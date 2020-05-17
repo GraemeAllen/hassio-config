@@ -1,0 +1,369 @@
+#############################   RESOURCES   ###################################
+resources:
+  - type: module
+    url: /local/js/card-mod.js
+  - type: module
+    url: /local/js/custom-header.js?v=1.3.2
+  - type: js
+    url: /local/js/text-element.js?v=0.0.2
+  - type: module
+    url: /local/js/config-template-card.js?v=1.1.2
+  - type: module
+    url: /browser_mod.js
+  - type: js
+    url: /local/js/bar-card.js
+  - type: module
+    url: /local/js/button-entity-row.js
+  - type: module
+    url: /local/js/circle-sensor-card.js
+  - type: js
+    url: /local/js/light-entity-card.js
+  - type: module
+    url: /local/js/layout-card.js
+  - type: module
+    url: /local/js/mini-graph-card-bundle.js?v=0.9.3
+  - type: module
+    url: /local/js/mini-media-player-bundle.js?v=1.6.0
+  - type: js
+    url: /local/js/vertical-stack-in-card.js
+  - type: module
+    url: /local/js/popup-backdrop-filter.js
+  - type: js
+    url: /local/js/upcoming-media-card.js
+  - type: module
+    url: /local/js/weather-card-chart.js
+  - type: module
+    url: /local/js/simple-weather-card-bundle.js?v=0.7.2
+  - type: module
+    url: /local/js/homekit-panel-card.js?v=0.4.7
+  - type: module
+    url: /local/js/auto-entities.js
+  - type: module
+    url: /local/js/now-playing-card.js
+  - type: module
+    url: /local/js/button-card.js  
+  - type: module
+    url: /local/js/buien-rain-card.js?v=0.0.60
+  - type: js
+    url: /local/js/light-slider-card-lajv.js
+  - type: module
+    url: /local/js/slider-entity-row.js
+
+views:
+  - title: Floor plan
+    icon: 'mdi:floor-plan'
+    panel: true
+    cards:
+ 
+###################   config-template-card    #####################
+ 
+        # To use the styling templates for individual lights, I have used 
+        # Config Template Card. Config template card passes the entities it
+        # uses into the card. Make sure you change these entities below to  
+        # your own and include any light entities you use above.
+        
+        # To understand why, check: https://github.com/iantrich/config-template-card
+
+      - type: "custom:config-template-card"
+        entities:
+          - light.graeme_s_lamp
+          - light.carol_s_lamp
+          - switch.cristo_light
+          - media_player.living_room_tv
+          - switch.sonoff_1000d66ac3 
+          - input_boolean.living_room_blinds
+          - input_boolean.kitchen_blinds
+          - input_number.daylight_tester
+          
+          
+
+        card:    
+#######################   Picture Elements Card    ############################
+          type: picture-elements       
+          image: /local/apartment-dark.png
+          style: |
+            ha-card:first-child {
+              background: rgba(255, 255, 255, 1)
+            }
+          elements:
+####################    DAY BASE FLOORPLAN OVERLAY    #########################
+            - action: none
+              entity: input_number.daylight_tester
+              hold_action:
+                action: none
+              image: /local/apartment-light.png
+              style:
+                mix-blend-mode: lighten
+                height: 100%
+                left: 50%
+                opacity: '${states["input_number.daylight_tester"].state + "%"}'                
+                top: 50%
+                width: 100%
+              tap_action:
+                action: none
+              type: image
+#############    WINDOW BLINDS - BLENDED IMAGE OVERLAYS    ################  
+            # LIVING ROOM #
+            - action: none
+              entity: input_boolean.living_room_blinds
+              hold_action:
+                action: none
+              style:
+                mix-blend-mode: lighten
+                opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'    
+                display: '${states["input_boolean.living_room_blinds"].state === "on" ? "block" : "none"}'
+                top: 50%
+                left: 50%
+                width: 100%
+              tap_action:
+                action: none
+              type: image
+              image: /local/light-overlays/blinds/living-room-blinds.png
+            # KITCHEN #
+            - action: none
+              entity: input_boolean.kitchen_blinds
+              hold_action:
+                action: none
+              style:
+                mix-blend-mode: lighten
+                opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'    
+                display: '${states["input_boolean.kitchen_blinds"].state === "on" ? "block" : "none"}'  
+                top: 50%
+                left: 50%
+                width: 100%
+              tap_action:
+                action: none
+              type: image
+              image: /local/light-overlays/blinds/kitchen-blinds.png
+            # BEDROOM #
+            - action: none
+              entities: 
+              - switch.sonoff_1000d66ac3 
+              - input_number.daylight_tester
+              hold_action:
+                action: none
+              style:
+                mix-blend-mode: lighten
+                opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'    
+                display: '${states["switch.sonoff_1000d66ac3"].state === "on" ? "block" : "none"}'
+                top: 50%
+                left: 50%
+                width: 100%
+              tap_action:
+                action: none
+              type: image
+              image: /local/light-overlays/blinds/bedroom-blind.png
+              
+#############    INDIVIDUAL LIGHTS - BLENDED IMAGE OVERLAYS    ################    
+            # GRAEME'S DESK #
+            - action: none
+              entity: light.graeme_s_lamp
+              hold_action:
+                action: none
+              image: /local/light-overlays/graeme-light.png
+              style:
+                filter: '${"brightness(70%) sepia(100%) hue-rotate(" + (states["light.graeme_s_lamp"].attributes.hs_color ? states["light.graeme_s_lamp"].attributes.hs_color[0]-45 : -45) + "deg) saturate(" +  (states["light.graeme_s_lamp"].attributes.hs_color ? (states["light.graeme_s_lamp"].attributes.hs_color[1] * 3) : 100)+ "%)"}' 
+                mix-blend-mode: lighten
+                opacity: "${states['light.graeme_s_lamp'].state === 'on' ? (states['light.graeme_s_lamp'].attributes.brightness / 255) : '0'}"
+                top: 50%
+                left: 50%
+                width: 100%
+              tap_action:
+                action: none
+              type: image
+            # CAROL'S DESK #
+            - action: none
+              entity: light.carol_s_lamp
+              hold_action:
+                action: none
+              image: /local/light-overlays/carol-light.png
+              style:
+                filter: '${"brightness(100%) sepia(" + (states["light.carol_s_lamp"].attributes.color_temp ? states["light.carol_s_lamp"].attributes.color_temp/3.7 : 100) + "%) saturate(150%)"}' 
+                mix-blend-mode: lighten
+                opacity: "${states['light.carol_s_lamp'].state === 'on' ? (states['light.carol_s_lamp'].attributes.brightness / 255) : '0'}"
+                top: 50%
+                left: 50%
+                width: 100%
+              tap_action:
+                action: none
+              type: image
+            # CRISTO LAMP #
+            - action: none
+              entity: switch.cristo_light
+              hold_action:
+                action: none
+              state_image:
+                "on": /local/apartamento-cristo-lamp.png
+                "off": /local/transparent.png
+              style:
+                mix-blend-mode: lighten
+                top: 50%
+                left: 50%
+                width: 100%
+              tap_action:
+                action: none
+              type: image
+
+
+                  
+    
+                
+#########################    ICONS    #########################
+            # CAROL'S LAMP #
+            - entity: light.carol_s_lamp
+              icon: 'mdi:lamp'
+              style:
+                '--iron-icon-height': 1.5vw
+                '--iron-icon-width': 1.5vw
+                '--paper-item-icon-active-color': 
+                '--paper-item-icon-color': '#54596F'
+                align-items: center
+                background-color: 'rgba(255,255,255,0.6)'
+                border-radius: 100%
+                box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                display: flex
+                height: 2vw
+                justify-content: center
+                left: 60%
+                margin-left: '-1.5vw'
+                margin-top: '-1.5vw'
+                top: 41.5%
+                transform: scale(1.2)
+                width: 2vw
+              tap_action:
+                action: toggle
+              type: state-icon
+            # GRAEME'S LAMP #
+            - entity: light.graeme_s_lamp
+              icon: 'mdi:lamp'
+              style:
+                '--iron-icon-height': 1.5vw
+                '--iron-icon-width': 1.5vw
+                '--paper-item-icon-active-color': '#000000'
+                '--paper-item-icon-color': '#54596F'
+                align-items: center
+                background-color: 'rgba(255,255,255,0.6)'
+                border-radius: 100%
+                box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                display: flex
+                height: 2vw
+                justify-content: center
+                left: 48.5%
+                margin-left: '-1.5vw'
+                margin-top: '-1.5vw'
+                top: 41.5%
+                transform: scale(1.2)
+                width: 2vw
+              tap_action:
+                action: toggle
+              type: state-icon
+            # CRISTO LAMP #
+            - entity: switch.cristo_light
+              icon: 'mdi:lamp'
+              style:
+                '--iron-icon-height': 1.5vw
+                '--iron-icon-width': 1.5vw
+                '--paper-item-icon-active-color': '#F9C906'
+                '--paper-item-icon-color': '#54596F'
+                align-items: center
+                background-color: 'rgba(255,255,255,0.6)'
+                border-radius: 100%
+                box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                display: flex
+                height: 2vw
+                justify-content: center
+                left: 42%
+                margin-left: '-1.5vw'
+                margin-top: '-1.5vw'
+                top: 88%
+                transform: scale(1.2)
+                width: 2vw
+              tap_action:
+                action: toggle
+              type: state-icon
+            # LIVING ROOM BLINDS #    
+            - entity: input_boolean.living_room_blinds
+              icon: 'mdi:open-in-app'
+              style:
+                '--iron-icon-height': 1.5vw
+                '--iron-icon-width': 1.5vw
+                '--paper-item-icon-active-color': 
+                '--paper-item-icon-color': '#54596F'
+                align-items: center
+                background-color: 'rgba(255,255,255,0.6)'
+                border-radius: 100%
+                box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                display: flex
+                height: 2vw
+                justify-content: center
+                left: 72%
+                margin-left: '-1.5vw'
+                margin-top: '-1.5vw'
+                top: 46%
+                transform: scale(1.2)
+                width: 2vw
+              tap_action:
+                action: toggle
+              type: state-icon
+            # KITCHEN BLINDS #    
+            - entity: input_boolean.kitchen_blinds
+              icon: 'mdi:open-in-app'
+              style:
+                '--iron-icon-height': 1.5vw
+                '--iron-icon-width': 1.5vw
+                '--paper-item-icon-active-color': 
+                '--paper-item-icon-color': '#54596F'
+                align-items: center
+                background-color: 'rgba(255,255,255,0.6)'
+                border-radius: 100%
+                box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                display: flex
+                height: 2vw
+                justify-content: center
+                left: 79%
+                margin-left: '-1.5vw'
+                margin-top: '-1.5vw'
+                top: 56%
+                transform: scale(1.2)
+                width: 2vw
+              tap_action:
+                action: toggle
+              type: state-icon
+            # BEDROOM BLINDS #   
+            - entity: switch.sonoff_1000d66ac3
+              icon: 'mdi:open-in-app'
+              style:
+                '--iron-icon-height': 1.5vw
+                '--iron-icon-width': 1.5vw
+                '--paper-item-icon-active-color': 
+                '--paper-item-icon-color': '#54596F'
+                align-items: center
+                background-color: 'rgba(255,255,255,0.6)'
+                border-radius: 100%
+                box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                display: flex
+                height: 2vw
+                justify-content: center
+                left: 72%
+                margin-left: '-1.5vw'
+                margin-top: '-1.5vw'
+                top: 24%
+                transform: scale(1.2)
+                width: 2vw
+              tap_action:
+                action: toggle
+              type: state-icon
+           
+
+    #########################    DAY/NIGHT TEST    #########################
+
+
+            - type: custom:slider-entity-row
+              entity: input_number.daylight_tester
+              name: Daylight
+              style:
+                top: 5%
+                left: 5%
+
+            
+            

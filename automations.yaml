@@ -1,0 +1,31 @@
+- id: '1589211936901'
+  alias: Watching TV
+  description: ''
+  trigger:
+  - entity_id: media_player.living_room_tv
+    from: idle
+    platform: state
+    to: playing
+  condition: []
+  action:
+  - scene: scene.watching_tv
+- id: '1589212835864'
+  alias: Turn on lights at sunset
+  description: ''
+  trigger:
+  - event: sunset
+    platform: sun
+  condition: []
+  action:
+  - scene: scene.evening
+- id: '1589214058856'
+  alias: Pause TV
+  description: ''
+  trigger:
+  - entity_id: media_player.living_room_tv
+    from: playing
+    platform: state
+    to: idle
+  condition: []
+  action:
+  - scene: scene.evening

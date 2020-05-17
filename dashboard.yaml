@@ -1,0 +1,10 @@
+views:
+  - title: main
+    icon: mdi:home-outline
+    cards:
+  - title: Floor plan
+    panel: true
+    cards:
+      - type: picture-elements
+        image: /local/apartment.jpg
+        elements:

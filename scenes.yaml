@@ -1,0 +1,72 @@
+- id: '1589211764661'
+  name: Watching TV
+  entities:
+    light.carol_s_lamp:
+      current_power_w: '0.0'
+      daily_energy_kwh: '0.000'
+      friendly_name: Carol's lamp
+      max_mireds: 370
+      min_mireds: 153
+      monthly_energy_kwh: '0.022'
+      state: 'off'
+      supported_features: 3
+    light.graeme_s_lamp:
+      brightness: 255
+      current_power_w: '0.0'
+      daily_energy_kwh: '0.000'
+      friendly_name: Graeme's lamp
+      hs_color:
+      - 360
+      - 100
+      max_mireds: 400
+      min_mireds: 111
+      monthly_energy_kwh: '0.033'
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      state: 'on'
+      supported_features: 19
+      xy_color:
+      - 0.701
+      - 0.299
+    switch.cristo_light:
+      friendly_name: Cristo light
+      state: 'on'
+- id: '1589212766843'
+  name: Evening
+  entities:
+    light.carol_s_lamp:
+      brightness: 255
+      color_temp: 331
+      current_power_w: '0.0'
+      daily_energy_kwh: '0.000'
+      friendly_name: Carol's lamp
+      max_mireds: 370
+      min_mireds: 153
+      monthly_energy_kwh: '0.022'
+      state: 'on'
+      supported_features: 3
+    light.graeme_s_lamp:
+      brightness: 255
+      current_power_w: '0.0'
+      daily_energy_kwh: '0.000'
+      friendly_name: Graeme's lamp
+      hs_color:
+      - 45
+      - 100
+      max_mireds: 400
+      min_mireds: 111
+      monthly_energy_kwh: '0.033'
+      rgb_color:
+      - 255
+      - 191
+      - 0
+      state: 'on'
+      supported_features: 19
+      xy_color:
+      - 0.527
+      - 0.447
+    switch.cristo_light:
+      friendly_name: Cristo light
+      state: 'on'
