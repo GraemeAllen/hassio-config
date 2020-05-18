@@ -1,0 +1,24 @@
+{
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "person.graeme"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "key": "lovelace.live_floorplan",
+    "version": 1
+}

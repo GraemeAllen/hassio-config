@@ -1,0 +1,116 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "track_home": true
+                },
+                "domain": "met",
+                "entry_id": "55d48b115dcc4956842035d9c7dd0866",
+                "options": {},
+                "source": "onboarding",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Home",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "user_id": "3a58a4aeefb045dea44870d2e5ccca3e"
+                },
+                "domain": "cast",
+                "entry_id": "428f43c065c84feb8c29fc56b5431981",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Google Cast",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {},
+                "domain": "tplink",
+                "entry_id": "f0ec3f7a974e42da829c370440d87082",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "TP-Link Smart Home",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {
+                    "app_data": {
+                        "push_token": "eGoijwuI_sQ:APA91bGyg_lyL0ny_ro9p_dMWz6CVrZCeuMhL8mNU2JC-DxOBZFOCt8RH93fR9yPRXBe72mjx6YI9hQGkcb1HrQqYggLqmlxNqY6kZ04AVf9e6MK1kgkgFwTvQU4VX3ns3oUHvQYm8h-",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1"
+                    },
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "1.9.0-167 (167)",
+                    "device_id": "7170b4a8d9d8e457",
+                    "device_name": "Mi 9 Lite",
+                    "manufacturer": "Xiaomi",
+                    "model": "Mi 9 Lite",
+                    "os_name": "Android",
+                    "os_version": "29",
+                    "supports_encryption": false,
+                    "user_id": "479ff0902f1040b88851e8c3f1cf26c5",
+                    "webhook_id": "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d"
+                },
+                "domain": "mobile_app",
+                "entry_id": "95ac1e98621a4dccb2632c16e45bcb88",
+                "options": {},
+                "source": "registration",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Mi 9 Lite",
+                "unique_id": "io.homeassistant.companion.android-7170b4a8d9d8e457",
+                "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "cloudhook": false,
+                    "webhook_id": "afdb5d2128fc9e434531057e603f928f6f34452eef9e79d6884476dd763fdbf7"
+                },
+                "domain": "ifttt",
+                "entry_id": "83223f1e6b0b4d4d922c08415fd8436d",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "IFTTT Webhook",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {},
+                "domain": "ipp",
+                "entry_id": "58fab19f6b4b4b6cb1cb3f2bae19f29f",
+                "options": {},
+                "source": "ignore",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Ignored",
+                "unique_id": "b1f0e215-453b-39fd-5470-9aa9c4c2b988",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

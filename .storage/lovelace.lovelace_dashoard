@@ -1,0 +1,87 @@
+{
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "person.graeme"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "aspect_ratio": "100%",
+                            "entity": "light.graeme_s_lamp",
+                            "image": "https://lh3.googleusercontent.com/Gg5mxg6lLoqY1l4OPykgMAR5bgn3df4T_iVhf_y36QhcYw7pS1EIdiuwt35sJTsd8IIjyuRYdPRgN9JvZND5zANC4gw16bx2at2F2XK3V4Qi4lWId1r-vesnCjSD-whSoCQM_h3mIi-4SgKOEetzxDjoKfidutbYlXTPe9ijhwXbgPuGYLrM6VoEyZPavIG8BzJ9d6K-nzfd1szq79kRjOtcxD9hQe1g7UagHorGGEax2R6WQ19HvXJp329r12la_p_BTR-ijovW4LkvNoKCGXjCgwz1aHeR-5M_ZNrRMBTEohAjrtR9nl_QVBx2FmyTwgEkwUjB12HIGklz0aoEkLnyNoRpIZbQB71SW-TqEbMLQUeVRuHwBZSqT0C3vvz-Xp5500ir6ikTh8awQJCPzZt9NpYVAjDrh0dbhwDKw8mlEZq6dhd22FvwZBkKFUmEVpKcviuAnXlpd-vg4_mMj5t_b662sdQOTmJuQdUov5aVRy4oT10PcSyVk6gLdk4wv1bi_fPvmcBJ_nH_dNA3YFAqFU5bEWEbvjuomKKt3PwnSUYRqX8v3QWHtEbOHj9zx2B3GdL3RnuUvneqYWLYkwyjqPtd2appKDFVSSS3WwK6h4AF_o3AspWB17kKwiXQdFPgo4G1OXKk4CmYFJxpvSiPHCLZJxkGyGnHkLKGctJwcsmX1LnaC5Ji-jys6c8=w837-h881-no?authuser=0",
+                            "state_filter": {
+                                "off": "brightness(50%) hue-rotate(45deg)",
+                                "on": "brightness(110%) saturate(1.2) opacity(0.8)"
+                            },
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "type": "picture-entity"
+                        },
+                        {
+                            "entities": [
+                                "switch.cristo_light",
+                                "light.carol_s_lamp",
+                                "light.graeme_s_lamp",
+                                "switch.sonoff_debug"
+                            ],
+                            "title": "Living Room",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "light.carol_s_lamp",
+                            "image": "https://lh3.googleusercontent.com/pS_P2e0cB1bt_gRXulQlYHb2IJct-r2mdcV40DYQF0vyNrYEB25bpMDXhENaPS_UYRSEPelT1kG5Hk50XG-2K-m8P4BliP4jklSBVDsQdx-iHwYk0amXvf371NGK7IWjGb4dtGcLbmA75D2fQiHZtzX4efj39AHp0hv3w7SZtmqC_YVee_5s5XP-aoC6Khg8pNy-dedvpWeYZDj1GfYO_QYMmx6BTB4ZJ6KvdC7phBDhC2-PDEK3tQY4B0mbJ42_wLg_rlmkhAdRRYiwPc0jRwZ2xSiXXFRG_I2S_3Au4pLN58LTY-WiT9LQdI7xVUmbuT94rQ5SGTGjkfvnhaENzEzQcSu9xj4AdKfFvTilTT_cEq5_CCR8n2bAcr7XhHOOKfO3_nVgRWusXs6uBGPaE3TXBfqFUISTgYltzpr09ZUS6jyXaKja94HxocbClMi6ShmOg0MfkjIohBrfD74GFGxwG7KsuxyaGdi0hKqjuPO-bPdwLGOqhCoGrqq8nbAEoCHFe6VY6Zuq25krYPJ_OfJu8ThxO8DKb4hY8s2V52HwYFjb4O02t8UVSHyfcajJr_MqGSdSX0ht1fJp8A5ObAOprgfK-5HMzkFRjo3HvWUSgiXYzeH5EWlHQiRyvZCSPVPyo3D2LD7qPBRw6Vz7DrBfwgD_Cu3p5JfCEFbduKNgu4QTgYZCPX7Xii5V0Dk=s881-no?authuser=0  100%",
+                            "state_filter": {
+                                "off": "brightness(50%) hue-rotate(45deg)",
+                                "on": "brightness(110%) saturate(1.2)"
+                            },
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "type": "picture-entity"
+                        },
+                        {
+                            "entity": "weather.home",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entity": "media_player.living_room_tv",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.living_room_speaker",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                "scene.evening",
+                                "scene.watching_tv"
+                            ],
+                            "title": "Scene",
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "default_view",
+                    "title": "Home"
+                },
+                {
+                    "badges": [],
+                    "cards": []
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_dashoard",
+    "version": 1
+}

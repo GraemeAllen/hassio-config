@@ -1,0 +1,24 @@
+{
+    "data": {
+        "items": [
+            {
+                "device_trackers": [
+                    "device_tracker.mi_9_lite"
+                ],
+                "id": "graeme",
+                "name": "Graeme",
+                "user_id": "479ff0902f1040b88851e8c3f1cf26c5"
+            },
+            {
+                "device_trackers": [
+                    "device_tracker.iphonedcarolina"
+                ],
+                "id": "carol",
+                "name": "Carol",
+                "user_id": null
+            }
+        ]
+    },
+    "key": "person",
+    "version": 2
+}

@@ -1,0 +1,77 @@
+{
+    "data": {
+        "binary_sensor": {},
+        "deleted_ids": [],
+        "sensor": {
+            "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d_battery_level": {
+                "added": true,
+                "attributes": {},
+                "device_class": "battery",
+                "icon": "mdi:battery-80",
+                "name": "Battery Level",
+                "state": 80,
+                "type": "sensor",
+                "unique_id": "battery_level",
+                "unit_of_measurement": "%",
+                "webhook_id": "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d"
+            },
+            "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d_battery_state": {
+                "added": true,
+                "attributes": {
+                    "charger_type": "unknown",
+                    "is_charging": false
+                },
+                "device_class": "battery",
+                "icon": "mdi:battery-80",
+                "name": "Battery State",
+                "state": "discharging",
+                "type": "sensor",
+                "unique_id": "battery_state",
+                "webhook_id": "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d"
+            },
+            "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d_geocoded_location": {
+                "added": true,
+                "attributes": {
+                    "Administrative Area": "Porto",
+                    "Country": "Portugal",
+                    "ISO Country Code": "PT",
+                    "Locality": "S\u00e3o Mamede de Infesta",
+                    "Location": [
+                        41.181905,
+                        -8.6234105
+                    ],
+                    "Postal Code": "4465",
+                    "Sub Administrative Area": null,
+                    "Sub Locality": null,
+                    "Sub Thoroughfare": "646",
+                    "Thoroughfare": "Rua Bernardim Ribeiro"
+                },
+                "icon": "mdi:map",
+                "name": "Geocoded Location",
+                "state": "R. Bernardim Ribeiro 646, 4465 S\u00e3o Mamede de Infesta, Portugal",
+                "type": "sensor",
+                "unique_id": "geocoded_location",
+                "webhook_id": "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d"
+            },
+            "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d_wifi_connection": {
+                "added": true,
+                "attributes": {
+                    "bssid": "88:66:39:d7:8d:04",
+                    "frequency": 2427,
+                    "ip_address": "192.168.1.68",
+                    "is_hidden": false,
+                    "link_speed": 58,
+                    "signal_level": -56
+                },
+                "icon": "mdi:wifi-strength-2",
+                "name": "Wifi Connection",
+                "state": "The Force",
+                "type": "sensor",
+                "unique_id": "wifi_connection",
+                "webhook_id": "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d"
+            }
+        }
+    },
+    "key": "mobile_app",
+    "version": 1
+}

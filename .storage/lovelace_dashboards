@@ -1,0 +1,24 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": "lovelace_dashoard",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": false,
+                "title": "Dashoard",
+                "url_path": "lovelace-dashoard"
+            },
+            {
+                "id": "live_floorplan",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": false,
+                "title": "Floorplan",
+                "url_path": "live-floorplan"
+            }
+        ]
+    },
+    "key": "lovelace_dashboards",
+    "version": 1
+}
