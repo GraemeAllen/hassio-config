@@ -1,3 +1,11 @@
+custom_header:
+  compact_mode: true
+  editor_warnings: false
+  hide_header: true
+  kiosk_mode: true
+  hidden_tab_redirect: false
+  cards:
+
 #############################   RESOURCES   ###################################
 resources:
   - type: module
@@ -18,6 +26,8 @@ resources:
     url: /local/js/circle-sensor-card.js
   - type: js
     url: /local/js/light-entity-card.js
+  - type: module
+    url: /local/js/lovelace-hui-element.js
   - type: module
     url: /local/js/layout-card.js
   - type: module
@@ -48,11 +58,15 @@ resources:
     url: /local/js/light-slider-card-lajv.js
   - type: module
     url: /local/js/slider-entity-row.js
+  - type: module
+    url: /local/js/kisok.js
 
 views:
-  - title: Floor plan
+  - title: Floor plan kiosk
     icon: 'mdi:floor-plan'
+    id: kiosk_floor_plan
     panel: true
+    background: 'rgba(42, 46, 48, 1)'
     cards:
  
 ###################   config-template-card    #####################
@@ -74,18 +88,33 @@ views:
           - input_boolean.living_room_blinds
           - input_boolean.kitchen_blinds
           - input_number.daylight_tester
-          
-          
+          - sun.sun
+
 
         card:    
 #######################   Picture Elements Card    ############################
-          type: picture-elements       
+          type: 'custom:hui-element'  
+          card_type: 'picture-elements'
           image: /local/apartment-dark.png
           style: |
             ha-card:first-child {
-              background: rgba(255, 255, 255, 1)
+              background: transparent
             }
           elements:
+####################    NIGHT BASE FLOORPLAN OVERLAY    #########################
+            - action: none
+              entity: none
+              hold_action:
+                action: none
+              image: /local/apartment-dark1.png
+              style:
+                top: 50%
+                left: 50%
+                width: 100%      
+                background: 'rgba(42, 46, 48, 1)'
+              tap_action:
+                action: none  
+              type: image
 ####################    DAY BASE FLOORPLAN OVERLAY    #########################
             - action: none
               entity: input_number.daylight_tester
@@ -94,11 +123,10 @@ views:
               image: /local/apartment-light.png
               style:
                 mix-blend-mode: lighten
-                height: 100%
-                left: 50%
-                opacity: '${states["input_number.daylight_tester"].state + "%"}'                
-                top: 50%
-                width: 100%
+                opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'               
+                top: 45%
+                left: 60%
+                width: 85%
               tap_action:
                 action: none
               type: image
@@ -112,9 +140,9 @@ views:
                 mix-blend-mode: lighten
                 opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'    
                 display: '${states["input_boolean.living_room_blinds"].state === "on" ? "block" : "none"}'
-                top: 50%
-                left: 50%
-                width: 100%
+                top: 45%
+                left: 60%
+                width: 85%  
               tap_action:
                 action: none
               type: image
@@ -128,9 +156,9 @@ views:
                 mix-blend-mode: lighten
                 opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'    
                 display: '${states["input_boolean.kitchen_blinds"].state === "on" ? "block" : "none"}'  
-                top: 50%
-                left: 50%
-                width: 100%
+                top: 45%
+                left: 60%
+                width: 85%  
               tap_action:
                 action: none
               type: image
@@ -146,10 +174,10 @@ views:
                 mix-blend-mode: lighten
                 opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'    
                 display: '${states["switch.sonoff_1000d66ac3"].state === "on" ? "block" : "none"}'
-                top: 50%
-                left: 50%
-                width: 100%
-              tap_action:
+                top: 45%
+                left: 60%
+                width: 85%  
+              tap_action:    
                 action: none
               type: image
               image: /local/light-overlays/blinds/bedroom-blind.png
@@ -165,9 +193,9 @@ views:
                 filter: '${"brightness(70%) sepia(100%) hue-rotate(" + (states["light.graeme_s_lamp"].attributes.hs_color ? states["light.graeme_s_lamp"].attributes.hs_color[0]-45 : -45) + "deg) saturate(" +  (states["light.graeme_s_lamp"].attributes.hs_color ? (states["light.graeme_s_lamp"].attributes.hs_color[1] * 3) : 100)+ "%)"}' 
                 mix-blend-mode: lighten
                 opacity: "${states['light.graeme_s_lamp'].state === 'on' ? (states['light.graeme_s_lamp'].attributes.brightness / 255) : '0'}"
-                top: 50%
-                left: 50%
-                width: 100%
+                top: 45%
+                left: 60%
+                width: 85%  
               tap_action:
                 action: none
               type: image
@@ -181,9 +209,9 @@ views:
                 filter: '${"brightness(100%) sepia(" + (states["light.carol_s_lamp"].attributes.color_temp ? states["light.carol_s_lamp"].attributes.color_temp/3.7 : 100) + "%) saturate(150%)"}' 
                 mix-blend-mode: lighten
                 opacity: "${states['light.carol_s_lamp'].state === 'on' ? (states['light.carol_s_lamp'].attributes.brightness / 255) : '0'}"
-                top: 50%
-                left: 50%
-                width: 100%
+                top: 45%
+                left: 60%
+                width: 85%  
               tap_action:
                 action: none
               type: image
@@ -193,21 +221,17 @@ views:
               hold_action:
                 action: none
               state_image:
-                "on": /local/apartamento-cristo-lamp.png
+                "on": /local/light-overlays/cristo-lamp.png
                 "off": /local/transparent.png
               style:
                 mix-blend-mode: lighten
-                top: 50%
-                left: 50%
-                width: 100%
+                top: 45%
+                left: 60%
+                width: 85%  
               tap_action:
                 action: none
               type: image
 
-
-                  
-    
-                
 #########################    ICONS    #########################
             # CAROL'S LAMP #
             - entity: light.carol_s_lamp
@@ -224,10 +248,10 @@ views:
                 display: flex
                 height: 2vw
                 justify-content: center
-                left: 60%
+                left: 69%
                 margin-left: '-1.5vw'
                 margin-top: '-1.5vw'
-                top: 41.5%
+                top: 38.5%
                 transform: scale(1.2)
                 width: 2vw
               tap_action:
@@ -248,10 +272,10 @@ views:
                 display: flex
                 height: 2vw
                 justify-content: center
-                left: 48.5%
+                left: 58.7%
                 margin-left: '-1.5vw'
                 margin-top: '-1.5vw'
-                top: 41.5%
+                top: 38.5%
                 transform: scale(1.2)
                 width: 2vw
               tap_action:
@@ -272,10 +296,10 @@ views:
                 display: flex
                 height: 2vw
                 justify-content: center
-                left: 42%
+                left: 53%
                 margin-left: '-1.5vw'
                 margin-top: '-1.5vw'
-                top: 88%
+                top: 78%
                 transform: scale(1.2)
                 width: 2vw
               tap_action:
@@ -296,10 +320,10 @@ views:
                 display: flex
                 height: 2vw
                 justify-content: center
-                left: 72%
+                left: 79%
                 margin-left: '-1.5vw'
                 margin-top: '-1.5vw'
-                top: 46%
+                top: 42.5%
                 transform: scale(1.2)
                 width: 2vw
               tap_action:
@@ -320,10 +344,10 @@ views:
                 display: flex
                 height: 2vw
                 justify-content: center
-                left: 79%
+                left: 85%
                 margin-left: '-1.5vw'
                 margin-top: '-1.5vw'
-                top: 56%
+                top: 50%
                 transform: scale(1.2)
                 width: 2vw
               tap_action:
@@ -344,10 +368,10 @@ views:
                 display: flex
                 height: 2vw
                 justify-content: center
-                left: 72%
+                left: 79%
                 margin-left: '-1.5vw'
                 margin-top: '-1.5vw'
-                top: 24%
+                top: 22%
                 transform: scale(1.2)
                 width: 2vw
               tap_action:
@@ -355,15 +379,306 @@ views:
               type: state-icon
            
 
-    #########################    DAY/NIGHT TEST    #########################
+
+##############################################################################
+#                                                                            #
+#                                   SIDEBAR                                  #
+#                                                                            #
+##############################################################################
+
+              #########################    BG IMAGE    #########################
+            - action: none
+              hold_action:
+                action: none
+              image: /local/sidebar/sidebarBG2.png
+              style:
+                height: 100%
+                left: 11.73828125%
+                top: 50%
+                width: 23.4765625%
+              tap_action:
+                action: none
+              type: image
+              
+              #########################    TIME AND DATE    #########################
+            - entity: sensor.time
+              hold_action:
+                action: none
+              style:
+                color: 'rgba(255, 255, 255, 0.7)'
+                font-size: 5.41vw
+                font-weight: 200
+                left: 2.7%
+                letter-spacing: '-0.05vw'
+                max-width: 1px
+                top: 10%
+              tap_action:
+                action: none
+              type: state-label
+            - entity: sensor.date_string
+              hold_action:
+                action: none
+              style:
+                color: 'rgba(255, 255, 255, 0.3)'
+                font-size: 1.3vw
+                font-weight: 300
+                left: 18.1%
+                letter-spacing: '-0.05vw'
+                text-align: left
+                top: 17%
+                width: 30%
+              tap_action:
+                action: none
+              type: state-label
+                  #########################    DAY/NIGHT TEST    #########################
 
 
             - type: custom:slider-entity-row
               entity: input_number.daylight_tester
               name: Daylight
               style:
-                top: 5%
-                left: 5%
+                color: '#ffffff'
+                top: 85%
+                left: 9%
+              #########################    Mini Weather card    #########################
+              
+            - backdrop: false
+              entity: weather.home
+              name: ' '
+              style: |
+                :host {
+                  left: 11.4%;
+                  top:  24%;
+                  width: 17%;
+                  height: 7% !important;
+                  overflow: hidden;
+                  height: 8.5vw;
+                  background: none  !important;
+                  box-shadow: none !important;
+                  font-size: 1vw !important;
+                }
+                ha-card {
+                  background: none  !important;
+                  box-shadow: none !important;
+                  flex-flow: row-reverse !important;
+                  padding: 0 !important;
+                }
+                .weather__info--add{
+                  display : none !important;
+                }
+                .weather__info{
+                  flex-grow: 1;
+                  min-height: 0 !important;
+                  height: 2.4vw;
+                  margin-left: 0.6vw;
+                  color: rgba(255, 255, 255, 0.7)
+                }
+                .weather__icon{
+                  margin-right:0.5% !important;
+                  margin-top: -3%;
+                  width: 2vw !important;
+                  height: 2vw !important;
+                  flex: 0 0 2vw !important;
+                }
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/4
+              type: 'custom:simple-weather-card'              #########################    MENU BUTTONS    #########################
+
+            - action: none
+              image: /local/sidebar/rooms_on.png
+              style:
+                border-radius: 5vw
+                box-shadow: '0px 0.2vw 0.8vw 0px rgba(0,0,0,0.1)'
+                left: 11.7%
+                top: 32%
+                width: 20.5078125%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/0
+              type: image
+            - action: none
+              image: /local/sidebar/all_off.png
+              style:
+                left: 11.7%
+                top: 40%
+                width: 20.5078125%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/2
+              type: image
+            - action: none
+              image: /local/sidebar/media_off.png
+              style:
+                left: 11.7%
+                top: 48%
+                width: 20.5078125%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/3
+              type: image
+
+              
+              
+              #########################    People at home    #########################
+              
+              #Optional label for people at Home (currently hidden with opacity: 0)
+              
+            - style:
+                color: white
+                font-size: 1vw
+                font-weight: 300
+                left: 8.8%
+                opacity: 0%
+                top: 66%
+                width: 10%
+              text: 'People at home:'
+              type: 'custom:text-element'
+              
+            - action: none
+              entity: person.graeme
+              state_image:
+                home: /local/users/graeme_hassio.jpg
+                not_home: /local/transparent.png
+              style:
+                background-color: 'rgba(255, 255, 255, 0.0)'
+                border: '0.1vw rgba(255, 255, 255, 0.3)'
+                border-radius: 10vw
+                height: 4.5vw
+                left: 5.8%
+                top: 72%
+                width: 4.5vw
+              tap_action: none
+              type: image
+                
+            - action: none
+              entity: person.carol
+              state_image:
+                home: /local/users/carol.jpg
+                not_home: /local/transparent.png
+              style:
+                background-color: 'rgba(255, 255, 255, 0.0)'
+                border: '0.1vw rgba(255, 255, 255, 0.3)'
+                border-radius: 10vw
+                height: 4.5vw
+                left: 10.8%
+                top: 72%
+                width: 4.5vw
+              tap_action: none
+              type: image
+              
+            - action: none
+              image: /local/transparent.png
+              style:
+                background-color: 'rgba(255, 255, 255, 0.0)'
+                border: '0.1vw dashed rgba(255, 255, 255, 0.3)'
+                border-radius: 10vw
+                height: 4.2vw
+                left: 15.9%
+                top: 72.2%
+                width: 4.2vw
+              tap_action: none
+              type: image
+            - action: none
+              image: /local/transparent.png
+              style:
+                background-color: 'rgba(255, 255, 255, 0.0)'
+                border: '0.1vw dashed rgba(255, 255, 255, 0.3)'
+                border-radius: 10vw
+                height: 4.2vw
+                left: 21.1%
+                top: 72.2%
+                width: 4.2vw
+              tap_action: none
+              type: image
+              
+              #########################    Minigraph to show temperature inside and out    #########################
+              
+            - color_thresholds:
+                - color: '#4dd2ff'
+                  value: 10
+                - color: '#ffa31a'
+                  value: 15
+                - color: '#ff1a1a'
+                  value: 20
+              entities:
+                - sensor.stairs_detector_temperature
+                - sensor.buienradar_ground_temperature
+              icon: 'mdi:home-thermometer-outline'
+              show:
+                icon: true
+                legend: false
+                name: false
+              style: |
+                :host {
+                  left: 11.6%;
+                  top:  92.9%;
+                  width: 23.5%;
+                  overflow: hidden;
+                  height: 15%;
+                  background: none  !important;
+                  box-shadow: none !important;
+                }
+                .header {
+                  font-size: 1vw;
+                  position: absolute !important;
+                  width: 5% !important;
+                  padding: 0 !important;
+                  right: 20% !important;
+                  top: 15% !important;
+                }
+                ha-card {
+                  background: none  !important;
+                  padding: 0 !important;
+                }
+                .icon > ha-icon {
+                  width:1.8vw !important;
+                  height:1.8vw !important;
+                }
+                .state__time{
+                  font-size:0.9vw !important;
+                  margin-top: 0.2vw;
+                  font-weight: 300 !important;
+                  opacity: 0.4 !important;
+                }
+                .states {
+                  font-size: 0.5vw !important;
+                  padding: 1vw 0vw 0vw 0vw  !important;
+                  margin: auto !important;
+                  width: 68%;
+                }
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/4
+              type: 'custom:mini-graph-card'
+              
+
+              
+              #########################    Overlay shadow images    #########################
+              
+            - action: none
+              image: /local/sidebar/sideShadow.png
+              style:
+                height: 35%
+                left: 18.45%
+                pointer-events: none
+                top: 83%
+                width: 10%
+              type: image
+            - action: none
+              image: /local/sidebar/sidebarInnerShadow.png
+              style:
+                left: 22.83%
+                opacity: 0.7
+                pointer-events: none
+                top: 50%
+                width: 1.2109375%
+              type: image
+              
+              #########################   Styled now playing Media Player    #########################
+              
+              # when the media player is playing, this overlaps the "Media" menu button
+
 
             
             

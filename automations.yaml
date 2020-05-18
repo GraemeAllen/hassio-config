@@ -29,3 +29,35 @@
   condition: []
   action:
   - scene: scene.evening
+- id: '1589822448722'
+  alias: Graeme computer light
+  description: ''
+  trigger:
+  - entity_id: device_tracker.36_e6_85_88_24_fb
+    from: not_home
+    platform: state
+    to: home
+  condition:
+  - condition: state
+    entity_id: person.graeme
+    state: home
+  action:
+  - scene: scene.graeme_work
+- id: '1589823128922'
+  alias: Carol computer light
+  description: ''
+  trigger:
+  - entity_id: device_tracker.mbp13c0inamotta
+    from: not_home
+    platform: state
+    to: home
+  - entity_id: device_tracker.mbp_de_ana_66
+    from: not_home
+    platform: state
+    to: home
+  condition:
+  - condition: state
+    entity_id: person.carol
+    state: home
+  action:
+  - scene: scene.carol_work

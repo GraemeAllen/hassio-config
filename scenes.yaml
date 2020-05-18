@@ -70,3 +70,41 @@
     switch.cristo_light:
       friendly_name: Cristo light
       state: 'on'
+- id: '1589823318973'
+  name: Graeme Work
+  entities:
+    light.graeme_s_lamp:
+      brightness: 255
+      color_temp: 176
+      current_power_w: '0.0'
+      daily_energy_kwh: '0.103'
+      friendly_name: Graeme's lamp
+      hs_color:
+      - 180
+      - 14
+      max_mireds: 400
+      min_mireds: 111
+      monthly_energy_kwh: '0.595'
+      rgb_color:
+      - 219
+      - 255
+      - 255
+      state: 'on'
+      supported_features: 19
+      xy_color:
+      - 0.285
+      - 0.332
+- id: '1589823358378'
+  name: Carol work
+  entities:
+    light.carol_s_lamp:
+      brightness: 255
+      color_temp: 250
+      current_power_w: '10.8'
+      daily_energy_kwh: '0.060'
+      friendly_name: Carol's lamp
+      max_mireds: 370
+      min_mireds: 153
+      monthly_energy_kwh: '0.200'
+      state: 'on'
+      supported_features: 3
