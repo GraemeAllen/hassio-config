@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "home-assistant-277315",
+  "private_key_id": "b640ced71d95cc63a334ce2f878548da28e223cb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCuNkwCcaBN7sgU\n7EafK2Cn97II4jFYuixjBheFAdpZm0z1KFJ2HynF2L8jAeHe1SbnomBroimXR9Sw\nzTOG8J2Knax9iGYkwve0WUF1F4Q6gylDJZnRVCQjcoAOG9tq/ygAppLDR+TiWC0G\nmFsPMQNb4lexmR1/D6IChVThbthC/OdskckdNmrqeIaETbIN1fdq8SSCnOvJpq02\nzDN+BoL1YOLtNSWDfnjLcJ0jl/gjGrbVsyK3tQn7frLEx377quQcXjOa7ya0ON4z\nZVIXdzaKxdbrPbbDex3UJfMXzG9Ep+UW1gJ2VGVTeJ6B95pLVjPkQZhkZPvYlVBU\nFOX2hiWnAgMBAAECggEAVh8FaFfflWcrhhxftSPuflqWqomXN3OhqbpDOj92P8Hk\nQ3WRfk9diS7jHl052byppOzCmbLquJyL6nMmu9iLKRFVSiF5zUaMyZ0uHMJpXbul\nVEpsRe1AiD18TH089SH6FohCGUObRMGuUIpUyafDL1MvYt58lGmX/4MGOQNg6Yvm\nL0ws6/rKDYc5ILn67Q+NCkzC7+00yM647deOzVFJXAPkon+BaqaV+0TmkZa7z8sl\nVticxSJaJd3qcMMM8TaMGxpp+sq9/SrHwKTTOyZ9JPTz1l37KqqeZh7stM4uAtWs\nWE5SY2Xh2e5ZpAiHd3kojwt0QsKnbZT6U8GUQeQcAQKBgQDvhGKaqbeC2MePdA4C\nF3CG0no6++ziAH3J9C1aJkQrwg0CoFwercJ+qtwB01ZXvD7XMzDRv0gLxJ63nXqi\n6bxO8UBxW+Zlw+fhfdlz4NEIwITrugC+1VBRnutlv99sN+9RlxldWdSWVPXEGqZr\nCjE5418TK94DqT4lyMmZezHbAQKBgQC6M2vxp3GlrSPBkbe3nnJBcHOlnQBAOoGD\n+hAjiHbz7cRL90lr5Y2zF4ixMokcO8FcvCSClFVrgl4TBvRg5Vq/MUqRnAghk9gl\nkMx9QnDS+NdkkXNyVrVqxhqvk2s2NpY52KBBqZcb2QoiTmTM9P+d8mCO8DAIgg1x\nn0lGm2hIpwKBgG0yxx3KWK8gFEOT3rsXYqclGLMBnmsfXDoRyAd8wMHOc84JvFYE\nVFMZpLp0Vr4jRecpII3QDpHG77G462uQ8thu5zmHc5Bb88D7doN9MPAzjaZHJAXd\nDQRZVusJwlv9WG+zWs4ToXd0fqQMnmjYub6xqev8qPi0VXA2jasa3o0BAoGBAKjl\n8fk+sLjex7tS6Xn2kJ9JWK2WL18Tct37G16P746uU0uxIPltPU6Bf210cKiaj3gF\n9Xw4/w7JL3pE6bFm+hzJomFYTovepsbUhJjuhpboP8EqqrTBcEhNMHGo4CxJ8ZTB\nKgTFx5rsEeQyhf7gEWn9LJcbygY9qeIx4W7ZkwurAoGARiuvGVG493ex5mm6mvnI\nWvVoK9yzjg4ZBemuSQMPSucCEm//+1E2ceY9j5Igersh6md2YsXdR/+IGnLwKhgk\nNBOCJLiKagJUnw2xZBlJLcMMTApSqAYsNHcT6nKRyvCMpOPLrvTYZaqHZ5AC2c3y\nIcPXrR/hXOWAtq4FOyLurOI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "graeme-ha@home-assistant-277315.iam.gserviceaccount.com",
+  "client_id": "108990229984901062566",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/graeme-ha%40home-assistant-277315.iam.gserviceaccount.com"
+}
