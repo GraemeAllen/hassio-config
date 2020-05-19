@@ -123,10 +123,6 @@ input_number:
     max: 100
     step: 1
     
-input_boolean:
-  living_room_blinds:
-    name: Living Room Blinds
-  kitchen_blinds:
-    name: Kitchen Blinds    
+
     
 

@@ -440,7 +440,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -456,7 +456,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -472,7 +472,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -485,6 +485,38 @@
                 "platform": "input_number",
                 "supported_features": 0,
                 "unique_id": "range_low",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.lights_out",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "lights out",
+                "platform": "homeassistant",
+                "supported_features": 0,
+                "unique_id": "1589891459574",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.blinds_down",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "blinds down",
+                "platform": "homeassistant",
+                "supported_features": 0,
+                "unique_id": "1589892220516",
                 "unit_of_measurement": null
             }
         ]

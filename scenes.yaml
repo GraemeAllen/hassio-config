@@ -108,3 +108,45 @@
       monthly_energy_kwh: '0.200'
       state: 'on'
       supported_features: 3
+- id: '1589891459574'
+  name: lights out
+  entities:
+    light.carol_s_lamp:
+      current_power_w: '0.0'
+      daily_energy_kwh: '0.032'
+      friendly_name: Carol's lamp
+      max_mireds: 370
+      min_mireds: 153
+      monthly_energy_kwh: '0.242'
+      state: 'off'
+      supported_features: 3
+    light.graeme_s_lamp:
+      current_power_w: '0.0'
+      daily_energy_kwh: '0.047'
+      friendly_name: Graeme's lamp
+      max_mireds: 400
+      min_mireds: 111
+      monthly_energy_kwh: '0.674'
+      state: 'off'
+      supported_features: 19
+    switch.cristo_light:
+      friendly_name: Cristo light
+      state: 'off'
+- id: '1589892220516'
+  name: blinds down
+  entities:
+    switch.sonoff_1000d66886:
+      device_id: 1000d66886
+      friendly_name: Kitchen Blinds
+      rssi: -60
+      state: 'off'
+    switch.sonoff_1000d66ac3:
+      device_id: 1000d66ac3
+      friendly_name: Bedroom blinds
+      rssi: -58
+      state: 'off'
+    switch.sonoff_1000d67323:
+      device_id: 1000d67323
+      friendly_name: Living Room Blinds
+      rssi: -57
+      state: 'off'

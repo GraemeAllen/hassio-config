@@ -9,7 +9,7 @@
                 "device_class": "battery",
                 "icon": "mdi:battery-80",
                 "name": "Battery Level",
-                "state": 80,
+                "state": 81,
                 "type": "sensor",
                 "unique_id": "battery_level",
                 "unit_of_measurement": "%",
@@ -56,14 +56,14 @@
             "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d_wifi_connection": {
                 "added": true,
                 "attributes": {
-                    "bssid": "88:66:39:d7:8d:04",
-                    "frequency": 2427,
+                    "bssid": "88:66:39:d7:8d:08",
+                    "frequency": 5500,
                     "ip_address": "192.168.1.68",
                     "is_hidden": false,
-                    "link_speed": 58,
-                    "signal_level": -56
+                    "link_speed": 433,
+                    "signal_level": -55
                 },
-                "icon": "mdi:wifi-strength-2",
+                "icon": "mdi:wifi-strength-3",
                 "name": "Wifi Connection",
                 "state": "The Force",
                 "type": "sensor",
