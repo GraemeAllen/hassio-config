@@ -4,7 +4,10 @@
 !.gitignore
 !*.md
 
-# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+# Ensure these files are ignored, otherwise your secret data/credentials will leak.
 secrets.yaml
 known_devices.yaml
-home_assistant_v2.db
+home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+home-assistant.log
