@@ -7,3 +7,4 @@
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 secrets.yaml
 known_devices.yaml
+home_assistant_v2.db

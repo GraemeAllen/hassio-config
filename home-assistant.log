@@ -801,3 +801,19 @@
 2020-05-19 18:06:22 WARNING (SyncWorker_8) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
 2020-05-19 18:06:22 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
 2020-05-19 18:07:03 WARNING (MainThread) [homeassistant.util.async_] Detected I/O inside the event loop. This is causing stability issues. Please report issue to the custom component author for sonoff doing I/O at custom_components/sonoff/__init__.py, line 374: ), headers=self._headers)
+2020-05-19 18:07:19 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-05-19 18:07:55 WARNING (SyncWorker_13) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-05-19 18:07:55 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-05-19 18:08:04 WARNING (MainThread) [homeassistant.util.async_] Detected I/O inside the event loop. This is causing stability issues. Please report issue to the custom component author for sonoff doing I/O at custom_components/sonoff/__init__.py, line 374: ), headers=self._headers)
+2020-05-19 18:08:21 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-05-19 18:08:57 WARNING (SyncWorker_3) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-05-19 18:08:57 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-05-19 18:09:05 WARNING (MainThread) [homeassistant.util.async_] Detected I/O inside the event loop. This is causing stability issues. Please report issue to the custom component author for sonoff doing I/O at custom_components/sonoff/__init__.py, line 374: ), headers=self._headers)
+2020-05-19 18:09:23 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-05-19 18:10:06 WARNING (MainThread) [homeassistant.util.async_] Detected I/O inside the event loop. This is causing stability issues. Please report issue to the custom component author for sonoff doing I/O at custom_components/sonoff/__init__.py, line 374: ), headers=self._headers)
+2020-05-19 18:10:30 WARNING (SyncWorker_9) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-05-19 18:10:30 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-05-19 18:10:56 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-05-19 18:11:07 WARNING (MainThread) [homeassistant.util.async_] Detected I/O inside the event loop. This is causing stability issues. Please report issue to the custom component author for sonoff doing I/O at custom_components/sonoff/__init__.py, line 374: ), headers=self._headers)
+2020-05-19 18:11:32 WARNING (SyncWorker_8) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-05-19 18:11:32 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
