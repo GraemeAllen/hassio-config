@@ -87,7 +87,7 @@ views:
           - switch.sonoff_1000d66ac3 
           - switch.sonoff_1000d67323
           - switch.sonoff_1000d66886
-          - input_number.daylight_tester
+          - sensor.ambient_light_calc
           - sun.sun
           - sensor.time
 
@@ -123,7 +123,7 @@ views:
               image: /local/apartment-light.png
               style:
                 mix-blend-mode: lighten
-                opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'               
+                opacity: '${states["sensor.ambient_light_calc"].state + 10 + "%"}'               
                 top: 45%
                 left: 60%
                 width: 85%
@@ -138,7 +138,7 @@ views:
                 action: none
               style:
                 mix-blend-mode: lighten
-                opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'    
+                opacity: '${states["sensor.ambient_light_calc"].state + 10 + "%"}'    
                 display: '${states["switch.sonoff_1000d67323"].state === "on" ? "block" : "none"}'
                 top: 45%
                 left: 60%
@@ -154,7 +154,7 @@ views:
                 action: none
               style:
                 mix-blend-mode: lighten
-                opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'    
+                opacity: '${states["sensor.ambient_light_calc"].state + 10 + "%"}'    
                 display: '${states["switch.sonoff_1000d66886"].state === "on" ? "block" : "none"}'  
                 top: 45%
                 left: 60%
@@ -172,7 +172,7 @@ views:
                 action: none
               style:
                 mix-blend-mode: lighten
-                opacity: '${states["input_number.daylight_tester"].state + 10 + "%"}'    
+                opacity: '${states["sensor.ambient_light_calc"].state + 10 + "%"}'    
                 display: '${states["switch.sonoff_1000d66ac3"].state === "on" ? "block" : "none"}'
                 top: 45%
                 left: 60%
@@ -429,18 +429,7 @@ views:
               tap_action:
                 action: none
               type: state-label
-                  #########################    DAY/NIGHT TEST    #########################
-
-
-            - type: custom:slider-entity-row
-              entity: input_number.daylight_tester
-              name: Daylight
-              style:
-                color: '#ffffff'
-                top: 85%
-                left: 9%
               #########################    Mini Weather card    #########################
-              
             - backdrop: 
                 day: 'rgba(255, 255, 255, 0)'
                 night: 'rgba(255, 255, 255, 0)'
@@ -517,8 +506,6 @@ views:
                 action: navigate
                 navigation_path: /lovelace/2
               type: image
-
-              
               
               #########################    People at home    #########################
               
@@ -546,7 +533,7 @@ views:
                 border-radius: 10vw
                 height: 4.5vw
                 left: 5.8%
-                top: 72%
+                top: 62%
                 width: 4.5vw
               tap_action: none
               type: image
@@ -562,7 +549,7 @@ views:
                 border-radius: 10vw
                 height: 4.5vw
                 left: 10.8%
-                top: 72%
+                top: 62%
                 width: 4.5vw
               tap_action: none
               type: image
@@ -575,7 +562,7 @@ views:
                 border-radius: 10vw
                 height: 4.2vw
                 left: 15.9%
-                top: 72.2%
+                top: 62.2%
                 width: 4.2vw
               tap_action: none
               type: image
@@ -587,35 +574,44 @@ views:
                 border-radius: 10vw
                 height: 4.2vw
                 left: 21.1%
-                top: 72.2%
+                top: 62.2%
                 width: 4.2vw
               tap_action: none
               type: image
               
-              #########################    Minigraph to show temperature inside and out    #########################
-              
-            - color_thresholds:
-                - color: '#4dd2ff'
-                  value: 10
-                - color: '#ffa31a'
-                  value: 15
-                - color: '#ff1a1a'
-                  value: 20
-              entities:
-                - sensor.stairs_detector_temperature
-                - sensor.buienradar_ground_temperature
-              icon: 'mdi:home-thermometer-outline'
+#############    Minigraph to show temperature and Illumitation    ############
+            - entities:
+                - entity: sensor.ambient_light_calc
+                  color: 'rgba(255,255,255,0.7)'
+                  name: Illumination
+                  smoothing: true
+                  aggregate_func: last
+                  unit: '%'
+                - entity: sensor.weather_temperature
+                  name: Temperature
+                  smoothing: true
+                  aggregate_func: last
+                  unit: '°C'
+              color_thresholds:
+              - color: '#4dd2ff'
+                value: 10
+              - color: '#ffa31a'
+                value: 20
+              - color: '#ff1a1a'
+                value: 30
+              hours_to_show: 24
+              points_per_hour: 60
               show:
-                icon: true
-                legend: false
+                icon: false
                 name: false
+                state: false
+                points: false
               style: |
                 :host {
                   left: 11.6%;
-                  top:  92.9%;
+                  top:  75%;
                   width: 23.5%;
                   overflow: hidden;
-                  height: 15%;
                   background: none  !important;
                   box-shadow: none !important;
                 }
@@ -647,12 +643,14 @@ views:
                   margin: auto !important;
                   width: 68%;
                 }
+                .ellipsis {
+                    color: rgba(255,255,255,0.7);
+                }
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/4
+              update_interval: 120
               type: 'custom:mini-graph-card'
-              
-
               
               #########################    Overlay shadow images    #########################
               
@@ -662,7 +660,7 @@ views:
                 height: 35%
                 left: 18.45%
                 pointer-events: none
-                top: 83%
+                top: 73%
                 width: 10%
               type: image
             - action: none
@@ -835,16 +833,7 @@ views:
             tap_action:
               action: none
             type: state-label
-            #########################    DAY/NIGHT TEST    #########################
-    
-    
-          - type: custom:slider-entity-row
-            entity: input_number.daylight_tester
-            name: Daylight
-            style:
-              color: '#ffffff'
-              top: 85%
-              left: 9%
+
             #########################    Mini Weather card    #########################
             
           - backdrop: 
@@ -923,12 +912,9 @@ views:
               action: navigate
               navigation_path: /lovelace/2
             type: image
-    
-              
-              
-            #########################    People at home    #########################
-              
-            #Optional label for people at Home (currently hidden with opacity: 0)
+          #########################    People at home    #########################
+          
+          #Optional label for people at Home (currently hidden with opacity: 0)
               
           - style:
               color: white
@@ -952,7 +938,7 @@ views:
               border-radius: 10vw
               height: 4.5vw
               left: 5.8%
-              top: 72%
+              top: 62%
               width: 4.5vw
             tap_action: none
             type: image
@@ -968,7 +954,7 @@ views:
               border-radius: 10vw
               height: 4.5vw
               left: 10.8%
-              top: 72%
+              top: 62%
               width: 4.5vw
             tap_action: none
             type: image
@@ -981,7 +967,7 @@ views:
               border-radius: 10vw
               height: 4.2vw
               left: 15.9%
-              top: 72.2%
+              top: 62.2%
               width: 4.2vw
             tap_action: none
             type: image
@@ -993,35 +979,42 @@ views:
               border-radius: 10vw
               height: 4.2vw
               left: 21.1%
-              top: 72.2%
+              top: 62.2%
               width: 4.2vw
             tap_action: none
             type: image
               
-              #########################    Minigraph to show temperature inside and out    #########################
-              
-          - color_thresholds:
-              - color: '#4dd2ff'
-                value: 10
-              - color: '#ffa31a'
-                value: 15
-              - color: '#ff1a1a'
-                value: 20
-            entities:
-              - sensor.stairs_detector_temperature
-              - sensor.buienradar_ground_temperature
-            icon: 'mdi:home-thermometer-outline'
+#############    Minigraph to show temperature and Illumitation    ############
+          - entities:
+              - entity: sensor.ambient_light_calc
+                color: 'rgba(255,255,255,0.7)'
+                name: Illumination
+                smoothing: true
+                unit: '%'
+              - entity: sensor.weather_temperature
+                name: Temperature
+                smoothing: true
+                unit: '°C'
+            color_thresholds:
+            - color: '#4dd2ff'
+              value: 10
+            - color: '#ffa31a'
+              value: 20
+            - color: '#ff1a1a'
+              value: 30
+            hours_to_show: 24
+            points_per_hour: 60
             show:
-              icon: true
-              legend: false
+              icon: false
               name: false
-              style: |
+              state: false
+              points: false
+            style: |
                 :host {
                   left: 11.6%;
-                  top:  92.9%;
+                  top:  75%;
                   width: 23.5%;
                   overflow: hidden;
-                  height: 15%;
                   background: none  !important;
                   box-shadow: none !important;
                 }
@@ -1053,38 +1046,39 @@ views:
                   margin: auto !important;
                   width: 68%;
                 }
+                .ellipsis {
+                    color: rgba(255,255,255,0.7);
+                }
             tap_action:
               action: navigate
               navigation_path: /lovelace/4
+            update_interval: 120
             type: 'custom:mini-graph-card'
-              
-    
               
               #########################    Overlay shadow images    #########################
               
           - action: none
             image: /local/sidebar/sideShadow.png
             style:
-              height: 35%
-              left: 18.45%
-              pointer-events: none
-              top: 83%
-              width: 10%
+                height: 35%
+                left: 18.45%
+                pointer-events: none
+                top: 73%
+                width: 10%
             type: image
           - action: none
             image: /local/sidebar/sidebarInnerShadow.png
             style:
-              left: 22.83%
-              opacity: 0.7
-              pointer-events: none
-              top: 50%
-              width: 1.2109375%
+                left: 22.83%
+                opacity: 0.7
+                pointer-events: none
+                top: 50%
+                width: 1.2109375%
             type: image
               
               #########################   Styled now playing Media Player    #########################
               
               # when the media player is playing, this overlaps the "Media" menu button
-              
               
 #############################################################################################################################################
 #                                                                                                                                           #
@@ -1151,11 +1145,10 @@ views:
                   .mmp-player__core {
                       margin-bottom: 41% !important;
                   }
-
-
+                  #sliderBar {
+                      width:10%;
+                  }
               scale: 1.5
-
-              
               mini-media-player-base-color: 'rgba(255,255,255,0.7)'
               mini-media-player-icon-color: 'rgba(255,255,255,0.7)'
 
@@ -1213,16 +1206,7 @@ views:
               tap_action:
                 action: none
               type: state-label
-                  #########################    DAY/NIGHT TEST    #########################
 
-
-            - type: custom:slider-entity-row
-              entity: input_number.daylight_tester
-              name: Daylight
-              style:
-                color: '#ffffff'
-                top: 85%
-                left: 9%
               #########################    Mini Weather card    #########################
               
             - backdrop: 
@@ -1330,7 +1314,7 @@ views:
                 border-radius: 10vw
                 height: 4.5vw
                 left: 5.8%
-                top: 72%
+                top: 62%
                 width: 4.5vw
               tap_action: none
               type: image
@@ -1346,7 +1330,7 @@ views:
                 border-radius: 10vw
                 height: 4.5vw
                 left: 10.8%
-                top: 72%
+                top: 62%
                 width: 4.5vw
               tap_action: none
               type: image
@@ -1359,7 +1343,7 @@ views:
                 border-radius: 10vw
                 height: 4.2vw
                 left: 15.9%
-                top: 72.2%
+                top: 62.2%
                 width: 4.2vw
               tap_action: none
               type: image
@@ -1371,35 +1355,42 @@ views:
                 border-radius: 10vw
                 height: 4.2vw
                 left: 21.1%
-                top: 72.2%
+                top: 62.2%
                 width: 4.2vw
               tap_action: none
               type: image
               
-              #########################    Minigraph to show temperature inside and out    #########################
-              
-            - color_thresholds:
-                - color: '#4dd2ff'
-                  value: 10
-                - color: '#ffa31a'
-                  value: 15
-                - color: '#ff1a1a'
-                  value: 20
-              entities:
-                - sensor.stairs_detector_temperature
-                - sensor.buienradar_ground_temperature
-              icon: 'mdi:home-thermometer-outline'
+#############    Minigraph to show temperature and Illumitation    ############
+            - entities:
+                - entity: sensor.ambient_light_calc
+                  color: 'rgba(255,255,255,0.7)'
+                  name: Illumination
+                  smoothing: true
+                  unit: '%'
+                - entity: sensor.weather_temperature
+                  name: Temperature
+                  smoothing: true
+                  unit: '°C'
+              color_thresholds:
+              - color: '#4dd2ff'
+                value: 10
+              - color: '#ffa31a'
+                value: 20
+              - color: '#ff1a1a'
+                value: 30
+              hours_to_show: 24
+              points_per_hour: 60
               show:
-                icon: true
-                legend: false
+                icon: false
                 name: false
+                state: false
+                points: false
               style: |
                 :host {
                   left: 11.6%;
-                  top:  92.9%;
+                  top:  75%;
                   width: 23.5%;
                   overflow: hidden;
-                  height: 15%;
                   background: none  !important;
                   box-shadow: none !important;
                 }
@@ -1431,12 +1422,14 @@ views:
                   margin: auto !important;
                   width: 68%;
                 }
+                .ellipsis {
+                    color: rgba(255,255,255,0.7);
+                }
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/4
+              update_interval: 120
               type: 'custom:mini-graph-card'
-              
-
               
               #########################    Overlay shadow images    #########################
               
@@ -1446,7 +1439,7 @@ views:
                 height: 35%
                 left: 18.45%
                 pointer-events: none
-                top: 83%
+                top: 73%
                 width: 10%
               type: image
             - action: none
@@ -1462,4 +1455,32 @@ views:
               #########################   Styled now playing Media Player    #########################
               
               # when the media player is playing, this overlaps the "Media" menu button
-              
+  - title: DEBUG
+    icon: 'mdi:floor-plan'
+    id: kiosk_media
+    panel: true
+    background: 'rgba(42, 46, 48, 1)'
+    cards:              
+          ####################   DEBUG TEXT    #########################          
+      - type: markdown
+        style:
+           background: 'rgba(0, 0, 0, 1)'
+        content: |
+            Cloudiness: {{states.sensor.weather_cloudiness.state}} %
+            Dewpoint Temp.: {{states.sensor.weather_dewpoint_temperature.state}} degC
+            Fog: {{states.sensor.weather_fog.state}} %
+            High Clouds: {{states.sensor.weather_high_clouds.state}} %
+            Humidity: {{states.sensor.weather_humidity.state}} %
+            Low Clouds: {{states.sensor.weather_low_clouds.state}} %
+            Medium Clouds: {{states.sensor.weather_medium_clouds.state}} %
+            Precipitation: {{states.sensor.weather_precipitation.state}} %
+            Pressure: {{states.sensor.weather_pressure.state}} hPa
+            Symbol: {{states.sensor.weather_symbol.state}}
+            Temperature: {{states.sensor.weather_temperature.state}} degC
+            Wind Direction: {{states.sensor.weather_wind_direction.state}} deg
+            Wind Speed: {{states.sensor.weather_wind_speed.state}}
+            Sun: {{states.sun.sun.attributes.elevation}} deg
+            
+            {{(states.sun.sun.attributes.elevation | float) / (1-(states.sensor.weather_cloudiness.state | float/100)) }}
+            {{ ( 30 + states.sun.sun.attributes.elevation | float) * ( 1 - (states.sensor.weather_cloudiness.state | float / 100 )) }}
+            Ambient Light: {{states.sensor.ambient_light_calc.state}} %

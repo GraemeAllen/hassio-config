@@ -75,11 +75,37 @@ sensor:
       date_string:
         friendly_name: "Full Date"
         value_template: "{{ states('sensor.day') }}, {{ states('sensor.month') }} {{ now().year }}"  
-  
+        
+      ambient_light_calc:
+        friendly_name: 'Calculated Ambient Light'
+        value_template: '{{ ((30 + states.sun.sun.attributes.elevation | float ) * (1 - ((states.sensor.weather_low_clouds.state | float / 100) + (states.sensor.weather_medium_clouds.state | float / 150) + (states.sensor.weather_high_clouds.state | float / 200)))) |float|round(1) }}'
+
 ## Weather
+
+  - platform: yr
+
+  - platform: yr
+    name: Weather
+    forecast: 24
+    monitored_conditions:
+      - temperature
+      - symbol
+      - precipitation
+      - windSpeed
+      - pressure
+      - windDirection
+      - humidity
+      - fog
+      - cloudiness
+      - lowClouds
+      - mediumClouds
+      - highClouds
+      - dewpointTemperature
+
+
 weather:
-  - platform: buienradar
-    name: 'buienWeather'
+  - platform: 'buienradar'
+    name: Weather-old
     latitude: 41.182192
     longitude: -8.625669
     forecast: true
