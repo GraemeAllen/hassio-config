@@ -104,7 +104,7 @@
             {
                 "area_id": null,
                 "config_entries": [
-                    "95ac1e98621a4dccb2632c16e45bcb88"
+                    "92a1de24be754b2986572103aaa6d43d"
                 ],
                 "connections": [],
                 "id": "ad95d9298f504875b76dc5836f8e541b",
@@ -119,6 +119,26 @@
                 "name": "Mi 9 Lite",
                 "name_by_user": null,
                 "sw_version": "29",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "75457f90a2e943b192edd8a7a7e2f7e0"
+                ],
+                "connections": [],
+                "id": "bd322b29540f4672be73d4f6b43d4add",
+                "identifiers": [
+                    [
+                        "hacs",
+                        "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+                    ]
+                ],
+                "manufacturer": "hacs.xyz",
+                "model": "",
+                "name": "HACS",
+                "name_by_user": null,
+                "sw_version": "0.24.5",
                 "via_device_id": null
             }
         ]

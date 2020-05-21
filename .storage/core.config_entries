@@ -48,37 +48,6 @@
                 "version": 1
             },
             {
-                "connection_class": "cloud_push",
-                "data": {
-                    "app_data": {
-                        "push_token": "eGoijwuI_sQ:APA91bGyg_lyL0ny_ro9p_dMWz6CVrZCeuMhL8mNU2JC-DxOBZFOCt8RH93fR9yPRXBe72mjx6YI9hQGkcb1HrQqYggLqmlxNqY6kZ04AVf9e6MK1kgkgFwTvQU4VX3ns3oUHvQYm8h-",
-                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1"
-                    },
-                    "app_id": "io.homeassistant.companion.android",
-                    "app_name": "Home Assistant",
-                    "app_version": "1.9.0-167 (167)",
-                    "device_id": "7170b4a8d9d8e457",
-                    "device_name": "Mi 9 Lite",
-                    "manufacturer": "Xiaomi",
-                    "model": "Mi 9 Lite",
-                    "os_name": "Android",
-                    "os_version": "29",
-                    "supports_encryption": false,
-                    "user_id": "479ff0902f1040b88851e8c3f1cf26c5",
-                    "webhook_id": "3ca3f2dda075fcb2b1f399dd4b6655622753b8cef383da6e87d79975e28e958d"
-                },
-                "domain": "mobile_app",
-                "entry_id": "95ac1e98621a4dccb2632c16e45bcb88",
-                "options": {},
-                "source": "registration",
-                "system_options": {
-                    "disable_new_entities": false
-                },
-                "title": "Mi 9 Lite",
-                "unique_id": "io.homeassistant.companion.android-7170b4a8d9d8e457",
-                "version": 1
-            },
-            {
                 "connection_class": "unknown",
                 "data": {
                     "cloudhook": false,
@@ -97,7 +66,10 @@
             },
             {
                 "connection_class": "local_poll",
-                "data": {},
+                "data": {
+                    "host": "192.168.1.69",
+                    "name": "HP OfficeJet Pro 7740 series [F7337D] (Fax) @ MacBook Pro de an"
+                },
                 "domain": "ipp",
                 "entry_id": "58fab19f6b4b4b6cb1cb3f2bae19f29f",
                 "options": {},
@@ -107,6 +79,57 @@
                 },
                 "title": "Ignored",
                 "unique_id": "b1f0e215-453b-39fd-5470-9aa9c4c2b988",
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "appdaemon": false,
+                    "netdaemon": false,
+                    "sidepanel_icon": "mdi:alpha-c-box",
+                    "sidepanel_title": "HACS",
+                    "token": "f0f70395032d1b1dc634a213b1d6e998c07b9e6a"
+                },
+                "domain": "hacs",
+                "entry_id": "75457f90a2e943b192edd8a7a7e2f7e0",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {
+                    "app_data": {
+                        "push_token": "caCGwnpN_7g:APA91bGDPrm1fVzw-8rVTdRn_dujmX7WLGJU1jTCqpYYOHA4SkslebgKUvboo83rG4d0dT3AYgRxSuOeYpZpICGFbMyo-9_yWWWKaz-2c5yRYCEtam-bQsOq01IBu3sMW--w8GrG-Yk2",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1"
+                    },
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "1.9.0-167 (167)",
+                    "device_id": "7170b4a8d9d8e457",
+                    "device_name": "Mi 9 Lite",
+                    "manufacturer": "Xiaomi",
+                    "model": "Mi 9 Lite",
+                    "os_name": "Android",
+                    "os_version": "29",
+                    "supports_encryption": false,
+                    "user_id": "479ff0902f1040b88851e8c3f1cf26c5",
+                    "webhook_id": "afb2a5b5670fa4c85ac49fd704db688a3a01957e14bc32b0e659f9236e1d5162"
+                },
+                "domain": "mobile_app",
+                "entry_id": "92a1de24be754b2986572103aaa6d43d",
+                "options": {},
+                "source": "registration",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Mi 9 Lite",
+                "unique_id": "io.homeassistant.companion.android-7170b4a8d9d8e457",
                 "version": 1
             }
         ]

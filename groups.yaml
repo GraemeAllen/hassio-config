@@ -34,3 +34,8 @@
       - switch.sonoff_1000d66ac3
       - switch.sonoff_1000d66886
       - switch.sonoff_1000d67323
+  media:
+    name: Media
+    entities:
+      - media_player.living_room_tv
+      - media_player.living_room_speaker

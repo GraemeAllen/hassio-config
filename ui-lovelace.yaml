@@ -306,12 +306,12 @@ views:
               type: state-icon
             # LIVING ROOM BLINDS #    
             - entity: switch.sonoff_1000d67323
-              icon: 'mdi:open-in-app'
+              icon: 'mdi:blinds'
               style:
                 '--iron-icon-height': 1.5vw
                 '--iron-icon-width': 1.5vw
-                '--paper-item-icon-active-color': 
-                '--paper-item-icon-color': '#54596F'
+                '--paper-item-icon-active-color': 'rgba(255,255,255,0.3)' 
+                '--paper-item-icon-color': 'black'
                 align-items: center
                 background-color: 'rgba(255,255,255,0.6)'
                 border-radius: 100%
@@ -330,12 +330,12 @@ views:
               type: state-icon
             # KITCHEN BLINDS #    
             - entity: switch.sonoff_1000d66886
-              icon: 'mdi:open-in-app'
+              icon: 'mdi:blinds'
               style:
                 '--iron-icon-height': 1.5vw
                 '--iron-icon-width': 1.5vw
-                '--paper-item-icon-active-color': 
-                '--paper-item-icon-color': '#54596F'
+                '--paper-item-icon-active-color': 'rgba(255,255,255,0.3)' 
+                '--paper-item-icon-color': 'black'
                 align-items: center
                 background-color: 'rgba(255,255,255,0.6)'
                 border-radius: 100%
@@ -354,12 +354,12 @@ views:
               type: state-icon
             # BEDROOM BLINDS #   
             - entity: switch.sonoff_1000d66ac3
-              icon: 'mdi:open-in-app'
+              icon: 'mdi:blinds'
               style:
                 '--iron-icon-height': 1.5vw
                 '--iron-icon-width': 1.5vw
-                '--paper-item-icon-active-color': 
-                '--paper-item-icon-color': '#54596F'
+                '--paper-item-icon-active-color': 'rgba(255,255,255,0.3)' 
+                '--paper-item-icon-color': 'black'
                 align-items: center
                 background-color: 'rgba(255,255,255,0.6)'
                 border-radius: 100%
@@ -381,7 +381,7 @@ views:
 
 ##############################################################################
 #                                                                            #
-#                                   SIDEBAR                                  #
+#                             FLOOR PLAN SIDEBAR                             #
 #                                                                            #
 ##############################################################################
 
@@ -442,7 +442,6 @@ views:
                   width: 17%;
                   height: 8% !important;
                   overflow: hidden;
-                  height: 8.5vw;
                   box-shadow: none !important;
                   font-size: 1vw !important;
                 }
@@ -468,6 +467,31 @@ views:
                   height: 2vw !important;
                   flex: 0 0 2vw !important;
                 }
+                @media screen and (max-width: 900px) {  
+                    :host {
+                      left: 11.4%;
+                      top:  24%;
+                      width: 17%;
+                      overflow: hidden;
+                      box-shadow: none !important;
+                      font-size: 1vw !important;
+                    }
+                    .ha-card {
+                      box-shadow: none !important;
+                      flex-flow: row-reverse !important;
+                      padding: 0 !important;
+                    }
+                    .weather__info--add{
+                      display : none !important;
+                    }
+                    .weather__info{
+                      flex-grow: 1;
+                      min-height: 0 !important;
+                      height: 25px !important;
+                      margin-left: 0.6vw;
+                      color: rgba(255, 255, 255, 0.7)
+                    }
+                }    
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/4
@@ -583,24 +607,23 @@ views:
             - entities:
                 - entity: sensor.ambient_light_calc
                   color: 'rgba(255,255,255,0.7)'
-                  name: Illumination
-                  smoothing: true
-                  aggregate_func: last
+                  name: Sunlight
+                  show_fill: false
+                  y_axis: secondary
                   unit: '%'
                 - entity: sensor.weather_temperature
                   name: Temperature
-                  smoothing: true
-                  aggregate_func: last
+                  show_fill: false
                   unit: '°C'
               color_thresholds:
-              - color: '#4dd2ff'
-                value: 10
-              - color: '#ffa31a'
-                value: 20
-              - color: '#ff1a1a'
-                value: 30
+                - color: '#4dd2ff'
+                  value: 10
+                - color: '#ffa31a'
+                  value: 20
+                - color: '#ff1a1a'
+                  value: 30
               hours_to_show: 24
-              points_per_hour: 60
+              points_per_hour: 2
               show:
                 icon: false
                 name: false
@@ -646,10 +669,17 @@ views:
                 .ellipsis {
                     color: rgba(255,255,255,0.7);
                 }
+                @media screen and (max-width: 900px) {
+                    .graph__legend {
+                        display: none !important;
+                    }
+                }
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/4
-              update_interval: 120
+              update_interval: 1800
+              lower_bound_secondary: 0
+              upper_bound_secondary: 100
               type: 'custom:mini-graph-card'
               
               #########################    Overlay shadow images    #########################
@@ -676,6 +706,124 @@ views:
               #########################   Styled now playing Media Player    #########################
               
               # when the media player is playing, this overlaps the "Media" menu button
+            - entity: media_player.living_room_tv
+              hide:
+                  controls: true
+                  name: true
+                  power: true
+                  source: true
+                  volume: true
+                  progress: true
+              idle_view:
+                  after: 0.1
+                  when_idle: true
+                  when_paused: true
+                  when_standby: true
+              style: |
+                  :host {
+                    left: 11.7%;
+                    top:  47.5%;
+                    width: 20.5%;
+                    border-radius: 5vw;
+                    overflow: hidden;
+                    height: 3.8vw;
+                    box-shadow: none !important;
+                  }
+                  ha-card {
+                    border-radius: 5vw;
+                    overflow: hidden !important;
+                    box-shadow: none !important;
+                    padding: 0.1vw 0.9vw 0.7vw 1.05vw !important;
+                  }
+                  ha-card.--inactive .mmp-player{
+                    opacity: 0 !important;
+                  }
+                  #primaryProgress{
+                    background: #474A52 !important; 
+                  }              
+                  .entity__info{
+                    height: 2.6vw;
+                    width: 65% !important;
+                    max-height: 20vw !important;
+                    font-size: 0.9vw !important;
+                    margin:0 0 0 1.04vw !important;
+                    display: inline-block !important;
+                  }
+                  div.mmp__bg{
+                    background: #1E2022;
+                  }
+                  ha-card.--inactive div.mmp__bg{
+                    background: none;
+                  }
+                  div.mmp-player {
+                    padding: 0vw;
+                    height: 100%;
+                  }
+                  ha-card {
+                    height: 100%;
+                  }
+                  mmp-powerstrip {
+                    width: 100%;
+                    display: block;
+                    padding:0;
+                  }
+                  ha-icon{
+                    display: block !important;
+                    height: 2vw !important;
+                    width: 2vw !important;
+                    margin: 0.3vw 1.5vw 0 0vw !important;
+                  }
+                  .entity__icon{
+                    float:right;
+                    padding: 0.1vw;
+                    width: 3vw !important;
+                    height: 3vw !important;
+                    min-width: 0 !important;
+                    min-height: 0 !important;
+                    margin:0 !important;
+                    display: inline-block !important;
+                  }
+                  .mmp-player__core {
+                    height: auto;
+                    width: 100% !important;
+                    margin-bottom: 0.1vw;
+                    display: block !important;
+                    position: absolute !important;
+                    bottom: 0;
+                  }
+                  .entity__info__media{
+                    max-height: 20vw !important;
+                  }
+                  .entity__info__media span::before{
+                    content: none !important
+                  }
+                  .attr__media_title{
+                    display:block;
+                    color: white;
+                    font-weight: 300;
+                    font-size: 1.2vw !important;
+                  }
+                  .attr__media_artist{
+                    font-size: 0.8vw !important;
+                    font-weight: 200;
+                    color: white;
+                  }
+                  .entity__artwork{
+                    display:inline-block;
+                    float: right;
+                    margin-right: 0 !important;
+                    display: inline-block;
+                    float: right;
+                    width: 2.2vw !important;
+                    height: 2.2vw !important;
+                    min-width: 0 !important;
+                    margin: 0.2vw 1vw 0 0 !important;
+                  }
+              tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/2
+              type: 'custom:mini-media-player'
+
 
 #############################################################################################################################################
 #                                                                                                                                           #
@@ -724,7 +872,7 @@ views:
                               service_data:
                                 entity_id: script.off_lights   
                           - entity: group.all_blinds
-                            icon: 'mdi:open-in-app'                          
+                            icon: 'mdi:blinds'                          
                             tap_action:
                               action: call-service
                               service: script.turn_on
@@ -757,21 +905,21 @@ views:
                           - entity: switch.cristo_light
                             icon: 'mdi:lamp'
                           - entity: switch.sonoff_1000d67323
-                            icon: 'mdi:open-in-app'
+                            icon: 'mdi:blinds'
                         title: Living Room
                     tileOnRow: 2
                   - column: 3
                     entities:
                       - entities:
                           - entity: switch.sonoff_1000d66ac3
-                            icon: 'mdi:open-in-app'
+                            icon: 'mdi:blinds'
                         title: Bedroom
                     tileOnRow: 1
                   - column: 4
                     entities:
                       - entities:
                           - entity: switch.sonoff_1000d66886
-                            icon: 'mdi:open-in-app'
+                            icon: 'mdi:blinds'
                         title: Kitchen
                     tileOnRow: 1
 
@@ -786,7 +934,7 @@ views:
             
 ##############################################################################
 #                                                                            #
-#                                   SIDEBAR                                  #
+#                           ALL DEVICES SIDEBAR                              #
 #                                                                            #
 ##############################################################################
 
@@ -874,6 +1022,31 @@ views:
                   height: 2vw !important;
                   flex: 0 0 2vw !important;
                 }
+                @media screen and (max-width: 900px) {  
+                    :host {
+                      left: 11.4%;
+                      top:  24%;
+                      width: 17%;
+                      overflow: hidden;
+                      box-shadow: none !important;
+                      font-size: 1vw !important;
+                    }
+                    .ha-card {
+                      box-shadow: none !important;
+                      flex-flow: row-reverse !important;
+                      padding: 0 !important;
+                    }
+                    .weather__info--add{
+                      display : none !important;
+                    }
+                    .weather__info{
+                      flex-grow: 1;
+                      min-height: 0 !important;
+                      height: 25px !important;
+                      margin-left: 0.6vw;
+                      color: rgba(255, 255, 255, 0.7)
+                    }
+                }   
             tap_action:
               action: navigate
               navigation_path: /lovelace/4
@@ -988,12 +1161,13 @@ views:
           - entities:
               - entity: sensor.ambient_light_calc
                 color: 'rgba(255,255,255,0.7)'
-                name: Illumination
-                smoothing: true
+                name: Sunlight
+                show_fill: false
+                y_axis: secondary
                 unit: '%'
               - entity: sensor.weather_temperature
                 name: Temperature
-                smoothing: true
+                show_fill: false
                 unit: '°C'
             color_thresholds:
             - color: '#4dd2ff'
@@ -1003,7 +1177,7 @@ views:
             - color: '#ff1a1a'
               value: 30
             hours_to_show: 24
-            points_per_hour: 60
+            points_per_hour: 2
             show:
               icon: false
               name: false
@@ -1049,10 +1223,17 @@ views:
                 .ellipsis {
                     color: rgba(255,255,255,0.7);
                 }
+                @media screen and (max-width: 900px) {
+                    .graph__legend {
+                        display: none !important;
+                    }
+                }
             tap_action:
               action: navigate
               navigation_path: /lovelace/4
-            update_interval: 120
+            update_interval: 1800
+            upper_bound_secondary: 100
+            lower_bound_secondary: 0
             type: 'custom:mini-graph-card'
               
               #########################    Overlay shadow images    #########################
@@ -1079,7 +1260,123 @@ views:
               #########################   Styled now playing Media Player    #########################
               
               # when the media player is playing, this overlaps the "Media" menu button
-              
+          - entity: media_player.living_room_tv
+            hide:
+              controls: true
+              name: true
+              power: true
+              source: true
+              volume: true
+              progress: true
+            idle_view:
+              after: 0.1
+              when_idle: true
+              when_paused: true
+              when_standby: true
+            style: |
+              :host {
+                left: 11.7%;
+                top:  47.5%;
+                width: 20.5%;
+                border-radius: 5vw;
+                overflow: hidden;
+                height: 3.8vw;
+                box-shadow: none !important;
+              }
+              ha-card {
+                border-radius: 5vw;
+                overflow: hidden !important;
+                box-shadow: none !important;
+                padding: 0.1vw 0.9vw 0.7vw 1.05vw !important;
+              }
+              ha-card.--inactive .mmp-player{
+                opacity: 0 !important;
+              }
+              #primaryProgress{
+                background: #474A52 !important; 
+              }              
+              .entity__info{
+                height: 2.6vw;
+                width: 65% !important;
+                max-height: 20vw !important;
+                font-size: 0.9vw !important;
+                margin:0 0 0 1.04vw !important;
+                display: inline-block !important;
+              }
+              div.mmp__bg{
+                background: #1E2022;
+              }
+              ha-card.--inactive div.mmp__bg{
+                background: none;
+              }
+              div.mmp-player {
+                padding: 0vw;
+                height: 100%;
+              }
+              ha-card {
+                height: 100%;
+              }
+              mmp-powerstrip {
+                width: 100%;
+                display: block;
+                padding:0;
+              }
+              ha-icon{
+                display: block !important;
+                height: 2vw !important;
+                width: 2vw !important;
+                margin: 0.3vw 1.5vw 0 0vw !important;
+              }
+              .entity__icon{
+                float:right;
+                padding: 0.1vw;
+                width: 3vw !important;
+                height: 3vw !important;
+                min-width: 0 !important;
+                min-height: 0 !important;
+                margin:0 !important;
+                display: inline-block !important;
+              }
+              .mmp-player__core {
+                height: auto;
+                width: 100% !important;
+                margin-bottom: 0.1vw;
+                display: block !important;
+                position: absolute !important;
+                bottom: 0;
+              }
+              .entity__info__media{
+                max-height: 20vw !important;
+              }
+              .entity__info__media span::before{
+                content: none !important
+              }
+              .attr__media_title{
+                display:block;
+                color: white;
+                font-weight: 300;
+                font-size: 1.2vw !important;
+              }
+              .attr__media_artist{
+                font-size: 0.8vw !important;
+                font-weight: 200;
+                color: white;
+              }
+              .entity__artwork{
+                display:inline-block;
+                float: right;
+                margin-right: 0 !important;
+                display: inline-block;
+                float: right;
+                width: 2.2vw !important;
+                height: 2.2vw !important;
+                min-width: 0 !important;
+                margin: 0.2vw 1vw 0 0 !important;
+              }
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/2
+            type: 'custom:mini-media-player'
 #############################################################################################################################################
 #                                                                                                                                           #
 #                                                   Media View                                               #
@@ -1087,7 +1384,7 @@ views:
 #############################################################################################################################################              
 
   - title: Media kiosk
-    icon: 'mdi:floor-plan'
+    icon: 'mdi:play-circle-outline'
     id: kiosk_media
     panel: true
     background: 'rgba(42, 46, 48, 1)'
@@ -1104,20 +1401,11 @@ views:
 
       - type: "custom:config-template-card"
         entities:
-          - light.graeme_s_lamp
-          - light.carol_s_lamp
-          - switch.cristo_light
           - media_player.living_room_tv
-          - switch.sonoff_1000d66ac3 
-          - input_boolean.living_room_blinds
-          - input_boolean.kitchen_blinds
-          - input_number.daylight_tester
-          - sun.sun
-          - sensor.time
 
 
         card:    
-#######################   Picture Elements Card    ############################
+####################    TV LAYOUT    #########################
           type: 'custom:hui-element'  
           card_type: 'picture-elements'
           image: /local/tv.png
@@ -1131,10 +1419,19 @@ views:
               icon: mdi:google-chrome
               group: true
               artwork: cover
+              info: scroll
+              volume_stateless: true
+              idle_view:
+                  after: 2
+                  when_idle: true
+                  when_paused: false
+                  when_standby: true
               hide:
                 volume: false
                 source: false
                 power_state: false
+                artwork_border: false
+                runtime: false
               style: |
                   :host {
                   background: rgba(0, 0, 0, 0)  !important;
@@ -1145,20 +1442,20 @@ views:
                   .mmp-player__core {
                       margin-bottom: 41% !important;
                   }
-                  #sliderBar {
-                      width:10%;
+                  #sliderContainer {
+                      width: 25% !important;
                   }
               scale: 1.5
               mini-media-player-base-color: 'rgba(255,255,255,0.7)'
               mini-media-player-icon-color: 'rgba(255,255,255,0.7)'
 
     
-####################    TV LAYOUT    #########################
+
 
               
 ##############################################################################
 #                                                                            #
-#                                   SIDEBAR                                  #
+#                                MEDIA SIDEBAR                               #
 #                                                                            #
 ##############################################################################
 
@@ -1247,6 +1544,31 @@ views:
                   height: 2vw !important;
                   flex: 0 0 2vw !important;
                 }
+                @media screen and (max-width: 900px) {  
+                    :host {
+                      left: 11.4%;
+                      top:  24%;
+                      width: 17%;
+                      overflow: hidden;
+                      box-shadow: none !important;
+                      font-size: 1vw !important;
+                    }
+                    .ha-card {
+                      box-shadow: none !important;
+                      flex-flow: row-reverse !important;
+                      padding: 0 !important;
+                    }
+                    .weather__info--add{
+                      display : none !important;
+                    }
+                    .weather__info{
+                      flex-grow: 1;
+                      min-height: 0 !important;
+                      height: 25px !important;
+                      margin-left: 0.6vw;
+                      color: rgba(255, 255, 255, 0.7)
+                    }
+                }   
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/4
@@ -1364,12 +1686,13 @@ views:
             - entities:
                 - entity: sensor.ambient_light_calc
                   color: 'rgba(255,255,255,0.7)'
-                  name: Illumination
-                  smoothing: true
+                  name: Sunlight
+                  show_fill: false
+                  y_axis: secondary
                   unit: '%'
                 - entity: sensor.weather_temperature
                   name: Temperature
-                  smoothing: true
+                  show_fill: false                  
                   unit: '°C'
               color_thresholds:
               - color: '#4dd2ff'
@@ -1379,7 +1702,8 @@ views:
               - color: '#ff1a1a'
                 value: 30
               hours_to_show: 24
-              points_per_hour: 60
+              points_per_hour: 2
+              smoothing: true
               show:
                 icon: false
                 name: false
@@ -1425,10 +1749,17 @@ views:
                 .ellipsis {
                     color: rgba(255,255,255,0.7);
                 }
+                @media screen and (max-width: 900px) {
+                    .graph__legend {
+                        display: none !important;
+                    }
+                }
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/4
-              update_interval: 120
+              update_interval: 1800
+              upper_bound_secondary: 100
+              lower_bound_secondary: 0
               type: 'custom:mini-graph-card'
               
               #########################    Overlay shadow images    #########################
@@ -1455,8 +1786,131 @@ views:
               #########################   Styled now playing Media Player    #########################
               
               # when the media player is playing, this overlaps the "Media" menu button
+            - entity: media_player.all
+              hide:
+                  controls: true
+                  name: true
+                  power: true
+                  source: true
+                  volume: true
+                  progress: true
+              idle_view:
+                  after: 0.1
+                  when_idle: true
+                  when_paused: true
+                  when_standby: true
+              style: |
+                  :host {
+                    left: 11.7%;
+                    top:  47.5%;
+                    width: 20.5%;
+                    border-radius: 5vw;
+                    overflow: hidden;
+                    height: 3.8vw;
+                    box-shadow: none !important;
+                    background: none !important;
+                  }
+                  ha-card {
+                    border-radius: 5vw;
+                    overflow: hidden !important;
+                    box-shadow: none !important;
+                    padding: 0.1vw 0.9vw 0.7vw 1.05vw !important;
+                    background: none !important;
+                  }
+                  ha-card.--inactive .mmp-player{
+                    opacity: 0 !important;
+                  }
+                  #primaryProgress{
+                    background: #474A52 !important; 
+                  }              
+                  .entity__info{
+                    height: 2.6vw;
+                    width: 65% !important;
+                    max-height: 20vw !important;
+                    font-size: 0.9vw !important;
+                    margin:0 0 0 1.04vw !important;
+                    display: inline-block !important;
+                  }
+                  div.mmp__bg{
+                    background: #2a2e30;
+                    font-weight: 200;
+                  }
+                  ha-card.--inactive div.mmp__bg{
+                    background: none;
+                  }
+                  div.mmp-player {
+                    padding: 0vw;
+                    height: 100%;
+                  }
+                  ha-card {
+                    height: 100%;
+                  }
+                  mmp-powerstrip {
+                    width: 100%;
+                    display: block;
+                    padding:0;
+                  }
+                  ha-icon{
+                    display: block !important;
+                    height: 2vw !important;
+                    width: 2vw !important;
+                    margin: 0.3vw 1.5vw 0 0vw !important;
+                  }
+                  .entity__icon{
+                    float:right;
+                    padding: 0.1vw;
+                    width: 3vw !important;
+                    height: 3vw !important;
+                    min-width: 0 !important;
+                    min-height: 0 !important;
+                    margin:0 !important;
+                    display: inline-block !important;
+                  }
+                  .mmp-player__core {
+                    height: auto;
+                    width: 100% !important;
+                    margin-bottom: 0.1vw;
+                    display: block !important;
+                    position: absolute !important;
+                    bottom: 0;
+                  }
+                  .entity__info__media{
+                    max-height: 20vw !important;
+                  }
+                  .entity__info__media span::before{
+                    content: none !important
+                  }
+                  .attr__media_title{
+                    display:block;
+                    color: white;
+                    font-weight: 400;
+                    font-size: 1.2vw !important;
+                  }
+                  .attr__media_artist{
+                    font-size: 0.8vw !important;
+                    font-weight: 300;
+                    color: white;
+                  }
+                  .entity__artwork{
+                    display:inline-block;
+                    float: right;
+                    margin-right: 0 !important;
+                    display: inline-block;
+                    float: right;
+                    width: 2.2vw !important;
+                    height: 2.2vw !important;
+                    min-width: 0 !important;
+                    margin: 0.2vw 1vw 0 0 !important;
+                  }
+              tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/2
+              type: 'custom:mini-media-player'
+              
+##########################    DEBUG PAGE    ####################################              
+              
   - title: DEBUG
-    icon: 'mdi:floor-plan'
+    icon: 'mdi:bug'
     id: kiosk_media
     panel: true
     background: 'rgba(42, 46, 48, 1)'
