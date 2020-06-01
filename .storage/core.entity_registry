@@ -472,7 +472,7 @@
                 "unit_of_measurement": "pending update(s)"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "92a1de24be754b2986572103aaa6d43d",
                 "device_class": "battery",
                 "device_id": "ad95d9298f504875b76dc5836f8e541b",
@@ -488,7 +488,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "92a1de24be754b2986572103aaa6d43d",
                 "device_class": "battery",
                 "device_id": "ad95d9298f504875b76dc5836f8e541b",
@@ -504,7 +504,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "92a1de24be754b2986572103aaa6d43d",
                 "device_class": null,
                 "device_id": "ad95d9298f504875b76dc5836f8e541b",
@@ -512,7 +512,7 @@
                 "entity_id": "sensor.mi_9_lite_wifi_connection",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:wifi-strength-off",
+                "original_icon": "mdi:wifi-strength-3",
                 "original_name": "Mi 9 Lite Wifi Connection",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -520,7 +520,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "92a1de24be754b2986572103aaa6d43d",
                 "device_class": null,
                 "device_id": "ad95d9298f504875b76dc5836f8e541b",
@@ -533,6 +533,54 @@
                 "platform": "mobile_app",
                 "supported_features": 0,
                 "unique_id": "afb2a5b5670fa4c85ac49fd704db688a3a01957e14bc32b0e659f9236e1d5162_geocoded_location",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "fbb7cc6d57754a6fa387a4fdafdd8889",
+                "device_class": null,
+                "device_id": "111a7b806c40408ab3306322220b9320",
+                "disabled_by": null,
+                "entity_id": "device_tracker.mi_phone_2",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Mi_Phone",
+                "platform": "mobile_app",
+                "supported_features": 0,
+                "unique_id": "dda98f06ec8945759074e914e74754cd",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "automation.new_automation",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Open Blinds Mon-Fri",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "1590765489156",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "automation.open_blinds_sat_sun",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Open Blinds Sat-Sun",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "1590765489157",
                 "unit_of_measurement": null
             }
         ]

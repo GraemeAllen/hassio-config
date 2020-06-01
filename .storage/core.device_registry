@@ -140,6 +140,26 @@
                 "name_by_user": null,
                 "sw_version": "0.24.5",
                 "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "fbb7cc6d57754a6fa387a4fdafdd8889"
+                ],
+                "connections": [],
+                "id": "111a7b806c40408ab3306322220b9320",
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "dda98f06ec8945759074e914e74754cd"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "pyxis",
+                "name": "Mi_Phone",
+                "name_by_user": null,
+                "sw_version": "10",
+                "via_device_id": null
             }
         ]
     },

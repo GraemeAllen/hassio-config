@@ -15,7 +15,23 @@ close_blinds:
     data:
       entity_id: switch.sonoff_1000d66886
       
-
+open_blinds:
+  alias: Open All Blinds
+  sequence:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.sonoff_1000d66ac3
+  - delay:
+      seconds: 2
+  - service: switch.turn_on
+    data:
+      entity_id: switch.sonoff_1000d67323
+  - delay:
+      seconds: 2
+  - service: switch.turn_on
+    data:
+      entity_id: switch.sonoff_1000d66886
+      
 off_lights:
   alias: Turn off lights
   sequence:

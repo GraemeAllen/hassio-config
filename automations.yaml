@@ -61,3 +61,34 @@
     state: home
   action:
   - scene: scene.carol_work
+- id: '1590765489156'
+  alias: Open Blinds Mon-Fri
+  description: ''
+  trigger:
+  - at: 06:20:00
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - data: {}
+    service: script.open_blinds
+- id: '1590765489157'
+  alias: Open Blinds Sat-Sun
+  description: ''
+  trigger:
+  - at: 08:00:00
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - sat
+    - sun
+  action:
+  - data: {}
+    service: script.open_blinds

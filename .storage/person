@@ -3,7 +3,8 @@
         "items": [
             {
                 "device_trackers": [
-                    "device_tracker.mi_9_lite"
+                    "device_tracker.mi_9_lite",
+                    "device_tracker.mi_phone_2"
                 ],
                 "id": "graeme",
                 "name": "Graeme",
