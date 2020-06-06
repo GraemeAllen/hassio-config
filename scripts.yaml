@@ -1,36 +1,37 @@
 close_blinds:
   alias: Close All Blinds
   sequence:
-  - service: switch.turn_off
+  - service: cover.close_cover
     data:
-      entity_id: switch.sonoff_1000d66ac3
+      entity_id: cover.sonoff_1000d66ac3
   - delay:
       seconds: 2
-  - service: switch.turn_off
+  - service: cover.close_cover
     data:
-      entity_id: switch.sonoff_1000d67323
+      entity_id: cover.sonoff_1000d67323
   - delay:
       seconds: 2
-  - service: switch.turn_off
+  - service: cover.close_cover
     data:
-      entity_id: switch.sonoff_1000d66886
+      entity_id: cover.sonoff_1000d66886
       
 open_blinds:
   alias: Open All Blinds
   sequence:
-  - service: switch.turn_on
+  - service: cover.set_cover_position
     data:
-      entity_id: switch.sonoff_1000d66ac3
+      entity_id: cover.sonoff_1000d66ac3
+      position: 50
   - delay:
       seconds: 2
-  - service: switch.turn_on
+  - service: cover.open_cover
     data:
-      entity_id: switch.sonoff_1000d67323
+      entity_id: cover.sonoff_1000d67323
   - delay:
       seconds: 2
-  - service: switch.turn_on
+  - service: cover.open_cover
     data:
-      entity_id: switch.sonoff_1000d66886
+      entity_id: cover.sonoff_1000d66886
       
 off_lights:
   alias: Turn off lights
@@ -57,19 +58,19 @@ off_all:
   - service: light.turn_off
     data:
       entity_id: light.carol_s_lamp
-  - service: switch.turn_off
+  - service: cover.close_cover
     data:
-      entity_id: switch.sonoff_1000d66ac3
+      entity_id: cover.sonoff_1000d66ac3
   - delay:
       seconds: 2
-  - service: switch.turn_off
+  - service: cover.close_cover
     data:
-      entity_id: switch.sonoff_1000d67323
+      entity_id: cover.sonoff_1000d67323
   - delay:
       seconds: 2
-  - service: switch.turn_off
+  - service: cover.close_cover
     data:
-      entity_id: switch.sonoff_1000d66886           
+      entity_id: cover.sonoff_1000d66886           
       
       
 alarm:

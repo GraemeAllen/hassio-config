@@ -4,15 +4,15 @@
       - light.graeme_s_lamp
       - light.carol_s_lamp
       - switch.cristo_light
-      - switch.sonoff_1000d67323
+      - cover.sonoff_1000d67323
   bedroom:
     name: Bedroom
     entities:
-      - switch.sonoff_1000d66ac3
+      - cover.sonoff_1000d66ac3
   kitchen:
     name: Kitchen
     entities:
-      - switch.sonoff_1000d66886
+      - cover.sonoff_1000d66886
   all_lights:
     name: All Lights
     entities:
@@ -22,18 +22,18 @@
   all_blinds:
     name: All Blinds
     entities:
-      - switch.sonoff_1000d66ac3
-      - switch.sonoff_1000d66886
-      - switch.sonoff_1000d67323
+      - cover.sonoff_1000d66ac3
+      - cover.sonoff_1000d66886
+      - cover.sonoff_1000d67323
   all_devices:
     name: All Devices
     entities:
       - light.graeme_s_lamp
       - light.carol_s_lamp
       - switch.cristo_light
-      - switch.sonoff_1000d66ac3
-      - switch.sonoff_1000d66886
-      - switch.sonoff_1000d67323
+      - cover.sonoff_1000d66ac3
+      - cover.sonoff_1000d66886
+      - cover.sonoff_1000d67323
   media:
     name: Media
     entities:

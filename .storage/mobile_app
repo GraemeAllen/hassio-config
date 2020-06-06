@@ -130,9 +130,9 @@
                     "ip_address": "192.168.1.68",
                     "is_hidden": false,
                     "link_speed": 325,
-                    "signal_level": -50
+                    "signal_level": -61
                 },
-                "icon": "mdi:wifi-strength-3",
+                "icon": "mdi:wifi-strength-2",
                 "name": "Wifi Connection",
                 "state": "The Force",
                 "type": "sensor",

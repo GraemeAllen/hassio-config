@@ -755,3 +755,663 @@ pyHS100.smartdevice.SmartDeviceException: Communication error
 2020-06-06 19:28:52 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
 2020-06-06 19:28:52 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
 2020-06-06 19:29:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:30:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:31:01 WARNING (SyncWorker_0) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:31:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:31:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:31:01 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:31:27 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:31:27 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:32:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:20 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:20 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:21 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:21 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:22 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:22 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:23 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:52 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:52 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:52 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:52 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:32:52 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:33:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:34:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:53 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:55 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:35:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:57 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:35:57 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:06 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:06 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:07 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:07 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:14 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:14 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:15 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:16 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:16 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:16 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:17 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:17 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:22 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:23 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:28 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:28 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:30 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:30 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:33 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:33 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:34 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:34 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:42 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:42 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:36:53 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:53 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:53 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:53 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:57 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:57 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:36:58 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:37:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:37:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:37:44 WARNING (SyncWorker_11) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:37:44 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:37:44 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:37:44 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:00 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:11 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:11 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:38:11 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:38:48 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:15 WARNING (SyncWorker_19) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:39:15 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:15 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:15 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:39:29 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:29 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:29 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:30 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:30 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:30 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:30 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:30 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:43 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:43 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:43 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:39:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:57 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:57 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:57 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:57 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:57 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:39:57 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:06 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:06 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:06 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:06 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:06 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:06 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:06 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:06 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:19 WARNING (SyncWorker_6) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:40:19 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:19 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:19 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:40:45 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:45 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:45 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:40:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:40:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:41:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:41:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:41:50 WARNING (SyncWorker_9) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:41:50 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:41:50 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:41:50 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:42:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:42:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:42:18 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:42:18 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:42:18 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:43:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:43:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:43:25 WARNING (SyncWorker_3) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:43:25 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:43:25 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:43:25 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:15 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:15 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:16 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:16 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:17 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:17 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:17 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:18 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:18 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:19 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:20 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:22 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:22 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:22 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:44:22 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:23 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:23 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:54 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:55 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:44:56 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:45:01 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:45:29 WARNING (SyncWorker_15) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:45:29 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:45:41 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:45:41 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:45:55 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:46:01 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/devices/dashboard:0:0 ResizeObserver loop limit exceeded
+2020-06-06 19:46:31 WARNING (SyncWorker_10) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:46:31 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:47:28 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:48:35 WARNING (SyncWorker_6) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:48:35 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:49:01 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:02 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:03 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2020-06-06 19:50:04 WARNING (MainThread) [homeassistant.components.media_player] The websocket command media_player_thumbnail is deprecated. Use /api/media_player_proxy instead.
+2020-06-06 19:50:09 WARNING (SyncWorker_8) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:50:09 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:50:35 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:52:13 WARNING (SyncWorker_16) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:52:13 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:52:17 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
+2020-06-06 19:52:39 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:53:41 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
+2020-06-06 19:54:17 WARNING (SyncWorker_1) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:54:17 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:54:43 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:55:02 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/script/dashboard:0:0 ResizeObserver loop limit exceeded
+2020-06-06 19:55:19 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
+2020-06-06 19:56:51 WARNING (SyncWorker_7) [homeassistant.components.tplink.switch] Could not read state for 192.168.1.74: Communication error
+2020-06-06 19:56:51 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-06 19:57:17 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
