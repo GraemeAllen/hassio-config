@@ -8,7 +8,9 @@
     to: playing
   condition: []
   action:
-  - scene: scene.watching_tv
+  - condition: state
+    entity_id: input_boolean.television
+    state: '''on'''
 - id: '1589212835864'
   alias: Turn on lights at sunset
   description: ''
@@ -28,7 +30,9 @@
     to: idle
   condition: []
   action:
-  - scene: scene.evening
+  - condition: state
+    entity_id: input_boolean.television
+    state: '''off'''
 - id: '1589822448722'
   alias: Graeme computer light
   description: ''
@@ -65,7 +69,7 @@
   alias: Open Blinds Mon-Fri
   description: ''
   trigger:
-  - at: 06:20:00
+  - at: 07:00:00
     platform: time
   condition:
   - condition: time
@@ -76,8 +80,17 @@
     - thu
     - fri
   action:
+  - data: {postition: 50}
+    entity_id: cover.sonoff_1000d66ac3
+    service: cover.set_cover_position
+  - delay: '2'
   - data: {}
-    service: script.open_blinds
+    entity_id: cover.sonoff_1000d66886
+    service: cover.open_cover
+  - delay: '2'
+  - data: {}
+    entity_id: cover.sonoff_1000d67323
+    service: cover.open_cover
 - id: '1590765489157'
   alias: Open Blinds Sat-Sun
   description: ''
@@ -90,5 +103,14 @@
     - sat
     - sun
   action:
+  - data: {postition: 50}
+    entity_id: cover.sonoff_1000d66ac3
+    service: cover.set_cover_position
+  - delay: '2'
   - data: {}
-    service: script.open_blinds
+    entity_id: cover.sonoff_1000d66886
+    service: cover.open_cover
+  - delay: '2'
+  - data: {}
+    entity_id: cover.sonoff_1000d67323
+    service: cover.open_cover

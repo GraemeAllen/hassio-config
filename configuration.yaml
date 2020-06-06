@@ -10,10 +10,7 @@ http:
 # Text to speech
 tts:
   - platform: google_translate
-namecheapdns:
-  domain: hab11.com
-  password: secret! namecheap
-  
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -37,13 +34,9 @@ google_assistant:
     - light
 
 sonoff:
-  username: graemejallen83@gmail.com
+  username: graeme@ibconsult.co.uk
   password: !secret sonoff
-  scan_interval: 60 #(optional, lower values than 60 won't work anymore!)
-  grace_period: 600 #(optional)
-  api_region: 'eu' #(optional)
-  entity_prefix: True #(optional)
-  debug: false #(optional)
+  #reload: always
   
 ####################################################################################### 
 ## Templates (Used for updating text in the UI and converting sensors to CSS values )
@@ -60,6 +53,24 @@ sensor:
       - 'time_date'
       - 'time_utc'
       - 'beat'
+      
+  - platform: random
+    name: 'tv_colour'
+    scan_interval: 10
+    maximum: 360
+    minimum: 0      
+      
+  - platform: random
+    name: 'graeme_laptop_colour'
+    scan_interval: 10
+    maximum: 360
+    minimum: 0    
+    
+  - platform: random
+    name: 'carol_laptop_colour'
+    scan_interval: 10
+    maximum: 360
+    minimum: 0        
       
   - platform: template
     sensors:  
@@ -81,7 +92,23 @@ sensor:
         
       ambient_light_calc:
         friendly_name: 'Calculated Ambient Light'
-        value_template: '{{ ((30 + states.sun.sun.attributes.elevation | float ) * (1 - ((states.sensor.weather_low_clouds.state | float / 100) + (states.sensor.weather_medium_clouds.state | float / 150) + (states.sensor.weather_high_clouds.state | float / 200)))) |float|round(1) }}'
+        value_template: '{{ ((18 + states.sun.sun.attributes.elevation | float ) * (1 - ((states.sensor.weather_cloudiness.state | float / 150)))) |float|round(1) }}'
+
+      brightness:
+        friendly_name: 'Ambient plus offset'
+        value_template: '{{(states.sensor.ambient_light_calc.state | float) + (states.input_number.daylight_tester.state | float)}}'
+
+      living_room_brightness:
+        friendly_name: 'Living room brightness'
+        value_template: '{{(states.sensor.brightness.state | float) * (states.cover.sonoff_1000d67323.attributes.current_position | float / 100) |float|round(1)}}'
+     
+      bedroom_brightness:
+        friendly_name: 'Bedroom brightness'
+        value_template: '{{(states.sensor.brightness.state | float) * (states.cover.sonoff_1000d66ac3.attributes.current_position | float / 100) |float|round(1)}}'     
+ 
+      kitchen_brightness:
+        friendly_name: 'Kitchen brightness'
+        value_template: '{{(states.sensor.brightness.state | float) * (states.cover.sonoff_1000d66886.attributes.current_position | float / 100) |float|round(1)}}'
 
 ## Weather
 
@@ -147,11 +174,10 @@ input_number:
 #######################################################################################
   daylight_tester:
     name: brightness
-    initial: 100
-    min: 0
+    initial: 0
+    min: -100
     max: 100
     step: 1
     
 
-    
 
