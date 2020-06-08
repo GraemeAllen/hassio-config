@@ -1,0 +1,49 @@
+{
+    "data": {
+        "binary_sensor": [
+            {
+                "device_class": "motion",
+                "is_status_binary_sensor": false,
+                "key": 842828748,
+                "name": "Living Room PIR",
+                "object_id": "living_room_pir",
+                "unique_id": "sensor_node2binary_sensorliving_room_pir"
+            }
+        ],
+        "device_info": {
+            "compilation_time": "Jun  8 2020, 19:05:03",
+            "esphome_version": "1.14.4",
+            "has_deep_sleep": false,
+            "mac_address": "F4:CF:A2:D8:25:B1",
+            "model": "PLATFORMIO_ESP01_1M",
+            "name": "sensor_node2",
+            "uses_password": false
+        },
+        "sensor": [
+            {
+                "accuracy_decimals": 1,
+                "force_update": false,
+                "icon": "mdi:thermometer",
+                "key": 920924750,
+                "name": "Inside Temperature",
+                "object_id": "inside_temperature",
+                "unique_id": "sensor_node2sensorinside_temperature",
+                "unit_of_measurement": "\u00b0C"
+            },
+            {
+                "accuracy_decimals": 0,
+                "force_update": false,
+                "icon": "mdi:water-percent",
+                "key": 847076999,
+                "name": "Inside Humidity",
+                "object_id": "inside_humidity",
+                "unique_id": "sensor_node2sensorinside_humidity",
+                "unit_of_measurement": "%"
+            }
+        ],
+        "services": [],
+        "text_sensor": []
+    },
+    "key": "esphome.20e07efb3ca34182a079e3e929c1537c",
+    "version": 1
+}

@@ -65,11 +65,11 @@
     state: home
   action:
   - scene: scene.carol_work
-- id: '1590765489156'
+- id: '1590765489158'
   alias: Open Blinds Mon-Fri
   description: ''
   trigger:
-  - at: 07:00:00
+  - at: '20:59:00'
     platform: time
   condition:
   - condition: time
@@ -81,7 +81,7 @@
     - fri
   action:
   - data: {}
-    service: script.open_blinds
+    service: script.wake_up
 - id: '1590765489157'
   alias: Open Blinds Sat-Sun
   description: ''
@@ -95,4 +95,63 @@
     - sun
   action:
   - data: {}
-    service: script.open_blinds
+    service: script.wake_up
+- id: '1591640831293'
+  alias: Wake Up 2
+  description: ''
+  trigger:
+  - device_id: a70875db160c49319a6cb6f92bb81119
+    domain: binary_sensor
+    entity_id: binary_sensor.living_room_pir_2
+    platform: device
+    type: motion
+  condition:
+  - condition: state
+    entity_id: input_boolean.blinds_primed
+    state: 'on'
+  action:
+  - data: {}
+    service: script.Wake_up_2
+- id: '1591645794362'
+  alias: Cristo light motion
+  description: ''
+  trigger:
+  - device_id: a70875db160c49319a6cb6f92bb81119
+    domain: binary_sensor
+    entity_id: binary_sensor.living_room_pir_2
+    platform: device
+    type: motion
+  condition:
+  - condition: device
+    device_id: f09cf8edf8944505a265dd63eafc7ba6
+    domain: light
+    entity_id: light.graeme_s_lamp
+    type: is_off
+  - condition: device
+    device_id: 8e00d81156f2483280581309593be0e7
+    domain: light
+    entity_id: light.carol_s_lamp
+    type: is_off
+  - condition: device
+    device_id: f253075c95a048228183a8f3495349e1
+    domain: media_player
+    entity_id: media_player.living_room_tv
+    type: is_off
+  - condition: or
+    conditions:
+    - after: sunset
+      before: sunrise
+      condition: sun
+    - condition: state
+      entity_id: cover.sonoff_1000d67323
+      state: closed
+  action:
+  - device_id: 6aed5e2038814e7cbf5f43ec238a4691
+    domain: switch
+    entity_id: switch.cristo_light
+    type: turn_on
+  - delay: '[object Object]'
+  - device_id: 6aed5e2038814e7cbf5f43ec238a4691
+    domain: switch
+    entity_id: switch.cristo_light
+    type: turn_off

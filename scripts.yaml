@@ -14,7 +14,6 @@ close_blinds:
   - service: cover.close_cover
     data:
       entity_id: cover.sonoff_1000d66886
-      
 open_blinds:
   alias: Open All Blinds
   sequence:
@@ -32,7 +31,6 @@ open_blinds:
   - service: cover.open_cover
     data:
       entity_id: cover.sonoff_1000d66886
-      
 off_lights:
   alias: Turn off lights
   sequence:
@@ -45,7 +43,6 @@ off_lights:
   - service: light.turn_off
     data:
       entity_id: light.carol_s_lamp
-           
 off_all:
   alias: Turn off Everything
   sequence:
@@ -70,98 +67,141 @@ off_all:
       seconds: 2
   - service: cover.close_cover
     data:
-      entity_id: cover.sonoff_1000d66886           
-      
-      
+      entity_id: cover.sonoff_1000d66886
 alarm:
   alias: Alarm
   sequence:
-  - service: media_player.play_media 
-    data_template:                 
+  - service: media_player.play_media
+    data_template:
       entity_id: media_player.living_room_speaker
       volume_level: 0.9
       media_content_id: https://death-star.duckdns.org/local/alarm.mp3
-      media_content_type: 'audio/mp3' 
+      media_content_type: audio/mp3
   - service: script.turn_on
-    entity_id: script.off_lights   
+    entity_id: script.off_lights
   - service: script.turn_on
-    entity_id: script.close_blinds 
+    entity_id: script.close_blinds
   - service: light.turn_on
     data:
       entity_id: light.graeme_s_lamp
-      rgb_color: [255,0,0]
+      rgb_color:
+      - 255
+      - 0
+      - 0
   - delay:
-      seconds: 1  
+      seconds: 1
   - service: light.turn_off
     data:
       entity_id: light.graeme_s_lamp
   - delay:
-      seconds: 0.5      
+      seconds: 0.5
   - service: light.turn_on
     data:
       entity_id: light.graeme_s_lamp
-      rgb_color: [255,0,0]
+      rgb_color:
+      - 255
+      - 0
+      - 0
   - delay:
-      seconds: 1  
+      seconds: 1
   - service: light.turn_off
     data:
       entity_id: light.graeme_s_lamp
   - delay:
-      seconds: 0.5    
+      seconds: 0.5
   - service: light.turn_on
     data:
       entity_id: light.graeme_s_lamp
-      rgb_color: [255,0,0]
+      rgb_color:
+      - 255
+      - 0
+      - 0
   - delay:
-      seconds: 1  
+      seconds: 1
   - service: light.turn_off
     data:
       entity_id: light.graeme_s_lamp
   - delay:
-      seconds: 0.5    
+      seconds: 0.5
   - service: light.turn_on
     data:
       entity_id: light.graeme_s_lamp
-      rgb_color: [255,0,0]
+      rgb_color:
+      - 255
+      - 0
+      - 0
   - delay:
-      seconds: 1  
+      seconds: 1
   - service: light.turn_off
     data:
       entity_id: light.graeme_s_lamp
   - delay:
-      seconds: 0.5    
+      seconds: 0.5
   - service: light.turn_on
     data:
       entity_id: light.graeme_s_lamp
-      rgb_color: [255,0,0]
+      rgb_color:
+      - 255
+      - 0
+      - 0
   - delay:
-      seconds: 1  
+      seconds: 1
   - service: light.turn_off
     data:
       entity_id: light.graeme_s_lamp
   - delay:
-      seconds: 0.5    
+      seconds: 0.5
   - service: light.turn_on
     data:
       entity_id: light.graeme_s_lamp
-      rgb_color: [255,0,0]
+      rgb_color:
+      - 255
+      - 0
+      - 0
   - delay:
-      seconds: 1  
+      seconds: 1
   - service: light.turn_off
     data:
       entity_id: light.graeme_s_lamp
   - delay:
-      seconds: 0.5    
+      seconds: 0.5
   - service: light.turn_on
     data:
       entity_id: light.graeme_s_lamp
-      rgb_color: [255,0,0]
+      rgb_color:
+      - 255
+      - 0
+      - 0
   - delay:
-      seconds: 1  
+      seconds: 1
   - service: light.turn_off
     data:
       entity_id: light.graeme_s_lamp
-  - service: media_player.play_media 
-    data_template:                 
+  - service: media_player.play_media
+    data_template:
       entity_id: media_player.living_room_speaker
-      volume_level: 0.2  
+      volume_level: 0.2
+wake_up:
+  alias: Wake Up
+  sequence:
+  - service: cover.set_cover_position
+    data:
+      entity_id: cover.sonoff_1000d66ac3
+      position: 50
+  - data: {}
+    entity_id: input_boolean.blinds_primed
+    service: input_boolean.turn_on
+wake_up_2:
+  alias: Wake Up 2
+  sequence:
+  - data: 
+      entity_id: cover.sonoff_1000d67323
+    service: cover.open_cover
+  - delay: 
+      seconds: 2
+  - data:
+      entity_id: cover.sonoff_1000d66886
+    service: cover.open_cover
+  - data:
+      entity_id: input_boolean.blinds_primed
+    service: input_boolean.turn_off

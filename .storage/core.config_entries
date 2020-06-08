@@ -162,6 +162,42 @@
                 "title": "Mi_Phone",
                 "unique_id": null,
                 "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "host": "sensor_node1.local",
+                    "password": "",
+                    "port": 6053
+                },
+                "domain": "esphome",
+                "entry_id": "872a0660f1bc44b897be48cb2bd5187e",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "sensor_node1",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "host": "sensor_node2.local",
+                    "password": "",
+                    "port": 6053
+                },
+                "domain": "esphome",
+                "entry_id": "20e07efb3ca34182a079e3e929c1537c",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "sensor_node2",
+                "unique_id": null,
+                "version": 1
             }
         ]
     },

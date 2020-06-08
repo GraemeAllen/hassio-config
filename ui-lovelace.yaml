@@ -98,6 +98,7 @@ views:
           - sensor.living_room_brightness
           - sensor.kitchen_brightness
           - sensor.bedroom_brightness
+          - binary_sensor.living_room_pir_2
 
         card:    
 #######################   Picture Elements Card    ############################
@@ -143,6 +144,42 @@ views:
                 action: none
               type: image
 #############    WINDOW BLINDS - BLENDED IMAGE OVERLAYS    ################  
+            # BEDROOM #
+            - action: none
+              entities: 
+              - cover.sonoff_1000d66ac3 
+              - sensor.bedroom_brightness
+              hold_action:
+                action: none
+              style:
+                mix-blend-mode: lighten
+                opacity: '${states["sensor.bedroom_brightness"].state + "%"}'    
+                display: '${states["cover.sonoff_1000d66ac3"].attributes.current_position > 90 ? "block" : "none"}'
+                top: 49%
+                left: 62%
+                width: 100%
+              tap_action:    
+                action: none
+              type: image
+              image: /local/floorplan/bedroom-blinds.png           
+            # BEDROOM PARTIAL #
+            - action: none
+              entities: 
+              - cover.sonoff_1000d66ac3 
+              - sensor.bedroom_brightness
+              hold_action:
+                action: none
+              style:
+                mix-blend-mode: lighten
+                opacity: '${states["sensor.bedroom_brightness"].state + "%"}'    
+                display: '${states["cover.sonoff_1000d66ac3"].attributes.current_position < 91 ? "block" : "none"}'
+                top: 49%
+                left: 62%
+                width: 100%
+              tap_action:    
+                action: none
+              type: image
+              image: /local/floorplan/bedroom-blinds-part.png     
             # LIVING ROOM #
             - action: none
               entities: 
@@ -153,7 +190,7 @@ views:
               style:
                 mix-blend-mode: lighten
                 opacity: '${states["sensor.living_room_brightness"].state + "%"}'    
-                display: '${states["cover.sonoff_1000d67323"].state != "closed" ? "block" : "none"}'
+                display: '${states["cover.sonoff_1000d67323"].attributes.current_position > 90 ? "block" : "none"}'
                 top: 49%
                 left: 62%
                 width: 100%
@@ -161,6 +198,24 @@ views:
                 action: none
               type: image
               image: /local/floorplan/living-room-blinds.png
+            # LIVING ROOM PARTIAL #
+            - action: none
+              entities: 
+              - cover.sonoff_1000d67323
+              - sensor.living_room_brightness
+              hold_action:
+                action: none
+              style:
+                mix-blend-mode: lighten
+                opacity: '${states["sensor.living_room_brightness"].state + "%"}'    
+                display: '${states["cover.sonoff_1000d67323"].attributes.current_position < 91 ? "block" : "none"}'
+                top: 49%
+                left: 62%
+                width: 100%
+              tap_action:
+                action: none
+              type: image
+              image: /local/floorplan/living-room-blinds-part.png              
             # KITCHEN #
             - action: none
               entities: 
@@ -179,24 +234,7 @@ views:
                 action: none
               type: image
               image: /local/floorplan/kitchen-blinds.png
-            # BEDROOM #
-            - action: none
-              entities: 
-              - cover.sonoff_1000d66ac3 
-              - sensor.bedroom_brightness
-              hold_action:
-                action: none
-              style:
-                mix-blend-mode: lighten
-                opacity: '${states["sensor.bedroom_brightness"].state + "%"}'    
-                display: '${states["cover.sonoff_1000d66ac3"].state != "closed" ? "block" : "none"}'
-                top: 49%
-                left: 62%
-                width: 100%
-              tap_action:    
-                action: none
-              type: image
-              image: /local/floorplan/bedroom-blinds.png
+
               
 #############    INDIVIDUAL LIGHTS - BLENDED IMAGE OVERLAYS    ################    
             # GRAEME'S DESK #
@@ -475,7 +513,7 @@ views:
               tap_action:
                 action: more-info
               type: state-icon
-            - entity: cover.sonoff_1000d66ac3
+            - entity: cover.sonoff_1000d66ac3 
               attribute: current_position
               suffix: '%'
               style:
@@ -486,6 +524,78 @@ views:
               type: state-label           
               tap_action:
                 action: more-info
+                
+#####################             Sensors             #######################
+
+            - entity: sensor.outside_temperature
+              suffix:
+              style:
+                top: 23%
+                left: 94%
+                color: 'rgba(255,255,255,0.0)'
+              type: state-badge     
+              tap_action:
+                action: more-info    
+            - entity: sensor.outside_humidity
+              suffix:
+              style:
+                top: 30.5%
+                left: 94%
+                color: 'rgba(255,255,255,0.0)'
+              type: state-badge     
+              tap_action:
+                action: more-info   
+            - entity: sensor.lux
+              suffix:
+              style:
+                top: 37%
+                left: 94%
+                color: 'rgba(255,255,255,0.0)'
+              type: state-badge     
+              tap_action:
+                action: more-info   
+
+            - entity: sensor.inside_temperature
+              suffix:
+              style:
+                top: 72%
+                left: 48%
+                color: 'rgba(255,255,255,0.0)'
+              type: state-badge     
+              tap_action:
+                action: more-info   
+            - entity: sensor.inside_humidity
+              suffix:
+              style:
+                top: 72%
+                left: 52%
+                color: 'rgba(255,255,255,0.0)'
+              type: state-badge     
+              tap_action:
+                action: more-info   
+            - entity: binary_sensor.living_room_pir_2
+              style:
+                '--iron-icon-height': 1.2vw
+                '--iron-icon-width': 1.2vw
+                '--paper-item-icon-active-color': '#F9C906'
+                '--paper-item-icon-color': '#54596F'
+                align-items: center
+                background-color: 'rgba(255,255,255,0.6)'
+                border-radius: 100%
+                box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                display: flex
+                height: 1.5vw
+                justify-content: center
+                left: 50%
+                margin-left: '-1.2vw'
+                margin-top: '-1.2vw'
+                top: 47%
+                transform: scale(1.2)
+                width: 1.5vw
+              tap_action:
+                action: more-info
+              type: state-icon             
+               
 
 ##############################################################################
 #                                                                            #
@@ -713,13 +823,13 @@ views:
               
 #############    Minigraph to show temperature and Illumitation    ############
             - entities:
-                - entity: sensor.ambient_light_calc
+                - entity: sensor.lux
                   color: 'rgba(255,255,255,0.7)'
                   name: Sunlight
                   show_fill: false
                   y_axis: secondary
-                  unit: '%'
-                - entity: sensor.weather_temperature
+                  unit: 'Lux'
+                - entity: sensor.outside_temperature
                   name: Temperature
                   show_fill: false
                   unit: '°C'
@@ -784,8 +894,6 @@ views:
                 action: navigate
                 navigation_path: /lovelace/4
               update_interval: 1800
-              lower_bound_secondary: 0
-              upper_bound_secondary: 100
               group: 'true'
               type: 'custom:mini-graph-card'
               
@@ -902,6 +1010,12 @@ views:
                             icon: 'mdi:lamp'
                           - entity: cover.sonoff_1000d67323
                             icon: 'mdi:blinds'
+                          - entity: sensor.inside_temperature
+                            icon: 'mdi:thermometer-lines'
+                          - entity: sensor.inside_humidity
+                            icon: 'mdi:water'
+                          - entity: binary_sensor.living_room_pir_2
+                            icon: 'mdi:run'
                         title: Living Room
                     tileOnRow: 2
                   - column: 3
@@ -919,7 +1033,17 @@ views:
                             icon: 'mdi:blinds'
                         title: Kitchen
                     tileOnRow: 1
-
+                  - column: 5
+                    entities:
+                      - entities:
+                          - entity: sensor.outside_temperature
+                            icon: 'mdi:thermometer-lines'
+                          - entity: sensor.outside_humidity
+                            icon: 'mdi:water'
+                          - entity: sensor.lux
+                            icon: 'mdi:weather-sunny'
+                        title: Outside
+                    tileOnRow: 1
                 row: 2
             statePositionTop: true
             style:
@@ -1827,6 +1951,7 @@ views:
             
 
             Living room pos: {{states.cover.sonoff_1000d67323.attributes.current_position | float}}
+            Bedroom pos: {{states.sensor.bedroom_position.state}}
                         
             Living Room: {{states.sensor.living_room_brightness.state}}
             Bedroom: {{states.sensor.bedroom_brightness.state}}

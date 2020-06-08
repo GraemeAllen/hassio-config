@@ -1,0 +1,58 @@
+esphome:
+  name: sensor_node1
+  platform: ESP8266
+  board: esp01_1m
+  includes:
+    - tsl2591.h
+
+  libraries:
+    - "Adafruit TSL2591 Library"
+
+wifi:
+  ssid: "The Force"
+  password: "Obi-Wan&Luke"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Sensor Node1 Fallback Hotspot"
+    password: "bBtGW2pPk0gy"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+sensor:
+  - platform: dht
+    pin: GPIO16
+    model: dht22
+    temperature:
+      name: "Outside Temperature"
+    humidity:
+      name: "Outside Humidity"
+    update_interval: 60s
+    
+  - platform: custom
+    lambda: |-
+      auto my_sensor = new Tsl2591();
+      App.register_component(my_sensor);
+      return {my_sensor};
+    
+    sensors:
+      name: "Lux" 
+      unit_of_measurement: lux
+      filters:
+      - filter_out: 0
+i2c:
+  sda: GPIO4
+  scl: GPIO0    
+  scan: false
+    
+
+    
+

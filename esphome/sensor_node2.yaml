@@ -1,0 +1,66 @@
+esphome:
+  name: sensor_node2
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "The Force"
+  password: "Obi-Wan&Luke"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Sensor Node2 Fallback Hotspot"
+    password: "0X93H0KPKMTD"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+sensor:
+  - platform: dht
+    pin: GPIO16
+    model: dht22
+    temperature:
+      name: "Inside Temperature"
+    humidity:
+      name: "Inside Humidity"
+    update_interval: 30s
+    
+binary_sensor:
+  - platform: gpio
+    pin: GPIO5
+    name: "Living Room PIR"
+    device_class: motion    
+    
+display:
+  - platform: lcd_gpio
+    dimensions: 16x2
+    data_pins:
+      - GPIO15
+      - GPIO13
+      - GPIO12
+      - GPIO14
+    enable_pin: GPIO3
+    rs_pin: GPIO1
+    lambda: |-
+      // Print 0 at the top left
+      it.print("0");
+
+      // Print 1 at the second row and second column.
+      it.print(1, 1, "1");
+
+
+      // Print the current time
+      it.strftime("It is %H:%M on %d.%m.%Y", id(my_time).now());
+      // Result for 10:06 on august 21st 2018 -> "It is 10:06 on 21.08.2018"
+
+# (Optional) For displaying time:
+time:
+- platform: sntp
+  id: my_time

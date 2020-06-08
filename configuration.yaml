@@ -56,7 +56,7 @@ sensor:
       
   - platform: random
     name: 'tv_colour'
-    scan_interval: 10
+    scan_interval: 60
     maximum: 360
     minimum: 0      
       
@@ -96,7 +96,7 @@ sensor:
 
       brightness:
         friendly_name: 'Ambient plus offset'
-        value_template: '{{(states.sensor.ambient_light_calc.state | float) + (states.input_number.daylight_tester.state | float)}}'
+        value_template: '{{((states.sensor.lux.state | float) / 20) + (states.input_number.daylight_tester.state | float)}}'
 
       living_room_brightness:
         friendly_name: 'Living room brightness'
@@ -109,6 +109,15 @@ sensor:
       kitchen_brightness:
         friendly_name: 'Kitchen brightness'
         value_template: '{{(states.sensor.brightness.state | float) * (states.cover.sonoff_1000d66886.attributes.current_position | float / 100) |float|round(1)}}'
+
+      living_room_position:
+        value_template: '{{states.cover.sonoff_1000d67323.attributes.current_position | float|round(1)}}'
+        
+      bedroom_position:
+        value_template: '{{states.cover.sonoff_1000d66ac3.attributes.current_position | float|round(1)}}'        
+        
+      kitchen_position:
+        value_template: '{{states.cover.sonoff_1000d66886.attributes.current_position | float|round(1)}}'        
 
 ## Weather
 
@@ -179,5 +188,6 @@ input_number:
     max: 100
     step: 1
     
-
-
+input_boolean:
+  blinds_primed:
+    name: Blinds Primed

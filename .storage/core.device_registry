@@ -160,6 +160,46 @@
                 "name_by_user": null,
                 "sw_version": "10",
                 "via_device_id": null
+            },
+            {
+                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "config_entries": [
+                    "872a0660f1bc44b897be48cb2bd5187e"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "a4:cf:12:ef:41:51"
+                    ]
+                ],
+                "id": "c7a7fd6b97cb49fc913ec563376fc2b7",
+                "identifiers": [],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sensor_node1",
+                "name_by_user": null,
+                "sw_version": "1.14.4 (Jun  8 2020, 15:10:26)",
+                "via_device_id": null
+            },
+            {
+                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "config_entries": [
+                    "20e07efb3ca34182a079e3e929c1537c"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "f4:cf:a2:d8:25:b1"
+                    ]
+                ],
+                "id": "a70875db160c49319a6cb6f92bb81119",
+                "identifiers": [],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sensor_node2",
+                "name_by_user": null,
+                "sw_version": "1.14.4 (Jun  8 2020, 19:05:03)",
+                "via_device_id": null
             }
         ]
     },
