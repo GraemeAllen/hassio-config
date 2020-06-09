@@ -194,10 +194,10 @@ wake_up:
 wake_up_2:
   alias: Wake Up 2
   sequence:
-  - data: 
+  - data:
       entity_id: cover.sonoff_1000d67323
     service: cover.open_cover
-  - delay: 
+  - delay:
       seconds: 2
   - data:
       entity_id: cover.sonoff_1000d66886
@@ -205,3 +205,57 @@ wake_up_2:
   - data:
       entity_id: input_boolean.blinds_primed
     service: input_boolean.turn_off
+turn_on_cristo:
+  sequence:
+  - data:
+      entity_id: switch.cristo_light
+    service: switch.turn_on
+  - delay: 00:02:00
+  - data:
+      entity_id: switch.cristo_light
+    service: switch.turn_off
+
+flash_red_led:
+  sequence:
+  - service: light.turn_on
+    data:
+      entity_id: light.rgb_led
+      rgb_color:
+      - 255
+      - 0
+      - 0      
+  - delay:
+      seconds: 1  
+  - service: light.turn_off
+    data:
+      entity_id: light.rgb_led      
+
+flash_green_led:
+  sequence:
+  - service: light.turn_on
+    data:
+      entity_id: light.rgb_led
+      rgb_color:
+      - 0
+      - 255
+      - 0      
+  - delay:
+      seconds: 1  
+  - service: light.turn_off
+    data:
+      entity_id: light.rgb_led   
+      
+flash_blue_led:
+  sequence:
+  - service: light.turn_on
+    data:
+      entity_id: light.rgb_led
+      rgb_color:
+      - 0
+      - 0
+      - 255      
+  - delay:
+      seconds: 1  
+  - service: light.turn_off
+    data:
+      entity_id: light.rgb_led    

@@ -11,7 +11,7 @@
             }
         ],
         "device_info": {
-            "compilation_time": "Jun  8 2020, 19:05:03",
+            "compilation_time": "Jun  9 2020, 11:59:57",
             "esphome_version": "1.14.4",
             "has_deep_sleep": false,
             "mac_address": "F4:CF:A2:D8:25:B1",
@@ -19,6 +19,21 @@
             "name": "sensor_node2",
             "uses_password": false
         },
+        "light": [
+            {
+                "effects": [],
+                "key": 502299492,
+                "max_mireds": 0.0,
+                "min_mireds": 0.0,
+                "name": "RGB LED",
+                "object_id": "rgb_led",
+                "supports_brightness": true,
+                "supports_color_temperature": false,
+                "supports_rgb": true,
+                "supports_white_value": false,
+                "unique_id": "sensor_node2lightrgb_led"
+            }
+        ],
         "sensor": [
             {
                 "accuracy_decimals": 1,

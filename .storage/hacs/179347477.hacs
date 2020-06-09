@@ -1,0 +1,60 @@
+{
+    "data": {
+        "archived": false,
+        "authors": [
+            "@claytonjn"
+        ],
+        "category": "integration",
+        "config_flow": false,
+        "content_in_root": false,
+        "country": [],
+        "default_branch": "master",
+        "description": "Circadian Lighting custom component for Home Assistant",
+        "domain": "circadian_lighting",
+        "domains": [],
+        "downloads": 0,
+        "file_name": "",
+        "filename": "",
+        "first_install": false,
+        "fork": false,
+        "full_name": "claytonjn/hass-circadian_lighting",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": null,
+        "id": "179347477",
+        "installed": true,
+        "installed_commit": "4909fdb",
+        "installed_version": "1.0.11",
+        "iot_class": null,
+        "last_commit": "4909fdb",
+        "last_updated": "2020-06-07T21:39:11Z",
+        "last_version": "1.0.11",
+        "manifest_name": "Circadian Lighting",
+        "new": false,
+        "open_issues": 53,
+        "persistent_directory": null,
+        "published_tags": [
+            "1.0.11",
+            "1.0.10",
+            "1.0.9",
+            "1.0.6",
+            "1.0.5"
+        ],
+        "pushed_at": "2020-06-07T21:39:11",
+        "releases": true,
+        "render_readme": false,
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 177,
+        "topics": [
+            "circadian",
+            "circadian-rhythms",
+            "hacs",
+            "home-assistant"
+        ],
+        "zip_release": false
+    },
+    "key": "hacs/179347477.hacs",
+    "version": "6"
+}

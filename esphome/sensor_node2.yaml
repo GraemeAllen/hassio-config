@@ -37,30 +37,21 @@ binary_sensor:
     pin: GPIO5
     name: "Living Room PIR"
     device_class: motion    
-    
-display:
-  - platform: lcd_gpio
-    dimensions: 16x2
-    data_pins:
-      - GPIO15
-      - GPIO13
-      - GPIO12
-      - GPIO14
-    enable_pin: GPIO3
-    rs_pin: GPIO1
-    lambda: |-
-      // Print 0 at the top left
-      it.print("0");
 
-      // Print 1 at the second row and second column.
-      it.print(1, 1, "1");
+light:
+  - platform: rgb
+    name: "RGB LED"
+    red: output_red
+    green: output_green
+    blue: output_blue
+output:
+  - platform: esp8266_pwm
+    id: output_red
+    pin: GPIO13
+  - platform: esp8266_pwm
+    id: output_green
+    pin: GPIO12
+  - platform: esp8266_pwm
+    id: output_blue
+    pin: GPIO14
 
-
-      // Print the current time
-      it.strftime("It is %H:%M on %d.%m.%Y", id(my_time).now());
-      // Result for 10:06 on august 21st 2018 -> "It is 10:06 on 21.08.2018"
-
-# (Optional) For displaying time:
-time:
-- platform: sntp
-  id: my_time

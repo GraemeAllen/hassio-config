@@ -2,6 +2,10 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+# Database
+recorder:
+  purge_keep_days: 3
+  
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
   base_url: https://hab11.com
@@ -60,17 +64,6 @@ sensor:
     maximum: 360
     minimum: 0      
       
-  - platform: random
-    name: 'graeme_laptop_colour'
-    scan_interval: 10
-    maximum: 360
-    minimum: 0    
-    
-  - platform: random
-    name: 'carol_laptop_colour'
-    scan_interval: 10
-    maximum: 360
-    minimum: 0        
       
   - platform: template
     sensors:  
@@ -90,9 +83,9 @@ sensor:
         friendly_name: "Full Date"
         value_template: "{{ states('sensor.day') }}, {{ states('sensor.month') }} {{ now().year }}"  
         
-      ambient_light_calc:
-        friendly_name: 'Calculated Ambient Light'
-        value_template: '{{ ((18 + states.sun.sun.attributes.elevation | float ) * (1 - ((states.sensor.weather_cloudiness.state | float / 150)))) |float|round(1) }}'
+     # ambient_light_calc:
+     #   friendly_name: 'Calculated Ambient Light'
+     #   value_template: '{{ ((18 + states.sun.sun.attributes.elevation | float ) * (1 - ((states.sensor.weather_cloudiness.state | float / 150)))) |float|round(1) }}'
 
       brightness:
         friendly_name: 'Ambient plus offset'

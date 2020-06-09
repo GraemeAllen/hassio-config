@@ -1,75 +1,8 @@
-- id: '1589211936901'
-  alias: Watching TV
-  description: ''
-  trigger:
-  - entity_id: media_player.living_room_tv
-    from: idle
-    platform: state
-    to: playing
-  condition: []
-  action:
-  - condition: state
-    entity_id: input_boolean.television
-    state: '''on'''
-- id: '1589212835864'
-  alias: Turn on lights at sunset
-  description: ''
-  trigger:
-  - event: sunset
-    platform: sun
-  condition: []
-  action:
-  - scene: scene.evening
-- id: '1589214058856'
-  alias: Pause TV
-  description: ''
-  trigger:
-  - entity_id: media_player.living_room_tv
-    from: playing
-    platform: state
-    to: idle
-  condition: []
-  action:
-  - condition: state
-    entity_id: input_boolean.television
-    state: '''off'''
-- id: '1589822448722'
-  alias: Graeme computer light
-  description: ''
-  trigger:
-  - entity_id: device_tracker.36_e6_85_88_24_fb
-    from: not_home
-    platform: state
-    to: home
-  condition:
-  - condition: state
-    entity_id: person.graeme
-    state: home
-  action:
-  - scene: scene.graeme_work
-- id: '1589823128922'
-  alias: Carol computer light
-  description: ''
-  trigger:
-  - entity_id: device_tracker.mbp13c0inamotta
-    from: not_home
-    platform: state
-    to: home
-  - entity_id: device_tracker.mbp_de_ana_66
-    from: not_home
-    platform: state
-    to: home
-  condition:
-  - condition: state
-    entity_id: person.carol
-    state: home
-  action:
-  - scene: scene.carol_work
 - id: '1590765489158'
   alias: Open Blinds Mon-Fri
   description: ''
   trigger:
-  - at: '20:59:00'
+  - at: 07:00:00
     platform: time
   condition:
   - condition: time
@@ -139,19 +72,26 @@
     type: is_off
   - condition: or
     conditions:
-    - after: sunset
-      before: sunrise
+    - before: sunrise
+      before_offset: 00:30:00
       condition: sun
-    - condition: state
-      entity_id: cover.sonoff_1000d67323
-      state: closed
+    - after: sunset
+      after_offset: -00:30:00
+      condition: sun
   action:
-  - device_id: 6aed5e2038814e7cbf5f43ec238a4691
-    domain: switch
-    entity_id: switch.cristo_light
-    type: turn_on
-  - delay: '[object Object]'
-  - device_id: 6aed5e2038814e7cbf5f43ec238a4691
-    domain: switch
-    entity_id: switch.cristo_light
-    type: turn_off
+  - entity_id: script.turn_on_cristo
+    service: script.turn_off
+  - service: script.turn_on_cristo
+- id: '1591700611894'
+  alias: LED on motion
+  description: ''
+  trigger:
+  - device_id: a70875db160c49319a6cb6f92bb81119
+    domain: binary_sensor
+    entity_id: binary_sensor.living_room_pir_2
+    platform: device
+    type: motion
+  condition: []
+  action:
+  - data: {}
+    service: script.flash_blue_led

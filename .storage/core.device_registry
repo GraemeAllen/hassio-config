@@ -7,6 +7,7 @@
                     "428f43c065c84feb8c29fc56b5431981"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "3fc6b25a1b2345ff9ec63c8e2fa818ab",
                 "identifiers": [
                     [
@@ -27,6 +28,7 @@
                     "428f43c065c84feb8c29fc56b5431981"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "f253075c95a048228183a8f3495349e1",
                 "identifiers": [
                     [
@@ -52,6 +54,7 @@
                         "50:c7:bf:4d:55:19"
                     ]
                 ],
+                "entry_type": null,
                 "id": "6aed5e2038814e7cbf5f43ec238a4691",
                 "identifiers": [],
                 "manufacturer": "TP-Link",
@@ -72,6 +75,7 @@
                         "98:da:c4:47:69:fc"
                     ]
                 ],
+                "entry_type": null,
                 "id": "8e00d81156f2483280581309593be0e7",
                 "identifiers": [],
                 "manufacturer": "TP-Link",
@@ -92,6 +96,7 @@
                         "68:ff:7b:8f:e7:c2"
                     ]
                 ],
+                "entry_type": null,
                 "id": "f09cf8edf8944505a265dd63eafc7ba6",
                 "identifiers": [],
                 "manufacturer": "TP-Link",
@@ -107,6 +112,7 @@
                     "92a1de24be754b2986572103aaa6d43d"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "ad95d9298f504875b76dc5836f8e541b",
                 "identifiers": [
                     [
@@ -127,6 +133,7 @@
                     "75457f90a2e943b192edd8a7a7e2f7e0"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "bd322b29540f4672be73d4f6b43d4add",
                 "identifiers": [
                     [
@@ -138,7 +145,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.24.5",
+                "sw_version": "1.1.0",
                 "via_device_id": null
             },
             {
@@ -147,6 +154,7 @@
                     "fbb7cc6d57754a6fa387a4fdafdd8889"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "111a7b806c40408ab3306322220b9320",
                 "identifiers": [
                     [
@@ -162,7 +170,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "area_id": "92060567571d4646b465d3b497cc6e27",
                 "config_entries": [
                     "872a0660f1bc44b897be48cb2bd5187e"
                 ],
@@ -172,13 +180,14 @@
                         "a4:cf:12:ef:41:51"
                     ]
                 ],
+                "entry_type": null,
                 "id": "c7a7fd6b97cb49fc913ec563376fc2b7",
                 "identifiers": [],
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sensor_node1",
                 "name_by_user": null,
-                "sw_version": "1.14.4 (Jun  8 2020, 15:10:26)",
+                "sw_version": "1.14.4 (Jun  9 2020, 08:21:32)",
                 "via_device_id": null
             },
             {
@@ -192,13 +201,40 @@
                         "f4:cf:a2:d8:25:b1"
                     ]
                 ],
+                "entry_type": null,
                 "id": "a70875db160c49319a6cb6f92bb81119",
                 "identifiers": [],
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sensor_node2",
                 "name_by_user": null,
-                "sw_version": "1.14.4 (Jun  8 2020, 19:05:03)",
+                "sw_version": "1.14.4 (Jun  9 2020, 11:59:57)",
+                "via_device_id": null
+            },
+            {
+                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "config_entries": [
+                    "bc95c6cda32d4acc8640f920bab9badc"
+                ],
+                "connections": [
+                    [
+                        "upnp",
+                        "uuid:00e0fc37-2525-2828-2500-886639D78CFD"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "8d736c906d3e46aabaaecfa4034cf146",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:00e0fc37-2525-2828-2500-886639D78CFD"
+                    ]
+                ],
+                "manufacturer": "Huawei",
+                "model": "Huawei EchoLife Series",
+                "name": "Vodafone HG8247Q Gateway",
+                "name_by_user": null,
+                "sw_version": null,
                 "via_device_id": null
             }
         ]

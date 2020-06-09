@@ -166,7 +166,7 @@
             {
                 "connection_class": "local_push",
                 "data": {
-                    "host": "sensor_node1.local",
+                    "host": "192.168.1.83",
                     "password": "",
                     "port": 6053
                 },
@@ -178,13 +178,13 @@
                     "disable_new_entities": false
                 },
                 "title": "sensor_node1",
-                "unique_id": null,
+                "unique_id": "sensor_node1",
                 "version": 1
             },
             {
                 "connection_class": "local_push",
                 "data": {
-                    "host": "sensor_node2.local",
+                    "host": "192.168.1.84",
                     "password": "",
                     "port": 6053
                 },
@@ -196,7 +196,24 @@
                     "disable_new_entities": false
                 },
                 "title": "sensor_node2",
-                "unique_id": null,
+                "unique_id": "sensor_node2",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "st": "urn:schemas-upnp-org:device:InternetGatewayDevice:1",
+                    "udn": "uuid:00e0fc37-2525-2828-2500-886639D78CFD"
+                },
+                "domain": "upnp",
+                "entry_id": "bc95c6cda32d4acc8640f920bab9badc",
+                "options": {},
+                "source": "ssdp",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Vodafone HG8247Q Gateway",
+                "unique_id": "uuid:00e0fc37-2525-2828-2500-886639D78CFD::urn:schemas-upnp-org:device:InternetGatewayDevice:1",
                 "version": 1
             }
         ]

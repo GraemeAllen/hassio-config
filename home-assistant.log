@@ -1,134 +1,29 @@
-2020-06-08 19:12:29 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for sonoff which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-06-08 19:12:29 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-06-08 19:12:45 WARNING (MainThread) [homeassistant.components.lovelace] Resources need to be specified in your configuration.yaml. Please see the docs.
-2020-06-08 19:12:50 WARNING (SyncWorker_15) [homeassistant.components.bluetooth_le_tracker.device_tracker] No Bluetooth LE devices to track!
-2020-06-08 19:12:50 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform legacy
-2020-06-08 19:14:01 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 19:22:59 ERROR (MainThread) [homeassistant.config] Invalid config for [script]: invalid slug Wake_up (try wake_up) for dictionary value @ data['script']. Got OrderedDict([('close_blinds', OrderedDict([('alias', 'Close All Blinds'), ('sequence', [OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d66ac3')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d67323')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', Ordered.... (See /config/configuration.yaml, line 15). Please check the docs at https://www.home-assistant.io/integrations/script
-2020-06-08 19:27:21 ERROR (MainThread) [homeassistant.config] Invalid config for [script]: invalid slug Wake_up (try wake_up) for dictionary value @ data['script']. Got OrderedDict([('close_blinds', OrderedDict([('alias', 'Close All Blinds'), ('sequence', [OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d66ac3')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d67323')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', Ordered.... (See /config/configuration.yaml, line 15). Please check the docs at https://www.home-assistant.io/integrations/script
-2020-06-08 19:28:19 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 19:28:58 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 19:29:14 ERROR (MainThread) [homeassistant.components.automation] Open Blinds Mon-Fri: Error executing script. Service not found for call_service at pos 1: Unable to find service script/wake_up
-2020-06-08 19:29:20 ERROR (MainThread) [homeassistant.components.automation] Open Blinds Mon-Fri: Error executing script. Service not found for call_service at pos 1: Unable to find service script/wake_up
-2020-06-08 19:30:04 ERROR (MainThread) [homeassistant.config] Invalid config for [automation]: Invalid time specified: 70200 for dictionary value @ data['trigger'][0]['at']. Got None. (See /config/configuration.yaml, line 14). 
-2020-06-08 19:30:05 ERROR (MainThread) [homeassistant.config] Invalid config for [script]: invalid slug Wake_up (try wake_up) for dictionary value @ data['script']. Got OrderedDict([('close_blinds', OrderedDict([('alias', 'Close All Blinds'), ('sequence', [OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d66ac3')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d67323')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', Ordered.... (See /config/configuration.yaml, line 15). Please check the docs at https://www.home-assistant.io/integrations/script
-2020-06-08 19:30:39 ERROR (MainThread) [homeassistant.config] Invalid config for [automation]: Invalid time specified: 70260 for dictionary value @ data['trigger'][0]['at']. Got None. (See /config/configuration.yaml, line 14). 
-2020-06-08 19:30:41 ERROR (MainThread) [homeassistant.config] Invalid config for [script]: invalid slug Wake_up (try wake_up) for dictionary value @ data['script']. Got OrderedDict([('close_blinds', OrderedDict([('alias', 'Close All Blinds'), ('sequence', [OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d66ac3')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d67323')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', Ordered.... (See /config/configuration.yaml, line 15). Please check the docs at https://www.home-assistant.io/integrations/script
-2020-06-08 19:31:15 ERROR (MainThread) [homeassistant.config] Invalid config for [automation]: Invalid time specified: 70260 for dictionary value @ data['trigger'][0]['at']. Got None. (See /config/configuration.yaml, line 14). 
-2020-06-08 19:31:16 ERROR (MainThread) [homeassistant.config] Invalid config for [script]: invalid slug Wake_up (try wake_up) for dictionary value @ data['script']. Got OrderedDict([('close_blinds', OrderedDict([('alias', 'Close All Blinds'), ('sequence', [OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d66ac3')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d67323')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', Ordered.... (See /config/configuration.yaml, line 15). Please check the docs at https://www.home-assistant.io/integrations/script
-2020-06-08 19:32:13 ERROR (MainThread) [homeassistant.components.hassio] Invalid config for [script]: invalid slug Wake_up (try wake_up) for dictionary value @ data['script']. Got OrderedDict([('close_blinds', OrderedDict([('alias', 'Close All Blinds'), ('sequence', [OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d66ac3')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', OrderedDict([('entity_id', 'cover.sonoff_1000d67323')]))]), OrderedDict([('delay', OrderedDict([('seconds', 2)]))]), OrderedDict([('service', 'cover.close_cover'), ('data', Ordered.... (See /config/configuration.yaml, line 15). 
-Invalid config for [automation]: Invalid time specified: 70500 for dictionary value @ data['trigger'][0]['at']. Got None. (See /config/configuration.yaml, line 14). 
-2020-06-08 19:33:28 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 19:35:44 ERROR (MainThread) [homeassistant.config] Invalid config for [automation]: Invalid time specified: 70500 for dictionary value @ data['trigger'][0]['at']. Got None. (See /config/configuration.yaml, line 14). 
-2020-06-08 19:47:35 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 19:48:50 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 19:50:00 ERROR (MainThread) [homeassistant.components.automation] Open Blinds Mon-Fri: Error executing script. Service not found for call_service at pos 1: Unable to find service script/wake_up
-2020-06-08 19:51:44 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 19:55:07 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 19:56:22 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:56:42 WARNING (MainThread) [homeassistant.components.script] Script script.close_blinds already running.
-2020-06-08 19:56:52 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:57:07 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:57:16 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:57:39 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:57:48 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:57:56 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:58:07 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:58:16 WARNING (MainThread) [homeassistant.components.script] Script script.wake_up_2 already running.
-2020-06-08 19:58:16 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:58:36 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:58:44 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:59:02 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 19:59:17 ERROR (MainThread) [homeassistant.components.script] Wake Up 2: Error rendering Wake Up 2 delay template: offset 2s should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:06:55 ERROR (SyncWorker_3) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:06:55 ERROR (SyncWorker_11) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:06:55 ERROR (SyncWorker_12) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:06:55 ERROR (SyncWorker_14) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:06:55 ERROR (SyncWorker_5) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:34:16 ERROR (SyncWorker_0) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:34:16 ERROR (SyncWorker_16) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:34:16 ERROR (SyncWorker_18) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:34:16 ERROR (SyncWorker_8) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:42:32 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 20:45:37 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:05
-2020-06-08 20:46:12 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 20:48:30 ERROR (SyncWorker_18) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:30 ERROR (SyncWorker_12) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:30 ERROR (SyncWorker_5) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:30 ERROR (SyncWorker_7) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:30 ERROR (SyncWorker_4) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:30 ERROR (SyncWorker_19) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:33 ERROR (SyncWorker_3) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:33 ERROR (SyncWorker_14) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:33 ERROR (SyncWorker_2) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:33 ERROR (SyncWorker_6) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:33 ERROR (SyncWorker_0) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:33 ERROR (SyncWorker_13) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:35 ERROR (SyncWorker_18) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:50 ERROR (SyncWorker_10) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:50 ERROR (SyncWorker_3) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:50 ERROR (SyncWorker_14) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:50 ERROR (SyncWorker_9) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:50 ERROR (SyncWorker_8) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:50 ERROR (SyncWorker_18) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:50 ERROR (SyncWorker_5) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:50 ERROR (SyncWorker_7) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:50 ERROR (SyncWorker_17) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:51 ERROR (Recorder) [homeassistant.components.recorder] Error adding event: (sqlite3.OperationalError) database is locked
+2020-06-09 23:04:33 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-06-09 23:04:33 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for sonoff which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-06-09 23:04:33 WARNING (MainThread) [homeassistant.components.http] The 'base_url' option (with value 'https://hab11.com') is deprecated, please remove it from your configuration
+2020-06-09 23:04:45 WARNING (MainThread) [homeassistant.components.lovelace] Resources need to be specified in your configuration.yaml. Please see the docs.
+2020-06-09 23:04:50 WARNING (SyncWorker_2) [homeassistant.components.bluetooth_le_tracker.device_tracker] No Bluetooth LE devices to track!
+2020-06-09 23:04:51 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform legacy
+2020-06-09 23:05:48 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:05:48 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:05:48 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:06:01 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:07:53 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:07:55 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:10:28 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:10:29 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:12:24 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:12:25 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:14:17 ERROR (Recorder) [homeassistant.components.recorder] Error adding event: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2285, in _wrap_pool_connect
-    return fn()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 363, in connect
-    return _ConnectionFairy._checkout(self)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 773, in _checkout
-    fairy = _ConnectionRecord.checkout(pool)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 492, in checkout
-    rec = pool._do_get()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 238, in _do_get
-    return self._create_connection()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 308, in _create_connection
-    return _ConnectionRecord(self)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 437, in __init__
-    self.__connect(first_connect_check=True)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 664, in __connect
-    pool.dispatch.connect(self.connection, self)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/event/attr.py", line 322, in __call__
-    fn(*args, **kw)
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 499, in setup_recorder_connection
-    cursor.execute("PRAGMA journal_mode=WAL")
-sqlite3.OperationalError: database is locked
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: events
 
 The above exception was the direct cause of the following exception:
 
@@ -149,89 +44,38 @@ Traceback (most recent call last):
     rec.execute(self)
   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
     uow,
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 213, in save_obj
-    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 374, in _organize_states_for_save
-    base_mapper, uowtransaction, states
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1602, in _connections_for_states
-    connection = uowtransaction.transaction.connection(base_mapper)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 313, in connection
-    return self._connection_for_bind(bind, execution_options)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 420, in _connection_for_bind
-    conn = self._parent._connection_for_bind(bind, execution_options)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 432, in _connection_for_bind
-    conn = bind._contextual_connect()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2251, in _contextual_connect
-    self._wrap_pool_connect(self.pool.connect, None),
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2289, in _wrap_pool_connect
-    e, dialect, self
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1555, in _handle_dbapi_exception_noconnection
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
     sqlalchemy_exception, with_traceback=exc_info[2], from_=e
   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
     raise exception
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2285, in _wrap_pool_connect
-    return fn()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 363, in connect
-    return _ConnectionFairy._checkout(self)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 773, in _checkout
-    fairy = _ConnectionRecord.checkout(pool)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 492, in checkout
-    rec = pool._do_get()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 238, in _do_get
-    return self._create_connection()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 308, in _create_connection
-    return _ConnectionRecord(self)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 437, in __init__
-    self.__connect(first_connect_check=True)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 664, in __connect
-    pool.dispatch.connect(self.connection, self)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/event/attr.py", line 322, in __call__
-    fn(*args, **kw)
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 499, in setup_recorder_connection
-    cursor.execute("PRAGMA journal_mode=WAL")
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) database is locked
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:52 ERROR (SyncWorker_15) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:48:52 ERROR (SyncWorker_11) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-08 20:49:01 ERROR (Recorder) [homeassistant.components.recorder] Error adding event: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
+2020-06-09 23:14:18 WARNING (MainThread) [homeassistant.components.http] The 'base_url' option (with value 'https://hab11.com') is deprecated, please remove it from your configuration
+2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error executing query: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
 (Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 372, in run
-    self.event_session.flush()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
-    self._flush(objects)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2592, in _flush
-    subtransactions=True
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 947, in begin
-    self.transaction = self.transaction._begin(nested=nested)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 316, in _begin
-    self._assert_active()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 295, in _assert_active
-    code="7s2a",
-sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-2020-06-08 20:49:01 ERROR (Recorder) [homeassistant.components.recorder] Error adding event: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 372, in run
-    self.event_session.flush()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
-    self._flush(objects)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2592, in _flush
-    subtransactions=True
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 947, in begin
-    self.transaction = self.transaction._begin(nested=nested)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 316, in _begin
-    self._assert_active()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 295, in _assert_active
-    code="7s2a",
-sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-2020-06-08 20:49:01 ERROR (Recorder) [homeassistant.components.recorder] Error executing query: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-2020-06-08 20:49:01 ERROR (Recorder) [homeassistant.components.recorder] Error saving events: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
+2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error saving events: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
 (Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
 Traceback (most recent call last):
   File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 419, in _commit_event_session_or_retry
@@ -244,46 +88,95 @@ Traceback (most recent call last):
     self._assert_active(prepared_ok=True)
   File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 295, in _assert_active
     code="7s2a",
-sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
 (Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-2020-06-08 20:49:52 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:05
-2020-06-08 20:49:56 WARNING (SyncWorker_17) [homeassistant.components.tplink.light] Could not read data for 192.168.1.76: Communication error
-2020-06-08 20:49:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.carol_s_lamp is taking over 10 seconds
-2020-06-08 20:49:56 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:50:03 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:05
-2020-06-08 20:50:07 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.carol_s_lamp is taking over 10 seconds
-2020-06-08 20:50:15 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:05
-2020-06-08 20:50:26 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:05
-2020-06-08 20:50:38 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:05
-2020-06-08 20:50:50 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:05
-2020-06-08 20:51:01 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:51:51 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:52:16 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 20:54:54 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:55:17 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:56:13 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:56:20 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:56:27 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:56:27 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:56:45 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:57:19 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:57:32 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:57:40 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:57:52 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:58:05 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:58:23 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:58:25 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:58:25 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:58:32 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:58:33 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:58:33 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 20:59:15 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:59:22 ERROR (MainThread) [frontend.js.latest.202004272] https://www.hab11.com/config/automation/dashboard:0:0 ResizeObserver loop limit exceeded
-2020-06-08 20:59:48 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 20:59:57 ERROR (MainThread) [homeassistant.components.automation] Cristo light motion: Error rendering Cristo light motion delay template: offset [object Object] should be format 'HH:MM' or 'HH:MM:SS'
-2020-06-08 21:06:44 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 21:08:44 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:05
-2020-06-08 21:08:48 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.carol_s_lamp is taking over 10 seconds
-2020-06-08 21:08:48 WARNING (SyncWorker_1) [homeassistant.components.tplink.light] Could not read data for 192.168.1.76: Communication error
-2020-06-08 21:08:48 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-08 21:08:53 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-09 23:14:18 ERROR (MainThread) [homeassistant.core] Error doing job: Exception in callback EventBus.async_listen_once.<locals>.onetime_listener(<Event homeassistant_stop[L]>) at /usr/src/homeassistant/homeassistant/core.py:671
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/src/homeassistant/homeassistant/core.py", line 683, in onetime_listener
+    self._hass.async_run_job(listener, event)
+  File "/usr/src/homeassistant/homeassistant/core.py", line 392, in async_run_job
+    self.async_add_job(target, *args)
+  File "/usr/src/homeassistant/homeassistant/core.py", line 322, in async_add_job
+    task = self.loop.create_task(target(*args))
+TypeError: stop() takes 1 positional argument but 2 were given
+2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error adding event: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: events
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 372, in run
+    self.event_session.flush()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error executing query: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
+(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
+2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error saving events: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
+(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 419, in _commit_event_session_or_retry
+    self._commit_event_session()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 470, in _commit_event_session
+    self.event_session.commit()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 501, in commit
+    self._assert_active(prepared_ok=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 295, in _assert_active
+    code="7s2a",
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
+(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)

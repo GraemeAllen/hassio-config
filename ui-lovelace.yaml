@@ -11,7 +11,7 @@ resources:
   - type: module
     url: /local/js/card-mod.js
   - type: module
-    url: /local/js/custom-header.js?v=1.3.2
+    url: /hacsfiles/custom-header/custom-header.js
   - type: js
     url: /local/js/text-element.js?v=0.0.2
   - type: module
@@ -62,7 +62,7 @@ resources:
     url: /local/js/kisok.js
 
 views:
-  - title: Floor plan kiosk
+  - title: kiosk
     icon: 'mdi:floor-plan'
     id: kiosk_floor_plan
     panel: true
@@ -717,22 +717,22 @@ views:
               #########################    MENU BUTTONS    #########################
 
             - action: none
-              image: /local/sidebar/rooms_on.png
+              image: /local/sidebar/floor_plan_on.png
               style:
                 border-radius: 5vw
                 box-shadow: '0px 0.2vw 0.8vw 0px rgba(0,0,0,0.1)'
                 left: 11.7%
-                top: 32%
+                top: 36%
                 width: 20.5078125%
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/0
               type: image
             - action: none
-              image: /local/sidebar/all_off.png
+              image: /local/sidebar/all_devices_off.png
               style:
                 left: 11.7%
-                top: 40%
+                top: 44%
                 width: 20.5078125%
               tap_action:
                 action: navigate
@@ -742,13 +742,22 @@ views:
               image: /local/sidebar/media_off.png
               style:
                 left: 11.7%
-                top: 48%
+                top: 52%
                 width: 20.5078125%
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/2
               type: image
-              
+            - action: none
+              image: /local/sidebar/data_off.png
+              style:
+                left: 11.7%
+                top: 60%
+                width: 20.5078125%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/3
+              type: image              
               #########################    People at home    #########################
               
               #Optional label for people at Home (currently hidden with opacity: 0)
@@ -759,7 +768,7 @@ views:
                 font-weight: 300
                 left: 8.8%
                 opacity: 0%
-                top: 66%
+                top: 80%
                 width: 10%
               text: 'People at home:'
               type: 'custom:text-element'
@@ -775,7 +784,7 @@ views:
                 border-radius: 10vw
                 height: 4.5vw
                 left: 5.8%
-                top: 62%
+                top: 73%
                 width: 4.5vw
               tap_action: none
               type: image
@@ -791,7 +800,7 @@ views:
                 border-radius: 10vw
                 height: 4.5vw
                 left: 10.8%
-                top: 62%
+                top: 73%
                 width: 4.5vw
               tap_action: none
               type: image
@@ -804,7 +813,7 @@ views:
                 border-radius: 10vw
                 height: 4.2vw
                 left: 15.9%
-                top: 62.2%
+                top: 73.2%
                 width: 4.2vw
               tap_action: none
               type: image
@@ -816,86 +825,10 @@ views:
                 border-radius: 10vw
                 height: 4.2vw
                 left: 21.1%
-                top: 62.2%
+                top: 73.2%
                 width: 4.2vw
               tap_action: none
               type: image
-              
-#############    Minigraph to show temperature and Illumitation    ############
-            - entities:
-                - entity: sensor.lux
-                  color: 'rgba(255,255,255,0.7)'
-                  name: Sunlight
-                  show_fill: false
-                  y_axis: secondary
-                  unit: 'Lux'
-                - entity: sensor.outside_temperature
-                  name: Temperature
-                  show_fill: false
-                  unit: '°C'
-              color_thresholds:
-                - color: '#4dd2ff'
-                  value: 10
-                - color: '#ffa31a'
-                  value: 20
-                - color: '#ff1a1a'
-                  value: 30
-              hours_to_show: 24
-              points_per_hour: 2
-              show:
-                icon: false
-                name: false
-                state: false
-                points: false
-              style: |
-                :host {
-                  left: 11.6%;
-                  top:  75%;
-                  width: 23.5%;
-                  overflow: hidden;
-                }
-                .header {
-                  font-size: 1vw;
-                  position: absolute !important;
-                  width: 5% !important;
-                  padding: 0 !important;
-                  right: 20% !important;
-                  top: 15% !important;
-                }
-                ha-card {
-                  padding: 0 !important;
-                  background: rgba(255,255,255,0.0);
-                }
-                .icon > ha-icon {
-                  width:1.8vw !important;
-                  height:1.8vw !important;
-                }
-                .state__time{
-                  font-size:0.9vw !important;
-                  margin-top: 0.2vw;
-                  font-weight: 300 !important;
-                  opacity: 0.4 !important;
-                }
-                .states {
-                  font-size: 0.5vw !important;
-                  padding: 1vw 0vw 0vw 0vw  !important;
-                  margin: auto !important;
-                  width: 68%;
-                }
-                .ellipsis {
-                    color: rgba(255,255,255,0.7);
-                }
-                @media screen and (max-width: 900px) {
-                    .graph__legend {
-                        display: none !important;
-                    }
-                }
-              tap_action:
-                action: navigate
-                navigation_path: /lovelace/4
-              update_interval: 1800
-              group: 'true'
-              type: 'custom:mini-graph-card'
               
               #########################    Overlay shadow images    #########################
               
@@ -905,7 +838,7 @@ views:
                 height: 35%
                 left: 18.45%
                 pointer-events: none
-                top: 73%
+                top: 81%
                 width: 10%
               type: image
             - action: none
@@ -1013,7 +946,7 @@ views:
                           - entity: sensor.inside_temperature
                             icon: 'mdi:thermometer-lines'
                           - entity: sensor.inside_humidity
-                            icon: 'mdi:water'
+                            icon: 'mdi:water-percent'
                           - entity: binary_sensor.living_room_pir_2
                             icon: 'mdi:run'
                         title: Living Room
@@ -1039,7 +972,7 @@ views:
                           - entity: sensor.outside_temperature
                             icon: 'mdi:thermometer-lines'
                           - entity: sensor.outside_humidity
-                            icon: 'mdi:water'
+                            icon: 'mdi:water-percent'
                           - entity: sensor.lux
                             icon: 'mdi:weather-sunny'
                         title: Outside
@@ -1172,25 +1105,25 @@ views:
               action: navigate
               navigation_path: /lovelace/4
             type: 'custom:simple-weather-card'              
-            #########################    MENU BUTTONS    #########################
-    
+              #########################    MENU BUTTONS    #########################
+
           - action: none
-            image: /local/sidebar/rooms_off.png
+            image: /local/sidebar/floor_plan_off.png
             style:
               left: 11.7%
-              top: 32%
+              top: 36%
               width: 20.5078125%
             tap_action:
               action: navigate
               navigation_path: /lovelace/0
             type: image
           - action: none
-            image: /local/sidebar/all_on.png
+            image: /local/sidebar/all_devices_on.png
             style:
               border-radius: 5vw
               box-shadow: '0px 0.2vw 0.8vw 0px rgba(0,0,0,0.1)'
               left: 11.7%
-              top: 40%
+              top: 44%
               width: 20.5078125%
             tap_action:
               action: navigate
@@ -1200,15 +1133,25 @@ views:
             image: /local/sidebar/media_off.png
             style:
               left: 11.7%
-              top: 48%
+              top: 52%
               width: 20.5078125%
             tap_action:
               action: navigate
               navigation_path: /lovelace/2
             type: image
-          #########################    People at home    #########################
-          
-          #Optional label for people at Home (currently hidden with opacity: 0)
+          - action: none
+            image: /local/sidebar/data_off.png
+            style:
+              left: 11.7%
+              top: 60%
+              width: 20.5078125%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/3
+            type: image              
+            #########################    People at home    #########################
+              
+            #Optional label for people at Home (currently hidden with opacity: 0)
               
           - style:
               color: white
@@ -1216,7 +1159,7 @@ views:
               font-weight: 300
               left: 8.8%
               opacity: 0%
-              top: 66%
+              top: 80%
               width: 10%
             text: 'People at home:'
             type: 'custom:text-element'
@@ -1232,7 +1175,7 @@ views:
               border-radius: 10vw
               height: 4.5vw
               left: 5.8%
-              top: 62%
+              top: 73%
               width: 4.5vw
             tap_action: none
             type: image
@@ -1248,7 +1191,7 @@ views:
               border-radius: 10vw
               height: 4.5vw
               left: 10.8%
-              top: 62%
+              top: 73%
               width: 4.5vw
             tap_action: none
             type: image
@@ -1261,7 +1204,7 @@ views:
               border-radius: 10vw
               height: 4.2vw
               left: 15.9%
-              top: 62.2%
+              top: 73.2%
               width: 4.2vw
             tap_action: none
             type: image
@@ -1273,113 +1216,32 @@ views:
               border-radius: 10vw
               height: 4.2vw
               left: 21.1%
-              top: 62.2%
+              top: 73.2%
               width: 4.2vw
             tap_action: none
             type: image
               
-#############    Minigraph to show temperature and Illumitation    ############
-          - entities:
-              - entity: sensor.ambient_light_calc
-                color: 'rgba(255,255,255,0.7)'
-                name: Sunlight
-                show_fill: false
-                y_axis: secondary
-                unit: '%'
-              - entity: sensor.weather_temperature
-                name: Temperature
-                show_fill: false
-                unit: '°C'
-            color_thresholds:
-            - color: '#4dd2ff'
-              value: 10
-            - color: '#ffa31a'
-              value: 20
-            - color: '#ff1a1a'
-              value: 30
-            hours_to_show: 24
-            points_per_hour: 2
-            show:
-              icon: false
-              name: false
-              state: false
-              points: false
-            style: |
-                :host {
-                  left: 11.6%;
-                  top:  75%;
-                  width: 23.5%;
-                  overflow: hidden;
-                  background: none;
-                  box-shadow: none !important;
-                }
-                .header {
-                  font-size: 1vw;
-                  position: absolute !important;
-                  width: 5% !important;
-                  padding: 0 !important;
-                  right: 20% !important;
-                  top: 15% !important;
-                }
-                ha-card {
-                  background: none;
-                  padding: 0 !important;
-                }
-                .icon > ha-icon {
-                  width:1.8vw !important;
-                  height:1.8vw !important;
-                }
-                .state__time{
-                  font-size:0.9vw !important;
-                  margin-top: 0.2vw;
-                  font-weight: 300 !important;
-                  opacity: 0.4 !important;
-                }
-                .states {
-                  font-size: 0.5vw !important;
-                  padding: 1vw 0vw 0vw 0vw  !important;
-                  margin: auto !important;
-                  width: 68%;
-                }
-                .ellipsis {
-                    color: rgba(255,255,255,0.7);
-                }
-                @media screen and (max-width: 900px) {
-                    .graph__legend {
-                        display: none !important;
-                    }
-                }
-            tap_action:
-              action: navigate
-              navigation_path: /lovelace/4
-            update_interval: 1800
-            upper_bound_secondary: 100
-            lower_bound_secondary: 0
-            type: 'custom:mini-graph-card'
-
-              
-              #########################    Overlay shadow images    #########################
+            #########################    Overlay shadow images    #########################
               
           - action: none
             image: /local/sidebar/sideShadow.png
             style:
-                height: 35%
-                left: 18.45%
-                pointer-events: none
-                top: 73%
-                width: 10%
+              height: 35%
+              left: 18.45%
+              pointer-events: none
+              top: 81%
+              width: 10%
             type: image
           - action: none
             image: /local/sidebar/sidebarInnerShadow.png
             style:
-                left: 22.83%
-                opacity: 0.7
-                pointer-events: none
-                top: 50%
-                width: 1.2109375%
+              left: 22.83%
+              opacity: 0.7
+              pointer-events: none
+              top: 50%
+              width: 1.2109375%
             type: image
-              
-           
+
 #############################################################################################################################################
 #                                                                                                                                           #
 #                                                   Media View                                               #
@@ -1387,7 +1249,7 @@ views:
 #############################################################################################################################################              
 
   - title: Media kiosk
-    icon: 'mdi:play-circle-outline'
+    icon: 'mdi:play-box'
     id: kiosk_media
     panel: true
     background: 'rgba(42, 46, 48, 1)'
@@ -1462,6 +1324,7 @@ views:
 #                                                                            #
 ##############################################################################
 
+
               #########################    BG IMAGE    #########################
             - action: none
               hold_action:
@@ -1506,15 +1369,380 @@ views:
               tap_action:
                 action: none
               type: state-label
-
               #########################    Mini Weather card    #########################
-              
             - backdrop: 
                 day: 'rgba(255, 255, 255, 0)'
                 night: 'rgba(255, 255, 255, 0)'
               entity: weather.home
               name: ' '
               style: |
+                :host {
+                  left: 11.4%;
+                  top:  24%;
+                  width: 17%;
+                  height: 8% !important;
+                  overflow: hidden;
+                  box-shadow: none !important;
+                  font-size: 1vw !important;
+                }
+                ha-card {
+                  box-shadow: none !important;
+                  flex-flow: row-reverse !important;
+                  padding: 0 !important;
+                }
+                .weather__info--add{
+                  display : none !important;
+                }
+                .weather__info{
+                  flex-grow: 1;
+                  min-height: 0 !important;
+                  height: 2.4vw;
+                  margin-left: 0.6vw;
+                  color: rgba(255, 255, 255, 0.7)
+                }
+                .weather__icon{
+                  margin-right:0.5% !important;
+                  margin-top: -3%;
+                  width: 2vw !important;
+                  height: 2vw !important;
+                  flex: 0 0 2vw !important;
+                }
+                @media screen and (max-width: 900px) {  
+                    :host {
+                      left: 11.4%;
+                      top:  24%;
+                      width: 17%;
+                      overflow: hidden;
+                      box-shadow: none !important;
+                      font-size: 1vw !important;
+                    }
+                    .ha-card {
+                      box-shadow: none !important;
+                      flex-flow: row-reverse !important;
+                      padding: 0 !important;
+                    }
+                    .weather__info--add{
+                      display : none !important;
+                    }
+                    .weather__info{
+                      flex-grow: 1;
+                      min-height: 0 !important;
+                      height: 25px !important;
+                      margin-left: 0.6vw;
+                      color: rgba(255, 255, 255, 0.7)
+                    }
+                }    
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/4
+              type: 'custom:simple-weather-card'              
+              #########################    MENU BUTTONS    #########################
+
+            - action: none
+              image: /local/sidebar/floor_plan_off.png
+              style:
+                left: 11.7%
+                top: 36%
+                width: 20.5078125%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/0
+              type: image
+            - action: none
+              image: /local/sidebar/all_devices_off.png
+              style:
+                left: 11.7%
+                top: 44%
+                width: 20.5078125%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/1
+              type: image
+            - action: none
+              image: /local/sidebar/media_on.png
+              style:
+                border-radius: 5vw
+                box-shadow: '0px 0.2vw 0.8vw 0px rgba(0,0,0,0.1)'
+                left: 11.7%
+                top: 52%
+                width: 20.5078125%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/2
+              type: image
+            - action: none
+              image: /local/sidebar/data_off.png
+              style:
+                left: 11.7%
+                top: 60%
+                width: 20.5078125%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace/3
+              type: image              
+              #########################    People at home    #########################
+              
+              #Optional label for people at Home (currently hidden with opacity: 0)
+              
+            - style:
+                color: white
+                font-size: 1vw
+                font-weight: 300
+                left: 8.8%
+                opacity: 0%
+                top: 80%
+                width: 10%
+              text: 'People at home:'
+              type: 'custom:text-element'
+              
+            - action: none
+              entity: person.graeme
+              state_image:
+                home: /local/users/graeme_hassio.jpg
+                not_home: /local/transparent.png
+              style:
+                background-color: 'rgba(255, 255, 255, 0.0)'
+                border: '0.1vw rgba(255, 255, 255, 0.3)'
+                border-radius: 10vw
+                height: 4.5vw
+                left: 5.8%
+                top: 73%
+                width: 4.5vw
+              tap_action: none
+              type: image
+                
+            - action: none
+              entity: person.carol
+              state_image:
+                home: /local/users/carol.jpg
+                not_home: /local/transparent.png
+              style:
+                background-color: 'rgba(255, 255, 255, 0.0)'
+                border: '0.1vw rgba(255, 255, 255, 0.3)'
+                border-radius: 10vw
+                height: 4.5vw
+                left: 10.8%
+                top: 73%
+                width: 4.5vw
+              tap_action: none
+              type: image
+              
+            - action: none
+              image: /local/transparent.png
+              style:
+                background-color: 'rgba(255, 255, 255, 0.0)'
+                border: '0.1vw dashed rgba(255, 255, 255, 0.3)'
+                border-radius: 10vw
+                height: 4.2vw
+                left: 15.9%
+                top: 73.2%
+                width: 4.2vw
+              tap_action: none
+              type: image
+            - action: none
+              image: /local/transparent.png
+              style:
+                background-color: 'rgba(255, 255, 255, 0.0)'
+                border: '0.1vw dashed rgba(255, 255, 255, 0.3)'
+                border-radius: 10vw
+                height: 4.2vw
+                left: 21.1%
+                top: 73.2%
+                width: 4.2vw
+              tap_action: none
+              type: image
+              
+              #########################    Overlay shadow images    #########################
+              
+            - action: none
+              image: /local/sidebar/sideShadow.png
+              style:
+                height: 35%
+                left: 18.45%
+                pointer-events: none
+                top: 81%
+                width: 10%
+              type: image
+            - action: none
+              image: /local/sidebar/sidebarInnerShadow.png
+              style:
+                left: 22.83%
+                opacity: 0.7
+                pointer-events: none
+                top: 50%
+                width: 1.2109375%
+              type: image
+
+#############################################################################################################################################
+#                                                                                                                                           #
+#                                                                       Data View                                                           #
+#                                                                                                                                           #
+#############################################################################################################################################
+
+  - title: Data Kiosk        
+    icon: 'mdi:chart-line'
+    panel: true
+    cards:
+
+      - type: picture-elements    
+        image: /local/transparent1.png
+        style: |
+          ha-card {
+            background: rgba(42, 46, 48, 1);
+            color: rgba(255, 255, 255, 0.85);
+          }
+        elements:        
+        ######### ROW ONE ##########
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.outside_temperature
+            line_color: var(--accent-color)
+            line_width: 8
+            font_size: 75     
+            show:
+                extrema: true
+                points: false
+            color_thresholds:
+                - color: '#4dd2ff'
+                  value: 10
+                - color: '#ffa31a'
+                  value: 20
+                - color: '#ff1a1a'
+                  value: 30
+            style:
+              top: 20%
+              left: 40% 
+              width: 20%    
+              height: 24%
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.outside_humidity
+            line_color: blue
+            line_width: 8
+            font_size: 75
+            show:
+                extrema: true
+                points: false
+            style:
+              top: 20%
+              left: 62%
+              width: 20%
+              height: 24%
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.lux
+            line_color: '#e74c3c'
+            line_width: 8
+            font_size: 75
+            icon: 'mdi:weather-sunny'
+            show:
+                extrema: true
+                points: false    
+            color_thresholds:
+                - color: '#000000'
+                  value: 0
+                - color: '#ebebeb'
+                  value: 2500                
+            style:
+              top: 20%
+              left: 84%
+              width: 20%
+              height: 24%
+        ######### ROW TWO ##########
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.inside_temperature
+            line_color: var(--accent-color)
+            line_width: 8
+            font_size: 75     
+            show:
+                extrema: true
+                points: false
+            color_thresholds:
+                - color: '#4dd2ff'
+                  value: 10
+                - color: '#ffa31a'
+                  value: 20
+                - color: '#ff1a1a'
+                  value: 30
+            style:
+              top: 48%
+              left: 40% 
+              width: 20%        
+              height: 24%
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.inside_humidity
+            line_color: blue
+            line_width: 8
+            font_size: 75
+            show:
+                extrema: true
+                points: false
+            style:
+              top: 48%
+              left: 62%
+              width: 20%
+              height: 24%
+
+##############################################################################
+#                                                                            #
+#                             DATA SIDEBAR                                   #
+#                                                                            #
+##############################################################################
+
+          - action: none
+            hold_action:
+              action: none
+            image: /local/sidebar/sidebarBG2.png
+            style:
+              height: 100%
+              left: 11.73828125%
+              top: 50%
+              width: 23.4765625%
+            tap_action:
+              action: none
+            type: image
+              
+            #########################    TIME AND DATE    #########################
+          - entity: sensor.time
+            hold_action:
+              action: none
+            style:
+              color: 'rgba(255, 255, 255, 0.7)'
+              font-size: 5.41vw
+              font-weight: 200
+              left: 2.7%
+              letter-spacing: '-0.05vw'
+              max-width: 1px
+              top: 10%
+            tap_action:
+              action: none
+            type: state-label
+          - entity: sensor.date_string
+            hold_action:
+              action: none
+            style:
+              color: 'rgba(255, 255, 255, 0.3)'
+              font-size: 1.3vw
+              font-weight: 300
+              left: 18.1%
+              letter-spacing: '-0.05vw'
+              text-align: left
+              top: 17%
+              width: 30%
+            tap_action:
+              action: none
+            type: state-label
+
+            #########################    Mini Weather card    #########################
+            
+          - backdrop: 
+              day: 'rgba(255, 255, 255, 0)'
+              night: 'rgba(255, 255, 255, 0)'
+            entity: weather.home
+            name: ' '
+            style: |
                 :host {
                   left: 11.4%;
                   top:  24%;
@@ -1572,344 +1800,148 @@ views:
                       color: rgba(255, 255, 255, 0.7)
                     }
                 }   
-              tap_action:
-                action: navigate
-                navigation_path: /lovelace/4
-              type: 'custom:simple-weather-card'              
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/4
+            type: 'custom:simple-weather-card'              
               #########################    MENU BUTTONS    #########################
 
-            - action: none
-              image: /local/sidebar/rooms_off.png
-              style:
-                left: 11.7%
-                top: 32%
-                width: 20.5078125%
-              tap_action:
-                action: navigate
-                navigation_path: /lovelace/0
-              type: image
-            - action: none
-              image: /local/sidebar/all_off.png
-              style:
-                left: 11.7%
-                top: 40%
-                width: 20.5078125%
-              tap_action:
-                action: navigate
-                navigation_path: /lovelace/1
-              type: image
-            - action: none
-              image: /local/sidebar/media_on.png
-              style:
-                border-radius: 5vw
-                box-shadow: '0px 0.2vw 0.8vw 0px rgba(0,0,0,0.1)'
-                left: 11.7%
-                top: 48%
-                width: 20.5078125%
-              tap_action:
-                action: navigate
-                navigation_path: /lovelace/2
-              type: image
-
+          - action: none
+            image: /local/sidebar/floor_plan_off.png
+            style:
+              left: 11.7%
+              top: 36%
+              width: 20.5078125%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/0
+            type: image
+          - action: none
+            image: /local/sidebar/all_devices_off.png
+            style:
+              left: 11.7%
+              top: 44%
+              width: 20.5078125%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/1
+            type: image
+          - action: none
+            image: /local/sidebar/media_off.png
+            style:
+              left: 11.7%
+              top: 52%
+              width: 20.5078125%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/2
+            type: image
+          - action: none
+            image: /local/sidebar/data_on.png
+            style:
+              border-radius: 5vw
+              box-shadow: '0px 0.2vw 0.8vw 0px rgba(0,0,0,0.1)'
+              left: 11.7%
+              top: 60%
+              width: 20.5078125%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/3
+            type: image              
+            #########################    People at home    #########################
               
+            #Optional label for people at Home (currently hidden with opacity: 0)
               
-              #########################    People at home    #########################
+          - style:
+              color: white
+              font-size: 1vw
+              font-weight: 300
+              left: 8.8%
+              opacity: 0%
+              top: 80%
+              width: 10%
+            text: 'People at home:'
+            type: 'custom:text-element'
               
-              #Optional label for people at Home (currently hidden with opacity: 0)
-              
-            - style:
-                color: white
-                font-size: 1vw
-                font-weight: 300
-                left: 8.8%
-                opacity: 0%
-                top: 66%
-                width: 10%
-              text: 'People at home:'
-              type: 'custom:text-element'
-              
-            - action: none
-              entity: person.graeme
-              state_image:
-                home: /local/users/graeme_hassio.jpg
-                not_home: /local/transparent.png
-              style:
-                background-color: 'rgba(255, 255, 255, 0.0)'
-                border: '0.1vw rgba(255, 255, 255, 0.3)'
-                border-radius: 10vw
-                height: 4.5vw
-                left: 5.8%
-                top: 62%
-                width: 4.5vw
-              tap_action: none
-              type: image
+          - action: none
+            entity: person.graeme
+            state_image:
+              home: /local/users/graeme_hassio.jpg
+              not_home: /local/transparent.png
+            style:
+              background-color: 'rgba(255, 255, 255, 0.0)'
+              border: '0.1vw rgba(255, 255, 255, 0.3)'
+              border-radius: 10vw
+              height: 4.5vw
+              left: 5.8%
+              top: 73%
+              width: 4.5vw
+            tap_action: none
+            type: image
                 
-            - action: none
-              entity: person.carol
-              state_image:
-                home: /local/users/carol.jpg
-                not_home: /local/transparent.png
-              style:
-                background-color: 'rgba(255, 255, 255, 0.0)'
-                border: '0.1vw rgba(255, 255, 255, 0.3)'
-                border-radius: 10vw
-                height: 4.5vw
-                left: 10.8%
-                top: 62%
-                width: 4.5vw
-              tap_action: none
-              type: image
+          - action: none
+            entity: person.carol
+            state_image:
+              home: /local/users/carol.jpg
+              not_home: /local/transparent.png
+            style:
+              background-color: 'rgba(255, 255, 255, 0.0)'
+              border: '0.1vw rgba(255, 255, 255, 0.3)'
+              border-radius: 10vw
+              height: 4.5vw
+              left: 10.8%
+              top: 73%
+              width: 4.5vw
+            tap_action: none
+            type: image
               
-            - action: none
-              image: /local/transparent.png
-              style:
-                background-color: 'rgba(255, 255, 255, 0.0)'
-                border: '0.1vw dashed rgba(255, 255, 255, 0.3)'
-                border-radius: 10vw
-                height: 4.2vw
-                left: 15.9%
-                top: 62.2%
-                width: 4.2vw
-              tap_action: none
-              type: image
-            - action: none
-              image: /local/transparent.png
-              style:
-                background-color: 'rgba(255, 255, 255, 0.0)'
-                border: '0.1vw dashed rgba(255, 255, 255, 0.3)'
-                border-radius: 10vw
-                height: 4.2vw
-                left: 21.1%
-                top: 62.2%
-                width: 4.2vw
-              tap_action: none
-              type: image
+          - action: none
+            image: /local/transparent.png
+            style:
+              background-color: 'rgba(255, 255, 255, 0.0)'
+              border: '0.1vw dashed rgba(255, 255, 255, 0.3)'
+              border-radius: 10vw
+              height: 4.2vw
+              left: 15.9%
+              top: 73.2%
+              width: 4.2vw
+            tap_action: none
+            type: image
+          - action: none
+            image: /local/transparent.png
+            style:
+              background-color: 'rgba(255, 255, 255, 0.0)'
+              border: '0.1vw dashed rgba(255, 255, 255, 0.3)'
+              border-radius: 10vw
+              height: 4.2vw
+              left: 21.1%
+              top: 73.2%
+              width: 4.2vw
+            tap_action: none
+            type: image
               
-#############    Minigraph to show temperature and Illumitation    ############
-            - entities:
-                - entity: sensor.ambient_light_calc
-                  color: 'rgba(255,255,255,0.7)'
-                  name: Sunlight
-                  show_fill: false
-                  y_axis: secondary
-                  unit: '%'
-                - entity: sensor.weather_temperature
-                  name: Temperature
-                  show_fill: false                  
-                  unit: '°C'
-              color_thresholds:
-              - color: '#4dd2ff'
-                value: 10
-              - color: '#ffa31a'
-                value: 20
-              - color: '#ff1a1a'
-                value: 30
-              hours_to_show: 24
-              points_per_hour: 2
-              smoothing: true
-              show:
-                icon: false
-                name: false
-                state: false
-                points: false
-              style: |
-                :host {
-                  left: 11.6%;
-                  top:  75%;
-                  width: 23.5%;
-                  overflow: hidden;
-                  background: none  !important;
-                  box-shadow: none !important;
-                }
-                .header {
-                  font-size: 1vw;
-                  position: absolute !important;
-                  width: 5% !important;
-                  padding: 0 !important;
-                  right: 20% !important;
-                  top: 15% !important;
-                }
-                ha-card {
-                  background: none  !important;
-                  padding: 0 !important;
-                }
-                .icon > ha-icon {
-                  width:1.8vw !important;
-                  height:1.8vw !important;
-                }
-                .state__time{
-                  font-size:0.9vw !important;
-                  margin-top: 0.2vw;
-                  font-weight: 300 !important;
-                  opacity: 0.4 !important;
-                }
-                .states {
-                  font-size: 0.5vw !important;
-                  padding: 1vw 0vw 0vw 0vw  !important;
-                  margin: auto !important;
-                  width: 68%;
-                }
-                .ellipsis {
-                    color: rgba(255,255,255,0.7);
-                }
-                @media screen and (max-width: 900px) {
-                    .graph__legend {
-                        display: none !important;
-                    }
-                }
-              tap_action:
-                action: navigate
-                navigation_path: /lovelace/4
-              update_interval: 1800
-              upper_bound_secondary: 100
-              lower_bound_secondary: 0
-              type: 'custom:mini-graph-card'
+            #########################    Overlay shadow images    #########################
               
-              #########################    Overlay shadow images    #########################
-              
-            - action: none
-              image: /local/sidebar/sideShadow.png
-              style:
-                height: 35%
-                left: 18.45%
-                pointer-events: none
-                top: 73%
-                width: 10%
-              type: image
-            - action: none
-              image: /local/sidebar/sidebarInnerShadow.png
-              style:
-                left: 22.83%
-                opacity: 0.7
-                pointer-events: none
-                top: 50%
-                width: 1.2109375%
-              type: image
-              
-              #########################   Styled now playing Media Player    #########################
-              
-              # when the media player is playing, this overlaps the "Media" menu button
-            - entity: media_player.all
-              hide:
-                  controls: true
-                  name: true
-                  power: true
-                  source: true
-                  volume: true
-                  progress: true
-              idle_view:
-                  after: 0.1
-                  when_idle: true
-                  when_paused: true
-                  when_standby: true
-              style: |
-                  :host {
-                    left: 11.7%;
-                    top:  47.5%;
-                    width: 20.5%;
-                    border-radius: 5vw;
-                    overflow: hidden;
-                    height: 3.8vw;
-                    box-shadow: none !important;
-                    background: none !important;
-                  }
-                  ha-card {
-                    border-radius: 5vw;
-                    overflow: hidden !important;
-                    box-shadow: none !important;
-                    padding: 0.1vw 0.9vw 0.7vw 1.05vw !important;
-                    background: none !important;
-                  }
-                  ha-card.--inactive .mmp-player{
-                    opacity: 0 !important;
-                  }
-                  #primaryProgress{
-                    background: #474A52 !important; 
-                  }              
-                  .entity__info{
-                    height: 2.6vw;
-                    width: 65% !important;
-                    max-height: 20vw !important;
-                    font-size: 0.9vw !important;
-                    margin:0 0 0 1.04vw !important;
-                    display: inline-block !important;
-                  }
-                  div.mmp__bg{
-                    background: #2a2e30;
-                    font-weight: 200;
-                  }
-                  ha-card.--inactive div.mmp__bg{
-                    background: none;
-                  }
-                  div.mmp-player {
-                    padding: 0vw;
-                    height: 100%;
-                  }
-                  ha-card {
-                    height: 100%;
-                  }
-                  mmp-powerstrip {
-                    width: 100%;
-                    display: block;
-                    padding:0;
-                  }
-                  ha-icon{
-                    display: block !important;
-                    height: 2vw !important;
-                    width: 2vw !important;
-                    margin: 0.3vw 1.5vw 0 0vw !important;
-                  }
-                  .entity__icon{
-                    float:right;
-                    padding: 0.1vw;
-                    width: 3vw !important;
-                    height: 3vw !important;
-                    min-width: 0 !important;
-                    min-height: 0 !important;
-                    margin:0 !important;
-                    display: inline-block !important;
-                  }
-                  .mmp-player__core {
-                    height: auto;
-                    width: 100% !important;
-                    margin-bottom: 0.1vw;
-                    display: block !important;
-                    position: absolute !important;
-                    bottom: 0;
-                  }
-                  .entity__info__media{
-                    max-height: 20vw !important;
-                  }
-                  .entity__info__media span::before{
-                    content: none !important
-                  }
-                  .attr__media_title{
-                    display:block;
-                    color: white;
-                    font-weight: 400;
-                    font-size: 1.2vw !important;
-                  }
-                  .attr__media_artist{
-                    font-size: 0.8vw !important;
-                    font-weight: 300;
-                    color: white;
-                  }
-                  .entity__artwork{
-                    display:inline-block;
-                    float: right;
-                    margin-right: 0 !important;
-                    display: inline-block;
-                    float: right;
-                    width: 2.2vw !important;
-                    height: 2.2vw !important;
-                    min-width: 0 !important;
-                    margin: 0.2vw 1vw 0 0 !important;
-                  }
-              tap_action:
-                  action: navigate
-                  navigation_path: /lovelace/2
-              type: 'custom:mini-media-player'
-              
+          - action: none
+            image: /local/sidebar/sideShadow.png
+            style:
+              height: 35%
+              left: 18.45%
+              pointer-events: none
+              top: 83%
+              width: 10%
+            type: image
+          - action: none
+            image: /local/sidebar/sidebarInnerShadow.png
+            style:
+              left: 22.83%
+              opacity: 0.7
+              pointer-events: none
+              top: 50%
+              width: 1.2109375%
+            type: image
+      
+       
 ##########################    DEBUG PAGE    ####################################              
               
   - title: DEBUG
