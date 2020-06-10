@@ -83,15 +83,24 @@
     service: script.turn_off
   - service: script.turn_on_cristo
 - id: '1591700611894'
-  alias: LED on motion
+  alias: LED on State Change
   description: ''
   trigger:
-  - device_id: a70875db160c49319a6cb6f92bb81119
-    domain: binary_sensor
-    entity_id: binary_sensor.living_room_pir_2
-    platform: device
-    type: motion
+  - entity_id: cover.sonoff_1000d66886
+    platform: state
+  - entity_id: cover.sonoff_1000d66ac3
+    platform: state
+  - entity_id: cover.sonoff_1000d67323
+    platform: state
+  - entity_id: light.carol_s_lamp
+    platform: state
+  - entity_id: light.graeme_s_lamp
+    platform: state
+  - entity_id: switch.cristo_light
+    platform: state
+  - entity_id: media_player.living_room_tv
+    platform: state
   condition: []
   action:
   - data: {}
-    service: script.flash_blue_led
+    service: script.flash_green_led

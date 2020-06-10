@@ -14,7 +14,10 @@ http:
 # Text to speech
 tts:
   - platform: google_translate
-
+  
+upnp:
+  local_ip: 192.168.1.100
+  
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -111,6 +114,8 @@ sensor:
         
       kitchen_position:
         value_template: '{{states.cover.sonoff_1000d66886.attributes.current_position | float|round(1)}}'        
+
+
 
 ## Weather
 

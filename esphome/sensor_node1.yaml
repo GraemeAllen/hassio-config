@@ -46,9 +46,9 @@ sensor:
     sensors:
       name: "Lux" 
       unit_of_measurement: lux
-     # filters:
+      filters:
      # - filter_out: 0
-     # - filter_out: 65535
+      - filter_out: 65535
 i2c:
   sda: GPIO4
   scl: GPIO0    

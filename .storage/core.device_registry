@@ -187,7 +187,7 @@
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sensor_node1",
                 "name_by_user": null,
-                "sw_version": "1.14.4 (Jun  9 2020, 08:21:32)",
+                "sw_version": "1.14.4 (Jun  9 2020, 23:20:52)",
                 "via_device_id": null
             },
             {
@@ -208,13 +208,13 @@
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sensor_node2",
                 "name_by_user": null,
-                "sw_version": "1.14.4 (Jun  9 2020, 11:59:57)",
+                "sw_version": "1.14.4 (Jun 10 2020, 10:00:39)",
                 "via_device_id": null
             },
             {
-                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "area_id": null,
                 "config_entries": [
-                    "bc95c6cda32d4acc8640f920bab9badc"
+                    "827a081939d6451c9d40a9a72435fd96"
                 ],
                 "connections": [
                     [
@@ -223,7 +223,7 @@
                     ]
                 ],
                 "entry_type": null,
-                "id": "8d736c906d3e46aabaaecfa4034cf146",
+                "id": "ed9bb7d857984886a7d1c2b01e35512d",
                 "identifiers": [
                     [
                         "upnp",

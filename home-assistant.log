@@ -1,182 +1,134 @@
-2020-06-09 23:04:33 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-06-09 23:04:33 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for sonoff which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-06-09 23:04:33 WARNING (MainThread) [homeassistant.components.http] The 'base_url' option (with value 'https://hab11.com') is deprecated, please remove it from your configuration
-2020-06-09 23:04:45 WARNING (MainThread) [homeassistant.components.lovelace] Resources need to be specified in your configuration.yaml. Please see the docs.
-2020-06-09 23:04:50 WARNING (SyncWorker_2) [homeassistant.components.bluetooth_le_tracker.device_tracker] No Bluetooth LE devices to track!
-2020-06-09 23:04:51 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform legacy
-2020-06-09 23:05:48 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:05:48 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:05:48 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:06:01 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:07:53 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:07:55 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:10:28 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:10:29 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:12:24 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:12:25 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
-2020-06-09 23:14:17 ERROR (Recorder) [homeassistant.components.recorder] Error adding event: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
-(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-06-10 17:51:38 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-06-10 17:51:38 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for sonoff which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-06-10 17:51:39 WARNING (MainThread) [homeassistant.components.http] The 'base_url' option (with value 'https://hab11.com') is deprecated, please remove it from your configuration
+2020-06-10 17:51:53 WARNING (MainThread) [homeassistant.components.lovelace] Resources need to be specified in your configuration.yaml. Please see the docs.
+2020-06-10 17:51:58 WARNING (SyncWorker_18) [homeassistant.components.bluetooth_le_tracker.device_tracker] No Bluetooth LE devices to track!
+2020-06-10 17:51:58 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform legacy
+2020-06-10 17:52:59 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:52:59 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:52:59 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:52:59 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:53:00 WARNING (MainThread) [homeassistant.core] Unable to remove unknown listener <function async_track_point_in_utc_time.<locals>.point_in_time_listener at 0x6f5b93d8>
+2020-06-10 17:53:32 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:53:32 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:53:36 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:55:25 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:55:41 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:56:04 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:56:05 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:56:06 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:56:14 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:57:19 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:57:34 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:57:35 ERROR (MainThread) [homeassistant.components.script] Dashboard on TV: Error executing script. Invalid data for call_service at pos 1: value should be a string for dictionary value @ data['entity_id']
+2020-06-10 17:57:35 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1867955824] value should be a string for dictionary value @ data['entity_id']
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such table: events
-
-The above exception was the direct cause of the following exception:
-
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 130, in handle_call_service
+    connection.context(msg),
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1253, in async_call
+    task.result()
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1288, in _execute_service
+    await handler.func(service_call)
+  File "/usr/src/homeassistant/homeassistant/components/script/__init__.py", line 207, in service_handler
+    await script.async_turn_on(variables=service.data, context=service.context)
+  File "/usr/src/homeassistant/homeassistant/components/script/__init__.py", line 284, in async_turn_on
+    await self.script.async_run(kwargs.get(ATTR_VARIABLES), context)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 798, in async_run
+    await run.async_run()
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 522, in async_run
+    await self._async_run()
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 539, in _async_run
+    await self._async_step(log_exceptions=not propagate_exceptions)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 153, in _async_step
+    self, f"_async_{cv.determine_script_action(self._action)}_step"
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 623, in _async_call_service_step
+    *self._prep_call_service_step(), blocking=True, context=self._context
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1215, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.7/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.7/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.7/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: value should be a string for dictionary value @ data['entity_id']
+2020-06-10 17:57:51 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:58:02 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:58:15 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:58:22 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:58:31 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:58:32 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:58:44 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:58:45 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:58:53 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:59:08 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:59:25 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:59:31 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:59:41 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:59:41 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 17:59:55 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:00:01 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:00:16 ERROR (MainThread) [homeassistant.components.script] Dashboard on TV: Error executing script. Invalid data for call_service at pos 1: expected str for dictionary value @ data['view_path']
+2020-06-10 18:00:16 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1867955824] expected str for dictionary value @ data['view_path']
 Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 372, in run
-    self.event_session.flush()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
-    self._flush(objects)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
-    exc_value, with_traceback=exc_tb,
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
-    raise exception
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
-    flush_context.execute()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
-    insert,
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
-    statement, params
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 984, in execute
-    return meth(self, multiparams, params)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
-    distilled_params,
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
-    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
-    raise exception
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-09 23:14:18 WARNING (MainThread) [homeassistant.components.http] The 'base_url' option (with value 'https://hab11.com') is deprecated, please remove it from your configuration
-2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error executing query: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error saving events: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 419, in _commit_event_session_or_retry
-    self._commit_event_session()
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 470, in _commit_event_session
-    self.event_session.commit()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
-    self.transaction.commit()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 501, in commit
-    self._assert_active(prepared_ok=True)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 295, in _assert_active
-    code="7s2a",
-sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('call_service', '{"domain": "homeassistant", "service": "restart", "service_data": {}}', 'LOCAL', '2020-06-09 22:14:17.057571', '2020-06-09 22:14:17.075242', 'f0e74a39c9444ffb87016b081e7aaa4b', '479ff0902f1040b88851e8c3f1cf26c5')]
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-2020-06-09 23:14:18 ERROR (MainThread) [homeassistant.core] Error doing job: Exception in callback EventBus.async_listen_once.<locals>.onetime_listener(<Event homeassistant_stop[L]>) at /usr/src/homeassistant/homeassistant/core.py:671
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/asyncio/events.py", line 88, in _run
-    self._context.run(self._callback, *self._args)
-  File "/usr/src/homeassistant/homeassistant/core.py", line 683, in onetime_listener
-    self._hass.async_run_job(listener, event)
-  File "/usr/src/homeassistant/homeassistant/core.py", line 392, in async_run_job
-    self.async_add_job(target, *args)
-  File "/usr/src/homeassistant/homeassistant/core.py", line 322, in async_add_job
-    task = self.loop.create_task(target(*args))
-TypeError: stop() takes 1 positional argument but 2 were given
-2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error adding event: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
-(Background on this error at: http://sqlalche.me/e/e3q8)
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such table: events
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 372, in run
-    self.event_session.flush()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
-    self._flush(objects)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
-    exc_value, with_traceback=exc_tb,
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
-    raise exception
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
-    flush_context.execute()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
-    insert,
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
-    statement, params
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 984, in execute
-    return meth(self, multiparams, params)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
-    distilled_params,
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
-    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
-    raise exception
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error executing query: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-2020-06-09 23:14:18 ERROR (Recorder) [homeassistant.components.recorder] Error saving events: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 419, in _commit_event_session_or_retry
-    self._commit_event_session()
-  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 470, in _commit_event_session
-    self.event_session.commit()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
-    self.transaction.commit()
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 501, in commit
-    self._assert_active(prepared_ok=True)
-  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 295, in _assert_active
-    code="7s2a",
-sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) no such table: events
-[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
-[parameters: ('homeassistant_stop', '{}', 'LOCAL', '2020-06-09 22:14:18.301501', '2020-06-09 22:14:18.313840', 'f446b796af9949eb94b956fd2ccf281b', None)]
-(Background on this error at: http://sqlalche.me/e/e3q8) (Background on this error at: http://sqlalche.me/e/7s2a)
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 130, in handle_call_service
+    connection.context(msg),
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1253, in async_call
+    task.result()
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1288, in _execute_service
+    await handler.func(service_call)
+  File "/usr/src/homeassistant/homeassistant/components/script/__init__.py", line 207, in service_handler
+    await script.async_turn_on(variables=service.data, context=service.context)
+  File "/usr/src/homeassistant/homeassistant/components/script/__init__.py", line 284, in async_turn_on
+    await self.script.async_run(kwargs.get(ATTR_VARIABLES), context)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 798, in async_run
+    await run.async_run()
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 522, in async_run
+    await self._async_run()
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 539, in _async_run
+    await self._async_step(log_exceptions=not propagate_exceptions)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 153, in _async_step
+    self, f"_async_{cv.determine_script_action(self._action)}_step"
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 623, in _async_call_service_step
+    *self._prep_call_service_step(), blocking=True, context=self._context
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1215, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.7/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.7/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.7/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: expected str for dictionary value @ data['view_path']
+2020-06-10 18:00:17 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:00:17 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:00:25 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:00:41 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:00:50 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:01:06 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:01:55 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:10 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:20 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:21 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:21 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:22 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:25 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:41 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:48 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:50 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:52 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:02:53 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:04 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:08 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:08 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:09 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:09 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:28 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:35 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:36 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:36 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:37 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:03:53 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:04:08 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:04:22 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404
+2020-06-10 18:04:37 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/v1/devices:reportStateAndNotification failed: 404

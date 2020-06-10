@@ -12,7 +12,7 @@
         "description": "HACS gives you a powerful UI to handle downloads of all your custom needs.",
         "domain": "hacs",
         "domains": [],
-        "downloads": 5932,
+        "downloads": 7121,
         "file_name": "",
         "filename": "hacs.zip",
         "first_install": false,
@@ -32,7 +32,7 @@
         "last_version": "1.1.0",
         "manifest_name": "HACS",
         "new": false,
-        "open_issues": 15,
+        "open_issues": 16,
         "persistent_directory": null,
         "published_tags": [
             "1.1.0",
@@ -46,7 +46,7 @@
         "render_readme": false,
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 1073,
+        "stargazers_count": 1076,
         "topics": [
             "community",
             "hacs",

@@ -206,9 +206,9 @@
                     "udn": "uuid:00e0fc37-2525-2828-2500-886639D78CFD"
                 },
                 "domain": "upnp",
-                "entry_id": "bc95c6cda32d4acc8640f920bab9badc",
+                "entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "options": {},
-                "source": "ssdp",
+                "source": "import",
                 "system_options": {
                     "disable_new_entities": false
                 },
