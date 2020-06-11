@@ -1,31 +1,31 @@
 {
     "data": [
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "editable": true,
                     "friendly_name": "Graeme",
-                    "gps_accuracy": 18,
+                    "gps_accuracy": 16,
                     "id": "graeme",
-                    "latitude": 41.1818112,
-                    "longitude": -8.6236459,
-                    "source": "person.graeme",
+                    "latitude": 41.1818108,
+                    "longitude": -8.6236541,
+                    "source": "device_tracker.mi_9_lite",
                     "user_id": "479ff0902f1040b88851e8c3f1cf26c5"
                 },
                 "context": {
-                    "id": "435e17adaeb84f328f1f18d326dee093",
+                    "id": "ec3130ac1ce644f28b79b4e06439795c",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "person.graeme",
-                "last_changed": "2020-06-10T16:51:54.930264+00:00",
-                "last_updated": "2020-06-10T16:51:54.930264+00:00",
+                "last_changed": "2020-06-11T13:11:24.460513+00:00",
+                "last_updated": "2020-06-11T18:34:22.003690+00:00",
                 "state": "home"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "editable": true,
@@ -34,39 +34,21 @@
                     "id": "carol",
                     "latitude": 41.18138303369821,
                     "longitude": -8.623506883959262,
-                    "source": "person.carol"
+                    "source": "device_tracker.iphonedcarolina"
                 },
                 "context": {
-                    "id": "fe0632e41e274985bed5d0639655ddb6",
+                    "id": "74c23d5e4ccb47cba642d69da6fefc2e",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "person.carol",
-                "last_changed": "2020-06-10T16:51:54.931189+00:00",
-                "last_updated": "2020-06-10T16:51:54.931189+00:00",
+                "last_changed": "2020-06-11T13:11:24.461426+00:00",
+                "last_updated": "2020-06-11T13:12:20.689709+00:00",
                 "state": "home"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
-            "state": {
-                "attributes": {
-                    "editable": false,
-                    "friendly_name": "Blinds Primed"
-                },
-                "context": {
-                    "id": "740f6092872a4c1c948db33854f00647",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.blinds_primed",
-                "last_changed": "2020-06-10T16:51:54.932132+00:00",
-                "last_updated": "2020-06-10T16:51:54.932132+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -78,18 +60,18 @@
                     "step": 1.0
                 },
                 "context": {
-                    "id": "31cc71024021412a8b1626bf89277505",
+                    "id": "cc23164c783b4d99b43fe3b1f02f26bc",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "input_number.nightime",
-                "last_changed": "2020-06-10T16:51:54.932827+00:00",
-                "last_updated": "2020-06-10T16:51:54.932827+00:00",
+                "last_changed": "2020-06-11T13:11:24.464220+00:00",
+                "last_updated": "2020-06-11T13:11:24.464220+00:00",
                 "state": "0.0"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -101,18 +83,18 @@
                     "step": 1.0
                 },
                 "context": {
-                    "id": "83780797c63b4cb4b891e45fbe99f86f",
+                    "id": "b5ca91cb4cec450886547149455d6244",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "input_number.range_high",
-                "last_changed": "2020-06-10T16:51:54.933504+00:00",
-                "last_updated": "2020-06-10T16:51:54.933504+00:00",
+                "last_changed": "2020-06-11T13:11:24.465006+00:00",
+                "last_updated": "2020-06-11T13:11:24.465006+00:00",
                 "state": "8.0"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -124,18 +106,18 @@
                     "step": 1.0
                 },
                 "context": {
-                    "id": "0158208c66364fe9bae143e0d1e8fc82",
+                    "id": "f291b9e6a4c64644a327c8599842a149",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "input_number.range_low",
-                "last_changed": "2020-06-10T16:51:54.934170+00:00",
-                "last_updated": "2020-06-10T16:51:54.934170+00:00",
+                "last_changed": "2020-06-11T13:11:24.465749+00:00",
+                "last_updated": "2020-06-11T13:11:24.465749+00:00",
                 "state": "4.0"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -147,37 +129,55 @@
                     "step": 1.0
                 },
                 "context": {
-                    "id": "039f97bd285346ef8058a964fe6b0ff7",
+                    "id": "acb88d13a1b04011a0c149e948a60032",
                     "parent_id": null,
-                    "user_id": null
+                    "user_id": "479ff0902f1040b88851e8c3f1cf26c5"
                 },
                 "entity_id": "input_number.daylight_tester",
-                "last_changed": "2020-06-10T16:51:54.934837+00:00",
-                "last_updated": "2020-06-10T16:51:54.934837+00:00",
-                "state": "0.0"
+                "last_changed": "2020-06-11T18:22:15.059003+00:00",
+                "last_updated": "2020-06-11T18:22:15.059003+00:00",
+                "state": "100.0"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
+            "state": {
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Blinds Primed"
+                },
+                "context": {
+                    "id": "12c11fe4628f45bbada1c763141fab5b",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.blinds_primed",
+                "last_changed": "2020-06-11T13:11:24.467205+00:00",
+                "last_updated": "2020-06-11T13:11:24.467205+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Open Blinds Mon-Fri",
                     "id": "1590765489158",
-                    "last_triggered": "2020-06-10T06:00:03.866853+00:00"
+                    "last_triggered": "2020-06-11T06:00:02.856717+00:00"
                 },
                 "context": {
-                    "id": "03ba32431e684985b07a7d31b8a5f6f1",
+                    "id": "771397418be148a0be42feb3bbc55035",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.open_blinds_sat_sun_2",
-                "last_changed": "2020-06-10T16:51:55.351213+00:00",
-                "last_updated": "2020-06-10T16:51:55.351213+00:00",
+                "last_changed": "2020-06-11T13:11:24.789889+00:00",
+                "last_updated": "2020-06-11T13:11:24.789889+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Open Blinds Sat-Sun",
@@ -185,113 +185,113 @@
                     "last_triggered": "2020-06-07T08:00:01.236415+00:00"
                 },
                 "context": {
-                    "id": "ff65752564e840efa2ed2b49a2bc04b0",
+                    "id": "cb8c4e399f29455fb7ef0c2c22aae9a9",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.open_blinds_sat_sun",
-                "last_changed": "2020-06-10T16:51:55.352354+00:00",
-                "last_updated": "2020-06-10T16:51:55.352354+00:00",
+                "last_changed": "2020-06-11T13:11:24.791054+00:00",
+                "last_updated": "2020-06-11T13:11:24.791054+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Wake Up 2",
                     "id": "1591640831293",
-                    "last_triggered": "2020-06-10T06:26:46.850724+00:00"
+                    "last_triggered": "2020-06-11T07:01:48.196151+00:00"
                 },
                 "context": {
-                    "id": "090dcfe4bda54b5b8835dde4c5996ca1",
+                    "id": "e9a048d5bb8f406db6e4a612bd6e3189",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.wake_up_2",
-                "last_changed": "2020-06-10T16:51:55.353317+00:00",
-                "last_updated": "2020-06-10T16:51:55.353317+00:00",
+                "last_changed": "2020-06-11T13:11:24.792060+00:00",
+                "last_updated": "2020-06-11T13:11:24.792060+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Cristo light motion",
                     "id": "1591645794362",
-                    "last_triggered": "2020-06-09T22:30:43.407210+00:00"
+                    "last_triggered": "2020-06-10T21:38:22.240137+00:00"
                 },
                 "context": {
-                    "id": "4872f32c098a4d9a8841f95e64a775ec",
+                    "id": "530ae07fcbe6436e99f47005c8aecc5b",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.cristo_light_motion",
-                "last_changed": "2020-06-10T16:51:55.354260+00:00",
-                "last_updated": "2020-06-10T16:51:55.354260+00:00",
+                "last_changed": "2020-06-11T13:11:24.793019+00:00",
+                "last_updated": "2020-06-11T13:11:24.793019+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "LED on State Change",
                     "id": "1591700611894",
-                    "last_triggered": "2020-06-10T16:07:20.610320+00:00"
+                    "last_triggered": "2020-06-11T19:11:50.880849+00:00"
                 },
                 "context": {
-                    "id": "900624868c024712bd7469a73adeeb4c",
-                    "parent_id": null,
+                    "id": "afa658e32dd84fad8aa30ba8944f3c6a",
+                    "parent_id": "507a78e5350342fa8084ff1da280c95f",
                     "user_id": null
                 },
                 "entity_id": "automation.new_automation_2",
-                "last_changed": "2020-06-10T16:51:55.355856+00:00",
-                "last_updated": "2020-06-10T16:51:55.355856+00:00",
+                "last_changed": "2020-06-11T13:11:24.793982+00:00",
+                "last_updated": "2020-06-11T19:11:50.881166+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "altitude": 148.0,
                     "course": 0,
                     "friendly_name": "Mi 9 Lite",
-                    "gps_accuracy": 18,
-                    "latitude": 41.1818112,
-                    "longitude": -8.6236459,
+                    "gps_accuracy": 16,
+                    "latitude": 41.1818108,
+                    "longitude": -8.6236541,
                     "source_type": "gps",
                     "speed": 0,
                     "vertical_accuracy": 2
                 },
                 "context": {
-                    "id": "218fe286c4c247c48324d7130bbf9bd7",
+                    "id": "0c4ec449acf84b12823b570c1cb14073",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "device_tracker.mi_9_lite",
-                "last_changed": "2020-06-10T16:52:02.439162+00:00",
-                "last_updated": "2020-06-10T16:52:02.439162+00:00",
+                "last_changed": "2020-06-11T18:51:38.265038+00:00",
+                "last_updated": "2020-06-11T18:51:38.265038+00:00",
                 "state": "home"
             }
         },
         {
-            "last_seen": "2020-06-10T16:52:55.494726+00:00",
+            "last_seen": "2020-06-11T19:12:42.016459+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Mi_Phone",
                     "source_type": "gps"
                 },
                 "context": {
-                    "id": "b59faeed96ec42bb9a658f9aeb701bb6",
+                    "id": "14ff9b92179241deb05a6340218ef597",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "device_tracker.mi_phone_2",
-                "last_changed": "2020-06-10T16:52:02.440498+00:00",
-                "last_updated": "2020-06-10T16:52:02.440498+00:00",
+                "last_changed": "2020-06-11T13:11:30.857385+00:00",
+                "last_updated": "2020-06-11T13:11:30.857385+00:00",
                 "state": "unknown"
             }
         },

@@ -36,7 +36,7 @@ off_lights:
   sequence:
   - service: switch.turn_off
     data:
-      entity_id: switch.cristo_light
+      entity_id: switch.cristo_lamp
   - service: light.turn_off
     data:
       entity_id: light.graeme_s_lamp
@@ -48,7 +48,7 @@ off_all:
   sequence:
   - service: switch.turn_off
     data:
-      entity_id: switch.cristo_light
+      entity_id: switch.cristo_lamp
   - service: light.turn_off
     data:
       entity_id: light.graeme_s_lamp
@@ -208,56 +208,45 @@ wake_up_2:
 turn_on_cristo:
   sequence:
   - data:
-      entity_id: switch.cristo_light
+      entity_id: switch.cristo_lamp
     service: switch.turn_on
   - delay: 00:02:00
   - data:
-      entity_id: switch.cristo_light
+      entity_id: switch.cristo_lamp
     service: switch.turn_off
 flash_red_led:
   sequence:
   - service: light.turn_on
     data:
       entity_id: light.rgb_led
+      flash: short
       rgb_color:
       - 255
       - 0
       - 0
-  - delay:
-      seconds: 1
-  - service: light.turn_off
-    data:
-      entity_id: light.rgb_led
+      transition: 0
 flash_green_led:
   sequence:
   - data:
       entity_id: light.rgb_led
+      flash: short
       rgb_color:
       - 0
       - 255
       - 0
       transition: 0
     service: light.turn_on
-  - delay:
-      seconds: 0.5
-  - data:
-      entity_id: light.rgb_led
-      transition: 0
-    service: light.turn_off
 flash_blue_led:
   sequence:
   - service: light.turn_on
     data:
       entity_id: light.rgb_led
+      flash: short
       rgb_color:
       - 0
       - 0
       - 255
-  - delay:
-      seconds: 1
-  - service: light.turn_off
-    data:
-      entity_id: light.rgb_led
+      transition: 0
 '1591808247932':
   alias: Dashboard on TV
   sequence:

@@ -16,6 +16,14 @@
                 "show_in_sidebar": false,
                 "title": "Floorplan",
                 "url_path": "live-floorplan"
+            },
+            {
+                "id": "lovelace_tablet",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": true,
+                "title": "Tablet",
+                "url_path": "lovelace-tablet"
             }
         ]
     },

@@ -32,7 +32,7 @@
         "last_version": "v2.1.4",
         "manifest_name": "Sonoff",
         "new": false,
-        "open_issues": 25,
+        "open_issues": 24,
         "persistent_directory": null,
         "published_tags": [
             "v2.1.4",
@@ -46,7 +46,7 @@
         "render_readme": true,
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 320,
+        "stargazers_count": 325,
         "topics": [
             "ewelink",
             "home-assistant",

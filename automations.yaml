@@ -96,7 +96,7 @@
     platform: state
   - entity_id: light.graeme_s_lamp
     platform: state
-  - entity_id: switch.cristo_light
+  - entity_id: switch.cristo_lamp
     platform: state
   - entity_id: media_player.living_room_tv
     platform: state

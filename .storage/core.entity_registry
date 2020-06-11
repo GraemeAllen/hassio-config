@@ -82,22 +82,6 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": {},
-                "config_entry_id": "f0ec3f7a974e42da829c370440d87082",
-                "device_class": null,
-                "device_id": "6aed5e2038814e7cbf5f43ec238a4691",
-                "disabled_by": null,
-                "entity_id": "switch.cristo_light",
-                "icon": null,
-                "name": null,
-                "original_icon": null,
-                "original_name": "Cristo light",
-                "platform": "tplink",
-                "supported_features": 0,
-                "unique_id": "50:C7:BF:4D:55:19",
-                "unit_of_measurement": null
-            },
-            {
                 "capabilities": {
                     "max_mireds": 370,
                     "min_mireds": 153
@@ -432,7 +416,7 @@
                 "entity_id": "sensor.mi_9_lite_battery_level",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-80",
+                "original_icon": "mdi:battery",
                 "original_name": "Mi 9 Lite Battery Level",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -448,7 +432,7 @@
                 "entity_id": "sensor.mi_9_lite_battery_state",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-80",
+                "original_icon": "mdi:battery-charging",
                 "original_name": "Mi 9 Lite Battery State",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -464,7 +448,7 @@
                 "entity_id": "sensor.mi_9_lite_wifi_connection",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:wifi-strength-2",
+                "original_icon": "mdi:wifi-strength-3",
                 "original_name": "Mi 9 Lite Wifi Connection",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -824,7 +808,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "device_class": null,
                 "device_id": "ed9bb7d857984886a7d1c2b01e35512d",
@@ -840,7 +824,7 @@
                 "unit_of_measurement": "B"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "device_class": null,
                 "device_id": "ed9bb7d857984886a7d1c2b01e35512d",
@@ -856,7 +840,7 @@
                 "unit_of_measurement": "packets"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "device_class": null,
                 "device_id": "ed9bb7d857984886a7d1c2b01e35512d",
@@ -872,7 +856,7 @@
                 "unit_of_measurement": "packets"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "device_class": null,
                 "device_id": "ed9bb7d857984886a7d1c2b01e35512d",
@@ -888,7 +872,7 @@
                 "unit_of_measurement": "KiB/s"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "device_class": null,
                 "device_id": "ed9bb7d857984886a7d1c2b01e35512d",
@@ -904,7 +888,7 @@
                 "unit_of_measurement": "KiB/s"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "device_class": null,
                 "device_id": "ed9bb7d857984886a7d1c2b01e35512d",
@@ -920,7 +904,7 @@
                 "unit_of_measurement": "packets/s"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "device_class": null,
                 "device_id": "ed9bb7d857984886a7d1c2b01e35512d",
@@ -936,7 +920,7 @@
                 "unit_of_measurement": "packets/s"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "device_class": null,
                 "device_id": "ed9bb7d857984886a7d1c2b01e35512d",
@@ -950,6 +934,22 @@
                 "supported_features": 0,
                 "unique_id": "uuid:00e0fc37-2525-2828-2500-886639D78CFD_bytes_received",
                 "unit_of_measurement": "B"
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "f0ec3f7a974e42da829c370440d87082",
+                "device_class": null,
+                "device_id": "6aed5e2038814e7cbf5f43ec238a4691",
+                "disabled_by": null,
+                "entity_id": "switch.cristo_lamp",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Cristo lamp",
+                "platform": "tplink",
+                "supported_features": 0,
+                "unique_id": "50:C7:BF:4D:55:19",
+                "unit_of_measurement": null
             }
         ]
     },

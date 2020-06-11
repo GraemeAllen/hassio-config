@@ -3,7 +3,7 @@
     entities:
       - light.graeme_s_lamp
       - light.carol_s_lamp
-      - switch.cristo_light
+      - switch.cristo_lamp
       - cover.sonoff_1000d67323
   bedroom:
     name: Bedroom
@@ -18,7 +18,7 @@
     entities:
       - light.graeme_s_lamp
       - light.carol_s_lamp
-      - switch.cristo_light
+      - switch.cristo_lamp
   all_blinds:
     name: All Blinds
     entities:
@@ -30,7 +30,7 @@
     entities:
       - light.graeme_s_lamp
       - light.carol_s_lamp
-      - switch.cristo_light
+      - switch.cristo_lamp
       - cover.sonoff_1000d66ac3
       - cover.sonoff_1000d66886
       - cover.sonoff_1000d67323
