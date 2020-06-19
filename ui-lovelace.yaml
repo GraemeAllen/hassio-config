@@ -1,9 +1,9 @@
 custom_header:
   compact_mode: true
   editor_warnings: false
-  hide_header: false
-  kiosk_mode: false
+  hide_header: true
   hidden_tab_redirect: false
+  disable_sidebar: true
   cards:
 
 #############################   RESOURCES   ###################################
@@ -71,8 +71,8 @@ sidebar:
     dateFormat: 'DD MMM YYYY'
     width: 
       mobile: 0
-      tablet: 0
-      desktop: 0
+      tablet: 15
+      desktop: 15
     style: |
       :host {
         --sidebar-background: #1E2022;
@@ -123,12 +123,12 @@ sidebar:
             style: |
                 :host {
                   background: none !important;
-
                 }
                 ha-card {
                   background: none !important;
                   box-shadow: none !important;
                   color: rgba(155,155,155,0.7) !important;
+                  margin-bottom: 40px;
                 }
       
 views:
@@ -971,9 +971,8 @@ views:
                   value: 30
             style:
               top: 20%
-              left: 40% 
-              width: 20%    
-              height: 24%
+              left: 18% 
+              width: 30%    
           - type: custom:mini-graph-card
             entities:
               - sensor.outside_humidity
@@ -989,9 +988,8 @@ views:
                   value: 80   
             style:
               top: 20%
-              left: 62%
-              width: 20%
-              height: 24%
+              left: 50%
+              width: 30%
           - type: custom:mini-graph-card
             entities:
               - sensor.lux
@@ -1009,9 +1007,8 @@ views:
                   value: 2000                
             style:
               top: 20%
-              left: 84%
-              width: 20%
-              height: 24%
+              left: 82%
+              width: 30%
         ######### ROW TWO ##########
           - type: custom:mini-graph-card
             entities:
@@ -1030,10 +1027,9 @@ views:
                 - color: '#ff1a1a'
                   value: 28
             style:
-              top: 48%
-              left: 40% 
-              width: 20%        
-              height: 24%
+              top: 52%
+              left: 18% 
+              width: 30%        
           - type: custom:mini-graph-card
             entities:
               - sensor.inside_humidity
@@ -1048,10 +1044,9 @@ views:
                 - color: '#0533ff'
                   value: 60    
             style:
-              top: 48%
-              left: 62%
-              width: 20%
-              height: 24%
+              top: 52%
+              left: 50%
+              width: 30%
 
 
        

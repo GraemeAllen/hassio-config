@@ -76,9 +76,9 @@
                 "added": true,
                 "attributes": {},
                 "device_class": "battery",
-                "icon": "mdi:battery-80",
+                "icon": "mdi:battery-90",
                 "name": "Battery Level",
-                "state": 85,
+                "state": 99,
                 "type": "sensor",
                 "unique_id": "battery_level",
                 "unit_of_measurement": "%",
@@ -91,7 +91,7 @@
                     "is_charging": false
                 },
                 "device_class": "battery",
-                "icon": "mdi:battery-80",
+                "icon": "mdi:battery-90",
                 "name": "Battery State",
                 "state": "discharging",
                 "type": "sensor",
@@ -106,18 +106,18 @@
                     "ISO Country Code": "PT",
                     "Locality": "S\u00e3o Mamede de Infesta",
                     "Location": [
-                        41.1816556,
-                        -8.623514199999999
+                        41.182609199999995,
+                        -8.628878000000002
                     ],
-                    "Postal Code": "4465",
+                    "Postal Code": "4465-092",
                     "Sub Administrative Area": null,
                     "Sub Locality": null,
-                    "Sub Thoroughfare": "681",
-                    "Thoroughfare": "Rua Bernardim Ribeiro"
+                    "Sub Thoroughfare": "91",
+                    "Thoroughfare": "Rua da Realidade"
                 },
                 "icon": "mdi:map",
                 "name": "Geocoded Location",
-                "state": "R. Bernardim Ribeiro 681, 4465 S\u00e3o Mamede de Infesta, Portugal",
+                "state": "R. da Realidade 91, 4465-092 S\u00e3o Mamede de Infesta, Portugal",
                 "type": "sensor",
                 "unique_id": "geocoded_location",
                 "webhook_id": "afb2a5b5670fa4c85ac49fd704db688a3a01957e14bc32b0e659f9236e1d5162"
@@ -125,16 +125,16 @@
             "afb2a5b5670fa4c85ac49fd704db688a3a01957e14bc32b0e659f9236e1d5162_wifi_connection": {
                 "added": true,
                 "attributes": {
-                    "bssid": "88:66:39:d7:8d:08",
-                    "frequency": 5540,
-                    "ip_address": "192.168.1.68",
+                    "bssid": null,
+                    "frequency": -1,
+                    "ip_address": "0.0.0.0",
                     "is_hidden": false,
-                    "link_speed": 433,
-                    "signal_level": -57
+                    "link_speed": -1,
+                    "signal_level": -1
                 },
-                "icon": "mdi:wifi-strength-2",
+                "icon": "mdi:wifi-strength-off",
                 "name": "Wifi Connection",
-                "state": "The Force",
+                "state": "<not connected>",
                 "type": "sensor",
                 "unique_id": "wifi_connection",
                 "webhook_id": "afb2a5b5670fa4c85ac49fd704db688a3a01957e14bc32b0e659f9236e1d5162"

@@ -28,11 +28,11 @@
         "installed_version": "v2.1.4",
         "iot_class": null,
         "last_commit": "40c9b88",
-        "last_updated": "2020-06-07T19:19:20Z",
+        "last_updated": "2020-06-19T17:30:45Z",
         "last_version": "v2.1.4",
         "manifest_name": "Sonoff",
         "new": false,
-        "open_issues": 24,
+        "open_issues": 30,
         "persistent_directory": null,
         "published_tags": [
             "v2.1.4",
@@ -41,12 +41,12 @@
             "v2.1.0",
             "v2.0.6"
         ],
-        "pushed_at": "2020-06-07T19:19:20",
+        "pushed_at": "2020-06-19T17:30:45",
         "releases": true,
         "render_readme": true,
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 325,
+        "stargazers_count": 347,
         "topics": [
             "ewelink",
             "home-assistant",

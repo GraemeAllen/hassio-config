@@ -74,7 +74,6 @@ alarm:
   - service: media_player.play_media
     data_template:
       entity_id: media_player.living_room_speaker
-      volume_level: 0.9
       media_content_id: https://death-star.duckdns.org/local/alarm.mp3
       media_content_type: audio/mp3
   - service: script.turn_on
@@ -180,7 +179,7 @@ alarm:
   - service: media_player.play_media
     data_template:
       entity_id: media_player.living_room_speaker
-      volume_level: 0.2
+
 wake_up:
   alias: Wake Up
   sequence:
@@ -255,3 +254,14 @@ flash_blue_led:
       entity_id: media_player.living_room_tv
       view_path: 0
     service: cast.show_lovelace_view
+    
+    
+alarm_test:
+  alias: Alarm Test
+  sequence:
+  - service: media_player.play_media
+    data_template:
+      entity_id: media_player.living_room_speaker
+      volume_level: 0.5
+      media_content_id: https://death-star.duckdns.org/local/alarm.mp3
+      media_content_type: audio/mp3

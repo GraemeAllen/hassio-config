@@ -2,7 +2,7 @@
   alias: Open Blinds Mon-Fri
   description: ''
   trigger:
-  - at: 07:00:00
+  - at: 06:20:00
     platform: time
   condition:
   - condition: time
@@ -73,7 +73,6 @@
   - condition: or
     conditions:
     - before: sunrise
-      before_offset: 00:30:00
       condition: sun
     - after: sunset
       after_offset: -00:30:00
