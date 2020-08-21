@@ -43,7 +43,7 @@ google_assistant:
 sonoff:
   username: graeme@ibconsult.co.uk
   password: !secret sonoff
-  #reload: always
+  reload: always
   
 ####################################################################################### 
 ## Templates (Used for updating text in the UI and converting sensors to CSS values )
