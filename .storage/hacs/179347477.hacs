@@ -1,13 +1,15 @@
 {
+    "version": "6",
+    "key": "hacs/179347477.hacs",
     "data": {
         "archived": false,
         "authors": [
             "@claytonjn"
         ],
         "category": "integration",
-        "config_flow": false,
         "content_in_root": false,
         "country": [],
+        "config_flow": false,
         "default_branch": "master",
         "description": "Circadian Lighting custom component for Home Assistant",
         "domain": "circadian_lighting",
@@ -23,17 +25,20 @@
         "hide_default_branch": false,
         "homeassistant": null,
         "id": "179347477",
-        "installed": true,
-        "installed_commit": "4909fdb",
-        "installed_version": "1.0.11",
         "iot_class": null,
+        "installed": true,
+        "installed_commit": "6a919ae",
+        "installed_version": "1.0.13",
+        "open_issues": 64,
         "last_commit": "6a919ae",
-        "last_updated": "2020-06-18T21:57:22Z",
         "last_version": "1.0.13",
+        "last_updated": "2020-10-07T16:31:14Z",
         "manifest_name": "Circadian Lighting",
         "new": false,
-        "open_issues": 52,
         "persistent_directory": null,
+        "pushed_at": "2020-10-07T16:31:14",
+        "releases": true,
+        "render_readme": false,
         "published_tags": [
             "1.0.13",
             "1.0.11",
@@ -41,20 +46,19 @@
             "1.0.9",
             "1.0.6"
         ],
-        "pushed_at": "2020-06-18T21:57:22",
-        "releases": true,
-        "render_readme": false,
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 183,
+        "stargazers_count": 237,
         "topics": [
             "circadian",
             "circadian-rhythms",
             "hacs",
-            "home-assistant"
+            "home-assistant",
+            "lighting",
+            "sleep",
+            "wellness"
         ],
-        "zip_release": false
-    },
-    "key": "hacs/179347477.hacs",
-    "version": "6"
+        "zip_release": false,
+        "full_name_lower": "claytonjn/hass-circadian_lighting"
+    }
 }

@@ -1,64 +1,74 @@
 {
+    "version": 1,
+    "key": "esphome.20e07efb3ca34182a079e3e929c1537c",
     "data": {
-        "binary_sensor": [
-            {
-                "device_class": "motion",
-                "is_status_binary_sensor": false,
-                "key": 842828748,
-                "name": "Living Room PIR",
-                "object_id": "living_room_pir",
-                "unique_id": "sensor_node2binary_sensorliving_room_pir"
-            }
-        ],
         "device_info": {
-            "compilation_time": "Jun 10 2020, 10:00:39",
-            "esphome_version": "1.14.4",
-            "has_deep_sleep": false,
-            "mac_address": "F4:CF:A2:D8:25:B1",
-            "model": "PLATFORMIO_ESP01_1M",
+            "uses_password": false,
             "name": "sensor_node2",
-            "uses_password": false
+            "mac_address": "F4:CF:A2:D8:25:B1",
+            "compilation_time": "Sep 17 2020, 17:32:06",
+            "model": "PLATFORMIO_ESP01_1M",
+            "has_deep_sleep": false,
+            "esphome_version": "1.14.4"
         },
+        "services": [],
         "light": [
             {
-                "effects": [],
-                "key": 502299492,
-                "max_mireds": 0.0,
-                "min_mireds": 0.0,
-                "name": "RGB LED",
                 "object_id": "rgb_led",
+                "key": 502299492,
+                "name": "RGB LED",
+                "unique_id": "sensor_node2lightrgb_led",
                 "supports_brightness": true,
-                "supports_color_temperature": false,
                 "supports_rgb": true,
                 "supports_white_value": false,
-                "unique_id": "sensor_node2lightrgb_led"
+                "supports_color_temperature": false,
+                "min_mireds": 0.0,
+                "max_mireds": 0.0,
+                "effects": []
+            }
+        ],
+        "binary_sensor": [
+            {
+                "object_id": "living_room_pir",
+                "key": 842828748,
+                "name": "Living Room PIR",
+                "unique_id": "sensor_node2binary_sensorliving_room_pir",
+                "device_class": "motion",
+                "is_status_binary_sensor": false
             }
         ],
         "sensor": [
             {
-                "accuracy_decimals": 1,
-                "force_update": false,
-                "icon": "mdi:thermometer",
+                "object_id": "inside_temperature",
                 "key": 920924750,
                 "name": "Inside Temperature",
-                "object_id": "inside_temperature",
                 "unique_id": "sensor_node2sensorinside_temperature",
-                "unit_of_measurement": "\u00b0C"
+                "icon": "mdi:thermometer",
+                "unit_of_measurement": "\u00b0C",
+                "accuracy_decimals": 1,
+                "force_update": false
             },
             {
-                "accuracy_decimals": 0,
-                "force_update": false,
-                "icon": "mdi:water-percent",
+                "object_id": "inside_humidity",
                 "key": 847076999,
                 "name": "Inside Humidity",
-                "object_id": "inside_humidity",
                 "unique_id": "sensor_node2sensorinside_humidity",
-                "unit_of_measurement": "%"
+                "icon": "mdi:water-percent",
+                "unit_of_measurement": "%",
+                "accuracy_decimals": 0,
+                "force_update": false
             }
         ],
-        "services": [],
-        "text_sensor": []
-    },
-    "key": "esphome.20e07efb3ca34182a079e3e929c1537c",
-    "version": 1
+        "text_sensor": [],
+        "switch": [
+            {
+                "object_id": "restart",
+                "key": 1203400786,
+                "name": "Restart",
+                "unique_id": "sensor_node2switchrestart",
+                "icon": "mdi:restart",
+                "assumed_state": false
+            }
+        ]
+    }
 }

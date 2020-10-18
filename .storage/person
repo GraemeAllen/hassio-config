@@ -12,7 +12,8 @@
             },
             {
                 "device_trackers": [
-                    "device_tracker.iphonedcarolina"
+                    "device_tracker.iphonedcarolina",
+                    "device_tracker.iphone_de_ana_carolina"
                 ],
                 "id": "carol",
                 "name": "Carol",

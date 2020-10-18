@@ -2,7 +2,7 @@
   alias: Open Blinds Mon-Fri
   description: ''
   trigger:
-  - at: 06:20:00
+  - at: 07:00:00
     platform: time
   condition:
   - condition: time
@@ -15,6 +15,7 @@
   action:
   - data: {}
     service: script.wake_up
+  mode: single
 - id: '1590765489157'
   alias: Open Blinds Sat-Sun
   description: ''
@@ -103,3 +104,33 @@
   action:
   - data: {}
     service: script.flash_green_led
+- id: '1598019739022'
+  alias: Mobile notification for motion
+  description: ''
+  trigger:
+  - device_id: a70875db160c49319a6cb6f92bb81119
+    domain: binary_sensor
+    entity_id: binary_sensor.living_room_pir_2
+    platform: device
+    type: motion
+  condition: []
+  action:
+  - data:
+      message: Motion Detected
+    service: notify.mobile_app_mi_9_lite
+  mode: single
+- id: '1600361087348'
+  alias: Restart PIR
+  description: Restart PIR node when it gets stuck
+  trigger:
+  - entity_id: binary_sensor.living_room_pir_2
+    for: 00:00:05
+    from: clear
+    platform: state
+    to: detected
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.restart
+    service: switch.toggle
+  mode: single

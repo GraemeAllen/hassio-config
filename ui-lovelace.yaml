@@ -1,13 +1,16 @@
 custom_header:
+  background: '#1E2022'
   compact_mode: true
   editor_warnings: false
-  hide_header: true
+  hide_header: false
   hidden_tab_redirect: false
   disable_sidebar: true
   cards:
 
 #############################   RESOURCES   ###################################
 resources:
+  - type: module
+    url: /hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js
   - type: module
     url: /local/js/card-mod.js
   - type: module
@@ -102,14 +105,18 @@ sidebar:
       active: true
     - action: navigate
       navigation_path: "/lovelace/1"
+      name: "Cleaning"        
+      icon: "mdi:robot-vacuum"
+    - action: navigate
+      navigation_path: "/lovelace/2"
       name: "Devices"
       icon: "mdi:home"
     - action: navigate
-      navigation_path: "/lovelace/2"
+      navigation_path: "/lovelace/3"
       name: "Media"  
       icon: "mdi:play-box"
     - action: navigate
-      navigation_path: "/lovelace/3"
+      navigation_path: "/lovelace/4"
       name: "Data"        
       icon: "mdi:chart-line"
       
@@ -118,7 +125,7 @@ sidebar:
       cardOptions:
         cards:
           - type: 'custom:simple-weather-card' 
-            entity: weather.home
+            entity: weather.weather_2
             name: ' '
             style: |
                 :host {
@@ -169,6 +176,8 @@ views:
           - sensor.kitchen_brightness
           - sensor.bedroom_brightness
           - binary_sensor.living_room_pir_2
+          - vacuum.roborock_s5_max
+          - camera.xiaomi_cloud_map_extractor
 
         card:    
 #######################   Picture Elements Card    ############################
@@ -178,11 +187,11 @@ views:
           style: |
             ha-card:first-child {
               background: transparent;
-              top:50%;
+
               left: 0%;
               width: 100%;   
               height: 110%;
-              padding-top: 6vh;
+              padding-top: 2%;
               padding-left: 8%;
             }
           elements:
@@ -215,6 +224,20 @@ views:
               tap_action:
                 action: none
               type: image
+################################## ROBOROCK ###################################  
+            - type: image
+              entity: camera.xiaomi_cloud_map_extractor
+              camera_image: "${states['vacuum.roborock_s5_max'].state === 'docked' ? '' : 'camera.xiaomi_cloud_map_extractor'}"
+              #camera_view: ""
+              style: 
+                transform: rotate(180deg) scale(1.1)
+                mix-blend-mode: lighten
+                top: -42%
+                left: -23.5%
+                opacity: 80%
+                display: "${states['vacuum.roborock_s5_max'].state === 'docked' ? 'none' : 'block'}"
+                #opacity: "${states['vacuum.roborock_s5_max'].state === 'docked' ? '0' : '1.0'}"
+              action: none 
 #############    WINDOW BLINDS - BLENDED IMAGE OVERLAYS    ################  
             # BEDROOM #
             - action: none
@@ -417,6 +440,7 @@ views:
               tap_action:
                 action: none              
               type: image
+
     #########################           ICONS    #########################
             # CAROL'S LAMP #
             - entity: light.carol_s_lamp
@@ -472,14 +496,11 @@ views:
               tap_action:
                 action: toggle
               type: state-icon
-   
-############################### BLINDS #######################    
-            # BEDROOM BLINDS #   
-            - entity: cover.sonoff_1000d66ac3 
-              icon: 'mdi:blinds'
+            # ROBOROCK #
+            - type: state-icon
+              entity: vacuum.roborock_s5_max
+              icon: 'mdi:robot-vacuum'
               style:
-                '--paper-item-icon-active-color': 'rgba(255,255,255,0.3)' 
-                '--paper-item-icon-color': 'black'
                 align-items: center
                 background-color: 'rgba(255,255,255,0.6)'
                 border-radius: 100%
@@ -489,13 +510,13 @@ views:
                 --mdc-icon-size: 2vmax
                 height: 2.5vmax
                 width: 2.5vmax
-                left: 64%        
-                top: 22%
+                left: 50.5%        
+                top: 94.5%
               tap_action:
-                action: more-info
-              type: state-icon
-            - entity: cover.sonoff_1000d66ac3 
-              attribute: current_position
+                action: more-info   
+############################### BLINDS #######################    
+            # BEDROOM BLINDS #   
+            - entity: sensor.bedroom_position 
               suffix: '%'
               style:
                 top: 22%
@@ -504,8 +525,38 @@ views:
                 font-size: 0.8vw
               type: state-label           
               tap_action:
+                action: none 
+            - entity: cover.sonoff_1000d66ac3 
+              icon: 'mdi:blinds'
+              style:
+                '--paper-item-icon-active-color': 'rgba(255,255,255,0.3)' 
+                '--paper-item-icon-color': 'black'
+                align-items: center
+                background-color: 'rgba(255,255,255,0.6)'
+                border-radius: 100%
+                box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                display: flex
+                justify-content: center                
+                --mdc-icon-size: 2vmax
+                height: 2.5vmax
+                width: 2.5vmax
+                left: 64%        
+                top: 22%
+              tap_action:
                 action: more-info
+              type: state-icon
+
             # LIVING ROOM BLINDS # 
+            - entity: sensor.living_room_position 
+              suffix: '%'
+              style:
+                top: 46%
+                left: 67%
+                color: 'rgba(255,255,255,0.7)'
+                font-size: 0.8vw
+              type: state-label
+              tap_action:
+                action: none  
             - entity: cover.sonoff_1000d67323
               icon: 'mdi:blinds'
               style:
@@ -525,18 +576,18 @@ views:
               tap_action:
                 action: more-info
               type: state-icon
-            - entity: cover.sonoff_1000d67323
-              attribute: current_position
+         
+            # KITCHEN BLINDS #    
+            - entity: sensor.kitchen_position
               suffix: '%'
               style:
-                top: 46%
-                left: 67%
+                top: 57%
+                left: 75%
                 color: 'rgba(255,255,255,0.7)'
                 font-size: 0.8vw
-              type: state-label
+              type: state-label     
               tap_action:
-                action: more-info              
-            # KITCHEN BLINDS #    
+                action: none            
             - entity: cover.sonoff_1000d66886
               icon: 'mdi:blinds'
               style:
@@ -556,18 +607,77 @@ views:
               tap_action:
                 action: more-info
               type: state-icon   
+              
+######################        CLOCK           #############################
             - entity: cover.sonoff_1000d66886
-              attribute: current_position
-              suffix: '%'
+              icon: 'mdi:clock-outline'
               style:
-                top: 57%
-                left: 75%
-                color: 'rgba(255,255,255,0.7)'
-                font-size: 0.8vw
-              type: state-label     
+                '--paper-item-icon-active-color': '#44739e' 
+                '--paper-item-icon-color': '#44739e'
+                align-items: center
+                background-color: 'rgba(255,255,255,0.6)'
+                border-radius: 100%
+                box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                display: flex
+                justify-content: center                
+                --mdc-icon-size: 2vmax
+                height: 2.5vmax
+                width: 2.5vmax
+                left: 50%        
+                top: 29%
+              type: state-icon  
               tap_action:
-                action: more-info              
-
+                action: call-service
+                service: browser_mod.popup
+                service_data:
+                  title: Wakey wakey!
+                  card:
+                    type: entities
+                    entities:
+                      #- group.all_wake
+                      - entity: input_number.wake_percent
+                        icon: none
+                        name:  Percent
+                      - entity: input_boolean.monday_wake
+                        icon: none
+                      - entity: input_datetime.monday_time
+                        icon: none
+                        name: '   -'                       
+                      - entity: input_boolean.tuesday_wake
+                        icon: none
+                      - entity: input_datetime.tuesday_time
+                        icon: none
+                        name: '   -'                        
+                      - entity: input_boolean.wednesday_wake
+                        icon: none
+                      - entity: input_datetime.wednesday_time
+                        icon: none
+                        name: '   -'                       
+                      - entity: input_boolean.thursday_wake
+                        icon: none
+                      - entity: input_datetime.thursday_time
+                        icon: none
+                        name: '   -'                       
+                      - entity: input_boolean.friday_wake
+                        icon: none
+                      - entity: input_datetime.friday_time
+                        icon: none
+                        name: '   -'                       
+                      - entity: input_boolean.saturday_wake
+                        icon: none
+                      - entity: input_datetime.saturday_time
+                        icon: none
+                        name: '   -'                       
+                      - entity: input_boolean.sunday_wake
+                        icon: none
+                      - entity: input_datetime.sunday_time
+                        icon: none
+                        name: '   -'                       
+                  deviceID:
+                    - this
+                    - dashboard
+ 
+  
                 
 #####################             Sensors             #######################
             - entity: sensor.outside_temperature
@@ -702,7 +812,63 @@ views:
               tap_action:
                 action: more-info
               type: state-icon             
-               
+
+        
+
+#############################################################################################################################################
+#                                                                                                                                           #
+#                                                                   VACUUM CLEANER                                                          #
+#                                                                                                                                           #
+#############################################################################################################################################               
+
+  - title: Cleaning
+    icon: 'mdi:robot-vacuum'
+    panel: true
+    cards:
+      - type: 'custom:hui-element'  
+        card_type: 'picture-elements'
+        entity: vacuum.roborock_s5_max
+        image: '/local/floorplan/apartment-all-light.png'
+        style: |
+            ha-card:first-child {
+              background: transparent;
+              left: 0%;
+              width: 100%;   
+              height: 110%;
+              margin-top: -2%;
+            }
+        elements:
+          - type: image
+            entity: camera.xiaomi_cloud_map_extractor
+            camera_image: camera.xiaomi_cloud_map_extractor
+            camera_refresh_interval: 2
+            style: 
+                transform: rotate(180deg) scale(1.36)
+                mix-blend-mode: lighten
+                width: 100%
+                height: 100% 
+                top: 25.5%
+                left: -3.7%
+            tap_action:
+              action: none 
+          - type: state-icon
+            entity: vacuum.roborock_s5_max
+            icon: 'mdi:robot-vacuum'
+            style:
+              align-items: center
+              background-color: 'rgba(255,255,255,0.6)'
+              border-radius: 100%
+              box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+              display: flex
+              justify-content: center                
+              --mdc-icon-size: 2vmax
+              height: 2.5vmax
+              width: 2.5vmax
+              left: 58.5%        
+              top: 86.5%
+            tap_action:
+              action: more-info   
+
 
 
              
@@ -725,13 +891,11 @@ views:
             background-image: url("/local/floorplan/apartment-all-light-blurred.png");
             background-size: 100%;
             background-repeat: no-repeat;
-            background-position: center;
             background-color: rgba(42,46,48,1);
             color: rgba(255, 255, 255, 0.85);
-            top: 0%;
+            margin-top: -2%;
             left: 0%;
-            width: 100%;  
-            min-height: 100%;
+            min-height: 110%;
             overflow: scroll;
           }
         elements:
@@ -786,14 +950,9 @@ views:
                               service: script.turn_on
                               service_data:  
                                 entity_id: script.off_all
-                          - entity: group.all_devices
-                            icon: 'mdi:anchor'
-                            name: Diving Stations
-                            tap_action:
-                              action: call-service
-                              service: script.turn_on
-                              service_data:  
-                                entity_id: script.alarm                                  
+                          - entity: vacuum.roborock_s5_max
+                            icon: 'mdi:robot-vacuum'
+                            name: Rob the Robot
                         title: Home
                     tileOnRow: 4   
                   - column: 2
@@ -883,7 +1042,7 @@ views:
           style: |
             ha-card:first-child {
               background: transparent;
-              top:50%;
+
               left: 0%;
               width: 100%;   
               height: 100%;
@@ -1063,27 +1222,9 @@ views:
         style:
            background: 'rgba(0, 0, 0, 1)'
         content: |
-            Cloudiness: {{states.sensor.weather_cloudiness.state}} %
-            Dewpoint Temp.: {{states.sensor.weather_dewpoint_temperature.state}} degC
-            Fog: {{states.sensor.weather_fog.state}} %
-            High Clouds: {{states.sensor.weather_high_clouds.state}} %
-            Humidity: {{states.sensor.weather_humidity.state}} %
-            Low Clouds: {{states.sensor.weather_low_clouds.state}} %
-            Medium Clouds: {{states.sensor.weather_medium_clouds.state}} %
-            Precipitation: {{states.sensor.weather_precipitation.state}} %
-            Pressure: {{states.sensor.weather_pressure.state}} hPa
-            Symbol: {{states.sensor.weather_symbol.state}}
-            Temperature: {{states.sensor.weather_temperature.state}} degC
-            Wind Direction: {{states.sensor.weather_wind_direction.state}} deg
-            Wind Speed: {{states.sensor.weather_wind_speed.state}}
-            Sun: {{states.sun.sun.attributes.elevation}} deg
             
-            {{(states.sun.sun.attributes.elevation | float) / (1-(states.sensor.weather_cloudiness.state | float/100)) }}
-            {{ ( 30 + states.sun.sun.attributes.elevation | float) * ( 1 - (states.sensor.weather_cloudiness.state | float / 100 )) }}
-            Ambient Light: {{states.sensor.ambient_light_calc.state}} %
-            Daylight tester: {{states.input_number.daylight_tester.state}}
-            Brightness: {{states.sensor.brightness.state}}
             
+            #Robo: {{states.vacuum.roborock_s5_max.state}}
             
             TV: {{states.input_boolean.television.state}}
             Media Player - Living Room TV: {{states.media_player.living_room_tv.state}}

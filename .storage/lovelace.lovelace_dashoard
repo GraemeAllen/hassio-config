@@ -1,87 +1,1346 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_dashoard",
     "data": {
         "config": {
-            "title": "Home",
-            "views": [
+            "custom_header": {
+                "compact_mode": true,
+                "editor_warnings": false,
+                "hide_header": false,
+                "hidden_tab_redirect": false,
+                "disable_sidebar": true,
+                "cards": null
+            },
+            "resources": [
                 {
-                    "badges": [
-                        {
-                            "entity": "binary_sensor.updater"
-                        },
-                        {
-                            "entity": "person.graeme"
-                        },
-                        {
-                            "entity": "sun.sun"
-                        }
-                    ],
-                    "cards": [
-                        {
-                            "aspect_ratio": "100%",
-                            "entity": "light.graeme_s_lamp",
-                            "image": "https://lh3.googleusercontent.com/Gg5mxg6lLoqY1l4OPykgMAR5bgn3df4T_iVhf_y36QhcYw7pS1EIdiuwt35sJTsd8IIjyuRYdPRgN9JvZND5zANC4gw16bx2at2F2XK3V4Qi4lWId1r-vesnCjSD-whSoCQM_h3mIi-4SgKOEetzxDjoKfidutbYlXTPe9ijhwXbgPuGYLrM6VoEyZPavIG8BzJ9d6K-nzfd1szq79kRjOtcxD9hQe1g7UagHorGGEax2R6WQ19HvXJp329r12la_p_BTR-ijovW4LkvNoKCGXjCgwz1aHeR-5M_ZNrRMBTEohAjrtR9nl_QVBx2FmyTwgEkwUjB12HIGklz0aoEkLnyNoRpIZbQB71SW-TqEbMLQUeVRuHwBZSqT0C3vvz-Xp5500ir6ikTh8awQJCPzZt9NpYVAjDrh0dbhwDKw8mlEZq6dhd22FvwZBkKFUmEVpKcviuAnXlpd-vg4_mMj5t_b662sdQOTmJuQdUov5aVRy4oT10PcSyVk6gLdk4wv1bi_fPvmcBJ_nH_dNA3YFAqFU5bEWEbvjuomKKt3PwnSUYRqX8v3QWHtEbOHj9zx2B3GdL3RnuUvneqYWLYkwyjqPtd2appKDFVSSS3WwK6h4AF_o3AspWB17kKwiXQdFPgo4G1OXKk4CmYFJxpvSiPHCLZJxkGyGnHkLKGctJwcsmX1LnaC5Ji-jys6c8=w837-h881-no?authuser=0",
-                            "state_filter": {
-                                "off": "brightness(50%) hue-rotate(45deg)",
-                                "on": "brightness(110%) saturate(1.2) opacity(0.8)"
-                            },
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "type": "picture-entity"
-                        },
-                        {
-                            "entities": [
-                                "switch.cristo_light",
-                                "light.carol_s_lamp",
-                                "light.graeme_s_lamp",
-                                "switch.sonoff_debug"
-                            ],
-                            "title": "Living Room",
-                            "type": "entities"
-                        },
-                        {
-                            "entity": "light.carol_s_lamp",
-                            "image": "https://lh3.googleusercontent.com/pS_P2e0cB1bt_gRXulQlYHb2IJct-r2mdcV40DYQF0vyNrYEB25bpMDXhENaPS_UYRSEPelT1kG5Hk50XG-2K-m8P4BliP4jklSBVDsQdx-iHwYk0amXvf371NGK7IWjGb4dtGcLbmA75D2fQiHZtzX4efj39AHp0hv3w7SZtmqC_YVee_5s5XP-aoC6Khg8pNy-dedvpWeYZDj1GfYO_QYMmx6BTB4ZJ6KvdC7phBDhC2-PDEK3tQY4B0mbJ42_wLg_rlmkhAdRRYiwPc0jRwZ2xSiXXFRG_I2S_3Au4pLN58LTY-WiT9LQdI7xVUmbuT94rQ5SGTGjkfvnhaENzEzQcSu9xj4AdKfFvTilTT_cEq5_CCR8n2bAcr7XhHOOKfO3_nVgRWusXs6uBGPaE3TXBfqFUISTgYltzpr09ZUS6jyXaKja94HxocbClMi6ShmOg0MfkjIohBrfD74GFGxwG7KsuxyaGdi0hKqjuPO-bPdwLGOqhCoGrqq8nbAEoCHFe6VY6Zuq25krYPJ_OfJu8ThxO8DKb4hY8s2V52HwYFjb4O02t8UVSHyfcajJr_MqGSdSX0ht1fJp8A5ObAOprgfK-5HMzkFRjo3HvWUSgiXYzeH5EWlHQiRyvZCSPVPyo3D2LD7qPBRw6Vz7DrBfwgD_Cu3p5JfCEFbduKNgu4QTgYZCPX7Xii5V0Dk=s881-no?authuser=0  100%",
-                            "state_filter": {
-                                "off": "brightness(50%) hue-rotate(45deg)",
-                                "on": "brightness(110%) saturate(1.2)"
-                            },
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "type": "picture-entity"
-                        },
-                        {
-                            "entity": "weather.home",
-                            "type": "weather-forecast"
-                        },
-                        {
-                            "entity": "media_player.living_room_tv",
-                            "type": "media-control"
-                        },
-                        {
-                            "entity": "media_player.living_room_speaker",
-                            "type": "media-control"
-                        },
-                        {
-                            "entities": [
-                                "scene.evening",
-                                "scene.watching_tv"
-                            ],
-                            "title": "Scene",
-                            "type": "entities"
-                        }
-                    ],
-                    "path": "default_view",
-                    "title": "Home"
+                    "type": "module",
+                    "url": "/hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js"
                 },
                 {
-                    "badges": [],
-                    "cards": []
+                    "type": "module",
+                    "url": "/local/js/card-mod.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/hacsfiles/custom-header/custom-header.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/local/js/text-element.js?v=0.0.2"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/config-template-card.js?v=1.1.2"
+                },
+                {
+                    "type": "module",
+                    "url": "/browser_mod.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/local/js/bar-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/button-entity-row.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/circle-sensor-card.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/local/js/light-entity-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/lovelace-hui-element.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/layout-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/mini-graph-card-bundle.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/mini-media-player-bundle.js?v=1.6.0"
+                },
+                {
+                    "type": "js",
+                    "url": "/local/js/vertical-stack-in-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/popup-backdrop-filter.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/local/js/upcoming-media-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/weather-card-chart.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/simple-weather-card-bundle.js?v=0.7.2"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/homekit-panel-card.js?v=0.4.7"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/auto-entities.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/now-playing-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/button-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/buien-rain-card.js?v=0.0.60"
+                },
+                {
+                    "type": "js",
+                    "url": "/local/js/light-slider-card-lajv.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/slider-entity-row.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/js/kisok.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/hacsfiles/sidebar-card/sidebar-card.js"
+                }
+            ],
+            "sidebar": {
+                "hideTopMenu": false,
+                "digitalClock": true,
+                "date": true,
+                "dateFormat": "DD MMM YYYY",
+                "width": {
+                    "mobile": 0,
+                    "tablet": 15,
+                    "desktop": 15
+                },
+                "style": ":host {\n  --sidebar-background: #1E2022;\n  --sidebar-text-color: rgba(255,255,255,0.7);\n  padding-top: 3vh;\n  display: none;\n}  \n.sidebar-inner h1, h2 {\n    padding: 0 0 0 20px !important;\n}\n.sidebar-inner h1 {\n    font-size: 3.5vw !important;\n    line-height: 3.5vw !important;\n}\n  .sidebar-inner h2 {\n    font-size: 1.5vw !important;\n    line-height: 1.5vw !important;          \n}\n.sidebarMenu{\n    border: none !important;\n}\n",
+                "sidebarMenu": [
+                    {
+                        "action": "navigate",
+                        "navigation_path": "/lovelace/0",
+                        "name": "Floor Plan",
+                        "icon": "mdi:floor-plan",
+                        "active": true
+                    },
+                    {
+                        "action": "navigate",
+                        "navigation_path": "/lovelace/1",
+                        "name": "Cleaning",
+                        "icon": "mdi:robot-vacuum"
+                    },
+                    {
+                        "action": "navigate",
+                        "navigation_path": "/lovelace/2",
+                        "name": "Devices",
+                        "icon": "mdi:home"
+                    },
+                    {
+                        "action": "navigate",
+                        "navigation_path": "/lovelace/3",
+                        "name": "Media",
+                        "icon": "mdi:play-box"
+                    },
+                    {
+                        "action": "navigate",
+                        "navigation_path": "/lovelace/4",
+                        "name": "Data",
+                        "icon": "mdi:chart-line"
+                    }
+                ],
+                "bottomCard": {
+                    "type": "horizontal-stack",
+                    "cardOptions": {
+                        "cards": [
+                            {
+                                "type": "custom:simple-weather-card",
+                                "entity": "weather.home",
+                                "name": " ",
+                                "style": ":host {\n  background: none !important;\n}\nha-card {\n  background: none !important;\n  box-shadow: none !important;\n  color: rgba(155,155,155,0.7) !important;\n  margin-bottom: 40px;\n}\n"
+                            }
+                        ]
+                    }
+                }
+            },
+            "views": [
+                {
+                    "title": "Floor plan",
+                    "icon": "mdi:floor-plan",
+                    "id": "kfloor_plan",
+                    "panel": true,
+                    "background": "rgba(42, 46, 48, 1)",
+                    "cards": [
+                        {
+                            "type": "custom:config-template-card",
+                            "entities": [
+                                "light.graeme_s_lamp",
+                                "light.carol_s_lamp",
+                                "switch.cristo_lamp",
+                                "media_player.living_room_tv",
+                                "device_tracker.36_e6_85_88_24_fb",
+                                "device_tracker.mbp13c0inamotta",
+                                "device_tracker.mbp_de_ana_66",
+                                "cover.sonoff_1000d66ac3",
+                                "cover.sonoff_1000d66886",
+                                "cover.sonoff_1000d67323",
+                                "sensor.ambient_light_calc",
+                                "sensor.weather_temperature",
+                                "sun.sun",
+                                "sensor.time",
+                                "input_number.daylight_tester",
+                                "sensor.living_room_brightness",
+                                "sensor.kitchen_brightness",
+                                "sensor.bedroom_brightness",
+                                "binary_sensor.living_room_pir_2"
+                            ],
+                            "card": {
+                                "type": "custom:hui-element",
+                                "card_type": "picture-elements",
+                                "image": "/local/floorplan/background.png",
+                                "style": "ha-card:first-child {\n  background: transparent;\n  top:50%;\n  left: 0%;\n  width: 100%;   \n  height: 110%;\n  padding-top: 6vh;\n  padding-left: 8%;\n}\n",
+                                "elements": [
+                                    {
+                                        "action": "none",
+                                        "entity": "none",
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "image": "/local/floorplan/apartment-dark-1.png",
+                                        "style": {
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%",
+                                            "background": "rgba(42, 46, 48, 1)"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entity": "input_number.daylight_tester",
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "image": "/local/floorplan/apartment-light.png",
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${(states[\"sensor.brightness\"].state) / 100}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entities": [
+                                            "cover.sonoff_1000d66ac3",
+                                            "sensor.bedroom_brightness"
+                                        ],
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states[\"sensor.bedroom_brightness\"].state / 100}",
+                                            "display": "${states[\"cover.sonoff_1000d66ac3\"].attributes.current_position > 90 ? \"block\" : \"none\"}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image",
+                                        "image": "/local/floorplan/bedroom-blinds.png"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entities": [
+                                            "cover.sonoff_1000d66ac3",
+                                            "sensor.bedroom_brightness"
+                                        ],
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states[\"sensor.bedroom_brightness\"].state / 100}",
+                                            "display": "${states[\"cover.sonoff_1000d66ac3\"].attributes.current_position < 91 ? \"block\" : \"none\"}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image",
+                                        "image": "/local/floorplan/bedroom-blinds-part.png"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entities": [
+                                            "cover.sonoff_1000d67323",
+                                            "sensor.living_room_brightness"
+                                        ],
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states[\"sensor.living_room_brightness\"].state / 100}",
+                                            "display": "${states[\"cover.sonoff_1000d67323\"].attributes.current_position > 90 ? \"block\" : \"none\"}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image",
+                                        "image": "/local/floorplan/living-room-blinds.png"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entities": [
+                                            "cover.sonoff_1000d67323",
+                                            "sensor.living_room_brightness"
+                                        ],
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states[\"sensor.living_room_brightness\"].state / 100}",
+                                            "display": "${states[\"cover.sonoff_1000d67323\"].attributes.current_position < 91 ? \"block\" : \"none\"}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image",
+                                        "image": "/local/floorplan/living-room-blinds-part.png"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entities": [
+                                            "cover.sonoff_1000d66886",
+                                            "sensor.kitchen_brightness"
+                                        ],
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states[\"sensor.kitchen_brightness\"].state / 100}",
+                                            "display": "${states[\"cover.sonoff_1000d66886\"].state != \"closed\" ? \"block\" : \"none\"}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image",
+                                        "image": "/local/floorplan/kitchen-blinds.png"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entity": "light.graeme_s_lamp",
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "image": "/local/floorplan/graeme-lamp.png",
+                                        "style": {
+                                            "filter": "${\"brightness(60%) sepia(100%) hue-rotate(\" + (states[\"light.graeme_s_lamp\"].attributes.hs_color ? states[\"light.graeme_s_lamp\"].attributes.hs_color[0]-45 : -45) + \"deg) saturate(\" +  (states[\"light.graeme_s_lamp\"].attributes.hs_color ? (states[\"light.graeme_s_lamp\"].attributes.hs_color[1] * 3) : 100)+ \"%)\"}",
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states['light.graeme_s_lamp'].state === 'on' ? (states['light.graeme_s_lamp'].attributes.brightness / 255) : '0'}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entity": "light.carol_s_lamp",
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "image": "/local/floorplan/carol-lamp.png",
+                                        "style": {
+                                            "filter": "${\"brightness(100%) sepia(\" + (states[\"light.carol_s_lamp\"].attributes.color_temp ? states[\"light.carol_s_lamp\"].attributes.color_temp/3.7 : 100) + \"%) saturate(150%)\"}",
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states['light.carol_s_lamp'].state === 'on' ? (states['light.carol_s_lamp'].attributes.brightness / 255) : '0'}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entity": "switch.cristo_lamp",
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "image": "/local/floorplan/cristo-lamp.png",
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states['switch.cristo_lamp'].state === 'on' ? '1.0' : '0'}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entity": "media_player.living_room_tv",
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "image": "/local/floorplan/television.png",
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states['media_player.living_room_tv'].state != 'off' ? '1.0' : '0'}",
+                                            "filter": "${\"hue-rotate(\" + states[\"sensor.tv_colour\"].state  + \"deg) brightness(100%)\"}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entity": "device_tracker.36_e6_85_88_24_fb",
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "image": "/local/floorplan/graeme-laptop.png",
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states['device_tracker.36_e6_85_88_24_fb'].state === 'home' ? '1.0' : '0'}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entity": "device_tracker.mbp_de_ana_66",
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "image": "/local/floorplan/carol-laptop.png",
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states['device_tracker.mbp_de_ana_66'].state === 'home' ? '1.0' : '0'}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image"
+                                    },
+                                    {
+                                        "action": "none",
+                                        "entity": "device_tracker.mbp13c0inamotta",
+                                        "hold_action": {
+                                            "action": "none"
+                                        },
+                                        "image": "/local/floorplan/carol-laptop.png",
+                                        "style": {
+                                            "mix-blend-mode": "lighten",
+                                            "opacity": "${states['device_tracker.mbp13c0inamotta'].state === 'home' ? '1.0' : '0'}",
+                                            "top": "50%",
+                                            "left": "40%",
+                                            "width": "140%"
+                                        },
+                                        "tap_action": {
+                                            "action": "none"
+                                        },
+                                        "type": "image"
+                                    },
+                                    {
+                                        "entity": "light.carol_s_lamp",
+                                        "icon": "mdi:lamp",
+                                        "style": {
+                                            "align-items": "center",
+                                            "background-color": "rgba(255,255,255,0.6)",
+                                            "border-radius": "100%",
+                                            "box-shadow": "0px 0px 28px 0px rgba(0,0,0,0.39)",
+                                            "display": "flex",
+                                            "justify-content": "center",
+                                            "--mdc-icon-size": "2vmax",
+                                            "height": "2.5vmax",
+                                            "width": "2.5vmax",
+                                            "left": "51%",
+                                            "top": "41.3%"
+                                        },
+                                        "tap_action": {
+                                            "action": "toggle"
+                                        },
+                                        "type": "state-icon"
+                                    },
+                                    {
+                                        "entity": "light.graeme_s_lamp",
+                                        "icon": "mdi:lamp",
+                                        "style": {
+                                            "align-items": "center",
+                                            "background-color": "rgba(255,255,255,0.6)",
+                                            "border-radius": "100%",
+                                            "box-shadow": "0px 0px 28px 0px rgba(0,0,0,0.39)",
+                                            "display": "flex",
+                                            "justify-content": "center",
+                                            "--mdc-icon-size": "2vmax",
+                                            "height": "2.5vmax",
+                                            "width": "2.5vmax",
+                                            "left": "38%",
+                                            "top": "41.3%"
+                                        },
+                                        "tap_action": {
+                                            "action": "toggle"
+                                        },
+                                        "type": "state-icon"
+                                    },
+                                    {
+                                        "entity": "switch.cristo_lamp",
+                                        "icon": "mdi:lamp",
+                                        "style": {
+                                            "align-items": "center",
+                                            "background-color": "rgba(255,255,255,0.6)",
+                                            "border-radius": "100%",
+                                            "box-shadow": "0px 0px 28px 0px rgba(0,0,0,0.39)",
+                                            "display": "flex",
+                                            "justify-content": "center",
+                                            "--mdc-icon-size": "2vmax",
+                                            "height": "2.5vmax",
+                                            "width": "2.5vmax",
+                                            "left": "27%",
+                                            "top": "96%"
+                                        },
+                                        "tap_action": {
+                                            "action": "toggle"
+                                        },
+                                        "type": "state-icon"
+                                    },
+                                    {
+                                        "entity": "cover.sonoff_1000d66ac3",
+                                        "icon": "mdi:blinds",
+                                        "style": {
+                                            "--paper-item-icon-active-color": "rgba(255,255,255,0.3)",
+                                            "--paper-item-icon-color": "black",
+                                            "align-items": "center",
+                                            "background-color": "rgba(255,255,255,0.6)",
+                                            "border-radius": "100%",
+                                            "box-shadow": "0px 0px 28px 0px rgba(0,0,0,0.39)",
+                                            "display": "flex",
+                                            "justify-content": "center",
+                                            "--mdc-icon-size": "2vmax",
+                                            "height": "2.5vmax",
+                                            "width": "2.5vmax",
+                                            "left": "64%",
+                                            "top": "22%"
+                                        },
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        },
+                                        "type": "state-icon"
+                                    },
+                                    {
+                                        "entity": "sensor.bedroom_position",
+                                        "suffix": "%",
+                                        "style": {
+                                            "top": "22%",
+                                            "left": "67%",
+                                            "color": "rgba(255,255,255,0.7)",
+                                            "font-size": "0.8vw"
+                                        },
+                                        "type": "state-label",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "cover.sonoff_1000d67323",
+                                        "icon": "mdi:blinds",
+                                        "style": {
+                                            "--paper-item-icon-active-color": "rgba(255,255,255,0.3)",
+                                            "--paper-item-icon-color": "black",
+                                            "align-items": "center",
+                                            "background-color": "rgba(255,255,255,0.6)",
+                                            "border-radius": "100%",
+                                            "box-shadow": "0px 0px 28px 0px rgba(0,0,0,0.39)",
+                                            "display": "flex",
+                                            "justify-content": "center",
+                                            "--mdc-icon-size": "2vmax",
+                                            "height": "2.5vmax",
+                                            "width": "2.5vmax",
+                                            "left": "64%",
+                                            "top": "46%"
+                                        },
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        },
+                                        "type": "state-icon"
+                                    },
+                                    {
+                                        "entity": "sensor.living_room_position",
+                                        "suffix": "%",
+                                        "style": {
+                                            "top": "46%",
+                                            "left": "67%",
+                                            "color": "rgba(255,255,255,0.7)",
+                                            "font-size": "0.8vw"
+                                        },
+                                        "type": "state-label",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "cover.sonoff_1000d66886",
+                                        "icon": "mdi:blinds",
+                                        "style": {
+                                            "--paper-item-icon-active-color": "rgba(255,255,255,0.3)",
+                                            "--paper-item-icon-color": "black",
+                                            "align-items": "center",
+                                            "background-color": "rgba(255,255,255,0.6)",
+                                            "border-radius": "100%",
+                                            "box-shadow": "0px 0px 28px 0px rgba(0,0,0,0.39)",
+                                            "display": "flex",
+                                            "justify-content": "center",
+                                            "--mdc-icon-size": "2vmax",
+                                            "height": "2.5vmax",
+                                            "width": "2.5vmax",
+                                            "left": "72%",
+                                            "top": "57%"
+                                        },
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        },
+                                        "type": "state-icon"
+                                    },
+                                    {
+                                        "entity": "sensor.kitchen_position",
+                                        "suffix": "%",
+                                        "style": {
+                                            "top": "57%",
+                                            "left": "75%",
+                                            "color": "rgba(255,255,255,0.7)",
+                                            "font-size": "0.8vw"
+                                        },
+                                        "type": "state-label",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "sensor.outside_temperature",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "10%",
+                                            "left": "83%",
+                                            "--paper-item-icon-color": "rgba(255,255,255,0.7",
+                                            "--mdc-icon-size": "2vmax"
+                                        },
+                                        "type": "state-icon",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "sensor.outside_temperature",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "14%",
+                                            "left": "83%",
+                                            "color": "rgba(255,255,255,0.7)",
+                                            "text-seize": "1vmax"
+                                        },
+                                        "type": "state-label",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "sensor.outside_humidity",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "20%",
+                                            "left": "83%",
+                                            "--paper-item-icon-color": "rgba(255,255,255,0.7",
+                                            "--mdc-icon-size": "2vmax"
+                                        },
+                                        "type": "state-icon",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "sensor.outside_humidity",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "24%",
+                                            "left": "83%",
+                                            "color": "rgba(255,255,255,0.7)",
+                                            "text-seize": "1vmax"
+                                        },
+                                        "type": "state-label",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "sensor.lux",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "30%",
+                                            "left": "83%",
+                                            "--paper-item-icon-color": "rgba(255,255,255,0.7",
+                                            "--mdc-icon-size": "2vmax"
+                                        },
+                                        "type": "state-icon",
+                                        "icon": "mdi:weather-sunny",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "sensor.lux",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "34%",
+                                            "left": "83%",
+                                            "color": "rgba(255,255,255,0.7)",
+                                            "text-seize": "1vmax"
+                                        },
+                                        "type": "state-label",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "type": "custom:slider-entity-row",
+                                        "entity": "input_number.daylight_tester",
+                                        "name": "Offset",
+                                        "style": {
+                                            "color": "rgba(255,255,255,0.7)",
+                                            "top": "40%",
+                                            "left": "83%",
+                                            "width": "10%"
+                                        },
+                                        "full_row": true,
+                                        "hide_state": true
+                                    },
+                                    {
+                                        "entity": "sensor.inside_temperature",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "78.5%",
+                                            "left": "20.5%",
+                                            "--paper-item-icon-color": "rgba(255,255,255,0.7",
+                                            "--mdc-icon-size": "2vmax"
+                                        },
+                                        "type": "state-icon",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "sensor.inside_temperature",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "82.5%",
+                                            "left": "20.5%",
+                                            "color": "rgba(255,255,255,0.7)",
+                                            "text-seize": "1vmax"
+                                        },
+                                        "type": "state-label",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "sensor.inside_humidity",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "78.5%",
+                                            "left": "26.5%",
+                                            "--paper-item-icon-color": "rgba(255,255,255,0.7",
+                                            "--mdc-icon-size": "2vmax"
+                                        },
+                                        "type": "state-icon",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "sensor.inside_humidity",
+                                        "suffix": "",
+                                        "style": {
+                                            "top": "82.5%",
+                                            "left": "26.5%",
+                                            "color": "rgba(255,255,255,0.7)",
+                                            "text-seize": "1vmax"
+                                        },
+                                        "type": "state-label",
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        }
+                                    },
+                                    {
+                                        "entity": "binary_sensor.living_room_pir_2",
+                                        "style": {
+                                            "align-items": "center",
+                                            "background-color": "rgba(255,255,255,0.6)",
+                                            "border-radius": "100%",
+                                            "box-shadow": "0px 0px 28px 0px rgba(0,0,0,0.39)",
+                                            "display": "flex",
+                                            "justify-content": "center",
+                                            "--mdc-icon-size": "2vmax",
+                                            "height": "2.5vmax",
+                                            "width": "2.5vmax",
+                                            "left": "23%",
+                                            "top": "49%"
+                                        },
+                                        "tap_action": {
+                                            "action": "more-info"
+                                        },
+                                        "type": "state-icon"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "Cleaning",
+                    "icon": "mdi:robot-vacuum",
+                    "panel": true,
+                    "cards": [
+                        {
+                            "type": "custom:xiaomi-vacuum-map-card",
+                            "entity": "vacuum.roborock_s5_max",
+                            "map_image": "/local/floorplan/apartment-all-light.png",
+                            "calibration_points": [
+                                {
+                                    "vacuum": {
+                                        "x": 19500,
+                                        "y": 29600
+                                    },
+                                    "map": {
+                                        "x": 1020,
+                                        "y": 935
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": 27000,
+                                        "y": 29600
+                                    },
+                                    "map": {
+                                        "x": 225,
+                                        "y": 935
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": 27000,
+                                        "y": 24500
+                                    },
+                                    "map": {
+                                        "x": 225,
+                                        "y": 350
+                                    }
+                                }
+                            ],
+                            "zones": [
+                                [
+                                    [
+                                        27000,
+                                        24500,
+                                        20000,
+                                        29600
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "All Devices Kiosk",
+                    "icon": "mdi:home",
+                    "panel": true,
+                    "cards": [
+                        {
+                            "type": "picture-elements",
+                            "image": "/local/transparent.png",
+                            "style": "ha-card {\n  background-image: url(\"/local/floorplan/apartment-all-light-blurred.png\");\n  background-size: 100%;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-color: rgba(42,46,48,1);\n  color: rgba(255, 255, 255, 0.85);\n  top: 0%;\n  left: 0%;\n  width: 100%;  \n  min-height: 100%;\n  overflow: scroll;\n}\n",
+                            "elements": [
+                                {
+                                    "enableColumns": true,
+                                    "popup": {
+                                        "brightnessHeight": "350px",
+                                        "brightnessWidth": "130px",
+                                        "scenesInARow": 2,
+                                        "switchHeight": "300px",
+                                        "switchWidth": "110px",
+                                        "type": "custom:homekit-card",
+                                        "style": ":host {\n  --tile-width: 100px;\n  --tile-height: 100px;\n  --tile-width-mobile: 80px;\n  --tile-height-mobile: 80px;\n  backdrop-filter: blur(10px);\n}\n"
+                                    },
+                                    "rows": [
+                                        {
+                                            "row": 1,
+                                            "columns": [
+                                                {
+                                                    "column": 1,
+                                                    "entities": [
+                                                        {
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "group.all_lights",
+                                                                    "icon": "mdi:lamp",
+                                                                    "tap_action": {
+                                                                        "action": "call-service",
+                                                                        "service": "script.turn_on",
+                                                                        "service_data": {
+                                                                            "entity_id": "script.off_lights"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "entity": "group.all_blinds",
+                                                                    "icon": "mdi:blinds",
+                                                                    "tap_action": {
+                                                                        "action": "call-service",
+                                                                        "service": "script.turn_on",
+                                                                        "service_data": {
+                                                                            "entity_id": "script.close_blinds"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "entity": "group.all_devices",
+                                                                    "icon": "mdi:home",
+                                                                    "tap_action": {
+                                                                        "action": "call-service",
+                                                                        "service": "script.turn_on",
+                                                                        "service_data": {
+                                                                            "entity_id": "script.off_all"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "entity": "group.all_devices",
+                                                                    "icon": "mdi:anchor",
+                                                                    "name": "Diving Stations",
+                                                                    "tap_action": {
+                                                                        "action": "call-service",
+                                                                        "service": "script.turn_on",
+                                                                        "service_data": {
+                                                                            "entity_id": "script.alarm"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "title": "Home"
+                                                        }
+                                                    ],
+                                                    "tileOnRow": 4
+                                                },
+                                                {
+                                                    "column": 2,
+                                                    "entities": [
+                                                        {
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "sensor.outside_temperature",
+                                                                    "icon": "mdi:thermometer-lines"
+                                                                },
+                                                                {
+                                                                    "entity": "sensor.outside_humidity",
+                                                                    "icon": "mdi:water-percent"
+                                                                },
+                                                                {
+                                                                    "entity": "sensor.lux",
+                                                                    "icon": "mdi:weather-sunny"
+                                                                }
+                                                            ],
+                                                            "title": "Outside"
+                                                        }
+                                                    ],
+                                                    "tileOnRow": 3
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "row": 2,
+                                            "columns": [
+                                                {
+                                                    "column": 1,
+                                                    "entities": [
+                                                        {
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "light.graeme_s_lamp",
+                                                                    "icon": "mdi:lamp"
+                                                                },
+                                                                {
+                                                                    "entity": "light.carol_s_lamp",
+                                                                    "icon": "mdi:lamp"
+                                                                },
+                                                                {
+                                                                    "entity": "switch.cristo_lamp",
+                                                                    "icon": "mdi:lamp"
+                                                                },
+                                                                {
+                                                                    "entity": "cover.sonoff_1000d67323",
+                                                                    "icon": "mdi:blinds"
+                                                                },
+                                                                {
+                                                                    "entity": "sensor.inside_temperature",
+                                                                    "icon": "mdi:thermometer-lines"
+                                                                },
+                                                                {
+                                                                    "entity": "sensor.inside_humidity",
+                                                                    "icon": "mdi:water-percent"
+                                                                },
+                                                                {
+                                                                    "entity": "binary_sensor.living_room_pir_2",
+                                                                    "icon": "mdi:run"
+                                                                }
+                                                            ],
+                                                            "title": "Living Room"
+                                                        }
+                                                    ],
+                                                    "tileOnRow": 7
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "row": 3,
+                                            "columns": [
+                                                {
+                                                    "column": 1,
+                                                    "entities": [
+                                                        {
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "cover.sonoff_1000d66ac3",
+                                                                    "icon": "mdi:blinds"
+                                                                }
+                                                            ],
+                                                            "title": "Bedroom"
+                                                        }
+                                                    ],
+                                                    "tileOnRow": 1
+                                                },
+                                                {
+                                                    "column": 2,
+                                                    "entities": [
+                                                        {
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "cover.sonoff_1000d66886",
+                                                                    "icon": "mdi:blinds"
+                                                                }
+                                                            ],
+                                                            "title": "Kitchen"
+                                                        }
+                                                    ],
+                                                    "tileOnRow": 1
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "statePositionTop": true,
+                                    "style": {
+                                        "height": "90%",
+                                        "left": "50%",
+                                        "top": "50%",
+                                        "width": "90%"
+                                    },
+                                    "type": "custom:homekit-card"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Media kiosk",
+                    "icon": "mdi:play-box",
+                    "id": "kiosk_media",
+                    "panel": true,
+                    "background": "rgba(42, 46, 48, 1)",
+                    "cards": [
+                        {
+                            "type": "custom:config-template-card",
+                            "entities": [
+                                "media_player.living_room_tv"
+                            ],
+                            "card": {
+                                "type": "custom:hui-element",
+                                "card_type": "picture-elements",
+                                "image": "/local/tv.png",
+                                "style": "ha-card:first-child {\n  background: transparent;\n  top:50%;\n  left: 0%;\n  width: 100%;   \n  height: 100%;\n}\n",
+                                "elements": [
+                                    {
+                                        "type": "custom:mini-media-player",
+                                        "entity": "media_player.living_room_tv",
+                                        "icon": "mdi:google-chrome",
+                                        "group": true,
+                                        "artwork": "cover",
+                                        "info": "scroll",
+                                        "volume_stateless": true,
+                                        "idle_view": {
+                                            "after": 2,
+                                            "when_idle": true,
+                                            "when_paused": false,
+                                            "when_standby": true
+                                        },
+                                        "hide": {
+                                            "volume": false,
+                                            "source": false,
+                                            "power_state": false,
+                                            "artwork_border": false,
+                                            "runtime": false
+                                        },
+                                        "style": ":host {\nbackground: rgba(0, 0, 0, 0)  !important;\nleft: 61.35%;\ntop: 37.25%;\nwidth: 51.9%;\n}\n.mmp-player__core {\n    margin-bottom: 41% !important;\n}\n#sliderContainer {\n    width: 25% !important;\n}\n",
+                                        "scale": 1.5,
+                                        "mini-media-player-base-color": "rgba(255,255,255,0.7)",
+                                        "mini-media-player-icon-color": "rgba(255,255,255,0.7)"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "Data Kiosk",
+                    "icon": "mdi:chart-line",
+                    "panel": true,
+                    "cards": [
+                        {
+                            "type": "picture-elements",
+                            "image": "/local/transparent1.png",
+                            "style": "ha-card:first-child {\n  background: rgba(42, 46, 48, 1);\n  top:50%;\n  left: 0%;\n  width: 100%;   \n  height: 100%;\n}\n",
+                            "elements": [
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.outside_temperature"
+                                    ],
+                                    "line_color": "var(--accent-color)",
+                                    "line_width": 8,
+                                    "font_size": 75,
+                                    "show": {
+                                        "extrema": true,
+                                        "points": false
+                                    },
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#4dd2ff",
+                                            "value": 10
+                                        },
+                                        {
+                                            "color": "#ffa31a",
+                                            "value": 20
+                                        },
+                                        {
+                                            "color": "#ff1a1a",
+                                            "value": 30
+                                        }
+                                    ],
+                                    "style": {
+                                        "top": "20%",
+                                        "left": "18%",
+                                        "width": "30%"
+                                    }
+                                },
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.outside_humidity"
+                                    ],
+                                    "line_width": 8,
+                                    "font_size": 75,
+                                    "show": {
+                                        "extrema": true,
+                                        "points": false
+                                    },
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#888a94",
+                                            "value": 0
+                                        },
+                                        {
+                                            "color": "#0533ff",
+                                            "value": 80
+                                        }
+                                    ],
+                                    "style": {
+                                        "top": "20%",
+                                        "left": "50%",
+                                        "width": "30%"
+                                    }
+                                },
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.lux"
+                                    ],
+                                    "line_color": "#e74c3c",
+                                    "line_width": 8,
+                                    "font_size": 75,
+                                    "icon": "mdi:weather-sunny",
+                                    "show": {
+                                        "extrema": true,
+                                        "points": false
+                                    },
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#000000",
+                                            "value": 0
+                                        },
+                                        {
+                                            "color": "#fff4d9",
+                                            "value": 2000
+                                        }
+                                    ],
+                                    "style": {
+                                        "top": "20%",
+                                        "left": "82%",
+                                        "width": "30%"
+                                    }
+                                },
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.inside_temperature"
+                                    ],
+                                    "line_color": "var(--accent-color)",
+                                    "line_width": 8,
+                                    "font_size": 75,
+                                    "show": {
+                                        "extrema": true,
+                                        "points": false
+                                    },
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#4dd2ff",
+                                            "value": 17
+                                        },
+                                        {
+                                            "color": "#ffa31a",
+                                            "value": 21
+                                        },
+                                        {
+                                            "color": "#ff1a1a",
+                                            "value": 28
+                                        }
+                                    ],
+                                    "style": {
+                                        "top": "52%",
+                                        "left": "18%",
+                                        "width": "30%"
+                                    }
+                                },
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.inside_humidity"
+                                    ],
+                                    "line_width": 8,
+                                    "font_size": 75,
+                                    "show": {
+                                        "extrema": true,
+                                        "points": false
+                                    },
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#888a94",
+                                            "value": 0
+                                        },
+                                        {
+                                            "color": "#0533ff",
+                                            "value": 60
+                                        }
+                                    ],
+                                    "style": {
+                                        "top": "52%",
+                                        "left": "50%",
+                                        "width": "30%"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "DEBUG",
+                    "icon": "mdi:bug",
+                    "id": "kiosk_media",
+                    "panel": true,
+                    "background": "rgba(42, 46, 48, 1)",
+                    "cards": [
+                        {
+                            "type": "markdown",
+                            "style": {
+                                "background": "rgba(0, 0, 0, 1)"
+                            },
+                            "content": "Cloudiness: {{states.sensor.weather_cloudiness.state}} %\nDewpoint Temp.: {{states.sensor.weather_dewpoint_temperature.state}} degC\nFog: {{states.sensor.weather_fog.state}} %\nHigh Clouds: {{states.sensor.weather_high_clouds.state}} %\nHumidity: {{states.sensor.weather_humidity.state}} %\nLow Clouds: {{states.sensor.weather_low_clouds.state}} %\nMedium Clouds: {{states.sensor.weather_medium_clouds.state}} %\nPrecipitation: {{states.sensor.weather_precipitation.state}} %\nPressure: {{states.sensor.weather_pressure.state}} hPa\nSymbol: {{states.sensor.weather_symbol.state}}\nTemperature: {{states.sensor.weather_temperature.state}} degC\nWind Direction: {{states.sensor.weather_wind_direction.state}} deg\nWind Speed: {{states.sensor.weather_wind_speed.state}}\nSun: {{states.sun.sun.attributes.elevation}} deg\n\n{{(states.sun.sun.attributes.elevation | float) / (1-(states.sensor.weather_cloudiness.state | float/100)) }}\n{{ ( 30 + states.sun.sun.attributes.elevation | float) * ( 1 - (states.sensor.weather_cloudiness.state | float / 100 )) }}\nAmbient Light: {{states.sensor.ambient_light_calc.state}} %\nDaylight tester: {{states.input_number.daylight_tester.state}}\nBrightness: {{states.sensor.brightness.state}}\n\n\nTV: {{states.input_boolean.television.state}}\nMedia Player - Living Room TV: {{states.media_player.living_room_tv.state}}\nRandom: {{states.sensor.tv_colour.state}}\n\n\nLiving room pos: {{states.cover.sonoff_1000d67323.attributes.current_position | float}}\nBedroom pos: {{states.sensor.bedroom_position.state}}\n            \nLiving Room: {{states.sensor.living_room_brightness.state}}\nBedroom: {{states.sensor.bedroom_brightness.state}}\nKitchen: {{states.sensor.kitchen_brightness.state}}         \n"
+                        }
+                    ]
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_dashoard",
-    "version": 1
+    }
 }

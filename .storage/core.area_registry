@@ -1,24 +1,28 @@
 {
+    "version": 1,
+    "key": "core.area_registry",
     "data": {
         "areas": [
             {
-                "id": "e249b468ccce44868f1226d5bbe24470",
-                "name": "Living Room"
+                "name": "Living Room",
+                "id": "e249b468ccce44868f1226d5bbe24470"
             },
             {
-                "id": "8e0d16bf378d48d18e8ca67f7a40be8a",
-                "name": "Kitchen"
+                "name": "Kitchen",
+                "id": "8e0d16bf378d48d18e8ca67f7a40be8a"
             },
             {
-                "id": "2803f62880fa4a88ab9e9ed1c9c48f05",
-                "name": "Bedroom"
+                "name": "Bedroom",
+                "id": "2803f62880fa4a88ab9e9ed1c9c48f05"
             },
             {
-                "id": "92060567571d4646b465d3b497cc6e27",
-                "name": "Veranda"
+                "name": "Veranda",
+                "id": "92060567571d4646b465d3b497cc6e27"
+            },
+            {
+                "name": "Trash",
+                "id": "4a25736e0ca811eb97ae733eaa921aa0"
             }
         ]
-    },
-    "key": "core.area_registry",
-    "version": 1
+    }
 }

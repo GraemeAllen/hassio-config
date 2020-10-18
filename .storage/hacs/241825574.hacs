@@ -1,11 +1,13 @@
 {
+    "version": "6",
+    "key": "hacs/241825574.hacs",
     "data": {
         "archived": false,
         "authors": [],
         "category": "plugin",
-        "config_flow": false,
         "content_in_root": false,
         "country": [],
+        "config_flow": false,
         "default_branch": "master",
         "description": null,
         "domain": "",
@@ -21,33 +23,32 @@
         "hide_default_branch": false,
         "homeassistant": null,
         "id": "241825574",
+        "iot_class": null,
         "installed": true,
         "installed_commit": "c9cf231",
         "installed_version": "0.1.7.6",
-        "iot_class": null,
-        "last_commit": "c9cf231",
-        "last_updated": "2020-06-08T08:45:54Z",
-        "last_version": "0.1.7.6",
+        "open_issues": 4,
+        "last_commit": "3a7fb4a",
+        "last_version": "0.1.7.7",
+        "last_updated": "2020-08-28T13:59:31Z",
         "manifest_name": null,
         "new": false,
-        "open_issues": 2,
         "persistent_directory": null,
+        "pushed_at": "2020-08-28T13:59:31",
+        "releases": true,
+        "render_readme": true,
         "published_tags": [
+            "0.1.7.7",
             "0.1.7.6",
             "0.1.7.5",
             "0.1.7.4",
-            "0.1.7.3",
-            "0.1.7.2"
+            "0.1.7.3"
         ],
-        "pushed_at": "2020-06-08T08:45:54",
-        "releases": true,
-        "render_readme": true,
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 33,
+        "stargazers_count": 46,
         "topics": [],
-        "zip_release": false
-    },
-    "key": "hacs/241825574.hacs",
-    "version": "6"
+        "zip_release": false,
+        "full_name_lower": "dbuit/sidebar-card"
+    }
 }

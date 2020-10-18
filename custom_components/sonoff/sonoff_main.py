@@ -13,15 +13,7 @@ from .sonoff_local import EWeLinkLocal
 _LOGGER = logging.getLogger(__name__)
 
 ATTRS = ('local', 'cloud', 'rssi', 'humidity', 'temperature', 'power',
-         'current', 'voltage', 'battery', 'consumption')
-
-# map cloud attrs to local attrs
-ATTRS_MAP = {
-    'currentTemperature': 'temperature',
-    'currentHumidity': 'humidity'
-}
-
-EMPTY_DICT = {}
+         'current', 'voltage', 'battery', 'consumption', 'water')
 
 
 def load_cache(filename: str):
@@ -42,10 +34,6 @@ def save_cache(filename: str, data: dict):
 
 
 def get_attrs(state: dict) -> dict:
-    for k in ATTRS_MAP:
-        if k in state:
-            state[ATTRS_MAP[k]] = state.pop(k)
-
     return {k: state[k] for k in ATTRS if k in state}
 
 
@@ -136,7 +124,7 @@ class EWeLinkRegistry:
 
         await self.cloud.start([self._registry_handler], self.devices)
 
-    async def local_start(self, handlers: List[Callable]):
+    async def local_start(self, handlers: List[Callable], zeroconf):
         if self.devices is None:
             self.devices = {}
 
@@ -145,7 +133,7 @@ class EWeLinkRegistry:
         else:
             handlers = [self._registry_handler]
 
-        self.local.start(handlers, self.devices)
+        self.local.start(handlers, self.devices, zeroconf)
 
     async def stop(self):
         # TODO: do something
@@ -238,7 +226,9 @@ class EWeLinkDevice:
         state = device['params']
 
         self._attrs = device['extra'] or {}
-        self._is_th_3_4_0 = 'mainSwitch' in state
+        # don't know if deviceType only in Sonoff TH
+        # https://github.com/AlexxIT/SonoffLAN/issues/158
+        self._is_th_3_4_0 = 'deviceType' in state
 
         if force_refresh:
             attrs = get_attrs(state)

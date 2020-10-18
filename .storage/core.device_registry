@@ -1,50 +1,9 @@
 {
+    "version": 1,
+    "key": "core.device_registry",
     "data": {
         "devices": [
             {
-                "area_id": "e249b468ccce44868f1226d5bbe24470",
-                "config_entries": [
-                    "428f43c065c84feb8c29fc56b5431981"
-                ],
-                "connections": [],
-                "entry_type": null,
-                "id": "3fc6b25a1b2345ff9ec63c8e2fa818ab",
-                "identifiers": [
-                    [
-                        "cast",
-                        "02523e396bb4cda7a81d2c9264f3645e"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "Google Home Mini",
-                "name": "Living Room speaker",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": "e249b468ccce44868f1226d5bbe24470",
-                "config_entries": [
-                    "428f43c065c84feb8c29fc56b5431981"
-                ],
-                "connections": [],
-                "entry_type": null,
-                "id": "f253075c95a048228183a8f3495349e1",
-                "identifiers": [
-                    [
-                        "cast",
-                        "368141d879afbe722b1b2da878b4535a"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "Chromecast",
-                "name": "Living Room TV",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": "e249b468ccce44868f1226d5bbe24470",
                 "config_entries": [
                     "f0ec3f7a974e42da829c370440d87082"
                 ],
@@ -54,18 +13,18 @@
                         "50:c7:bf:4d:55:19"
                     ]
                 ],
-                "entry_type": null,
-                "id": "6aed5e2038814e7cbf5f43ec238a4691",
                 "identifiers": [],
                 "manufacturer": "TP-Link",
                 "model": "HS100(UK)",
                 "name": "Cristo lamp",
-                "name_by_user": null,
                 "sw_version": "1.2.5 Build 171213 Rel.101014",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "6aed5e2038814e7cbf5f43ec238a4691",
+                "via_device_id": null,
+                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "name_by_user": null
             },
             {
-                "area_id": "e249b468ccce44868f1226d5bbe24470",
                 "config_entries": [
                     "f0ec3f7a974e42da829c370440d87082"
                 ],
@@ -75,18 +34,18 @@
                         "98:da:c4:47:69:fc"
                     ]
                 ],
-                "entry_type": null,
-                "id": "8e00d81156f2483280581309593be0e7",
                 "identifiers": [],
                 "manufacturer": "TP-Link",
                 "model": "KL120(EU)",
                 "name": "Carol's lamp",
-                "name_by_user": null,
                 "sw_version": "1.8.11 Build 191113 Rel.105336",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "8e00d81156f2483280581309593be0e7",
+                "via_device_id": null,
+                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "name_by_user": null
             },
             {
-                "area_id": "e249b468ccce44868f1226d5bbe24470",
                 "config_entries": [
                     "f0ec3f7a974e42da829c370440d87082"
                 ],
@@ -96,24 +55,22 @@
                         "68:ff:7b:8f:e7:c2"
                     ]
                 ],
-                "entry_type": null,
-                "id": "f09cf8edf8944505a265dd63eafc7ba6",
                 "identifiers": [],
                 "manufacturer": "TP-Link",
                 "model": "KL130(EU)",
                 "name": "Graeme's lamp",
-                "name_by_user": null,
                 "sw_version": "1.8.11 Build 191113 Rel.105336",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "f09cf8edf8944505a265dd63eafc7ba6",
+                "via_device_id": null,
+                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "92a1de24be754b2986572103aaa6d43d"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "ad95d9298f504875b76dc5836f8e541b",
                 "identifiers": [
                     [
                         "mobile_app",
@@ -123,18 +80,18 @@
                 "manufacturer": "Xiaomi",
                 "model": "Mi 9 Lite",
                 "name": "Mi 9 Lite",
-                "name_by_user": null,
                 "sw_version": "29",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "ad95d9298f504875b76dc5836f8e541b",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "75457f90a2e943b192edd8a7a7e2f7e0"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "bd322b29540f4672be73d4f6b43d4add",
                 "identifiers": [
                     [
                         "hacs",
@@ -144,18 +101,18 @@
                 "manufacturer": "hacs.xyz",
                 "model": "",
                 "name": "HACS",
-                "name_by_user": null,
-                "sw_version": "1.1.0",
-                "via_device_id": null
+                "sw_version": "1.4.1",
+                "entry_type": null,
+                "id": "bd322b29540f4672be73d4f6b43d4add",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "fbb7cc6d57754a6fa387a4fdafdd8889"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "111a7b806c40408ab3306322220b9320",
                 "identifiers": [
                     [
                         "mobile_app",
@@ -165,12 +122,14 @@
                 "manufacturer": "Xiaomi",
                 "model": "pyxis",
                 "name": "Mi_Phone",
-                "name_by_user": null,
                 "sw_version": "10",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "111a7b806c40408ab3306322220b9320",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "92060567571d4646b465d3b497cc6e27",
                 "config_entries": [
                     "872a0660f1bc44b897be48cb2bd5187e"
                 ],
@@ -180,18 +139,18 @@
                         "a4:cf:12:ef:41:51"
                     ]
                 ],
-                "entry_type": null,
-                "id": "c7a7fd6b97cb49fc913ec563376fc2b7",
                 "identifiers": [],
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sensor_node1",
-                "name_by_user": null,
-                "sw_version": "1.14.4 (Jun  9 2020, 23:20:52)",
-                "via_device_id": null
+                "sw_version": "1.14.4 (Aug 30 2020, 10:38:40)",
+                "entry_type": null,
+                "id": "c7a7fd6b97cb49fc913ec563376fc2b7",
+                "via_device_id": null,
+                "area_id": "92060567571d4646b465d3b497cc6e27",
+                "name_by_user": null
             },
             {
-                "area_id": "e249b468ccce44868f1226d5bbe24470",
                 "config_entries": [
                     "20e07efb3ca34182a079e3e929c1537c"
                 ],
@@ -201,18 +160,18 @@
                         "f4:cf:a2:d8:25:b1"
                     ]
                 ],
-                "entry_type": null,
-                "id": "a70875db160c49319a6cb6f92bb81119",
                 "identifiers": [],
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sensor_node2",
-                "name_by_user": null,
-                "sw_version": "1.14.4 (Jun 10 2020, 10:00:39)",
-                "via_device_id": null
+                "sw_version": "1.14.4 (Sep 17 2020, 17:32:06)",
+                "entry_type": null,
+                "id": "a70875db160c49319a6cb6f92bb81119",
+                "via_device_id": null,
+                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "827a081939d6451c9d40a9a72435fd96"
                 ],
@@ -222,8 +181,6 @@
                         "uuid:00e0fc37-2525-2828-2500-886639D78CFD"
                     ]
                 ],
-                "entry_type": null,
-                "id": "ed9bb7d857984886a7d1c2b01e35512d",
                 "identifiers": [
                     [
                         "upnp",
@@ -233,12 +190,77 @@
                 "manufacturer": "Huawei",
                 "model": "Huawei EchoLife Series",
                 "name": "Vodafone HG8247Q Gateway",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "ed9bb7d857984886a7d1c2b01e35512d",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "c9909eba8b934185969216caa22b7aaa"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "280260DD-0A03-4DA0-A6A9-3E6687ACFBDE"
+                    ]
+                ],
+                "manufacturer": "Apple",
+                "model": "iPhone10,5",
+                "name": "iPhone de Ana Carolina",
+                "sw_version": "13.7",
+                "entry_type": null,
+                "id": "1c9fd8ed2ca542b98d24464849b0afbc",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "a50c918e0ca811eba73f6dce1923f1a1"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "02523e396bb4cda7a81d2c9264f3645e"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Home Mini",
+                "name": "Living Room speaker",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "a5299bdc0ca811eba5e2c527b651b1c0",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "a50c918e0ca811eba73f6dce1923f1a1"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "b21e63d25625ec4b9a1bacf19ff1dfc2"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast",
+                "name": "Living Room TV",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "a5322cd70ca811eba5ba6ba304107a6a",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             }
-        ]
-    },
-    "key": "core.device_registry",
-    "version": 1
+        ],
+        "deleted_devices": []
+    }
 }

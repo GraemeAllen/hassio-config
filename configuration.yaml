@@ -1,7 +1,7 @@
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
-
+ios:
 # Database
 recorder:
   purge_keep_days: 3
@@ -29,8 +29,12 @@ device_tracker:
     password: !secret router
   - platform: bluetooth_tracker
   - platform: bluetooth_le_tracker
+
+browser_mod:
+
 lovelace:
   mode: yaml
+  
 
 google_assistant:
   project_id: home-assistant-277315
@@ -43,8 +47,87 @@ google_assistant:
 sonoff:
   username: graeme@ibconsult.co.uk
   password: !secret sonoff
-  reload: always
+  #reload: always
   
+vacuum:
+  - platform: xiaomi_miio
+    host: 192.168.1.73
+    token: 574e7848396438314767766e41527968
+    name: Roborock S5 Max
+  
+  
+####################################################################################### 
+## Roborock Map
+#######################################################################################  
+
+# camera:
+#   - platform: xiaomi_cloud_map_extractor
+#     host: 192.168.1.73
+#     token: 574e7848396438314767766e41527968
+#     username: !secret xiaomi_user
+#     password: !secret xiaomi_pass
+#     country: "de"
+#     colors:
+#       color_map_inside: [0, 0, 0]
+#       color_map_outside: [0, 0, 0]
+#       color_map_wall: [0, 0, 0]
+#       color_map_wall_v2: [0, 0, 0]
+#       color_grey_wall: [0, 0, 0]
+#       color_path: [255, 255, 255]
+#       color_goto_path: [255, 255, 0]
+#       color_predicted_path: [255, 255, 0, 0.5]
+#       color_zones: [0xAD, 0xD8, 0xFF, 0x8F]
+#       color_zones_outline: [0xAD, 0xD8, 0xFF]
+#       color_virtual_walls: [255, 0, 0]
+#       color_no_go_zones: [255, 33, 55, 0.6]
+#       color_no_go_zones_outline: [255, 0, 0]
+#       color_no_mop_zones: [163, 130, 211, 0.6]
+#       color_no_mop_zones_outline: [0, 200, 255]
+#       color_charger: [255, 255, 255, 0.6]
+#       color_robo: [255, 255, 255]
+#       color_unknown: [0, 0, 0]
+#       color_scan: [0, 0, 0]
+#     room_colors:
+#       1: [0, 0, 0]
+#       2: [0, 0, 0]
+#       3: [0, 0, 0]
+#       4: [0, 0, 0]
+#       5: [0, 0, 0]
+#       6: [0, 0, 0]
+#       7: [0, 0, 0]
+#       8: [0, 0, 0]
+#       9: [0, 0, 0]
+#       10: [0, 0, 0]
+#       11: [0, 0, 0]
+#       12: [0, 0, 0]
+#       13: [0, 0, 0]
+#       14: [0, 0, 0]
+#       15: [0, 0, 0]
+#       16: [0, 0, 0]
+#       17: [0, 0, 0]
+#       18: [0, 0, 0]
+#       19: [0, 0, 0]
+#       20: [0, 0, 0]
+#       21: [0, 0, 0]
+#       22: [0, 0, 0]
+#       23: [0, 0, 0]
+#     draw:
+#       - path
+#       - goto_path
+#       - no_go_zones
+#       - no_mopping_zones
+#       - vacuum_position
+#       - virtual_walls
+#       - zones
+#     map_transformation:
+#       scale: 5
+#     attributes:
+#       - image
+#       - no_go_areas
+#       - no_mopping_areas
+#       - vacuum_position
+#       - zones
+
 ####################################################################################### 
 ## Templates (Used for updating text in the UI and converting sensors to CSS values )
 #######################################################################################  
@@ -86,13 +169,17 @@ sensor:
         friendly_name: "Full Date"
         value_template: "{{ states('sensor.day') }}, {{ states('sensor.month') }} {{ now().year }}"  
         
-     # ambient_light_calc:
-     #   friendly_name: 'Calculated Ambient Light'
-     #   value_template: '{{ ((18 + states.sun.sun.attributes.elevation | float ) * (1 - ((states.sensor.weather_cloudiness.state | float / 150)))) |float|round(1) }}'
+      ambient_light_calc:
+        friendly_name: 'Calculated Ambient Light'
+        value_template: '{{ ((18 + states.sun.sun.attributes.elevation | float ) * (1 - ((states.sensor.weather_cloudiness.state | float / 150)))) |float|round(1) }}'
 
       brightness:
         friendly_name: 'Ambient plus offset'
-        value_template: '{{((states.sensor.lux.state | float) / 20) + (states.input_number.daylight_tester.state | float)}}'
+        value_template: '{{((states.sensor.lux.state | float) / 2) + (states.input_number.daylight_tester.state | float)}}'
+    
+    #   brightness:
+    #     friendly_name: 'Ambient plus offset'
+    #     value_template: '{{((states.sensor.ambient_light_calc.state | float) / 2) + (states.input_number.daylight_tester.state | float)}}'
 
       living_room_brightness:
         friendly_name: 'Living room brightness'
@@ -107,45 +194,27 @@ sensor:
         value_template: '{{(states.sensor.brightness.state | float) * (states.cover.sonoff_1000d66886.attributes.current_position | float / 100) |float|round(1)}}'
 
       living_room_position:
-        value_template: '{{states.cover.sonoff_1000d67323.attributes.current_position | float|round(1)}}'
+        value_template: '{{states.cover.sonoff_1000d67323.attributes.current_position | float|round(0)}}'
         
       bedroom_position:
-        value_template: '{{states.cover.sonoff_1000d66ac3.attributes.current_position | float|round(1)}}'        
+        value_template: '{{states.cover.sonoff_1000d66ac3.attributes.current_position | float|round(0)}}'        
         
       kitchen_position:
-        value_template: '{{states.cover.sonoff_1000d66886.attributes.current_position | float|round(1)}}'        
+        value_template: '{{states.cover.sonoff_1000d66886.attributes.current_position | float|round(0)}}'        
 
 
 
 ## Weather
 
-  - platform: yr
 
-  - platform: yr
-    name: Weather
-    forecast: 24
-    monitored_conditions:
-      - temperature
-      - symbol
-      - precipitation
-      - windSpeed
-      - pressure
-      - windDirection
-      - humidity
-      - fog
-      - cloudiness
-      - lowClouds
-      - mediumClouds
-      - highClouds
-      - dewpointTemperature
 
 
 weather:
-  - platform: 'buienradar'
-    name: Weather-old
+  - platform: ipma
+    name: Weather
     latitude: 41.182192
     longitude: -8.625669
-    forecast: true
+
 
 binary_sensor:
   - platform: workday
@@ -164,6 +233,12 @@ input_number:
     max: 1
     step: 1
     mode: box
+
+  wake_percent:
+    name: Open Percentage
+    min: 0
+    max: 100
+    step: 1
     
   range_high:
     name: High Limit
@@ -186,6 +261,70 @@ input_number:
     max: 100
     step: 1
     
+    
 input_boolean:
   blinds_primed:
     name: Blinds Primed
+    
+######################################################################################
+## WAKE UP
+######################################################################################
+
+  monday_wake:
+    name: 'Monday'
+   
+  tuesday_wake:
+    name: 'Tuesday'
+      
+  wednesday_wake:
+    name: 'Wednesday'
+    
+  thursday_wake:
+    name: 'Thursday'
+    
+  friday_wake:
+    name: 'Friday'
+    
+  saturday_wake:
+    name: 'Saturday'
+    
+  sunday_wake:
+    name: 'Sunday'
+    
+input_datetime:
+  monday_time:
+    name: 'Monday'
+    has_date: false
+    has_time: true
+    
+  tuesday_time:
+    name: 'Tuesday'
+    has_date: false
+    has_time: true
+    
+  wednesday_time:
+    name: 'Wednesday'
+    has_date: false
+    has_time: true
+    
+  thursday_time:
+    name: 'Thursday'
+    has_date: false
+    has_time: true
+    
+  friday_time:
+    name: 'Friday'
+    has_date: false
+    has_time: true
+    
+  saturday_time:
+    name: 'Saturday'
+    has_date: false
+    has_time: true
+    
+  sunday_time:
+    name: 'Sunday'
+    has_date: false
+    has_time: true
+ 
+      

@@ -1,88 +1,77 @@
 {
+    "version": 1,
+    "key": "core.config_entries",
     "data": {
         "entries": [
             {
-                "connection_class": "cloud_poll",
+                "entry_id": "55d48b115dcc4956842035d9c7dd0866",
+                "version": 1,
+                "domain": "met",
+                "title": "Home",
                 "data": {
                     "track_home": true
                 },
-                "domain": "met",
-                "entry_id": "55d48b115dcc4956842035d9c7dd0866",
                 "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
                 "source": "onboarding",
-                "system_options": {
-                    "disable_new_entities": false
-                },
-                "title": "Home",
-                "unique_id": null,
-                "version": 1
+                "connection_class": "cloud_poll",
+                "unique_id": null
             },
             {
-                "connection_class": "local_push",
-                "data": {
-                    "user_id": "3a58a4aeefb045dea44870d2e5ccca3e"
-                },
-                "domain": "cast",
-                "entry_id": "428f43c065c84feb8c29fc56b5431981",
-                "options": {},
-                "source": "zeroconf",
-                "system_options": {
-                    "disable_new_entities": false
-                },
-                "title": "Google Cast",
-                "unique_id": null,
-                "version": 1
-            },
-            {
-                "connection_class": "local_poll",
-                "data": {},
-                "domain": "tplink",
                 "entry_id": "f0ec3f7a974e42da829c370440d87082",
+                "version": 1,
+                "domain": "tplink",
+                "title": "TP-Link Smart Home",
+                "data": {},
                 "options": {},
-                "source": "user",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "TP-Link Smart Home",
-                "unique_id": null,
-                "version": 1
+                "source": "user",
+                "connection_class": "local_poll",
+                "unique_id": null
             },
             {
-                "connection_class": "unknown",
+                "entry_id": "83223f1e6b0b4d4d922c08415fd8436d",
+                "version": 1,
+                "domain": "ifttt",
+                "title": "IFTTT Webhook",
                 "data": {
                     "cloudhook": false,
                     "webhook_id": "afdb5d2128fc9e434531057e603f928f6f34452eef9e79d6884476dd763fdbf7"
                 },
-                "domain": "ifttt",
-                "entry_id": "83223f1e6b0b4d4d922c08415fd8436d",
                 "options": {},
-                "source": "user",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "IFTTT Webhook",
-                "unique_id": null,
-                "version": 1
+                "source": "user",
+                "connection_class": "unknown",
+                "unique_id": null
             },
             {
-                "connection_class": "local_poll",
+                "entry_id": "58fab19f6b4b4b6cb1cb3f2bae19f29f",
+                "version": 1,
+                "domain": "ipp",
+                "title": "Ignored",
                 "data": {
                     "host": "192.168.1.69",
                     "name": "HP OfficeJet Pro 7740 series [F7337D] (Fax) @ MacBook Pro de an"
                 },
-                "domain": "ipp",
-                "entry_id": "58fab19f6b4b4b6cb1cb3f2bae19f29f",
                 "options": {},
-                "source": "ignore",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "Ignored",
-                "unique_id": "b1f0e215-453b-39fd-5470-9aa9c4c2b988",
-                "version": 1
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "b1f0e215-453b-39fd-5470-9aa9c4c2b988"
             },
             {
-                "connection_class": "cloud_poll",
+                "entry_id": "75457f90a2e943b192edd8a7a7e2f7e0",
+                "version": 1,
+                "domain": "hacs",
+                "title": "",
                 "data": {
                     "appdaemon": false,
                     "netdaemon": false,
@@ -90,27 +79,27 @@
                     "sidepanel_title": "HACS",
                     "token": "f0f70395032d1b1dc634a213b1d6e998c07b9e6a"
                 },
-                "domain": "hacs",
-                "entry_id": "75457f90a2e943b192edd8a7a7e2f7e0",
                 "options": {},
-                "source": "user",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "",
-                "unique_id": null,
-                "version": 1
+                "source": "user",
+                "connection_class": "cloud_poll",
+                "unique_id": null
             },
             {
-                "connection_class": "cloud_push",
+                "entry_id": "92a1de24be754b2986572103aaa6d43d",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "Mi 9 Lite",
                 "data": {
                     "app_data": {
-                        "push_token": "caCGwnpN_7g:APA91bGDPrm1fVzw-8rVTdRn_dujmX7WLGJU1jTCqpYYOHA4SkslebgKUvboo83rG4d0dT3AYgRxSuOeYpZpICGFbMyo-9_yWWWKaz-2c5yRYCEtam-bQsOq01IBu3sMW--w8GrG-Yk2",
-                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1"
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1",
+                        "push_token": "caCGwnpN_7g:APA91bGDPrm1fVzw-8rVTdRn_dujmX7WLGJU1jTCqpYYOHA4SkslebgKUvboo83rG4d0dT3AYgRxSuOeYpZpICGFbMyo-9_yWWWKaz-2c5yRYCEtam-bQsOq01IBu3sMW--w8GrG-Yk2"
                     },
                     "app_id": "io.homeassistant.companion.android",
                     "app_name": "Home Assistant",
-                    "app_version": "1.9.0-167 (167)",
+                    "app_version": "2.5.0-full (400)",
                     "device_id": "7170b4a8d9d8e457",
                     "device_name": "Mi 9 Lite",
                     "manufacturer": "Xiaomi",
@@ -121,19 +110,19 @@
                     "user_id": "479ff0902f1040b88851e8c3f1cf26c5",
                     "webhook_id": "afb2a5b5670fa4c85ac49fd704db688a3a01957e14bc32b0e659f9236e1d5162"
                 },
-                "domain": "mobile_app",
-                "entry_id": "92a1de24be754b2986572103aaa6d43d",
                 "options": {},
-                "source": "registration",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "Mi 9 Lite",
-                "unique_id": "io.homeassistant.companion.android-7170b4a8d9d8e457",
-                "version": 1
+                "source": "registration",
+                "connection_class": "cloud_push",
+                "unique_id": "io.homeassistant.companion.android-7170b4a8d9d8e457"
             },
             {
-                "connection_class": "cloud_push",
+                "entry_id": "fbb7cc6d57754a6fa387a4fdafdd8889",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "Mi_Phone",
                 "data": {
                     "app_data": {
                         "push_token": "dfWZsiHcSKm_muPONLP6cQ:APA91bGm3Smk764PNdbS78xZwOuCGuqLH8rNa3WVhQe_LO6E7232n1JEjwI7hdSRfrF7oxEfbj8TtSsbF--lxAzcjYFnfBLwu6fgEyqfWEnwduvfdAz4KyzwMyjRKCRfwKkGwUs-eGDZ",
@@ -152,72 +141,129 @@
                     "user_id": "479ff0902f1040b88851e8c3f1cf26c5",
                     "webhook_id": "77c55871e855a16f4f99e2558ae17c911c0842521ff85fcb2d4e1d8635339583"
                 },
-                "domain": "mobile_app",
-                "entry_id": "fbb7cc6d57754a6fa387a4fdafdd8889",
                 "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
                 "source": "registration",
-                "system_options": {
-                    "disable_new_entities": false
-                },
-                "title": "Mi_Phone",
-                "unique_id": null,
-                "version": 1
+                "connection_class": "cloud_push",
+                "unique_id": null
             },
             {
-                "connection_class": "local_push",
-                "data": {
-                    "host": "192.168.1.83",
-                    "password": "",
-                    "port": 6053
-                },
-                "domain": "esphome",
                 "entry_id": "872a0660f1bc44b897be48cb2bd5187e",
-                "options": {},
-                "source": "zeroconf",
-                "system_options": {
-                    "disable_new_entities": false
-                },
+                "version": 1,
+                "domain": "esphome",
                 "title": "sensor_node1",
-                "unique_id": "sensor_node1",
-                "version": 1
-            },
-            {
-                "connection_class": "local_push",
                 "data": {
-                    "host": "192.168.1.84",
+                    "host": "192.168.1.80",
                     "password": "",
                     "port": 6053
                 },
-                "domain": "esphome",
-                "entry_id": "20e07efb3ca34182a079e3e929c1537c",
                 "options": {},
-                "source": "zeroconf",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "sensor_node2",
-                "unique_id": "sensor_node2",
-                "version": 1
+                "source": "zeroconf",
+                "connection_class": "local_push",
+                "unique_id": "sensor_node1"
             },
             {
-                "connection_class": "local_poll",
+                "entry_id": "20e07efb3ca34182a079e3e929c1537c",
+                "version": 1,
+                "domain": "esphome",
+                "title": "sensor_node2",
+                "data": {
+                    "host": "192.168.1.77",
+                    "password": "",
+                    "port": 6053
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "zeroconf",
+                "connection_class": "local_push",
+                "unique_id": "sensor_node2"
+            },
+            {
+                "entry_id": "827a081939d6451c9d40a9a72435fd96",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Vodafone HG8247Q Gateway",
                 "data": {
                     "st": "urn:schemas-upnp-org:device:InternetGatewayDevice:1",
                     "udn": "uuid:00e0fc37-2525-2828-2500-886639D78CFD"
                 },
-                "domain": "upnp",
-                "entry_id": "827a081939d6451c9d40a9a72435fd96",
                 "options": {},
-                "source": "import",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "Vodafone HG8247Q Gateway",
-                "unique_id": "uuid:00e0fc37-2525-2828-2500-886639D78CFD::urn:schemas-upnp-org:device:InternetGatewayDevice:1",
-                "version": 1
+                "source": "import",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:00e0fc37-2525-2828-2500-886639D78CFD::urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+            },
+            {
+                "entry_id": "c9909eba8b934185969216caa22b7aaa",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "iPhone de Ana Carolina",
+                "data": {
+                    "app_data": {
+                        "push_token": "ftFiy3qk2EoAugdHXDyHVH:APA91bFaMqmnTfA1q9P802s5-M3tvArCPrCywE-IAR3ipuM99sCQJu-btVF1tSOELghMEn4bFo1dIgJTxExLAGVCatp3omIdVaEmPbxT2MrA6sJ6Y59GKL8hDfHa8TvYju5b99tiXpa9",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+                    },
+                    "app_id": "io.robbie.HomeAssistant",
+                    "app_name": "Home Assistant",
+                    "app_version": "2020.6.2 (1)",
+                    "device_id": "280260DD-0A03-4DA0-A6A9-3E6687ACFBDE",
+                    "device_name": "iPhone de Ana Carolina",
+                    "manufacturer": "Apple",
+                    "model": "iPhone10,5",
+                    "os_name": "iOS",
+                    "os_version": "13.7",
+                    "secret": "4ad58f5976a7d8b89499be44fb2ba4dcceba254538c41ac72348386207fab760",
+                    "supports_encryption": true,
+                    "user_id": "ba7b100e0e334d499bdb058f82ba4ecb",
+                    "webhook_id": "4a6b7170cb25f391e6efa070af9df3940bd2547fa6050986ff914a2b234e5a30"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "registration",
+                "connection_class": "cloud_push",
+                "unique_id": "io.robbie.HomeAssistant-280260DD-0A03-4DA0-A6A9-3E6687ACFBDE"
+            },
+            {
+                "entry_id": "a50c918e0ca811eba73f6dce1923f1a1",
+                "version": 1,
+                "domain": "cast",
+                "title": "Google Cast",
+                "data": {
+                    "user_id": "de93db4a08004f359e776fdf69ce6b95"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_push",
+                "unique_id": "cast"
+            },
+            {
+                "entry_id": "9e42b0d20ed511eba7b36327a473086b",
+                "version": 1,
+                "domain": "ios",
+                "title": "Home Assistant iOS",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "import",
+                "connection_class": "cloud_push",
+                "unique_id": null
             }
         ]
-    },
-    "key": "core.config_entries",
-    "version": 1
+    }
 }

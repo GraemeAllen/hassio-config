@@ -1,49 +1,49 @@
 {
+    "version": 1,
+    "key": "esphome.872a0660f1bc44b897be48cb2bd5187e",
     "data": {
         "device_info": {
-            "compilation_time": "Jun  9 2020, 23:20:52",
-            "esphome_version": "1.14.4",
-            "has_deep_sleep": false,
-            "mac_address": "A4:CF:12:EF:41:51",
-            "model": "PLATFORMIO_ESP01_1M",
+            "uses_password": false,
             "name": "sensor_node1",
-            "uses_password": false
+            "mac_address": "A4:CF:12:EF:41:51",
+            "compilation_time": "Aug 30 2020, 10:38:40",
+            "model": "PLATFORMIO_ESP01_1M",
+            "has_deep_sleep": false,
+            "esphome_version": "1.14.4"
         },
+        "services": [],
         "sensor": [
             {
-                "accuracy_decimals": 0,
-                "force_update": false,
-                "icon": "",
+                "object_id": "lux",
                 "key": 914478924,
                 "name": "Lux",
-                "object_id": "lux",
                 "unique_id": "sensor_node1sensorlux",
-                "unit_of_measurement": "lux"
+                "icon": "",
+                "unit_of_measurement": "lux",
+                "accuracy_decimals": 0,
+                "force_update": false
             },
             {
-                "accuracy_decimals": 1,
-                "force_update": false,
-                "icon": "mdi:thermometer",
+                "object_id": "outside_temperature",
                 "key": 2259435129,
                 "name": "Outside Temperature",
-                "object_id": "outside_temperature",
                 "unique_id": "sensor_node1sensoroutside_temperature",
-                "unit_of_measurement": "\u00b0C"
+                "icon": "mdi:thermometer",
+                "unit_of_measurement": "\u00b0C",
+                "accuracy_decimals": 1,
+                "force_update": false
             },
             {
-                "accuracy_decimals": 0,
-                "force_update": false,
-                "icon": "mdi:water-percent",
+                "object_id": "outside_humidity",
                 "key": 1320590942,
                 "name": "Outside Humidity",
-                "object_id": "outside_humidity",
                 "unique_id": "sensor_node1sensoroutside_humidity",
-                "unit_of_measurement": "%"
+                "icon": "mdi:water-percent",
+                "unit_of_measurement": "%",
+                "accuracy_decimals": 0,
+                "force_update": false
             }
         ],
-        "services": [],
         "text_sensor": []
-    },
-    "key": "esphome.872a0660f1bc44b897be48cb2bd5187e",
-    "version": 1
+    }
 }
