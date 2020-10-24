@@ -1031,7 +1031,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "iPhone de Ana Carolina Battery Level",
-                "original_icon": "mdi:battery-50"
+                "original_icon": "mdi:battery-charging-20"
             },
             {
                 "entity_id": "sensor.iphone_de_ana_carolina_bssid",
@@ -1127,7 +1127,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": null,
                 "original_name": "iPhone de Ana Carolina Battery State",
-                "original_icon": "mdi:battery-50"
+                "original_icon": "mdi:battery-charging-20"
             },
             {
                 "entity_id": "sensor.iphone_de_ana_carolina_storage",
@@ -1175,7 +1175,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Mi 9 Lite Audio Sensor",
-                "original_icon": "mdi:volume-high"
+                "original_icon": "mdi:volume-off"
             },
             {
                 "entity_id": "sensor.mi_9_lite_do_not_disturb_sensor",
@@ -1624,6 +1624,134 @@
                 "unit_of_measurement": null,
                 "original_name": "Weather",
                 "original_icon": null
+            },
+            {
+                "entity_id": "sensor.euro",
+                "config_entry_id": "c1a91578152a11eb91955f7ecbc9c93a",
+                "device_id": null,
+                "unique_id": "nodered-9e74f251.0dfb4-7319f5ac.a6299c",
+                "platform": "nodered",
+                "name": null,
+                "icon": "mdi:currency-eur",
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": "sensor",
+                "unit_of_measurement": "\u20ac",
+                "original_name": "Euro",
+                "original_icon": "mdi:CurrencyEur"
+            },
+            {
+                "entity_id": "sensor.bitcoin",
+                "config_entry_id": "c1a91578152a11eb91955f7ecbc9c93a",
+                "device_id": null,
+                "unique_id": "nodered-9e74f251.0dfb4-488f6b7d.ad4d74",
+                "platform": "nodered",
+                "name": null,
+                "icon": "mdi:bitcoin",
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": "sensor",
+                "unit_of_measurement": "BTC",
+                "original_name": "Bitcoin",
+                "original_icon": "MDI:bitcoin"
+            },
+            {
+                "entity_id": "sensor.ethereum",
+                "config_entry_id": "c1a91578152a11eb91955f7ecbc9c93a",
+                "device_id": null,
+                "unique_id": "nodered-9e74f251.0dfb4-375bbcc1.591044",
+                "platform": "nodered",
+                "name": "Ethereum",
+                "icon": "mdi:ethereum",
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": "sensor",
+                "unit_of_measurement": "ETH",
+                "original_name": "Ethereum",
+                "original_icon": "MDI:ethereum"
+            },
+            {
+                "entity_id": "sensor.btc_price",
+                "config_entry_id": "c1a91578152a11eb91955f7ecbc9c93a",
+                "device_id": null,
+                "unique_id": "nodered-9e74f251.0dfb4-1bc12960.29dea7",
+                "platform": "nodered",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": "sensor",
+                "unit_of_measurement": "\u20ac",
+                "original_name": "BTC Price",
+                "original_icon": "mdi:bitcoin"
+            },
+            {
+                "entity_id": "sensor.eth_price",
+                "config_entry_id": "c1a91578152a11eb91955f7ecbc9c93a",
+                "device_id": null,
+                "unique_id": "nodered-9e74f251.0dfb4-3e284add.6a2b96",
+                "platform": "nodered",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": "sensor",
+                "unit_of_measurement": "\u20ac",
+                "original_name": "ETH Price",
+                "original_icon": "mdi:ethereum"
+            },
+            {
+                "entity_id": "sensor.btc_value",
+                "config_entry_id": "c1a91578152a11eb91955f7ecbc9c93a",
+                "device_id": null,
+                "unique_id": "nodered-9e74f251.0dfb4-c51c31c3.bca51",
+                "platform": "nodered",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": "sensor",
+                "unit_of_measurement": "\u20ac",
+                "original_name": "BTC Value",
+                "original_icon": "mdi:bitcoin"
+            },
+            {
+                "entity_id": "sensor.eth_value",
+                "config_entry_id": "c1a91578152a11eb91955f7ecbc9c93a",
+                "device_id": null,
+                "unique_id": "nodered-9e74f251.0dfb4-e09b00c9.8d60d",
+                "platform": "nodered",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": "sensor",
+                "unit_of_measurement": "\u20ac",
+                "original_name": "ETH Value",
+                "original_icon": "mdi:ethereum"
+            },
+            {
+                "entity_id": "sensor.portfolio",
+                "config_entry_id": "c1a91578152a11eb91955f7ecbc9c93a",
+                "device_id": null,
+                "unique_id": "nodered-9e74f251.0dfb4-ce46ae84.4a6d8",
+                "platform": "nodered",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": "sensor",
+                "unit_of_measurement": "\u20ac",
+                "original_name": "Portfolio",
+                "original_icon": "mdi:currency-eur"
             }
         ]
     }

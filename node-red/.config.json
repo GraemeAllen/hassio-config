@@ -1466,6 +1466,198 @@
      "file": "/config/node-red/node_modules/node-red-contrib-schedex/index.js"
     }
    }
+  },
+  "node-red-contrib-coinbase": {
+   "name": "node-red-contrib-coinbase",
+   "version": "0.0.4",
+   "local": true,
+   "nodes": {
+    "client": {
+     "name": "client",
+     "types": [
+      "coinbase-client"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-coinbase",
+     "file": "/config/node-red/node_modules/node-red-contrib-coinbase/coinbase-client.js"
+    },
+    "get-buy-price": {
+     "name": "get-buy-price",
+     "types": [
+      "coinbase-get-buy-price"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-coinbase",
+     "file": "/config/node-red/node_modules/node-red-contrib-coinbase/coinbase-getBuyPrice.js"
+    },
+    "get-account": {
+     "name": "get-account",
+     "types": [
+      "coinbase-get-account"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-coinbase",
+     "file": "/config/node-red/node_modules/node-red-contrib-coinbase/coinbase-getAccount.js"
+    },
+    "sell": {
+     "name": "sell",
+     "types": [
+      "coinbase-sell"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-coinbase",
+     "file": "/config/node-red/node_modules/node-red-contrib-coinbase/coinbase-sell.js"
+    }
+   }
+  },
+  "node-red-contrib-crypto-js-plus": {
+   "name": "node-red-contrib-crypto-js-plus",
+   "version": "0.1.9",
+   "local": true,
+   "nodes": {
+    "encrypt": {
+     "name": "encrypt",
+     "types": [
+      "encrypt"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-crypto-js-plus",
+     "file": "/config/node-red/node_modules/node-red-contrib-crypto-js-plus/cryptojs/encrypt.js"
+    },
+    "decrypt": {
+     "name": "decrypt",
+     "types": [
+      "decrypt"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-crypto-js-plus",
+     "file": "/config/node-red/node_modules/node-red-contrib-crypto-js-plus/cryptojs/decrypt.js"
+    },
+    "hmac": {
+     "name": "hmac",
+     "types": [
+      "hmac"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-crypto-js-plus",
+     "file": "/config/node-red/node_modules/node-red-contrib-crypto-js-plus/cryptojs/hmac.js"
+    },
+    "digest": {
+     "name": "digest",
+     "types": [
+      "digest"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-crypto-js-plus",
+     "file": "/config/node-red/node_modules/node-red-contrib-crypto-js-plus/cryptojs/digest.js"
+    },
+    "encode": {
+     "name": "encode",
+     "types": [
+      "encode"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-crypto-js-plus",
+     "file": "/config/node-red/node_modules/node-red-contrib-crypto-js-plus/cryptojs/encode.js"
+    },
+    "decode": {
+     "name": "decode",
+     "types": [
+      "decode"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-crypto-js-plus",
+     "file": "/config/node-red/node_modules/node-red-contrib-crypto-js-plus/cryptojs/decode.js"
+    }
+   }
+  },
+  "node-red-contrib-calc": {
+   "name": "node-red-contrib-calc",
+   "version": "1.0.5",
+   "local": true,
+   "nodes": {
+    "math": {
+     "name": "math",
+     "types": [
+      "calculator"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-calc",
+     "file": "/config/node-red/node_modules/node-red-contrib-calc/math.js"
+    }
+   }
+  },
+  "node-red-contrib-rate": {
+   "name": "node-red-contrib-rate",
+   "version": "1.4.0",
+   "local": true,
+   "nodes": {
+    "rate": {
+     "name": "rate",
+     "types": [
+      "rate"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-rate",
+     "file": "/config/node-red/node_modules/node-red-contrib-rate/rate.js"
+    }
+   }
+  },
+  "node-red-contrib-bool-gate": {
+   "name": "node-red-contrib-bool-gate",
+   "version": "1.0.2",
+   "local": true,
+   "nodes": {
+    "and": {
+     "name": "and",
+     "types": [
+      "and-gate"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-bool-gate",
+     "file": "/config/node-red/node_modules/node-red-contrib-bool-gate/nodes/and.js"
+    },
+    "or": {
+     "name": "or",
+     "types": [
+      "or-gate"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-bool-gate",
+     "file": "/config/node-red/node_modules/node-red-contrib-bool-gate/nodes/or.js"
+    }
+   }
+  },
+  "node-red-contrib-frequency-meter": {
+   "name": "node-red-contrib-frequency-meter",
+   "version": "0.0.1",
+   "local": false,
+   "nodes": {
+    "frequency-meter": {
+     "name": "frequency-meter",
+     "types": [
+      "frequency"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-frequency-meter",
+     "file": "/config/node-red/node_modules/node-red-contrib-frequency-meter/frequency-meter.js"
+    }
+   }
   }
  },
  "users": {
@@ -1474,12 +1666,13 @@
     "view": {
      "view-show-grid": true,
      "view-snap-grid": true,
-     "view-grid-size": 20,
+     "view-grid-size": "20",
      "view-node-status": true,
      "view-node-show-label": true,
      "view-show-tips": true
     }
-   }
+   },
+   "menu-menu-item-sidebar": true
   }
  }
 }

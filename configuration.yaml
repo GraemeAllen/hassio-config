@@ -203,7 +203,6 @@ sensor:
         value_template: '{{states.cover.sonoff_1000d66886.attributes.current_position | float|round(0)}}'        
 
 
-
 ## Weather
 
 

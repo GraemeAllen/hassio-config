@@ -263,6 +263,20 @@
                 "source": "import",
                 "connection_class": "cloud_push",
                 "unique_id": null
+            },
+            {
+                "entry_id": "c1a91578152a11eb91955f7ecbc9c93a",
+                "version": 1,
+                "domain": "nodered",
+                "title": "Node-RED",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_push",
+                "unique_id": null
             }
         ]
     }

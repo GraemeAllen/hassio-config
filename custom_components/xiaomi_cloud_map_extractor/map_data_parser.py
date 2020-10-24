@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Dict, Optional
 
 from .const import *
 from .image_handler import ImageHandler
@@ -19,19 +19,19 @@ class MapDataParser:
     NO_MOPPING_AREAS = 12
     OBSTACLES = 13
     DIGEST = 1024
-    MM = 50.0
+    MM = 50
     SIZE = 1024
 
     @staticmethod
-    def parse(raw: bytes, colors, drawables, image_config):
+    def parse(raw: bytes, colors, drawables, texts, sizes, image_config):
         map_data = MapData()
         map_header_length = MapDataParser.get_int16(raw, 0x02)
         map_data.major_version = MapDataParser.get_int16(raw, 0x08)
         map_data.minor_version = MapDataParser.get_int16(raw, 0x0A)
         map_data.map_index = MapDataParser.get_int32(raw, 0x0C)
         map_data.map_sequence = MapDataParser.get_int32(raw, 0x10)
-
         block_start_position = map_header_length
+        img_start = None
         while block_start_position < len(raw):
             block_header_length = MapDataParser.get_int16(raw, block_start_position + 0x02)
             header = MapDataParser.get_bytes(raw, block_start_position, block_header_length)
@@ -42,8 +42,11 @@ class MapDataParser:
             if block_type == MapDataParser.CHARGER:
                 map_data.charger = MapDataParser.parse_charger(block_start_position, raw)
             elif block_type == MapDataParser.IMAGE:
-                map_data.image = MapDataParser.parse_image(block_data_length, block_header_length, data, header, colors,
-                                                           image_config)
+                img_start = block_start_position
+                image, rooms = MapDataParser.parse_image(block_data_length, block_header_length, data, header, colors,
+                                                         image_config)
+                map_data.image = image
+                map_data.rooms = rooms
             elif block_type == MapDataParser.ROBOT_POSITION:
                 map_data.vacuum_position = MapDataParser.parse_vacuum_position(block_data_length, data)
             elif block_type == MapDataParser.PATH:
@@ -70,9 +73,28 @@ class MapDataParser:
                 block_pairs = MapDataParser.get_int16(header, 0x08)
                 map_data.blocks = MapDataParser.get_bytes(data, 0, block_pairs)
             block_start_position = block_start_position + block_data_length + (header[2] & 0xFF)
-        MapDataParser.draw_elements(colors, drawables, map_data)
-        ImageHandler.rotate(map_data.image)
+        if not map_data.image.is_empty:
+            MapDataParser.draw_elements(colors, drawables, texts, sizes, map_data)
+            if len(map_data.rooms) > 0:
+                map_data.vacuum_room = MapDataParser.get_current_vacuum_room(img_start, raw, map_data.vacuum_position)
+            ImageHandler.rotate(map_data.image)
+            ImageHandler.draw_texts(map_data.image, texts)
         return map_data
+
+    @staticmethod
+    def get_current_vacuum_room(block_start_position, raw, vacuum_position):
+        block_header_length = MapDataParser.get_int16(raw, block_start_position + 0x02)
+        header = MapDataParser.get_bytes(raw, block_start_position, block_header_length)
+        block_data_length = MapDataParser.get_int32(header, 0x04)
+        block_data_start = block_start_position + block_header_length
+        data = MapDataParser.get_bytes(raw, block_data_start, block_data_length)
+        image_top = MapDataParser.get_int32(header, block_header_length - 16)
+        image_left = MapDataParser.get_int32(header, block_header_length - 12)
+        image_width = MapDataParser.get_int32(header, block_header_length - 4)
+        x = round(vacuum_position.x / MapDataParser.MM - image_left)
+        y = round(vacuum_position.y / MapDataParser.MM - image_top)
+        room = ImageHandler.get_room_at_pixel(data, image_width, x, y)
+        return room
 
     @staticmethod
     def parse_image(block_data_length, block_header_length, data, header, colors, image_config):
@@ -91,14 +113,19 @@ class MapDataParser:
                 < MINIMAL_IMAGE_HEIGHT:
             image_config[CONF_TRIM][CONF_TOP] = 0
             image_config[CONF_TRIM][CONF_BOTTOM] = 0
-        image = ImageHandler.parse(data, image_width, image_height, colors, image_config)
+        image, rooms = ImageHandler.parse(data, image_width, image_height, colors, image_config)
+        for number, room in rooms.items():
+            rooms[number] = Zone((room[0] + image_left) * MapDataParser.MM,
+                                 (room[1] + image_top) * MapDataParser.MM,
+                                 (room[2] + image_left) * MapDataParser.MM,
+                                 (room[3] + image_top) * MapDataParser.MM)
         return ImageData(image_size,
                          image_top,
                          image_left,
                          image_height,
                          image_width,
                          image_config,
-                         image)
+                         image), rooms
 
     @staticmethod
     def parse_goto_target(data):
@@ -187,11 +214,12 @@ class MapDataParser:
         return areas
 
     @staticmethod
-    def draw_elements(colors, drawables, map_data):
+    def draw_elements(colors, drawables, texts, sizes, map_data):
         if DRAWABLE_CHARGER in drawables and map_data.charger is not None:
-            ImageHandler.draw_charger(map_data.image, map_data.charger, colors)
+            ImageHandler.draw_charger(map_data.image, map_data.charger, sizes[CONF_SIZE_CHARGER_RADIUS], colors)
         if DRAWABLE_VACUUM_POSITION in drawables and map_data.vacuum_position is not None:
-            ImageHandler.draw_vacuum_position(map_data.image, map_data.vacuum_position, colors)
+            ImageHandler.draw_vacuum_position(map_data.image, map_data.vacuum_position, sizes[CONF_SIZE_VACUUM_RADIUS],
+                                              colors)
         if DRAWABLE_PATH in drawables and map_data.path is not None:
             ImageHandler.draw_path(map_data.image, map_data.path, colors)
         if DRAWABLE_GOTO_PATH in drawables and map_data.goto_path is not None:
@@ -234,27 +262,30 @@ class MapDataParser:
 
 class MapData:
     def __init__(self):
+        self.blocks = None
         self.charger: Optional[Point] = None
-        self.image: Optional[ImageData] = None
-        self.vacuum_position: Optional[Point] = None
-        self.path: Optional[List[Point]] = None
-        self.goto_path: Optional[List[Point]] = None
-        self.predicted_path: Optional[List[Point]] = None
-        self.zones: Optional[List[Area]] = None
         self.goto: Optional[List[Point]] = None
-        self.walls: Optional[List[Wall]] = None
+        self.goto_path: Optional[List[Point]] = None
+        self.image: Optional[ImageData] = None
         self.no_go_areas: Optional[List[Area]] = None
         self.no_mopping_areas: Optional[List[Area]] = None
         self.obstacles = None
-        self.blocks = None
+        self.path: Optional[List[Point]] = None
+        self.predicted_path: Optional[List[Point]] = None
+        self.rooms: Optional[Dict[int, Zone]] = None
+        self.vacuum_position: Optional[Point] = None
+        self.vacuum_room: Optional[int] = None
+        self.walls: Optional[List[Wall]] = None
+        self.zones: Optional[List[Zone]] = None
+        self.map_name: Optional[str] = None
 
     def calibration(self):
         calibration_points = []
         for point in [Point(25500, 25500), Point(26500, 25500), Point(26500, 26500)]:
             img_point = point.to_img(self.image.dimensions)
             calibration_points.append({
-                ATTR_VACUUM: {ATTR_X: point.x, ATTR_Y: point.y},
-                ATTR_MAP: {ATTR_X: int(img_point.x), ATTR_Y: int(img_point.y)}
+                "vacuum": {"x": point.x, "y": point.y},
+                "map": {"x": int(img_point.x), "y": int(img_point.y)}
             })
         return calibration_points
 
@@ -314,6 +345,7 @@ class ImageData:
                                           width - trim_left - trim_right,
                                           scale,
                                           rotation)
+        self.is_empty = height == 0 or width == 0
         self.data = data
 
     def as_dict(self):

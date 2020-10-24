@@ -6,10 +6,10 @@
             "uses_password": false,
             "name": "sensor_node1",
             "mac_address": "A4:CF:12:EF:41:51",
-            "compilation_time": "Aug 30 2020, 10:38:40",
+            "compilation_time": "Oct 24 2020, 13:50:17",
             "model": "PLATFORMIO_ESP01_1M",
             "has_deep_sleep": false,
-            "esphome_version": "1.14.4"
+            "esphome_version": "1.15.3"
         },
         "services": [],
         "sensor": [

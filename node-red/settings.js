@@ -152,6 +152,7 @@ module.exports = {
   //    context.global.os
 
   functionGlobalContext: {
+      crypto:require('crypto')
     // os:require('os'),
     // jfive:require("johnny-five"),
     // j5board:require("johnny-five").Board({repl:false})
