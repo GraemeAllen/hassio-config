@@ -29,7 +29,7 @@
         "installed": true,
         "installed_commit": "6a919ae",
         "installed_version": "1.0.13",
-        "open_issues": 64,
+        "open_issues": 65,
         "last_commit": "6a919ae",
         "last_version": "1.0.13",
         "last_updated": "2020-10-07T16:31:14Z",
@@ -48,7 +48,7 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 243,
+        "stargazers_count": 246,
         "topics": [
             "circadian",
             "circadian-rhythms",

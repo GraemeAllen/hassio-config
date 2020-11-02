@@ -33,7 +33,7 @@
         "installed": true,
         "installed_commit": "739619e",
         "installed_version": "v0.4.4",
-        "open_issues": 3,
+        "open_issues": 4,
         "last_commit": "739619e",
         "last_version": "v0.4.4",
         "last_updated": "2020-10-15T23:29:00Z",
@@ -52,7 +52,7 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 84,
+        "stargazers_count": 87,
         "topics": [
             "home-assistant",
             "node-red"

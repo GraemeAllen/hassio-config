@@ -223,7 +223,7 @@ flash_red_led:
       - 255
       - 0
       - 0
-      transition: 0
+
 flash_green_led:
   sequence:
   - data:
@@ -233,7 +233,7 @@ flash_green_led:
       - 0
       - 255
       - 0
-      transition: 0
+
     service: light.turn_on
 flash_blue_led:
   sequence:
@@ -245,7 +245,7 @@ flash_blue_led:
       - 0
       - 0
       - 255
-      transition: 0
+
 '1591808247932':
   alias: Dashboard on TV
   sequence:
@@ -263,3 +263,13 @@ alarm_test:
       volume_level: 0.5
       media_content_id: https://death-star.duckdns.org/local/alarm.mp3
       media_content_type: audio/mp3
+money_up:
+  alias: Money Up
+  sequence:
+  - service: media_player.play_media
+    data:
+      media_content_id: https://death-star.duckdns.org/local/alarm.mp3
+      media_content_type: audio/wav
+    entity_id: media_player.living_room_speaker
+  mode: single
+  icon: mdi:currency-euro

@@ -1,6 +1,10 @@
+import logging
 from typing import Callable
 from PIL import Image, ImageDraw, ImageFont
+
 from .const import *
+
+_LOGGER = logging.getLogger(__name__)
 
 
 class ImageHandler:
@@ -84,13 +88,15 @@ class ImageHandler:
                         pixels[x, y] = ImageHandler.__get_color__(COLOR_MAP_WALL_V2, colors)
                     elif obstacle == 7:
                         room_number = (pixel_type & 0xFF) >> 3
+                        room_x = img_x + trim_left
+                        room_y = img_y + trim_bottom
                         if room_number not in rooms:
-                            rooms[room_number] = (img_x, img_y, img_x, img_y)
+                            rooms[room_number] = (room_x, room_y, room_x, room_y)
                         else:
-                            rooms[room_number] = (min(rooms[room_number][0], img_x),
-                                                  min(rooms[room_number][1], img_y),
-                                                  max(rooms[room_number][2], img_x),
-                                                  max(rooms[room_number][3], img_y))
+                            rooms[room_number] = (min(rooms[room_number][0], room_x),
+                                                  min(rooms[room_number][1], room_y),
+                                                  max(rooms[room_number][2], room_x),
+                                                  max(rooms[room_number][3], room_y))
                         default = ImageHandler.ROOM_COLORS[room_number >> 1]
                         pixels[x, y] = ImageHandler.__get_color__(f"{COLOR_ROOM_PREFIX}{room_number}", colors, default)
                     else:
@@ -225,10 +231,16 @@ class ImageHandler:
     def __draw_text__(image, text, x, y, color, font_file=None, font_size=None):
         def draw_func(draw: ImageDraw):
             font = ImageFont.load_default()
-            if font_file != "" and font_size > 0:
-                font = ImageFont.truetype(font_file, font_size)
-            w, h = draw.textsize(text, font)
-            draw.text((x - w / 2, y - h / 2), text, font=font, fill=color)
+            try:
+                if font_file is not None and font_size > 0:
+                    font = ImageFont.truetype(font_file, font_size)
+            except OSError:
+                _LOGGER.warning("Unable to find font file: %s", font_file)
+            except ImportError:
+                _LOGGER.warning("Unable to open font: %s", font_file)
+            finally:
+                w, h = draw.textsize(text, font)
+                draw.text((x - w / 2, y - h / 2), text, font=font, fill=color)
 
         ImageHandler.__draw_on_new_layer__(image, draw_func)
 

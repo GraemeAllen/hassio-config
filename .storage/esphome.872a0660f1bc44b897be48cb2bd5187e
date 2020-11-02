@@ -6,9 +6,9 @@
             "uses_password": false,
             "name": "sensor_node1",
             "mac_address": "A4:CF:12:EF:41:51",
-            "compilation_time": "Oct 24 2020, 13:50:17",
+            "compilation_time": "Nov  1 2020, 11:34:32",
             "model": "PLATFORMIO_ESP01_1M",
-            "has_deep_sleep": false,
+            "has_deep_sleep": true,
             "esphome_version": "1.15.3"
         },
         "services": [],
@@ -21,6 +21,26 @@
                 "icon": "",
                 "unit_of_measurement": "lux",
                 "accuracy_decimals": 0,
+                "force_update": false
+            },
+            {
+                "object_id": "outdoor_wake_duration",
+                "key": 787603189,
+                "name": "Outdoor wake duration",
+                "unique_id": "sensor_node1sensoroutdoor_wake_duration",
+                "icon": "",
+                "unit_of_measurement": "",
+                "accuracy_decimals": 1,
+                "force_update": false
+            },
+            {
+                "object_id": "outdoor_sleep_duration",
+                "key": 2126759274,
+                "name": "Outdoor sleep duration",
+                "unique_id": "sensor_node1sensoroutdoor_sleep_duration",
+                "icon": "",
+                "unit_of_measurement": "",
+                "accuracy_decimals": 1,
                 "force_update": false
             },
             {

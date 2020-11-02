@@ -56,7 +56,7 @@
                 "domain": "ipp",
                 "title": "Ignored",
                 "data": {
-                    "host": "192.168.1.69",
+                    "host": "192.168.1.81",
                     "name": "HP OfficeJet Pro 7740 series [F7337D] (Fax) @ MacBook Pro de an"
                 },
                 "options": {},
@@ -153,7 +153,7 @@
                 "entry_id": "872a0660f1bc44b897be48cb2bd5187e",
                 "version": 1,
                 "domain": "esphome",
-                "title": "sensor_node1",
+                "title": "sensor_node_outdoor",
                 "data": {
                     "host": "192.168.1.80",
                     "password": "",
@@ -171,7 +171,7 @@
                 "entry_id": "20e07efb3ca34182a079e3e929c1537c",
                 "version": 1,
                 "domain": "esphome",
-                "title": "sensor_node2",
+                "title": "sensor_node_indoor",
                 "data": {
                     "host": "192.168.1.77",
                     "password": "",
@@ -214,7 +214,7 @@
                     },
                     "app_id": "io.robbie.HomeAssistant",
                     "app_name": "Home Assistant",
-                    "app_version": "2020.6.2 (1)",
+                    "app_version": "2020.7 (11)",
                     "device_id": "280260DD-0A03-4DA0-A6A9-3E6687ACFBDE",
                     "device_name": "iPhone de Ana Carolina",
                     "manufacturer": "Apple",
@@ -276,6 +276,48 @@
                 },
                 "source": "user",
                 "connection_class": "local_push",
+                "unique_id": null
+            },
+            {
+                "entry_id": "a56b7bb516df11eb928fd312af52ab14",
+                "version": 1,
+                "domain": "mqtt",
+                "title": "Mosquitto broker",
+                "data": {
+                    "broker": "core-mosquitto",
+                    "port": 1883,
+                    "username": "homeassistant",
+                    "password": "fei8aivu6aFey8iizoh3owide5fo7wo8nah0Aiyau3aiy9dijieC3giequoz0shi",
+                    "protocol": "3.1.1",
+                    "discovery": true
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "hassio",
+                "connection_class": "local_push",
+                "unique_id": null
+            },
+            {
+                "entry_id": "a8d98b1c16df11eb82531dabd7cf1e25",
+                "version": 1,
+                "domain": "adguard",
+                "title": "AdGuard Home",
+                "data": {
+                    "host": "127.0.0.1",
+                    "port": 45158,
+                    "password": null,
+                    "ssl": false,
+                    "username": null,
+                    "verify_ssl": true
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "hassio",
+                "connection_class": "local_poll",
                 "unique_id": null
             }
         ]

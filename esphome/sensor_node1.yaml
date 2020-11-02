@@ -11,6 +11,8 @@ esphome:
 wifi:
   ssid: "The Force"
   password: "Obi-Wan&Luke"
+  fast_connect: True
+  power_save_mode: high
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
@@ -29,13 +31,13 @@ ota:
 
 sensor:
   - platform: dht
-    pin: GPIO16
+    pin: GPIO14
     model: dht22
     temperature:
       name: "Outside Temperature"
     humidity:
       name: "Outside Humidity"
-    update_interval: 60s
+    update_interval: 30s
     
   - platform: custom
     lambda: |-
@@ -49,11 +51,30 @@ sensor:
       filters:
      # - filter_out: 0
       - filter_out: 65535
+      
+  - platform: homeassistant
+    name: "Outdoor wake duration"
+    id: outdoor_wake_duration
+    entity_id: sensor.outdoor_wake_duration      
+      
+  - platform: homeassistant
+    name: "Outdoor sleep duration"
+    id: outdoor_sleep_duration
+    entity_id: sensor.outdoor_sleep_duration
+    on_value:
+      then:
+      - lambda:  'id(start_deep_sleep).set_sleep_duration(id(outdoor_sleep_duration).state * 60000);'
+      - delay: !lambda 'return id(outdoor_wake_duration).state * 1000;'
+      - deep_sleep.enter: start_deep_sleep      
+      
 i2c:
   sda: GPIO4
   scl: GPIO0    
   scan: false
-    
 
+deep_sleep:  
+  id: start_deep_sleep
+#  run_duration: 30s
+#  sleep_duration: 15min
     
 

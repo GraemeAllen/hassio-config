@@ -1645,7 +1645,7 @@
   "node-red-contrib-frequency-meter": {
    "name": "node-red-contrib-frequency-meter",
    "version": "0.0.1",
-   "local": false,
+   "local": true,
    "nodes": {
     "frequency-meter": {
      "name": "frequency-meter",

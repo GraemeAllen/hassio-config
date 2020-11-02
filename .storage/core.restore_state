@@ -9,309 +9,211 @@
                 "attributes": {
                     "editable": true,
                     "id": "graeme",
-                    "latitude": 41.1818087,
-                    "longitude": -8.6236181,
-                    "gps_accuracy": 20,
-                    "source": "device_tracker.mi_9_lite",
+                    "latitude": 41.1819661,
+                    "longitude": -8.6234844,
+                    "gps_accuracy": 42,
+                    "source": "person.graeme",
                     "user_id": "479ff0902f1040b88851e8c3f1cf26c5",
                     "friendly_name": "Graeme"
                 },
-                "last_changed": "2020-10-23T12:12:44.332534+00:00",
-                "last_updated": "2020-10-24T17:14:00.494237+00:00",
+                "last_changed": "2020-11-02T13:35:16.499342+00:00",
+                "last_updated": "2020-11-02T13:35:16.499342+00:00",
                 "context": {
-                    "id": "4efb9f47161c11eb8b646d35be15f3a7",
+                    "id": "c292573398d9e7cfb0753713a3d4574e",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
                 "entity_id": "person.carol",
-                "state": "home",
+                "state": "not_home",
                 "attributes": {
                     "editable": true,
                     "id": "carol",
-                    "latitude": 41.18138303369821,
-                    "longitude": -8.623506883959262,
-                    "gps_accuracy": 0,
-                    "source": "device_tracker.iphonedcarolina",
+                    "source": "person.carol",
                     "friendly_name": "Carol"
                 },
-                "last_changed": "2020-10-23T12:12:44.333445+00:00",
-                "last_updated": "2020-10-23T12:13:57.472711+00:00",
+                "last_changed": "2020-11-02T13:35:16.502567+00:00",
+                "last_updated": "2020-11-02T13:35:16.502567+00:00",
                 "context": {
-                    "id": "39eecb9c152911eba92eb5b9e68a93ab",
+                    "id": "217b934a725db2921d33d299cde32490",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
-                "entity_id": "input_boolean.blinds_primed",
-                "state": "off",
+                "entity_id": "input_select.vacuum_room_select",
+                "state": "Living Room",
                 "attributes": {
+                    "options": [
+                        "Bathroom",
+                        "Bedroom",
+                        "Hallway",
+                        "Kitchen",
+                        "Living Room"
+                    ],
                     "editable": false,
-                    "friendly_name": "Blinds Primed"
+                    "friendly_name": "Choose a room to clean"
                 },
-                "last_changed": "2020-10-24T07:12:09.995045+00:00",
-                "last_updated": "2020-10-24T07:12:09.995045+00:00",
+                "last_changed": "2020-11-02T13:35:24.234933+00:00",
+                "last_updated": "2020-11-02T13:35:24.234933+00:00",
                 "context": {
-                    "id": "3b727c7f15c811eb803cc16a210a7638",
-                    "parent_id": null,
-                    "user_id": "da87f7ae2d8f4c91a76d0a027499436b"
-                }
-            },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
-        },
-        {
-            "state": {
-                "entity_id": "input_boolean.monday_wake",
-                "state": "on",
-                "attributes": {
-                    "editable": false,
-                    "friendly_name": "Monday"
-                },
-                "last_changed": "2020-10-23T12:12:50.209956+00:00",
-                "last_updated": "2020-10-23T12:12:50.209956+00:00",
-                "context": {
-                    "id": "11d75348152911eb82c2cf740fe001df",
+                    "id": "13474472e04df12e28523eeeaf753257",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
-                "entity_id": "input_boolean.tuesday_wake",
-                "state": "on",
+                "entity_id": "input_select.vacuum_room_repeat",
+                "state": "1",
                 "attributes": {
+                    "options": [
+                        "1",
+                        "2",
+                        "3"
+                    ],
                     "editable": false,
-                    "friendly_name": "Tuesday"
+                    "friendly_name": "Number of times to clean the room",
+                    "icon": "mdi:numeric"
                 },
-                "last_changed": "2020-10-23T12:12:50.210505+00:00",
-                "last_updated": "2020-10-23T12:12:50.210505+00:00",
+                "last_changed": "2020-11-02T13:35:24.235312+00:00",
+                "last_updated": "2020-11-02T13:35:24.235312+00:00",
                 "context": {
-                    "id": "11d76903152911eb9e17e92fd60accf9",
+                    "id": "5bfc92a75a8a5e9f935bf3a3688bb3c1",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
-        },
-        {
-            "state": {
-                "entity_id": "input_boolean.wednesday_wake",
-                "state": "on",
-                "attributes": {
-                    "editable": false,
-                    "friendly_name": "Wednesday"
-                },
-                "last_changed": "2020-10-23T12:12:50.211080+00:00",
-                "last_updated": "2020-10-23T12:12:50.211080+00:00",
-                "context": {
-                    "id": "11d77f0c152911ebafafb36967188515",
-                    "parent_id": null,
-                    "user_id": null
-                }
-            },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
-        },
-        {
-            "state": {
-                "entity_id": "input_boolean.thursday_wake",
-                "state": "on",
-                "attributes": {
-                    "editable": false,
-                    "friendly_name": "Thursday"
-                },
-                "last_changed": "2020-10-23T12:12:50.211616+00:00",
-                "last_updated": "2020-10-23T12:12:50.211616+00:00",
-                "context": {
-                    "id": "11d7947f152911eba5c441f14d73a6d5",
-                    "parent_id": null,
-                    "user_id": null
-                }
-            },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
-        },
-        {
-            "state": {
-                "entity_id": "input_boolean.friday_wake",
-                "state": "on",
-                "attributes": {
-                    "editable": false,
-                    "friendly_name": "Friday"
-                },
-                "last_changed": "2020-10-23T12:12:50.212147+00:00",
-                "last_updated": "2020-10-23T12:12:50.212147+00:00",
-                "context": {
-                    "id": "11d7a943152911ebb2ec69af56d9233c",
-                    "parent_id": null,
-                    "user_id": null
-                }
-            },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
-        },
-        {
-            "state": {
-                "entity_id": "input_boolean.saturday_wake",
-                "state": "on",
-                "attributes": {
-                    "editable": false,
-                    "friendly_name": "Saturday"
-                },
-                "last_changed": "2020-10-23T12:12:50.212677+00:00",
-                "last_updated": "2020-10-23T12:12:50.212677+00:00",
-                "context": {
-                    "id": "11d7bdf6152911eba54ad34c635436d9",
-                    "parent_id": null,
-                    "user_id": null
-                }
-            },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
-        },
-        {
-            "state": {
-                "entity_id": "input_boolean.sunday_wake",
-                "state": "on",
-                "attributes": {
-                    "editable": false,
-                    "friendly_name": "Sunday"
-                },
-                "last_changed": "2020-10-23T12:12:50.213206+00:00",
-                "last_updated": "2020-10-23T12:12:50.213206+00:00",
-                "context": {
-                    "id": "11d7d2a4152911ebba320507b86f73cb",
-                    "parent_id": null,
-                    "user_id": null
-                }
-            },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
                 "entity_id": "input_datetime.monday_time",
-                "state": "10:00:00",
+                "state": "07:30:00",
                 "attributes": {
                     "editable": false,
                     "has_date": false,
                     "has_time": true,
-                    "hour": 10,
-                    "minute": 0,
+                    "hour": 7,
+                    "minute": 30,
                     "second": 0,
-                    "timestamp": 36000,
+                    "timestamp": 27000,
                     "friendly_name": "Monday"
                 },
-                "last_changed": "2020-10-23T12:12:50.218363+00:00",
-                "last_updated": "2020-10-23T12:12:50.218363+00:00",
+                "last_changed": "2020-11-02T13:35:24.395701+00:00",
+                "last_updated": "2020-11-02T13:35:24.395701+00:00",
                 "context": {
-                    "id": "11d89aa8152911ebb546cbb8e0f0926f",
+                    "id": "1112973af97d4fb63236badad25f355d",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
                 "entity_id": "input_datetime.tuesday_time",
-                "state": "07:00:00",
+                "state": "07:30:00",
                 "attributes": {
                     "editable": false,
                     "has_date": false,
                     "has_time": true,
                     "hour": 7,
-                    "minute": 0,
+                    "minute": 30,
                     "second": 0,
-                    "timestamp": 25200,
+                    "timestamp": 27000,
                     "friendly_name": "Tuesday"
                 },
-                "last_changed": "2020-10-23T12:12:50.219042+00:00",
-                "last_updated": "2020-10-23T12:12:50.219042+00:00",
+                "last_changed": "2020-11-02T13:35:24.396189+00:00",
+                "last_updated": "2020-11-02T13:35:24.396189+00:00",
                 "context": {
-                    "id": "11d8b65e152911eb8e631fb43b9f9e9a",
+                    "id": "30b33ecf18cd420d7320c563d5bcd97c",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
                 "entity_id": "input_datetime.wednesday_time",
-                "state": "07:00:00",
+                "state": "07:30:00",
                 "attributes": {
                     "editable": false,
                     "has_date": false,
                     "has_time": true,
                     "hour": 7,
-                    "minute": 0,
+                    "minute": 30,
                     "second": 0,
-                    "timestamp": 25200,
+                    "timestamp": 27000,
                     "friendly_name": "Wednesday"
                 },
-                "last_changed": "2020-10-23T12:12:50.219653+00:00",
-                "last_updated": "2020-10-23T12:12:50.219653+00:00",
+                "last_changed": "2020-11-02T13:35:24.396620+00:00",
+                "last_updated": "2020-11-02T13:35:24.396620+00:00",
                 "context": {
-                    "id": "11d8ce4c152911eb88c809533ce5725d",
+                    "id": "fab5acccf5f2d0484f8f627350ff7923",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
                 "entity_id": "input_datetime.thursday_time",
-                "state": "07:00:00",
+                "state": "07:30:00",
                 "attributes": {
                     "editable": false,
                     "has_date": false,
                     "has_time": true,
                     "hour": 7,
-                    "minute": 0,
+                    "minute": 30,
                     "second": 0,
-                    "timestamp": 25200,
+                    "timestamp": 27000,
                     "friendly_name": "Thursday"
                 },
-                "last_changed": "2020-10-23T12:12:50.220292+00:00",
-                "last_updated": "2020-10-23T12:12:50.220292+00:00",
+                "last_changed": "2020-11-02T13:35:24.397040+00:00",
+                "last_updated": "2020-11-02T13:35:24.397040+00:00",
                 "context": {
-                    "id": "11d8e73e152911eb87b0b3baa6ce0f49",
+                    "id": "11dc45bf84668ca4efd9a66c973ed7a0",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
                 "entity_id": "input_datetime.friday_time",
-                "state": "07:00:00",
+                "state": "07:30:00",
                 "attributes": {
                     "editable": false,
                     "has_date": false,
                     "has_time": true,
                     "hour": 7,
-                    "minute": 0,
+                    "minute": 30,
                     "second": 0,
-                    "timestamp": 25200,
+                    "timestamp": 27000,
                     "friendly_name": "Friday"
                 },
-                "last_changed": "2020-10-23T12:12:50.227772+00:00",
-                "last_updated": "2020-10-23T12:12:50.227772+00:00",
+                "last_changed": "2020-11-02T13:35:24.397456+00:00",
+                "last_updated": "2020-11-02T13:35:24.397456+00:00",
                 "context": {
-                    "id": "11da073f152911ebaad0536c7291d188",
+                    "id": "618ca36076623bbdd0a56fb93d117b8b",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -327,15 +229,15 @@
                     "timestamp": 28800,
                     "friendly_name": "Saturday"
                 },
-                "last_changed": "2020-10-23T12:12:50.228498+00:00",
-                "last_updated": "2020-10-23T12:12:50.228498+00:00",
+                "last_changed": "2020-11-02T13:35:24.397875+00:00",
+                "last_updated": "2020-11-02T13:35:24.397875+00:00",
                 "context": {
-                    "id": "11da2762152911eb985a4d65dde098c7",
+                    "id": "f0bcde39f7561dff45bd8f67cb6b9ee2",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -351,15 +253,15 @@
                     "timestamp": 28800,
                     "friendly_name": "Sunday"
                 },
-                "last_changed": "2020-10-23T12:12:50.229123+00:00",
-                "last_updated": "2020-10-23T12:12:50.229123+00:00",
+                "last_changed": "2020-11-02T13:35:24.398295+00:00",
+                "last_updated": "2020-11-02T13:35:24.398295+00:00",
                 "context": {
-                    "id": "11da4031152911eb8e8b0b26104996de",
+                    "id": "8caa99effd72f85537ee9f37a188981e",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -374,15 +276,15 @@
                     "mode": "box",
                     "friendly_name": "Nightime value"
                 },
-                "last_changed": "2020-10-23T12:12:50.305752+00:00",
-                "last_updated": "2020-10-23T12:12:50.305752+00:00",
+                "last_changed": "2020-11-02T13:35:24.409652+00:00",
+                "last_updated": "2020-11-02T13:35:24.409652+00:00",
                 "context": {
-                    "id": "11e5ef28152911eb9ccff59685c01a80",
+                    "id": "3c9e2663c22e8840f3c0bfc9f93ffc12",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -397,15 +299,15 @@
                     "mode": "slider",
                     "friendly_name": "Open Percentage"
                 },
-                "last_changed": "2020-10-23T12:12:50.306552+00:00",
-                "last_updated": "2020-10-23T12:12:50.306552+00:00",
+                "last_changed": "2020-11-02T13:35:24.410194+00:00",
+                "last_updated": "2020-11-02T13:35:24.410194+00:00",
                 "context": {
-                    "id": "11e61075152911eb8305e36137a3acf3",
+                    "id": "da3d0655b36e94a1b5804e087c26055e",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -420,15 +322,15 @@
                     "mode": "slider",
                     "friendly_name": "High Limit"
                 },
-                "last_changed": "2020-10-23T12:12:50.307061+00:00",
-                "last_updated": "2020-10-23T12:12:50.307061+00:00",
+                "last_changed": "2020-11-02T13:35:24.410498+00:00",
+                "last_updated": "2020-11-02T13:35:24.410498+00:00",
                 "context": {
-                    "id": "11e624ca152911eb81a67d49fd859857",
+                    "id": "11e359e6b28aae04dd0aa81e0d881c78",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -443,20 +345,20 @@
                     "mode": "slider",
                     "friendly_name": "High Limit"
                 },
-                "last_changed": "2020-10-23T12:12:50.307543+00:00",
-                "last_updated": "2020-10-23T12:12:50.307543+00:00",
+                "last_changed": "2020-11-02T13:35:24.410783+00:00",
+                "last_updated": "2020-11-02T13:35:24.410783+00:00",
                 "context": {
-                    "id": "11e637b2152911ebaf1df9a98e45a335",
+                    "id": "33f449e56cb425b3c05cb4531205eb3b",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
                 "entity_id": "input_number.daylight_tester",
-                "state": "33.0",
+                "state": "0.0",
                 "attributes": {
                     "initial": 0.0,
                     "editable": false,
@@ -466,15 +368,159 @@
                     "mode": "slider",
                     "friendly_name": "brightness"
                 },
-                "last_changed": "2020-10-23T14:11:38.474291+00:00",
-                "last_updated": "2020-10-23T14:11:38.474291+00:00",
+                "last_changed": "2020-11-02T13:35:24.411067+00:00",
+                "last_updated": "2020-11-02T13:35:24.411067+00:00",
                 "context": {
-                    "id": "aa9d370f153911eb9777992264c87886",
+                    "id": "286c9fa7b8f04f69c8fa4401d881c0f0",
                     "parent_id": null,
-                    "user_id": "479ff0902f1040b88851e8c3f1cf26c5"
+                    "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.blinds_primed",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Blinds Primed"
+                },
+                "last_changed": "2020-11-02T13:35:24.412960+00:00",
+                "last_updated": "2020-11-02T13:35:24.412960+00:00",
+                "context": {
+                    "id": "4605cfc9add640caac1887aa188240b4",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.monday_wake",
+                "state": "on",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Monday"
+                },
+                "last_changed": "2020-11-02T13:35:24.413344+00:00",
+                "last_updated": "2020-11-02T13:35:24.413344+00:00",
+                "context": {
+                    "id": "787a0c72a6ea3f416df202825f37647f",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.tuesday_wake",
+                "state": "on",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Tuesday"
+                },
+                "last_changed": "2020-11-02T13:35:24.413708+00:00",
+                "last_updated": "2020-11-02T13:35:24.413708+00:00",
+                "context": {
+                    "id": "7e9fc85d3768ebb37efaacd3fd2ccd19",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.wednesday_wake",
+                "state": "on",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Wednesday"
+                },
+                "last_changed": "2020-11-02T13:35:24.414068+00:00",
+                "last_updated": "2020-11-02T13:35:24.414068+00:00",
+                "context": {
+                    "id": "d611e415bc2cb7179dbdd009010b74f4",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.thursday_wake",
+                "state": "on",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Thursday"
+                },
+                "last_changed": "2020-11-02T13:35:24.414429+00:00",
+                "last_updated": "2020-11-02T13:35:24.414429+00:00",
+                "context": {
+                    "id": "26bd2484fecefd1bd83190695250e8c0",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.friday_wake",
+                "state": "on",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Friday"
+                },
+                "last_changed": "2020-11-02T13:35:24.414791+00:00",
+                "last_updated": "2020-11-02T13:35:24.414791+00:00",
+                "context": {
+                    "id": "287b72e3e45991e4a601a352711c0cfc",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.saturday_wake",
+                "state": "on",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Saturday"
+                },
+                "last_changed": "2020-11-02T13:35:24.415149+00:00",
+                "last_updated": "2020-11-02T13:35:24.415149+00:00",
+                "context": {
+                    "id": "aed364c5641aed42c8e296a7294bccf0",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sunday_wake",
+                "state": "on",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Sunday"
+                },
+                "last_changed": "2020-11-02T13:35:24.415507+00:00",
+                "last_updated": "2020-11-02T13:35:24.415507+00:00",
+                "context": {
+                    "id": "0d15c7db12a82c7670da4e1b39589877",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -487,15 +533,15 @@
                     "id": "1590765489158",
                     "friendly_name": "Open Blinds Mon-Fri"
                 },
-                "last_changed": "2020-10-23T12:12:51.715134+00:00",
-                "last_updated": "2020-10-23T12:12:51.715134+00:00",
+                "last_changed": "2020-11-02T13:35:26.822722+00:00",
+                "last_updated": "2020-11-02T13:35:26.822722+00:00",
                 "context": {
-                    "id": "12bcfe5a152911eb91e92b51d9700549",
+                    "id": "d1a7d64615065234c2de7c9bd1c69760",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -508,15 +554,15 @@
                     "id": "1590765489157",
                     "friendly_name": "Open Blinds Sat-Sun"
                 },
-                "last_changed": "2020-10-23T12:12:51.716037+00:00",
-                "last_updated": "2020-10-23T12:12:51.716037+00:00",
+                "last_changed": "2020-11-02T13:35:26.823338+00:00",
+                "last_updated": "2020-11-02T13:35:26.823338+00:00",
                 "context": {
-                    "id": "12bd2216152911eb87682b86dac29584",
+                    "id": "0599867993049e07d73bcca043c20082",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -529,15 +575,15 @@
                     "id": "1591640831293",
                     "friendly_name": "Wake Up 2"
                 },
-                "last_changed": "2020-10-23T12:12:51.716764+00:00",
-                "last_updated": "2020-10-23T12:12:51.716764+00:00",
+                "last_changed": "2020-11-02T13:35:26.826709+00:00",
+                "last_updated": "2020-11-02T13:35:26.826709+00:00",
                 "context": {
-                    "id": "12bd3f0e152911eba8437718099c207c",
+                    "id": "bb5559846bd285cc93da0f1d1dd26687",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -550,15 +596,15 @@
                     "id": "1591645794362",
                     "friendly_name": "Cristo light motion"
                 },
-                "last_changed": "2020-10-23T12:12:51.717427+00:00",
-                "last_updated": "2020-10-23T12:12:51.717427+00:00",
+                "last_changed": "2020-11-02T13:35:26.827245+00:00",
+                "last_updated": "2020-11-02T13:35:26.827245+00:00",
                 "context": {
-                    "id": "12bd591d152911ebb0c6bf9390c1b997",
+                    "id": "fe7de88c4b1ca355525a818a2a6af7a2",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -571,15 +617,15 @@
                     "id": "1591700611894",
                     "friendly_name": "LED on State Change"
                 },
-                "last_changed": "2020-10-23T14:52:53.266148+00:00",
-                "last_updated": "2020-10-23T14:52:53.266148+00:00",
+                "last_changed": "2020-11-02T13:35:26.827719+00:00",
+                "last_updated": "2020-11-02T13:35:26.827719+00:00",
                 "context": {
-                    "id": "6db46492153f11eb9a771bd62ffd1b62",
+                    "id": "29c37db095e72f18b300dbeb0763fb8a",
                     "parent_id": null,
-                    "user_id": "479ff0902f1040b88851e8c3f1cf26c5"
+                    "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -592,15 +638,15 @@
                     "id": "1598019739022",
                     "friendly_name": "Mobile notification for motion"
                 },
-                "last_changed": "2020-10-23T12:12:51.719010+00:00",
-                "last_updated": "2020-10-23T12:12:51.719010+00:00",
+                "last_changed": "2020-11-02T13:35:26.828191+00:00",
+                "last_updated": "2020-11-02T13:35:26.828191+00:00",
                 "context": {
-                    "id": "12bd96d5152911ebb6b18387bf05c675",
+                    "id": "d89e8dac6fe8937d9e35513a6d1b0f9f",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -613,15 +659,82 @@
                     "id": "1600361087348",
                     "friendly_name": "Restart PIR"
                 },
-                "last_changed": "2020-10-23T12:12:51.719697+00:00",
-                "last_updated": "2020-10-24T13:00:42.352415+00:00",
+                "last_changed": "2020-11-02T13:35:26.828764+00:00",
+                "last_updated": "2020-11-02T13:35:26.828764+00:00",
                 "context": {
-                    "id": "ec2a58c815f811eb90795d824c1dd546",
-                    "parent_id": "ec29d2ee15f811ebbfdd49b686b0e813",
+                    "id": "e9ed56eb20dd479de02e4f6766c01131",
+                    "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.holiday",
+                "state": "off",
+                "attributes": {
+                    "editable": true,
+                    "friendly_name": "Holiday",
+                    "icon": "mdi:beach"
+                },
+                "last_changed": "2020-11-02T13:35:28.790339+00:00",
+                "last_updated": "2020-11-02T13:35:28.790339+00:00",
+                "context": {
+                    "id": "dafa58f680f7115c2ecb60f46666aa5f",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_number.outdoor_sleep_duration",
+                "state": "15.0",
+                "attributes": {
+                    "initial": null,
+                    "editable": true,
+                    "min": 0.0,
+                    "max": 120.0,
+                    "step": 0.5,
+                    "mode": "box",
+                    "unit_of_measurement": "minutes",
+                    "friendly_name": "Outdoor Sleep Duration (minutes)"
+                },
+                "last_changed": "2020-11-02T13:35:28.790921+00:00",
+                "last_updated": "2020-11-02T13:35:28.790921+00:00",
+                "context": {
+                    "id": "6cca2c1a5e7d254e1ee154eae4b980a0",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_number.outdoor_wake_duration_seconds",
+                "state": "30.0",
+                "attributes": {
+                    "initial": null,
+                    "editable": true,
+                    "min": 0.0,
+                    "max": 999999.0,
+                    "step": 1.0,
+                    "mode": "box",
+                    "unit_of_measurement": "s",
+                    "friendly_name": "Outdoor Wake Duration (seconds)"
+                },
+                "last_changed": "2020-11-02T13:35:28.791336+00:00",
+                "last_updated": "2020-11-02T13:35:28.791336+00:00",
+                "context": {
+                    "id": "b99a2497b1e7fe23dcd0885639996566",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -629,24 +742,24 @@
                 "state": "home",
                 "attributes": {
                     "source_type": "gps",
-                    "latitude": 41.1818087,
-                    "longitude": -8.6236181,
-                    "gps_accuracy": 20,
-                    "altitude": 154.0,
-                    "course": 153,
+                    "latitude": 41.1819661,
+                    "longitude": -8.6234844,
+                    "gps_accuracy": 42,
+                    "altitude": 147.0,
+                    "course": 0,
                     "speed": 0,
-                    "vertical_accuracy": 6,
+                    "vertical_accuracy": 2,
                     "friendly_name": "Mi 9 Lite"
                 },
-                "last_changed": "2020-10-24T17:14:00.456296+00:00",
-                "last_updated": "2020-10-24T17:14:00.456296+00:00",
+                "last_changed": "2020-11-02T13:35:30.514606+00:00",
+                "last_updated": "2020-11-02T13:35:30.514606+00:00",
                 "context": {
-                    "id": "4ef5d6e3161c11ebb93d9b81273f4d16",
+                    "id": "ab6d0de476b6c6729bbceb61decb8487",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -656,15 +769,15 @@
                     "source_type": "gps",
                     "friendly_name": "Mi_Phone"
                 },
-                "last_changed": "2020-10-23T12:13:06.929476+00:00",
-                "last_updated": "2020-10-23T12:13:06.929476+00:00",
+                "last_changed": "2020-11-02T13:35:30.515237+00:00",
+                "last_updated": "2020-11-02T13:35:30.515237+00:00",
                 "context": {
-                    "id": "1bce8030152911eb8c306dcc91a4f722",
+                    "id": "12f4b73eb6b3a5b8758837e3e21faca6",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         },
         {
             "state": {
@@ -674,15 +787,15 @@
                     "source_type": "gps",
                     "friendly_name": "iPhone de Ana Carolina"
                 },
-                "last_changed": "2020-10-23T12:13:06.931238+00:00",
-                "last_updated": "2020-10-23T12:13:06.931238+00:00",
+                "last_changed": "2020-11-02T13:35:30.515778+00:00",
+                "last_updated": "2020-11-02T13:35:30.515778+00:00",
                 "context": {
-                    "id": "1bcec677152911eb852ab7b7a4de45e0",
+                    "id": "195a8b7a25228a636631c6bfa134220d",
                     "parent_id": null,
                     "user_id": null
                 }
             },
-            "last_seen": "2020-10-24T17:14:34.845926+00:00"
+            "last_seen": "2020-11-02T13:36:32.340470+00:00"
         }
     ]
 }

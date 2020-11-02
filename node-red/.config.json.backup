@@ -1641,6 +1641,23 @@
      "file": "/config/node-red/node_modules/node-red-contrib-bool-gate/nodes/or.js"
     }
    }
+  },
+  "node-red-contrib-frequency-meter": {
+   "name": "node-red-contrib-frequency-meter",
+   "version": "0.0.1",
+   "local": false,
+   "nodes": {
+    "frequency-meter": {
+     "name": "frequency-meter",
+     "types": [
+      "frequency"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-frequency-meter",
+     "file": "/config/node-red/node_modules/node-red-contrib-frequency-meter/frequency-meter.js"
+    }
+   }
   }
  },
  "users": {

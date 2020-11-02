@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace_dashboards",
     "data": {
         "items": [
             {
@@ -7,7 +9,8 @@
                 "require_admin": true,
                 "show_in_sidebar": false,
                 "title": "Dashoard",
-                "url_path": "lovelace-dashoard"
+                "url_path": "lovelace-dashoard",
+                "icon": "mdi:home"
             },
             {
                 "id": "live_floorplan",
@@ -21,12 +24,10 @@
                 "id": "lovelace_tablet",
                 "mode": "storage",
                 "require_admin": true,
-                "show_in_sidebar": true,
+                "show_in_sidebar": false,
                 "title": "Tablet",
                 "url_path": "lovelace-tablet"
             }
         ]
-    },
-    "key": "lovelace_dashboards",
-    "version": 1
+    }
 }

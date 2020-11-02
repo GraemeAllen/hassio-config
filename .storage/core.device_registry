@@ -101,8 +101,8 @@
                 "manufacturer": "hacs.xyz",
                 "model": "",
                 "name": "HACS",
-                "sw_version": "1.4.1",
-                "entry_type": null,
+                "sw_version": "1.6.1",
+                "entry_type": "service",
                 "id": "bd322b29540f4672be73d4f6b43d4add",
                 "via_device_id": null,
                 "area_id": null,
@@ -143,7 +143,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sensor_node1",
-                "sw_version": "1.15.3 (Oct 24 2020, 13:50:17)",
+                "sw_version": "1.15.3 (Nov  1 2020, 11:34:32)",
                 "entry_type": null,
                 "id": "c7a7fd6b97cb49fc913ec563376fc2b7",
                 "via_device_id": null,
@@ -164,7 +164,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sensor_node2",
-                "sw_version": "1.15.3 (Oct 24 2020, 13:57:29)",
+                "sw_version": "1.15.3 (Oct 26 2020, 17:12:13)",
                 "entry_type": null,
                 "id": "a70875db160c49319a6cb6f92bb81119",
                 "via_device_id": null,
@@ -256,6 +256,49 @@
                 "sw_version": null,
                 "entry_type": null,
                 "id": "a5322cd70ca811eba5ba6ba304107a6a",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "a8d98b1c16df11eb82531dabd7cf1e25"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "adguard",
+                        "127.0.0.1",
+                        45158,
+                        "/control/"
+                    ]
+                ],
+                "manufacturer": "AdGuard Team",
+                "model": null,
+                "name": "AdGuard Home",
+                "sw_version": "0.103.3",
+                "entry_type": "service",
+                "id": "a8f7b42816df11eb9152fd898c3633fc",
+                "via_device_id": null,
+                "area_id": "e249b468ccce44868f1226d5bbe24470",
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "55d48b115dcc4956842035d9c7dd0866"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "met"
+                    ]
+                ],
+                "manufacturer": "Met.no",
+                "model": "Forecast",
+                "name": "Forecast",
+                "sw_version": null,
+                "entry_type": "service",
+                "id": "7228b6ec8ccf52fabacb84d0ab32d876",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null

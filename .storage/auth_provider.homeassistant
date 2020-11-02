@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "auth_provider.homeassistant",
     "data": {
         "users": [
             {
@@ -8,9 +10,11 @@
             {
                 "password": "JDJiJDEyJEZjTnpQOGh6NjFHd3JxdXRXQUZvT09kY3YvbDhjdUdETllyelNOdVR3OUp2R0ZZOWttb2sy",
                 "username": "carol"
+            },
+            {
+                "username": "mosquitto",
+                "password": "JDJiJDEyJDV5czd4bFc1aGk3cXBDZ085U1JId09mdld1NnZvUkVmLlRkWXdoR25wblRyUVcxaC5UUEQy"
             }
         ]
-    },
-    "key": "auth_provider.homeassistant",
-    "version": 1
+    }
 }

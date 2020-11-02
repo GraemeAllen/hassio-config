@@ -2,19 +2,19 @@
   "nodes": {
     "488f6b7d_ad4d74": {
       "lastPayload": {
-        "state": 0.15783253,
+        "state": 0.1535109431034296,
         "attributes": {}
       }
     },
     "375bbcc1_591044": {
       "lastPayload": {
-        "state": 0.00472581,
+        "state": 0,
         "attributes": {}
       }
     },
     "7319f5ac_a6299c": {
       "lastPayload": {
-        "state": "33.09",
+        "state": "1.57",
         "attributes": {
           "name": "Euro"
         }
@@ -22,31 +22,31 @@
     },
     "1bc12960_29dea7": {
       "lastPayload": {
-        "state": 11055.94,
+        "state": 11557.99,
         "attributes": {}
       }
     },
     "3e284add_6a2b96": {
       "lastPayload": {
-        "state": 348.77,
+        "state": 330.45,
         "attributes": {}
       }
     },
     "c51c31c3_bca51": {
       "lastPayload": {
-        "state": 1744.99,
+        "state": 1774.41,
         "attributes": {}
       }
     },
     "e09b00c9_8d60d": {
       "lastPayload": {
-        "state": 1.65,
+        "state": 0,
         "attributes": {}
       }
     },
     "ce46ae84_4a6d8": {
       "lastPayload": {
-        "state": 1779.73,
+        "state": 1775.98,
         "attributes": {
           "name": "Portfolio"
         }

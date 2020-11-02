@@ -6,12 +6,37 @@
             "uses_password": false,
             "name": "sensor_node2",
             "mac_address": "F4:CF:A2:D8:25:B1",
-            "compilation_time": "Oct 24 2020, 13:57:29",
+            "compilation_time": "Oct 26 2020, 17:12:13",
             "model": "PLATFORMIO_ESP01_1M",
             "has_deep_sleep": false,
             "esphome_version": "1.15.3"
         },
         "services": [],
+        "light": [
+            {
+                "object_id": "rgb_led",
+                "key": 502299492,
+                "name": "RGB LED",
+                "unique_id": "sensor_node2lightrgb_led",
+                "supports_brightness": true,
+                "supports_rgb": true,
+                "supports_white_value": false,
+                "supports_color_temperature": false,
+                "min_mireds": 0.0,
+                "max_mireds": 0.0,
+                "effects": []
+            }
+        ],
+        "switch": [
+            {
+                "object_id": "restart",
+                "key": 1203400786,
+                "name": "Restart",
+                "unique_id": "sensor_node2switchrestart",
+                "icon": "mdi:restart",
+                "assumed_state": false
+            }
+        ],
         "sensor": [
             {
                 "object_id": "inside_temperature",
@@ -43,31 +68,6 @@
                 "unique_id": "sensor_node2binary_sensorliving_room_pir",
                 "device_class": "motion",
                 "is_status_binary_sensor": false
-            }
-        ],
-        "light": [
-            {
-                "object_id": "rgb_led",
-                "key": 502299492,
-                "name": "RGB LED",
-                "unique_id": "sensor_node2lightrgb_led",
-                "supports_brightness": true,
-                "supports_rgb": true,
-                "supports_white_value": false,
-                "supports_color_temperature": false,
-                "min_mireds": 0.0,
-                "max_mireds": 0.0,
-                "effects": []
-            }
-        ],
-        "switch": [
-            {
-                "object_id": "restart",
-                "key": 1203400786,
-                "name": "Restart",
-                "unique_id": "sensor_node2switchrestart",
-                "icon": "mdi:restart",
-                "assumed_state": false
             }
         ]
     }

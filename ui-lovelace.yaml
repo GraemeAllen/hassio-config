@@ -6,29 +6,31 @@ custom_header:
   hidden_tab_redirect: false
   disable_sidebar: true
   cards:
-
+  
 #############################   RESOURCES   ###################################
 resources:
   - type: module
     url: /hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js
   - type: module
-    url: /local/js/card-mod.js
+    url: /hacsfiles/lovelace-card-mod/card-mod.js
   - type: module
     url: /hacsfiles/custom-header/custom-header.js
-  - type: js
+  - type: module
     url: /local/js/text-element.js?v=0.0.2
   - type: module
-    url: /local/js/config-template-card.js?v=1.1.2
+    url: /local/js/config-template-card.js?
   - type: module
     url: /browser_mod.js
-  - type: js
+  - type: module
     url: /local/js/bar-card.js
   - type: module
     url: /local/js/button-entity-row.js
   - type: module
     url: /local/js/circle-sensor-card.js
-  - type: js
+  - type: module
     url: /local/js/light-entity-card.js
+  - type: module
+    url: /hacsfiles/lovelace-card-templater/lovelace-card-templater.js
   - type: module
     url: /local/js/lovelace-hui-element.js
   - type: module
@@ -36,19 +38,19 @@ resources:
   - type: module
     url: /local/js/mini-graph-card-bundle.js
   - type: module
-    url: /local/js/mini-media-player-bundle.js?v=1.6.0
-  - type: js
+    url: /local/js/mini-media-player-bundle.js
+  - type: module
     url: /local/js/vertical-stack-in-card.js
   - type: module
     url: /local/js/popup-backdrop-filter.js
-  - type: js
+  - type: module
     url: /local/js/upcoming-media-card.js
   - type: module
     url: /local/js/weather-card-chart.js
   - type: module
-    url: /local/js/simple-weather-card-bundle.js?v=0.7.2
+    url: /local/js/simple-weather-card-bundle.js
   - type: module
-    url: /local/js/homekit-panel-card.js?v=0.4.7
+    url: /local/js/homekit-panel-card.js
   - type: module
     url: /local/js/auto-entities.js
   - type: module
@@ -56,15 +58,16 @@ resources:
   - type: module
     url: /local/js/button-card.js  
   - type: module
-    url: /local/js/buien-rain-card.js?v=0.0.60
-  - type: js
+    url: /local/js/buien-rain-card.js
+  - type: module
     url: /local/js/light-slider-card-lajv.js
   - type: module
     url: /local/js/slider-entity-row.js
   - type: module
     url: /local/js/kisok.js
   - type: module   
-    url: /hacsfiles/sidebar-card/sidebar-card.js
+    url: /hacsfiles/sidebar-card/sidebar-card.js      
+
     
 ##########################      SIDEBAR        ##############################    
 sidebar:
@@ -513,7 +516,359 @@ views:
                 left: 50.5%        
                 top: 94.5%
               tap_action:
-                action: more-info   
+                action: call-service
+                service: browser_mod.popup
+                service_data:
+                  title: Rob the Roborock
+                  large: false
+                  deviceID:
+                    - this
+                    - dashboard
+                  style: 
+                    width: 60%
+                  hide_header: true
+                  card:
+                        type: vertical-stack
+                        cards:
+                          - type: 'custom:card-templater'
+                            entities:
+                                  - vacuum.roborock_s5_max
+                            card:
+                                  type: picture-elements
+                                  image: "/local/1604233684166.jpg"
+                                  elements:
+                                    - type: state-label
+                                      entity: vacuum.roborock_s5_max
+                                      style:
+                                        left: 0
+                                        right: 0
+                                        bottom: 0
+                                        background-color: "rgba(0, 0, 0, 0.3)"
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: icon
+                                      title: Battery
+                                      icon_template: '{{ state_attr("vacuum.roborock_s5_max", "battery_icon") }}'
+                                      style:
+                                        right: 171px
+                                        bottom: 0
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: state-label
+                                      title: Battery Level
+                                      entity: sensor.roborock_s5_max_battery
+                                      style:
+                                        right: 120px
+                                        bottom: 0px
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: icon
+                                      title: Locate Vacuum
+                                      icon: 'mdi:map-marker'
+                                      style:
+                                        right: 90px
+                                        bottom: 0
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                      tap_action:
+                                        action: call-service
+                                        service: vacuum.locate
+                                        service_data:
+                                          entity_id: vacuum.roborock_s5_max
+                                    - type: icon
+                                      title: Clean Apartment
+                                      icon: 'mdi:broom'
+                                      tap_action:
+                                        action: call-service
+                                        service: vacuum.start
+                                        service_data:
+                                          entity_id: vacuum.roborock_s5_max
+                                      style:
+                                        right: 0
+                                        bottom: 0
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: icon
+                                      title: Return To Base
+                                      icon: 'mdi:home-map-marker'
+                                      tap_action:
+                                        action: call-service
+                                        service: vacuum.return_to_base
+                                        service_data:
+                                          entity_id: vacuum.roborock_s5_max
+                                      style:
+                                        right: 45px
+                                        bottom: 0
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: state-label
+                                      entity: sensor.roborock_s5_max_last_cleaned
+                                      prefix: 'Last ran '
+                                      suffix: ' ago'
+                                      style:
+                                        background-color: "rgba(0, 0, 0, 0.3)"
+                                        bottom: 85%
+                                        padding: 8px
+                                        font-size: 16px
+                                        line-height: 2px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: state-label
+                                      prefix: "Ran "
+                                      suffix: "x"
+                                      entity: sensor.roborock_s5_max_lifetime_cleaning_count
+                                      style:
+                                        background-color: "rgba(0, 0, 0, 0.3)"
+                                        bottom: 85%
+                                        right: 0px
+                                        padding: 8px
+                                        font-size: 16px
+                                        line-height: 2px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                        width: 25%
+                                    - type: state-label
+                                      #prefix: "Ran for "
+                                      suffix: " hrs"
+                                      entity: sensor.roborock_s5_max_lifetime_cleaning_time
+                                      style:
+                                        background-color: "rgba(0, 0, 0, 0.3)"
+                                        bottom: 72%
+                                        right: 0px
+                                        padding: 8px
+                                        font-size: 16px
+                                        line-height: 2px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                        width: 25%
+                                    - type: state-label
+                                      entity: sensor.roborock_s5_max_lifetime_cleaned_area
+                                      #prefix: "Cleaned "
+                                      style:
+                                        background-color: "rgba(0, 0, 0, 0.3)"
+                                        bottom: 59%
+                                        right: 0px
+                                        padding: 8px
+                                        font-size: 16px
+                                        line-height: 2px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                        width: 25%
+                          - type: 'custom:card-templater'
+                            card:
+                              type: entities
+                              show_header_toggle: false
+                              entities:
+                                - input_select.vacuum_room_select
+                                - input_select.vacuum_room_repeat
+                                - type: call-service
+                                  service: mqtt.publish
+                                  service_data:
+                                    topic: /nodered/vacuum_room
+                                    payload_template: >-
+                                      {
+                                        "room": "{{ states.input_select.vacuum_room_select.state }}",
+                                        "repeat": {{ states.input_select.vacuum_room_repeat.state }}
+                                      }
+                                  name: " "
+                                  icon: " "
+                            entities:
+                              - input_select.vacuum_room_select
+                              - input_select.vacuum_room_repeat
+                          - type: horizontal-stack
+                            cards:
+                                - type: picture-elements
+                                  image: /local/side_brush.png
+                                  elements:
+                                    - type: state-label
+                                      entity: sensor.roborock_s5_max_side_brush_remaining
+                                      title: '% Remaining Until Side Brush Should Be Replaced'
+                                      style:
+                                        font-size: 30px
+                                        color: orange
+                                        left: 0px
+                                        right: 0px
+                                        bottom: 0px
+                                        background-color: "rgba(0, 0, 0, 0.3)"
+                                        transform: translate(0%,0%)
+                                    - type: state-label
+                                      title: Hours Remaining Until Side Brush Should Be Replaced
+                                      entity: sensor.roborock_s5_max_side_brush_hrs_remaining
+                                      suffix: ' left'
+                                      style:
+                                        right: 0px
+                                        bottom: 0px
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: icon
+                                      icon: mdi:restart
+                                      title: Reset Hours
+                                      tap_action:
+                                        action: call-service
+                                        service: vacuum.send_command
+                                        service_data:
+                                          entity_id: vacuum.roborock_s5_max
+                                          command: reset_consumable
+                                          params: ['side_brush_work_time']
+                                        confirmation:
+                                          text: Are you sure you want to reset the hours remaining counter for replacing the side brush?
+                                      style:
+                                        top: 0px
+                                        right: 0px
+                                        padding: 7px
+                                        transform: translate(0%,0%)
+                                - type: picture-elements
+                                  image: /local/main_brush.png
+                                  elements:
+                                    - type: state-label
+                                      title: '% Remaining Until Main Brush Should Be Replaced'
+                                      entity: sensor.roborock_s5_max_main_brush_remaining
+                                      style:
+                                        font-size: 30px
+                                        color: orange
+                                        left: 0px
+                                        right: 0px
+                                        bottom: 0px
+                                        background-color: "rgba(0, 0, 0, 0.3)"
+                                        transform: translate(0%,0%)
+                                    - type: state-label
+                                      title: 'Hours Remaining Until Main Brush Should Be Replaced'
+                                      entity: sensor.roborock_s5_max_main_brush_hrs_remaining
+                                      suffix: ' left'
+                                      style:
+                                        right: 0px
+                                        bottom: 0px
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: icon
+                                      icon: mdi:restart
+                                      title: Reset Hours
+                                      tap_action:
+                                        action: call-service
+                                        service: vacuum.send_command
+                                        service_data:
+                                          entity_id: vacuum.roborock_s5_max
+                                          command: reset_consumable
+                                          params: ['main_brush_work_time']
+                                        confirmation:
+                                          text: Are you sure you want to reset the hours remaining counter for replacing the main brush?
+                                      style:
+                                        top: 0px
+                                        right: 0px
+                                        padding: 7px
+                                        transform: translate(0%,0%)
+                          - type: horizontal-stack
+                            cards:                
+                                - type: picture-elements
+                                  image: /local/sensors.png
+                                  elements:
+                                    - type: state-label
+                                      entity: sensor.roborock_s5_max_sensors_remaining
+                                      title:  "% Remaining Until Sensors Should Be Cleaned"
+                                      style:
+                                        font-size: 30px
+                                        color: orange
+                                        left: 0px
+                                        right: 0px
+                                        bottom: 0px
+                                        background-color: "rgba(0, 0, 0, 0.3)"
+                                        transform: translate(0%,0%)
+                                    - type: state-label
+                                      title:  "Hours Remaining Until Sensors Should Be Cleaned"
+                                      entity: sensor.roborock_s5_max_sensors_hrs_remaining
+                                      suffix: ' left'
+                                      style:
+                                        right: 0px
+                                        bottom: 0px
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: icon
+                                      icon: mdi:restart
+                                      title: Reset Hours
+                                      tap_action:
+                                        action: call-service
+                                        service: vacuum.send_command
+                                        service_data:
+                                          entity_id: vacuum.roborock_s5_max
+                                          command: reset_consumable
+                                          params: ['sensor_dirty_time']
+                                        confirmation:
+                                          text: Are you sure you want to reset the hours remaining counter for cleaning the sensors?
+                                      style:
+                                        top: 0px
+                                        right: 0px
+                                        padding: 7px
+                                        transform: translate(0%,0%)
+                                - type: picture-elements
+                                  image: /local/filter.png
+                                  elements:
+                                    - type: state-label
+                                      title: '% Remaining Until Filter Should Be Replaced'
+                                      entity: sensor.roborock_s5_max_filter_remaining
+                                      style:
+                                        font-size: 30px
+                                        color: orange
+                                        left: 0px
+                                        right: 0px
+                                        bottom: 0px
+                                        background-color: "rgba(0, 0, 0, 0.3)"
+                                        transform: translate(0%,0%)
+                                    - type: state-label
+                                      title: 'Hours Remaining Until Filter Should Be Replaced'
+                                      entity: sensor.roborock_s5_max_filter_hrs_remaining
+                                      suffix: ' left'
+                                      style:
+                                        right: 0px
+                                        bottom: 0px
+                                        padding: 10px
+                                        font-size: 16px
+                                        line-height: 16px
+                                        color: white
+                                        transform: translate(0%,0%)
+                                    - type: icon
+                                      icon: mdi:restart
+                                      title: Reset Hours
+                                      tap_action:
+                                        action: call-service
+                                        service: vacuum.send_command
+                                        service_data:
+                                          entity_id: vacuum.roborock_s5_max
+                                          command: reset_consumable
+                                          params: ['filter_work_time']
+                                        confirmation:
+                                          text: Are you sure you want to reset the hours remaining counter for replacing the filter?
+                                      style:
+                                        top: 0px
+                                        right: 0px
+                                        padding: 7px
+                                        transform: translate(0%,0%)             
 ############################### BLINDS #######################    
             # BEDROOM BLINDS #   
             - entity: sensor.bedroom_position 
@@ -824,54 +1179,368 @@ views:
   - title: Cleaning
     icon: 'mdi:robot-vacuum'
     panel: true
+    background: 'rgba(42, 46, 48, 1)'
     cards:
-      - type: 'custom:hui-element'  
-        card_type: 'picture-elements'
-        entity: vacuum.roborock_s5_max
-        image: '/local/floorplan/apartment-all-light.png'
-        style: |
-            ha-card:first-child {
-              background: transparent;
-              left: 0%;
-              width: 100%;   
-              height: 110%;
-              margin-top: -2%;
-            }
-        elements:
-          - type: image
-            entity: camera.xiaomi_cloud_map_extractor
-            camera_image: camera.xiaomi_cloud_map_extractor
-            camera_refresh_interval: 2
-            style: 
-                transform: rotate(180deg) scale(1.36)
-                mix-blend-mode: lighten
-                width: 100%
-                height: 100% 
-                top: 25.5%
-                left: -3.7%
-            tap_action:
-              action: none 
-          - type: state-icon
-            entity: vacuum.roborock_s5_max
-            icon: 'mdi:robot-vacuum'
-            style:
-              align-items: center
-              background-color: 'rgba(255,255,255,0.6)'
-              border-radius: 100%
-              box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
-              display: flex
-              justify-content: center                
-              --mdc-icon-size: 2vmax
-              height: 2.5vmax
-              width: 2.5vmax
-              left: 58.5%        
-              top: 86.5%
-            tap_action:
-              action: more-info   
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: 'custom:card-templater'
+                entities:
+                  - vacuum.roborock_s5_max
+                card:
+                  type: picture-elements
+                  image: "/local/1604233684166.jpg"
+                  elements:
+                    - type: state-label
+                      entity: vacuum.roborock_s5_max
+                      style:
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        background-color: "rgba(0, 0, 0, 0.3)"
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: icon
+                      title: Battery
+                      icon_template: '{{ state_attr("vacuum.roborock_s5_max", "battery_icon") }}'
+                      style:
+                        right: 171px
+                        bottom: 0
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: state-label
+                      title: Battery Level
+                      entity: sensor.roborock_s5_max_battery
+                      style:
+                        right: 120px
+                        bottom: 0px
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: icon
+                      title: Locate Vacuum
+                      icon: 'mdi:map-marker'
+                      style:
+                        right: 90px
+                        bottom: 0
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: icon
+                      title: Clean First Floor
+                      icon: 'mdi:broom'
+                      tap_action:
+                        action: call-service
+                        service: mqtt.publish
+                        service_data:
+                          payload: 1
+                          topic: /nodered/vacuum_first_floor
+                      style:
+                        right: 0
+                        bottom: 0
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: icon
+                      title: Return To Base
+                      icon: 'mdi:home-map-marker'
+                      tap_action:
+                        action: call-service
+                        service: vacuum.return_to_base
+                        service_data:
+                          entity_id: vacuum.roborock_s5_max
+                      style:
+                        right: 45px
+                        bottom: 0
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: state-label
+                      entity: sensor.roborock_s5_max_last_cleaned
+                      prefix: 'Last ran '
+                      suffix: ' ago'
+                      style:
+                        background-color: "rgba(0, 0, 0, 0.3)"
+                        bottom: 85%
+                        padding: 8px
+                        font-size: 16px
+                        line-height: 2px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: state-label
+                      prefix: "Ran "
+                      suffix: "x"
+                      entity: sensor.roborock_s5_max_lifetime_cleaning_count
+                      style:
+                        background-color: "rgba(0, 0, 0, 0.3)"
+                        bottom: 85%
+                        right: 0px
+                        padding: 8px
+                        font-size: 16px
+                        line-height: 2px
+                        color: white
+                        transform: translate(0%,0%)
+                        width: 25%
+                    - type: state-label
+                      prefix: "Ran for "
+                      suffix: " hrs"
+                      entity: sensor.roborock_s5_max_lifetime_cleaning_time
+                      style:
+                        background-color: "rgba(0, 0, 0, 0.3)"
+                        bottom: 72%
+                        right: 0px
+                        padding: 8px
+                        font-size: 16px
+                        line-height: 2px
+                        color: white
+                        transform: translate(0%,0%)
+                        width: 25%
+                    - type: state-label
+                      entity: sensor.roborock_s5_max_lifetime_cleaned_area
+                      prefix: "Cleaned "
+                      style:
+                        background-color: "rgba(0, 0, 0, 0.3)"
+                        bottom: 59%
+                        right: 0px
+                        padding: 8px
+                        font-size: 16px
+                        line-height: 2px
+                        color: white
+                        transform: translate(0%,0%)
+                        width: 25%
+              - type: 'custom:hui-element'  
+                card_type: 'picture-elements'
+                entity: vacuum.roborock_s5_max
+                image: '/local/floorplan/apartment-all-light.png'
+                style: |
+                    ha-card:first-child {
+                      background: transparent;
+                      left: 0%;
+                      width: 100%;   
+                      height: 110%;
+                      margin-top: -2%;
+                    }
+                elements:
+                  - type: image
+                    entity: camera.xiaomi_cloud_map_extractor
+                    camera_image: camera.xiaomi_cloud_map_extractor
+                    camera_refresh_interval: 2
+                    style: 
+                        transform: rotate(180deg) scale(1.36)
+                        mix-blend-mode: lighten
+                        width: 100%
+                        height: 100% 
+                        top: 25.5%
+                        left: -3.7%
+                    tap_action:
+                      action: none 
+                  - type: state-icon
+                    entity: vacuum.roborock_s5_max
+                    icon: 'mdi:robot-vacuum'
+                    style:
+                      align-items: center
+                      background-color: 'rgba(255,255,255,0.6)'
+                      border-radius: 100%
+                      box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+                      display: flex
+                      justify-content: center                
+                      --mdc-icon-size: 2vmax
+                      height: 2.5vmax
+                      width: 2.5vmax
+                      left: 58.5%        
+                      top: 86.5%
+                    tap_action:
+                      action: more-info   
+          - type: horizontal-stack
+            cards:
+                - type: picture-elements
+                  image: /local/side_brush.png
+                  elements:
+                    - type: state-label
+                      entity: sensor.roborock_s4_side_brush_remaining
+                      title: '% Remaining Until Side Brush Should Be Replaced'
+                      style:
+                        font-size: 30px
+                        color: orange
+                        left: 0px
+                        right: 0px
+                        bottom: 0px
+                        background-color: "rgba(0, 0, 0, 0.3)"
+                        transform: translate(0%,0%)
+                    - type: state-label
+                      title: Hours Remaining Until Side Brush Should Be Replaced
+                      entity: sensor.roborock_s4_side_brush_hrs_remaining
+                      suffix: ' left'
+                      style:
+                        right: 0px
+                        bottom: 0px
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: icon
+                      icon: mdi:restart
+                      title: Reset Hours
+                      tap_action:
+                        action: call-service
+                        service: vacuum.send_command
+                        service_data:
+                          entity_id: vacuum.roborock_s4
+                          command: reset_consumable
+                          params: ['side_brush_work_time']
+                        confirmation:
+                          text: Are you sure you want to reset the hours remaining counter for replacing the side brush?
+                      style:
+                        top: 0px
+                        right: 0px
+                        padding: 7px
+                        transform: translate(0%,0%)
+                - type: picture-elements
+                  image: /local/main_brush.png
+                  elements:
+                    - type: state-label
+                      title: '% Remaining Until Main Brush Should Be Replaced'
+                      entity: sensor.roborock_s4_main_brush_remaining
+                      style:
+                        font-size: 30px
+                        color: orange
+                        left: 0px
+                        right: 0px
+                        bottom: 0px
+                        background-color: "rgba(0, 0, 0, 0.3)"
+                        transform: translate(0%,0%)
+                    - type: state-label
+                      title: 'Hours Remaining Until Main Brush Should Be Replaced'
+                      entity: sensor.roborock_s4_main_brush_hrs_remaining
+                      suffix: ' left'
+                      style:
+                        right: 0px
+                        bottom: 0px
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: icon
+                      icon: mdi:restart
+                      title: Reset Hours
+                      tap_action:
+                        action: call-service
+                        service: vacuum.send_command
+                        service_data:
+                          entity_id: vacuum.roborock_s4
+                          command: reset_consumable
+                          params: ['main_brush_work_time']
+                        confirmation:
+                          text: Are you sure you want to reset the hours remaining counter for replacing the main brush?
+                      style:
+                        top: 0px
+                        right: 0px
+                        padding: 7px
+                        transform: translate(0%,0%)
 
-
-
-             
+                - type: picture-elements
+                  image: /local/sensors.png
+                  elements:
+                    - type: state-label
+                      entity: sensor.roborock_s4_sensors_remaining
+                      title:  "% Remaining Until Sensors Should Be Cleaned"
+                      style:
+                        font-size: 30px
+                        color: orange
+                        left: 0px
+                        right: 0px
+                        bottom: 0px
+                        background-color: "rgba(0, 0, 0, 0.3)"
+                        transform: translate(0%,0%)
+                    - type: state-label
+                      title:  "Hours Remaining Until Sensors Should Be Cleaned"
+                      entity: sensor.roborock_s4_sensors_hrs_remaining
+                      suffix: ' left'
+                      style:
+                        right: 0px
+                        bottom: 0px
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: icon
+                      icon: mdi:restart
+                      title: Reset Hours
+                      tap_action:
+                        action: call-service
+                        service: vacuum.send_command
+                        service_data:
+                          entity_id: vacuum.roborock_s4
+                          command: reset_consumable
+                          params: ['sensor_dirty_time']
+                        confirmation:
+                          text: Are you sure you want to reset the hours remaining counter for cleaning the sensors?
+                      style:
+                        top: 0px
+                        right: 0px
+                        padding: 7px
+                        transform: translate(0%,0%)
+                - type: picture-elements
+                  image: /local/filter.png
+                  elements:
+                    - type: state-label
+                      title: '% Remaining Until Filter Should Be Replaced'
+                      entity: sensor.roborock_s4_filter_remaining
+                      style:
+                        font-size: 30px
+                        color: orange
+                        left: 0px
+                        right: 0px
+                        bottom: 0px
+                        background-color: "rgba(0, 0, 0, 0.3)"
+                        transform: translate(0%,0%)
+                    - type: state-label
+                      title: 'Hours Remaining Until Filter Should Be Replaced'
+                      entity: sensor.roborock_s4_filter_hrs_remaining
+                      suffix: ' left'
+                      style:
+                        right: 0px
+                        bottom: 0px
+                        padding: 10px
+                        font-size: 16px
+                        line-height: 16px
+                        color: white
+                        transform: translate(0%,0%)
+                    - type: icon
+                      icon: mdi:restart
+                      title: Reset Hours
+                      tap_action:
+                        action: call-service
+                        service: vacuum.send_command
+                        service_data:
+                          entity_id: vacuum.roborock_s4
+                          command: reset_consumable
+                          params: ['filter_work_time']
+                        confirmation:
+                          text: Are you sure you want to reset the hours remaining counter for replacing the filter?
+                      style:
+                        top: 0px
+                        right: 0px
+                        padding: 7px
+                        transform: translate(0%,0%)             
             
               
 #############################################################################################################################################
@@ -953,17 +1622,32 @@ views:
                           - entity: vacuum.roborock_s5_max
                             icon: 'mdi:robot-vacuum'
                             name: Rob the Robot
+                          - entity: input_boolean.holiday
+                            icon: 'mdi:beach'
+                            name: Holiday
+                            tap_action:
+                              action: toggle 
+                              entity: input_boolean.holiday
                         title: Home
-                    tileOnRow: 4   
+                    tileOnRow: 5   
                   - column: 2
                     entities:
                       - entities:
                           - entity: sensor.outside_temperature
                             icon: 'mdi:thermometer-lines'
+                            tap_action: 
+                              action: more-info
+                              entity: sensor.outside_temperature
                           - entity: sensor.outside_humidity
                             icon: 'mdi:water-percent'
+                            tap_action: 
+                              action: more-info
+                              entity: sensor.outside_humidity
                           - entity: sensor.lux
                             icon: 'mdi:weather-sunny'
+                            tap_action: 
+                              action: more-info
+                              entity: sensor.lux
                         title: Outside
                     tileOnRow: 3      
               - row: 2  
@@ -981,10 +1665,18 @@ views:
                             icon: 'mdi:blinds'
                           - entity: sensor.inside_temperature
                             icon: 'mdi:thermometer-lines'
+                            tap_action: 
+                              action: more-info
                           - entity: sensor.inside_humidity
                             icon: 'mdi:water-percent'
+                            tap_action: 
+                              action: more-info
+                              entity: sensor.inside_humidity
                           - entity: binary_sensor.living_room_pir_2
                             icon: 'mdi:run'
+                            tap_action: 
+                              action: more-info
+                              entity: binary_sensor.living_room_pir_2
                         title: Living Room
                     tileOnRow: 7
               - row: 3   
@@ -1098,114 +1790,194 @@ views:
   - title: Data Kiosk        
     icon: 'mdi:chart-line'
     panel: true
+    background: 'rgba(42, 46, 48, 1)'
     cards:
-
-      - type: picture-elements    
-        image: /local/transparent1.png
-        style: |
-            ha-card:first-child {
-              background: rgba(42, 46, 48, 1);
-              top:50%;
-              left: 0%;
-              width: 100%;   
-              height: 100%;
-            }
-        elements:        
-        ######### ROW ONE ##########
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.outside_temperature
-            line_color: var(--accent-color)
-            line_width: 8
-            font_size: 75     
-            show:
-                extrema: true
-                points: false
-            color_thresholds:
-                - color: '#4dd2ff'
-                  value: 10
-                - color: '#ffa31a'
-                  value: 20
-                - color: '#ff1a1a'
-                  value: 30
-            style:
-              top: 20%
-              left: 18% 
-              width: 30%    
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.outside_humidity
-            line_width: 8
-            font_size: 75
-            show:
-                extrema: true
-                points: false
-            color_thresholds:
-                - color: '#888a94'
-                  value: 0
-                - color: '#0533ff'
-                  value: 80   
-            style:
-              top: 20%
-              left: 50%
-              width: 30%
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.lux
-            line_color: '#e74c3c'
-            line_width: 8
-            font_size: 75
-            icon: 'mdi:weather-sunny'
-            show:
-                extrema: true
-                points: false    
-            color_thresholds:
-                - color: '#000000'
-                  value: 0
-                - color: '#fff4d9'
-                  value: 2000                
-            style:
-              top: 20%
-              left: 82%
-              width: 30%
-        ######### ROW TWO ##########
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.inside_temperature
-            line_color: var(--accent-color)
-            line_width: 8
-            font_size: 75     
-            show:
-                extrema: true
-                points: false
-            color_thresholds:
-                - color: '#4dd2ff'
-                  value: 17
-                - color: '#ffa31a'
-                  value: 21
-                - color: '#ff1a1a'
-                  value: 28
-            style:
-              top: 52%
-              left: 18% 
-              width: 30%        
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.inside_humidity
-            line_width: 8
-            font_size: 75
-            show:
-                extrema: true
-                points: false
-            color_thresholds:
-                - color: '#888a94'
-                  value: 0
-                - color: '#0533ff'
-                  value: 60    
-            style:
-              top: 52%
-              left: 50%
-              width: 30%
+      - type: vertical-stack        
+        cards:    
+          - type: horizontal-stack        
+            cards:
+                ######### ROW ONE ##########
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.outside_temperature
+                line_color: var(--accent-color)
+                line_width: 4
+                font_size: 75     
+                show:
+                    extrema: true
+                    points: false
+                color_thresholds:
+                    - color: '#4dd2ff'
+                      value: 10
+                    - color: '#ffa31a'
+                      value: 20
+                    - color: '#ff1a1a'
+                      value: 30
+                style: |
+                    ha-card {
+                      background-color: rgba(255,255,255,0);
+                      color: rgba(255,255,255,0.8);
+                      margin-left: 4px !important;
+                    }
+                    ha-card .icon {
+                      color: rgba(255,255,255,0.8);
+                    }
+                    .graph__labels {
+                        background-color: rgba(255,255,255,0);
+                    }
+                    .graph__labels > span {
+                        background: none !important;
+                    }
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.outside_humidity
+                line_width: 4
+                font_size: 75
+                show:
+                    extrema: true
+                    points: false
+                color_thresholds:
+                    - color: '#def0ff'
+                      value: 30
+                    - color: '#87c6fa'
+                      value: 50   
+                    - color: '#0079eb'
+                      value: 70   
+                style: |
+                    ha-card {
+                      background-color: rgba(255,255,255,0);
+                      color: rgba(255,255,255,0.8);
+                    }
+                    ha-card .icon {
+                      color: rgba(255,255,255,0.8);
+                    }
+                    .graph__labels {
+                        background-color: rgba(255,255,255,0);
+                    }
+                    .graph__labels > span {
+                        background: none !important;
+                    }
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.lux
+                line_color: '#e74c3c'
+                line_width: 4
+                font_size: 75
+                icon: 'mdi:weather-sunny'
+                show:
+                    extrema: true
+                    points: false    
+                color_thresholds:
+                    - color: '#000000'
+                      value: 0
+                    - color: '#fff4d9'
+                      value: 2000                
+                style: |
+                    ha-card {
+                      background-color: rgba(255,255,255,0);
+                      color: rgba(255,255,255,0.8);
+                      margin-right: 4px !important;
+                    }
+                    ha-card .icon {
+                      color: rgba(255,255,255,0.8);
+                    }
+                    .graph__labels {
+                        background-color: rgba(255,255,255,0);
+                    }
+                    .graph__labels > span {
+                        background: none !important;
+                    }
+            ######### ROW TWO ##########
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.inside_temperature
+                line_color: var(--accent-color)
+                line_width: 4
+                font_size: 75     
+                show:
+                    extrema: true
+                    points: false
+                color_thresholds:
+                    - color: '#4dd2ff'
+                      value: 18
+                    - color: '#ffa31a'
+                      value: 20
+                    - color: '#ff1a1a'
+                      value: 22
+                style: |
+                    ha-card {
+                      background-color: rgba(255,255,255,0);
+                      color: rgba(255,255,255,0.8);
+                      margin-left: 4px !important;
+                    }
+                    ha-card .icon {
+                      color: rgba(255,255,255,0.8);
+                    }
+                    .graph__labels {
+                        background-color: rgba(255,255,255,0);
+                    }
+                    .graph__labels > span {
+                        background: none !important;
+                    }
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.inside_humidity
+                line_width: 4
+                font_size: 75
+                show:
+                    extrema: true
+                    points: false
+                color_thresholds:
+                    - color: '#def0ff'
+                      value: 40
+                    - color: '#87c6fa'
+                      value: 50   
+                    - color: '#0079eb'
+                      value: 60    
+                style: |
+                    ha-card {
+                      background-color: rgba(255,255,255,0);
+                      color: rgba(255,255,255,0.8);
+                    }
+                    ha-card .icon {
+                      color: rgba(255,255,255,0.8);
+                    }
+                    .graph__labels {
+                        background-color: rgba(255,255,255,0);
+                    }
+                    .graph__labels > span {
+                        background: none !important;
+                    }
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.portfolio
+                line_width: 4
+                font_size: 75
+                show:
+                    extrema: true
+                    points: false
+                color_thresholds:
+                    - color: '#000000'
+                      value: 2000
+                    - color: '#FF0000'
+                      value: 0       
+                style: |
+                    ha-card {
+                      background-color: rgba(255,255,255,0);
+                      color: rgba(255,255,255,0.8);
+                      margin-right: 4px !important;
+                    }
+                    ha-card .icon {
+                      color: rgba(255,255,255,0.8);
+                    }
+                    .graph__labels {
+                        background-color: rgba(255,255,255,0);
+                    }
+                    .graph__labels > span {
+                        background: none !important;
+                    }
 
 
        

@@ -93,9 +93,9 @@
                     "Low Power Mode": false
                 },
                 "device_class": "battery",
-                "icon": "mdi:battery-70",
+                "icon": "mdi:battery-80",
                 "name": "Battery Level",
-                "state": 72,
+                "state": 81,
                 "type": "sensor",
                 "unique_id": "battery_level",
                 "unit_of_measurement": "%",
@@ -104,11 +104,11 @@
             "4a6b7170cb25f391e6efa070af9df3940bd2547fa6050986ff914a2b234e5a30_battery_state": {
                 "added": true,
                 "attributes": {
-                    "Battery Level": 72,
+                    "Battery Level": 81,
                     "Low Power Mode": false
                 },
                 "device_class": "battery",
-                "icon": "mdi:battery-70",
+                "icon": "mdi:battery-80",
                 "name": "Battery State",
                 "state": "Not Charging",
                 "type": "sensor",
@@ -127,10 +127,12 @@
             },
             "4a6b7170cb25f391e6efa070af9df3940bd2547fa6050986ff914a2b234e5a30_connectivity_connection_type": {
                 "added": true,
-                "attributes": {},
-                "icon": "mdi:wifi",
+                "attributes": {
+                    "Cellular Technology": "3G"
+                },
+                "icon": "mdi:signal",
                 "name": "Connection Type",
-                "state": "Wi-Fi",
+                "state": "Cellular",
                 "type": "sensor",
                 "unique_id": "connectivity_connection_type",
                 "webhook_id": "4a6b7170cb25f391e6efa070af9df3940bd2547fa6050986ff914a2b234e5a30"
@@ -141,7 +143,7 @@
                     "Allows VoIP": true,
                     "Carrier ID": "0000000100000001",
                     "Carrier Name": "NOS",
-                    "Current Radio Technology": "Long-Term Evolution (LTE)",
+                    "Current Radio Technology": "Wideband Code Division Multiple Access (WCDMA)",
                     "ISO Country Code": "pt",
                     "Mobile Country Code": "268",
                     "Mobile Network Code": "03"
@@ -186,14 +188,14 @@
             "4a6b7170cb25f391e6efa070af9df3940bd2547fa6050986ff914a2b234e5a30_storage": {
                 "added": true,
                 "attributes": {
-                    "Available": "3,43 GB",
-                    "Available (Important)": "8,70 GB",
-                    "Available (Opportunistic)": "7,42 GB",
+                    "Available": "2,56 GB",
+                    "Available (Important)": "8,08 GB",
+                    "Available (Opportunistic)": "6,80 GB",
                     "Total": "63,98 GB"
                 },
                 "icon": "mdi:database",
                 "name": "Storage",
-                "state": "11.59",
+                "state": "10.63",
                 "type": "sensor",
                 "unique_id": "storage",
                 "unit_of_measurement": "% available",
@@ -235,7 +237,7 @@
                 "device_class": "battery",
                 "icon": "mdi:battery-90",
                 "name": "Battery Level",
-                "state": 93,
+                "state": 92,
                 "type": "sensor",
                 "unique_id": "battery_level",
                 "unit_of_measurement": "%",
@@ -298,18 +300,18 @@
                     "Administrative Area": "Porto",
                     "Country": "Portugal",
                     "ISO Country Code": "PT",
-                    "Latitude": 41.181847,
+                    "Latitude": 41.181904,
                     "Locality": "S\u00e3o Mamede de Infesta",
-                    "Longitude": -8.623657,
+                    "Longitude": -8.62341,
                     "Postal Code": "4465",
                     "Sub Administrative Area": "null",
                     "Sub Locality": "null",
-                    "Sub Thoroughfare": "638",
+                    "Sub Thoroughfare": "646",
                     "Thoroughfare": "Rua Bernardim Ribeiro"
                 },
                 "icon": "mdi:map",
                 "name": "Geocoded Location",
-                "state": "R. Bernardim Ribeiro 638, 4465 S\u00e3o Mamede de Infesta, Portugal",
+                "state": "R. Bernardim Ribeiro 646, 4465 S\u00e3o Mamede de Infesta, Portugal",
                 "type": "sensor",
                 "unique_id": "geocoded_location",
                 "webhook_id": "afb2a5b5670fa4c85ac49fd704db688a3a01957e14bc32b0e659f9236e1d5162"
@@ -334,7 +336,7 @@
                 "device_class": "illuminance",
                 "icon": "mdi:brightness-5",
                 "name": "Light Sensor",
-                "state": "78",
+                "state": "0",
                 "type": "sensor",
                 "unique_id": "light_sensor",
                 "unit_of_measurement": "lx",
@@ -360,7 +362,7 @@
                 "attributes": {},
                 "icon": "mdi:leak",
                 "name": "Proximity Sensor",
-                "state": "near",
+                "state": "far",
                 "type": "sensor",
                 "unique_id": "proximity_sensor",
                 "webhook_id": "afb2a5b5670fa4c85ac49fd704db688a3a01957e14bc32b0e659f9236e1d5162"
@@ -384,13 +386,13 @@
             "afb2a5b5670fa4c85ac49fd704db688a3a01957e14bc32b0e659f9236e1d5162_wifi_connection": {
                 "added": true,
                 "attributes": {
-                    "bssid": "88:66:39:d7:8d:08",
-                    "frequency": 5500,
+                    "bssid": "88:66:39:d7:8d:04",
+                    "frequency": 2417,
                     "ip_address": "192.168.1.68",
                     "is_hidden": false,
                     "is_wifi_on": true,
-                    "link_speed": 390,
-                    "signal_level": -61
+                    "link_speed": 72,
+                    "signal_level": -1
                 },
                 "icon": "mdi:wifi",
                 "name": "Wifi Connection",

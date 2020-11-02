@@ -11,6 +11,13 @@ http:
   base_url: https://hab11.com
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
+  
+mqtt:
+  broker: core-mosquitto
+  username: homeassistant
+  password: fei8aivu6aFey8iizoh3owide5fo7wo8nah0Aiyau3aiy9dijieC3giequoz0shi
+  discovery: True
+  
 # Text to speech
 tts:
   - platform: google_translate
@@ -33,8 +40,9 @@ device_tracker:
 browser_mod:
 
 lovelace:
-  mode: yaml
-  
+    mode: yaml
+    
+#frontend: !include themes.yaml
 
 google_assistant:
   project_id: home-assistant-277315
@@ -175,7 +183,7 @@ sensor:
 
       brightness:
         friendly_name: 'Ambient plus offset'
-        value_template: '{{((states.sensor.lux.state | float) / 2) + (states.input_number.daylight_tester.state | float)}}'
+        value_template: '{{((states.sensor.lux.state | float) / 15) + (states.input_number.daylight_tester.state | float)}}'
     
     #   brightness:
     #     friendly_name: 'Ambient plus offset'
@@ -201,8 +209,89 @@ sensor:
         
       kitchen_position:
         value_template: '{{states.cover.sonoff_1000d66886.attributes.current_position | float|round(0)}}'        
+        
+      outdoor_sleep_duration:
+        value_template: '{{states.input_number.outdoor_sleep_duration.state}}'
+        
+      outdoor_wake_duration:
+        value_template: '{{states.input_number.outdoor_wake_duration_seconds.state}}'
+        
+        
+## Vacuum
+      roborock_s5_max_battery:
+        friendly_name: 'Vacuum Battery'
+        value_template: "{{state_attr('vacuum.roborock_s5_max', 'battery_level')}}"
+        unit_of_measurement: '%'
+        device_class: battery
+    
+      roborock_s5_max_lifetime_cleaned_area:
+        friendly_name: 'Lifetime Cleaned Area'
+        value_template: "{{state_attr('vacuum.roborock_s5_max', 'total_cleaned_area')}}"
+        unit_of_measurement: ㎡
+    
+      roborock_s5_max_lifetime_cleaning_time:
+        friendly_name: 'Lifetime Cleaning Time'
+        value_template: "{{(state_attr('vacuum.roborock_s5_max', 'total_cleaning_time') / 60)|round(1, 'floor')}}"
+    
+        # NOTE: This date is converted to be timezone aware so that it plays nice
+        # with some other templating functions and filters.
+      roborock_s5_max_last_cleaned:
+        friendly_name: Relative time since last cleaning ended
+        value_template: "{{relative_time(strptime(as_timestamp(state_attr('vacuum.roborock_s5_max', 'clean_stop'))|timestamp_custom('%Y-%m-%d %H:%M:%S%z'), '%Y-%m-%d %H:%M:%S%z'))}}"
+    
+      roborock_s5_max_lifetime_cleaning_count:
+        friendly_name: 'Lifetime Cleaning Count'
+        value_template: "{{state_attr('vacuum.roborock_s5_max', 'cleaning_count')}}"
+        
+        
+    # Used for the Filter maintenance card
+      roborock_s5_max_filter_remaining:
+        friendly_name: '% Filter Remaining'
+        unit_of_measurement: '%'
+        value_template: "{{((state_attr('vacuum.roborock_s5_max', 'filter_left') / 150) * 100) | round | int}}"
 
+    # Used for the Filter maintenance card
+      roborock_s5_max_filter_hrs_remaining:
+        friendly_name: 'Filter Remaining Hours'
+        unit_of_measurement: 'hrs'
+        value_template: "{{state_attr('vacuum.roborock_s5_max', 'filter_left')}}"
 
+   # Used for the Side Brush maintenance card
+      roborock_s5_max_side_brush_remaining:
+        friendly_name: '% Side Brush Remaining'
+        unit_of_measurement: '%'
+        value_template: "{{((state_attr('vacuum.roborock_s5_max', 'side_brush_left') / 200) * 100) | round | int}}"
+
+    # Used for the Side Brush maintenance card
+      roborock_s5_max_side_brush_hrs_remaining:
+        friendly_name: 'Side Brush Remaining Hours'
+        unit_of_measurement: 'hrs'
+        value_template: "{{state_attr('vacuum.roborock_s5_max', 'side_brush_left')}}"
+
+    # Used for the Main Brush maintenance card
+      roborock_s5_max_main_brush_remaining:
+        friendly_name: '% Main Brush Remaining'
+        unit_of_measurement: '%'
+        value_template: "{{((state_attr('vacuum.roborock_s5_max', 'main_brush_left') / 300) * 100) | round | int}}"
+
+    # Used for the Main Brush maintenance card
+      roborock_s5_max_main_brush_hrs_remaining:
+        friendly_name: 'Main Brush Remaining Hours'
+        unit_of_measurement: 'hrs'
+        value_template: "{{state_attr('vacuum.roborock_s5_max', 'main_brush_left')}}"
+
+    # Used for the Sensors maintenance card
+      roborock_s5_max_sensors_remaining:
+        friendly_name: '% Sensors Remaining'
+        unit_of_measurement: '%'
+        value_template: "{{((state_attr('vacuum.roborock_s5_max', 'sensor_dirty_left') / 30) * 100) | round | int}}"
+
+    # Used for the Sensors maintenance card
+      roborock_s5_max_sensors_hrs_remaining:
+        friendly_name: 'Sensors Remaining Hours'
+        unit_of_measurement: 'hrs'
+        value_template: "{{state_attr('vacuum.roborock_s5_max', 'sensor_dirty_left')}}"
+        
 ## Weather
 
 
@@ -325,5 +414,23 @@ input_datetime:
     name: 'Sunday'
     has_date: false
     has_time: true
- 
-      
+    
+input_select:
+  vacuum_room_select:
+    name: Choose a room to clean
+    options:
+      - Bathroom
+      - Bedroom
+      - Hallway
+      - Kitchen
+      - Living Room
+
+  vacuum_room_repeat:
+    name: Number of times to clean the room
+    options:
+      - 1
+      - 2
+      - 3
+    initial: 1
+    icon: mdi:numeric
+

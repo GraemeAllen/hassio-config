@@ -6,11 +6,11 @@
         "ssl_certificate": "/ssl/fullchain.pem",
         "ssl_key": "/ssl/privkey.pem",
         "login_attempts_threshold": -1,
+        "ip_ban_enabled": true,
+        "server_port": 8123,
         "cors_allowed_origins": [
             "https://cast.home-assistant.io"
         ],
-        "server_port": 8123,
-        "ip_ban_enabled": true,
         "ssl_profile": "modern"
     }
 }
